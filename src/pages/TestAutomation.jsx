@@ -1,12 +1,12 @@
 import React from 'react'
 
-import TestAutomationHeroSection from '../Test Automation Components/TestAutomationHeroSection';
-import Body from '../Test Automation Components/Body';
-import TestAutomationFeatures from '../Test Automation Components/TestAutomationFeatures';
-import ImprovementSection from '../Test Automation Components/ImprovementSection';
-import AutomationServices from '../Test Automation Components/AutomationServices';
-import ContentSlider from '../Test Automation Components/ContentSlider';
-import TestingCapabilities from '../Test Automation Components/TestingCapabilities';
+import TestAutomationHeroSection from '../container/Services/Testing and QA/Test Automation/TestAutomationHeroSection';
+import Body from '../container/Services/Testing and QA/Test Automation/Body';
+import TestAutomationFeatures from '../container/Services/Testing and QA/Test Automation/TestAutomationFeatures';
+import ImprovementSection from '../container/Services/Testing and QA/Test Automation/ImprovementSection';
+import AutomationServices from '../container/Services/Testing and QA/Test Automation/AutomationServices';
+import ContentSlider from '../container/Services/Testing and QA/Test Automation/ContentSlider';
+import TestingCapabilities from '../container/Services/Testing and QA/Test Automation/TestingCapabilities';
 
 const TestAutomation = () => {
     return (

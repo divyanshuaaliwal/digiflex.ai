@@ -10,7 +10,7 @@ import Reviews from './components/Reviews';
 import SoftwareTestManagement from './pages/SoftwareTestManagement';
 import TestAutomation from './pages/TestAutomation';
 import PerformanceTesting from './pages/PerformanceTesting';
-import SecurityTestingServices from './pages/SecurityTestingServices';
+import SecurityTesting from './pages/SecurityTesting';
 import SeleniumAutomationTesting from './pages/SeleniumAutomationTesting';
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
 				<Route path="/services/testing/software-test-management" element={<SoftwareTestManagement />} />
 				<Route path="/services/testing/test-automation" element={<TestAutomation />} />
 				<Route path="/services/testing/performance-testing" element={<PerformanceTesting />} />
-				<Route path='/services/testing/security-testing' element={<SecurityTestingServices />} />
+				<Route path='/services/testing/security-testing' element={<SecurityTesting />} />
 				<Route path='/services/testing/selenium-automation-testing' element={<SeleniumAutomationTesting />} />
 			</Routes>
 
