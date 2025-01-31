@@ -7,17 +7,18 @@ const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const navItems = [
-      { label: 'Home', href: '#' },
-      { label: 'Services', href: '#' },
-      { label: 'Industries', href: '#' },
-      { label: 'Clients', href: '#' },
-      { label: 'Insights', href: '#' },
-      { label: 'Approach', href: '#' },
-      { label: 'About us', href: '#' },
+        { label: 'Home', href: '#' },
+        { label: 'Services', href: '#' },
+        { label: 'Industries', href: '#' },
+        { label: 'Clients', href: '#' },
+        { label: 'Insights', href: '#' },
+        { label: 'Approach', href: '#' },
+        { label: 'About us', href: '#' },
     ];
 
+
     return (
-        <nav className="bg-blue-950 text-white">
+        <nav className="sticky top-0 z-50 bg-blue-950 text-white">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex items-center justify-between h-16">
                     
