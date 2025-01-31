@@ -41,71 +41,72 @@ const Navbar = () => {
     ];
 
     const services = [
-      { 
-        id: 'Consulting', 
-        icon: Globe, 
-        title: 'Consulting',
-        color: 'text-pink-500',
-        description: 'Modern web applications built with React, Next.js, and other cutting-edge technologies.',
-        features: [
-            { icon: Code, title: 'Mobile & Web App Consulting', path: '/mobile-consulting' },
-            { icon: Server, title: 'Website Consulting', path: '/web-consulting' },
-            { icon: Globe, title: 'Salesforce Consulting', path: '/salesforce-consulting' },
-            { icon: ShoppingBag, title: 'Devops Consulting', path: '/devops-consulting' },
-            { icon: LineChart, title: 'Testing Consulting', path: '/testing-consulting' },
-            { icon: Clock, title: 'AI Consulting', path: '/ai-consulting' },
-        ],
-        image: 'https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&w=600&q=80'
-      },
-      { 
-        id: 'UI/UX', 
-        icon: Smartphone, 
-        title: 'UI/UX : Creative & Intelligent Designs',
-        color: 'text-blue-500',
-        description: 'Native and cross-platform mobile applications for iOS and Android.',
-        features: [
-          { icon: Smartphone, title: 'Brand Strategy',path: '' },
-          { icon: Smartphone, title: 'Design Consulting',path: ''  },
-          { icon: Code, title: 'Product Design',path: ''  },
-          { icon: Code, title: 'UX Research',path: ''  },
-          { icon: Code, title: 'UI & Animation',path: ''  },
-          { icon: Code, title: 'Design Testing',path: ''  },
-        ],
-        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80'
-      },
-      { 
-        id: 'Apps', 
-        icon: ShoppingCart, 
-        title: 'Custom Apps',
-        color: 'text-green-500',
-        description: 'Full-featured e-commerce solutions with secure payment processing.',
-        features: [
-          { icon: ShoppingCart, title: 'Mobile App Development',path: '' },
-          { icon: Database, title: 'Web Application Development',path: '' },
-          { icon: ShoppingBag, title: 'Website Development',path: '' },
-          { icon: LineChart, title: 'SaaS Development',path: '' },
-          { icon: Globe, title: 'Blockchain Development',path: '' },
-          { icon: Server, title: 'Integration and Migration',path: '' },
-          { icon: Server, title: 'CEM Development',path: '' }
-        ],
-        image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80'
-      },
-      { 
-        id: 'QA', 
-        icon: Cpu, 
-        title: 'Testing & QA',
-        color: 'text-yellow-500',
-        description: 'Cutting-edge solutions using AI, ML, and blockchain technologies.',
-        features: [
-          { icon: Cpu, title: 'Software Test Management' ,path: ''},
-          { icon: Database, title: 'Test Automation',path: '' },
-          { icon: Code, title: 'Performance Testing' ,path: ''},
-          { icon: Server, title: 'Security Testing Services' ,path: ''},
-          { icon: Globe, title: 'Selenium Automation Testing',path: '' }
-        ],
-        image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80'
-      },
-    ];
+        { 
+          id: 'Consulting', 
+          icon: Globe, 
+          title: 'Consulting',
+          color: 'text-pink-500',
+          description: 'Modern web applications built with React, Next.js, and other cutting-edge technologies.',
+          features: [
+            { icon: Code, title: 'Mobile & Web App Consulting', path: '/services/consulting/mobile-consulting' },
+            { icon: Server, title: 'Website Consulting', path: '/services/consulting/web-consulting' },
+            { icon: Globe, title: 'Salesforce Consulting', path: '/services/consulting/salesforce-consulting' },
+            { icon: ShoppingBag, title: 'DevOps Consulting', path: '/services/consulting/devops-consulting' },
+            { icon: LineChart, title: 'Testing Consulting', path: '/services/consulting/testing-consulting' },
+            { icon: Clock, title: 'AI Consulting', path: '/services/consulting/ai-consulting' },
+          ],
+          image: 'https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&w=600&q=80'
+        },
+        { 
+          id: 'UI/UX', 
+          icon: Smartphone, 
+          title: 'UI/UX : Creative & Intelligent Designs',
+          color: 'text-blue-500',
+          description: 'Native and cross-platform mobile applications for iOS and Android.',
+          features: [
+            { icon: Smartphone, title: 'Brand Strategy', path: '#' },
+            { icon: Smartphone, title: 'Design Consulting', path: '#' },
+            { icon: Code, title: 'Product Design', path: '#' },
+            { icon: Code, title: 'UX Research', path: '#' },
+            { icon: Code, title: 'UI & Animation', path: '#' },
+            { icon: Code, title: 'Design Testing', path: '#' },
+          ],
+          image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80'
+        },
+        { 
+          id: 'Apps', 
+          icon: ShoppingCart, 
+          title: 'Custom Apps',
+          color: 'text-green-500',
+          description: 'Full-featured e-commerce solutions with secure payment processing.',
+          features: [
+            { icon: ShoppingCart, title: 'Mobile App Development', path: '/services/custom-apps/mobile' },
+            { icon: Database, title: 'Web Application Development', path: '/services/custom-apps/web' },
+            { icon: ShoppingBag, title: 'Website Development', path: '/services/custom-apps/desktop' },
+            { icon: LineChart, title: 'SaaS Development', path: '/services/custom-apps/saas' },
+            { icon: Globe, title: 'Blockchain Development', path: '/services/custom-apps/block-chain' },
+            { icon: Server, title: 'Integration and Migration', path: '/services/custom-apps/intregration' },
+            { icon: Server, title: 'CEM Development', path: '/services/custom-apps/cem-devlopment' }
+          ],
+          image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80'
+        },
+        { 
+          id: 'QA', 
+          icon: Cpu, 
+          title: 'Testing & QA',
+          color: 'text-yellow-500',
+          description: 'Cutting-edge solutions using AI, ML, and blockchain technologies.',
+          features: [
+            { icon: Cpu, title: 'Software Test Management', path: '/services/testing/software-test-management' },
+            { icon: Database, title: 'Test Automation', path: '/services/testing/test-automation' },
+            { icon: Code, title: 'Performance Testing', path: '/services/testing/performance-testing' },
+            { icon: Server, title: 'Security Testing Services', path: '/services/testing/security-testing' },
+            { icon: Globe, title: 'Selenium Automation Testing', path: '/services/testing/selenium-automation-testing' }
+          ],
+          image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80'
+        },
+      ];
+      
   
     const activeServiceData = services.find(s => s.id === activeService) || services[0];
 
