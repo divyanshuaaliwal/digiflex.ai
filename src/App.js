@@ -1,22 +1,33 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Navigation from "./components/Navigation";
+import Reviews from "./components/Reviews";
+
+
 import Hero from '../src/container/Services/Custom App/CEM/Hero';
 import Mobile from '../src/container/Services/Custom App/Intregation/Mobile';
 import Saas from '../src/container/Services/Custom App/Saas/Saas';
 import Website from '../src/container/Services/Custom App/Website/Website';
 import Application from '../src/container/Services/Custom App/Webapplication/Application';
 import Amp from '../src/container/Services/Custom App/MobileApp/Amp';
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Navigation from "./components/Navigation";
-import Reviews from "./components/Reviews";
+
+
 import SoftwareTestManagement from "./pages/SoftwareTestManagement";
 import TestAutomation from "./pages/TestAutomation";
 import PerformanceTesting from "./pages/PerformanceTesting";
 import SecurityTesting from "./pages/SecurityTesting";
 import SeleniumAutomationTesting from "./pages/SeleniumAutomationTesting";
 
+import WebConsulting from './pages/WebConsulting';
+import MobileConsulting from './pages/MobileConsulting'
+import SalesforceConsulting from './pages/SalesforceConsulting';
+import DevopsConsulting from './pages/DevopsConsulting';
+import TestingConsulting from './pages/TestingConsulting';
+import AiConsulting from './pages/AiConsulting';
 
 function App() {
   const location = useLocation();
@@ -35,34 +46,31 @@ function App() {
 
       <Routes>
         <Route path="/" element={<SoftwareTestManagement />} />
-        <Route
-          path="/services/testing/software-test-management"
-          element={<SoftwareTestManagement />}
-        />
-        <Route
-          path="/services/testing/test-automation"
-          element={<TestAutomation />}
-        />
-        <Route
-          path="/services/testing/performance-testing"
-          element={<PerformanceTesting />}
-        />
-        <Route
-          path="/services/testing/security-testing"
-          element={<SecurityTesting />}
-        />
-        <Route
-          path="/services/testing/selenium-automation-testing"
-          element={<SeleniumAutomationTesting />}
-        />
-      <Route path="/intregration" element={<Mobile/>} />
-			<Route path="/cem-devlopment" element={<Hero/>} />
-			<Route path="/services/apps/saas" element={<Saas/>} />
-			<Route path="/services/apps/desktop" element={<Website/>} />
-			<Route path="/services/apps/mobile" element={<Application/>} />
-			<Route path="/services/apps/web" element={<Amp/>} />
-		 
-      </Routes>
+
+        <Route path="/services/testing/software-test-management" element={<SoftwareTestManagement />}/>
+        <Route path="/services/testing/test-automation" element={<TestAutomation />}/>
+        <Route path="/services/testing/performance-testing" element={<PerformanceTesting />}/>
+        <Route path="/services/testing/security-testing" element={<SecurityTesting />}/>
+        <Route path="/services/testing/selenium-automation-testing" element={<SeleniumAutomationTesting />}/>
+
+        
+        <Route path="/intregration" element={<Mobile/>} />
+        <Route path="/cem-devlopment" element={<Hero/>} />
+        <Route path="/services/apps/saas" element={<Saas/>} />
+        <Route path="/services/apps/desktop" element={<Website/>} />
+        <Route path="/services/apps/mobile" element={<Application/>} />
+        <Route path="/services/apps/web" element={<Amp/>} />
+
+        <Route path="/" element={<WebConsulting />} />
+        <Route path="/mobile-consulting" element={<MobileConsulting />} />
+        <Route path="/web-consulting" element={<WebConsulting />} />
+        <Route path="/salesforce-consulting" element={<SalesforceConsulting />} />
+        <Route path="/devops-consulting" element={<DevopsConsulting />} />
+        <Route path="/testing-consulting" element={<TestingConsulting />} />
+        <Route path="/ai-consulting" element={<AiConsulting />} />
+
+            
+        </Routes>
 
       <Reviews />
       <Contact />
