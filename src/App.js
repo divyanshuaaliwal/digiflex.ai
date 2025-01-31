@@ -1,5 +1,6 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+
 import CemDevlopment from './pages/Cem-devlopment';
 import IntregrationandMigration from './pages/Intregration-and-Migration';
 import BlockChainDevlopment from './pages/BlockChainDevlopment'
@@ -7,16 +8,19 @@ import SaasDeclopment from './pages/Saas-Devlopment';
 import WebsiteDevlopment from './pages/WebsiteDevlopment';
 import MobileAppDevlopment from './pages/Mobile-App-Devlopment';
 import WebApplicationDevlopment from './pages/WebApplicationDevlopment';
+
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Reviews from "./components/Reviews";
+
 import SoftwareTestManagement from "./pages/SoftwareTestManagement";
 import TestAutomation from "./pages/TestAutomation";
 import PerformanceTesting from "./pages/PerformanceTesting";
 import SecurityTesting from "./pages/SecurityTesting";
 import SeleniumAutomationTesting from "./pages/SeleniumAutomationTesting";
+
 import WebConsulting from './pages/WebConsulting';
 import MobileConsulting from './pages/MobileConsulting'
 import SalesforceConsulting from './pages/SalesforceConsulting';
@@ -54,7 +58,7 @@ function App() {
         <Route path="/services/custom-apps/desktop" element={<WebsiteDevlopment/>} />
         <Route path="/services/custom-apps/block-chain" element={<BlockChainDevlopment/>} />
         <Route path="/services/custom-apps/mobile" element={<MobileAppDevlopment/>} />
-        <Route path="/services/custom-apps/web" element={<MobileAppDevlopment/>} />
+        <Route path="/services/custom-apps/web" element={<WebApplicationDevlopment/>} />
 
         <Route path="/services/consulting/mobile-consulting" element={<MobileConsulting />} />
         <Route path="/services/consulting/web-consulting" element={<WebConsulting />} />

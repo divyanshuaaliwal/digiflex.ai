@@ -60,7 +60,7 @@ const Navbar = () => {
         { 
           id: 'UI/UX', 
           icon: Smartphone, 
-          title: 'UI/UX : Creative & Intelligent Designs',
+          title: 'UI/UX',
           color: 'text-blue-500',
           description: 'Native and cross-platform mobile applications for iOS and Android.',
           features: [
@@ -136,7 +136,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className="sticky top-0 z-50 w-full bg-[#171B26] text-white">
+        <nav className="sticky top-0 z-50 w-full bg-blue-950 text-white">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
