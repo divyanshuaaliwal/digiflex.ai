@@ -17,7 +17,7 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className="bg-[#171B26] text-white">
+        <nav className="bg-blue-950 text-white">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex items-center justify-between h-16">
                     
@@ -36,7 +36,7 @@ const Navbar = () => {
                                             <a
                                                 key={item.label}
                                                 href={item.href}
-                                                className="text-white hover:text-gray-300 transition-colors text-sm"
+                                                className="text-white hover:text-gray-300 transition-colors font-medium"
                                             >
                                                 {item.label}
                                             </a>
