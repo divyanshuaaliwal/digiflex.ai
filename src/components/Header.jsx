@@ -16,7 +16,7 @@ import { Search, X, Menu,
   Clock,
   ChevronDown
 } from 'lucide-react';
-import logo from "../assests/digiflex.png";
+import logo from "../assets/digiflex.png";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
