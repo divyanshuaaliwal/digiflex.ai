@@ -1,8 +1,8 @@
 import imagg from '../assets/progressive-app-concept-illustration-b.png';
-import Application2 from '../container/Services/Custom App/Mobile App Devlopment/Amp2';
-import Application3 from '../container/Services/Custom App/Mobile App Devlopment/Amp3';
-import Application4 from '../container/Services/Custom App/Mobile App Devlopment/Amp4';
-import Application5 from '../container/Services/Custom App/Mobile App Devlopment/Amp5';
+import Application2 from '../container/Services/Custom App/Web Application Devlopment/Application2';
+import Application3 from '../container/Services/Custom App/Web Application Devlopment/Application3';
+import Application4 from '../container/Services/Custom App/Web Application Devlopment/Application4';
+import Application5 from '../container/Services/Custom App/Web Application Devlopment/Application5';
 
 
 

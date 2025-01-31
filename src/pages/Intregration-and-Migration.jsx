@@ -2,7 +2,7 @@ import React from 'react';
 import bg8 from '../assets/bg8.png'
 import Mobile2 from '../container/Services/Custom App/Intregation and Migration/Mobile2';
 import Mobile3 from '../container/Services/Custom App/Intregation and Migration/Mobile3';
-import Mobile4 from '../container/Services/Custom App/Intregation and Migration/Mobile4';
+import Mobile4 from '../container/Services/Custom App/Intregation and Migration/mobile4';
 
 
 const Mobile = () => {

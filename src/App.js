@@ -2,10 +2,11 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import CemDevlopment from './pages/Cem-devlopment';
 import IntregrationandMigration from './pages/Intregration-and-Migration';
+import BlockChainDevlopment from './pages/BlockChainDevlopment'
 import SaasDeclopment from './pages/Saas-Devlopment';
 import WebsiteDevlopment from './pages/WebsiteDevlopment';
-import MobileAppDevlopment from './pages/MobileAppDevlopment';
 import MobileAppDevlopment from './pages/Mobile-App-Devlopment';
+import WebApplicationDevlopment from './pages/WebApplicationDevlopment';
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -53,7 +54,8 @@ function App() {
         <Route path="/services/apps/saas" element={<SaasDeclopment/>} />
         <Route path="/services/apps/desktop" element={<WebsiteDevlopment/>} />
         <Route path="/services/apps/mobile" element={<MobileAppDevlopment/>} />
-        <Route path="/services/apps/web" element={<MobileAppDevlopment/>} />
+        <Route path="/BlockChain" element={<BlockChainDevlopment/>} />
+        <Route path="/services/apps/web" element={<WebApplicationDevlopment/>} />
 
         <Route path="/" element={<WebConsulting />} />
         <Route path="/mobile-consulting" element={<MobileConsulting />} />

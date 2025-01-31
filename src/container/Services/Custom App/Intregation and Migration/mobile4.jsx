@@ -1,5 +1,5 @@
 import React from 'react';
-import Mobile3 from './Mobile3';
+
 
 
 const ChevronLeft = () => (
