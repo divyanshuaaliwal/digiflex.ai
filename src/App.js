@@ -48,22 +48,20 @@ function App() {
         <Route path="/services/testing/security-testing" element={<SecurityTesting />}/>
         <Route path="/services/testing/selenium-automation-testing" element={<SeleniumAutomationTesting />}/>
 
-        
-        <Route path="/intregration" element={<IntregrationandMigration/>} />
-        <Route path="/cem-devlopment" element={<CemDevlopment/>} />
-        <Route path="/services/apps/saas" element={<SaasDeclopment/>} />
-        <Route path="/services/apps/desktop" element={<WebsiteDevlopment/>} />
-        <Route path="/services/apps/mobile" element={<MobileAppDevlopment/>} />
-        <Route path="/BlockChain" element={<BlockChainDevlopment/>} />
-        <Route path="/services/apps/web" element={<WebApplicationDevlopment/>} />
+        <Route path="/services/custom-apps/intregration" element={<IntregrationandMigration/>} />
+        <Route path="/services/custom-apps/cem-devlopment" element={<CemDevlopment/>} />
+        <Route path="/services/custom-apps/saas" element={<SaasDeclopment/>} />
+        <Route path="/services/custom-apps/desktop" element={<WebsiteDevlopment/>} />
+        <Route path="/services/custom-apps/block-chain" element={<BlockChainDevlopment/>} />
+        <Route path="/services/custom-apps/mobile" element={<MobileAppDevlopment/>} />
+        <Route path="/services/custom-apps/web" element={<MobileAppDevlopment/>} />
 
-        <Route path="/" element={<WebConsulting />} />
-        <Route path="/mobile-consulting" element={<MobileConsulting />} />
-        <Route path="/web-consulting" element={<WebConsulting />} />
-        <Route path="/salesforce-consulting" element={<SalesforceConsulting />} />
-        <Route path="/devops-consulting" element={<DevopsConsulting />} />
-        <Route path="/testing-consulting" element={<TestingConsulting />} />
-        <Route path="/ai-consulting" element={<AiConsulting />} />
+        <Route path="/services/consulting/mobile-consulting" element={<MobileConsulting />} />
+        <Route path="/services/consulting/web-consulting" element={<WebConsulting />} />
+        <Route path="/services/consulting/salesforce-consulting" element={<SalesforceConsulting />} />
+        <Route path="/services/consulting/devops-consulting" element={<DevopsConsulting />} />
+        <Route path="/services/consulting/testing-consulting" element={<TestingConsulting />} />
+        <Route path="/services/consulting/ai-consulting" element={<AiConsulting />} />
 
             
         </Routes>
