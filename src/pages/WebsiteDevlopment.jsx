@@ -1,8 +1,8 @@
 import React from 'react'
-import Website2 from '../container/Services/Custom App/Website/Website2'
-import Website3 from '../container/Services/Custom App/Website/Website3'
-import Website4 from '../container/Services/Custom App/Website/Website4'
-import Website5 from '../container/Services/Custom App/Website/Website5'
+import Website2 from '../container/Services/Custom App/Website Devlopment/Website2'
+import Website3 from '../container/Services/Custom App/Website Devlopment/Website3'
+import Website4 from '../container/Services/Custom App/Website Devlopment/Website4'
+import Website5 from '../container/Services/Custom App/Website Devlopment/Website5'
 
 import { Menu, PhoneIcon as WhatsApp } from "lucide-react"
 import bg13 from "../assets/bg13.png" // Import your image

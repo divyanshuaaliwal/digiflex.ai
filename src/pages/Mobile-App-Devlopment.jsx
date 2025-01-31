@@ -1,13 +1,13 @@
 import React from 'react';
-import Amp2 from '..//container/Services/Custom App/MobileApp/Amp2'
+import Amp2 from '..//container/Services/Custom App/Mobile App Devlopment/Amp2'
 import Mobilr from '../assets/mobile-app-development-concept-modern-technology-smartphone-interface-design-application-building-programming-vector-flat-illustration-b.png'
 import Com from '../assets/Logo2.jpg'
 import Com2 from '../assets/Logo3.jpg'
 import Com3 from '../assets/Logo4.jpg'
 import Com4 from '../assets/Logo5.jpg'
-import Amp3 from '..//container/Services/Custom App/MobileApp/Amp3';
+import Amp3 from '..//container/Services/Custom App/Mobile App Devlopment/Amp3';
 
-import Amp5 from '..//container/Services/Custom App/MobileApp/Amp5';
+import Amp5 from '..//container/Services/Custom App/Mobile App Devlopment/Amp5';
 
 import { MessageCircle } from 'lucide-react';
 

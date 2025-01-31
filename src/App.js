@@ -1,11 +1,11 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import Hero from './pages/Hero';
-import Mobile from './pages/Mobile';
-import Saas from './pages/Saas';
-import Website from './pages/Website';
-import Application from './pages/Application';
-import Amp from './pages/Amp';
+import CemDevlopment from './pages/Cem-devlopment';
+import IntregrationandMigration from './pages/Intregration-and-Migration';
+import SaasDeclopment from './pages/Saas-Devlopment';
+import WebsiteDevlopment from './pages/WebsiteDevlopment';
+import MobileAppDevlopment from './pages/MobileAppDevlopment';
+import MobileAppDevlopment from './pages/Mobile-App-Devlopment';
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -16,7 +16,6 @@ import TestAutomation from "./pages/TestAutomation";
 import PerformanceTesting from "./pages/PerformanceTesting";
 import SecurityTesting from "./pages/SecurityTesting";
 import SeleniumAutomationTesting from "./pages/SeleniumAutomationTesting";
-
 import WebConsulting from './pages/WebConsulting';
 import MobileConsulting from './pages/MobileConsulting'
 import SalesforceConsulting from './pages/SalesforceConsulting';
@@ -49,12 +48,12 @@ function App() {
         <Route path="/services/testing/selenium-automation-testing" element={<SeleniumAutomationTesting />}/>
 
         
-        <Route path="/intregration" element={<Mobile/>} />
-        <Route path="/cem-devlopment" element={<Hero/>} />
-        <Route path="/services/apps/saas" element={<Saas/>} />
-        <Route path="/services/apps/desktop" element={<Website/>} />
-        <Route path="/services/apps/mobile" element={<Application/>} />
-        <Route path="/services/apps/web" element={<Amp/>} />
+        <Route path="/intregration" element={<IntregrationandMigration/>} />
+        <Route path="/cem-devlopment" element={<CemDevlopment/>} />
+        <Route path="/services/apps/saas" element={<SaasDeclopment/>} />
+        <Route path="/services/apps/desktop" element={<WebsiteDevlopment/>} />
+        <Route path="/services/apps/mobile" element={<MobileAppDevlopment/>} />
+        <Route path="/services/apps/web" element={<MobileAppDevlopment/>} />
 
         <Route path="/" element={<WebConsulting />} />
         <Route path="/mobile-consulting" element={<MobileConsulting />} />

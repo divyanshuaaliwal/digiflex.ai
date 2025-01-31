@@ -1,9 +1,9 @@
 import React from "react";
 import bg3 from '../assets/bg3.png';
-import Cards from "../container/Services/Custom App/CEM/Cards"
-import Thirds from "../container/Services/Custom App/CEM/Third";
-import Four from "../container/Services/Custom App/CEM/Four";
-import KnowledgeSection from "../container/Services/Custom App/CEM/KnowledgeSection";
+import Cards from "../container/Services/Custom App/CEM Devlopment/Cards"
+import Thirds from "../container/Services/Custom App/CEM Devlopment/Third";
+import Four from "../container/Services/Custom App/CEM Devlopment/Four";
+import KnowledgeSection from "../container/Services/Custom App/CEM Devlopment/KnowledgeSection";
 
 
 
