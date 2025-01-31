@@ -1,8 +1,8 @@
-import imagg from '../../../../assets/progressive-app-concept-illustration-b.png';
-import Application2 from './Application2';
-import Application3 from './Application3';
-import Application4 from './Application4';
-import Application5 from './Application5';
+import imagg from '../assets/progressive-app-concept-illustration-b.png';
+import Application2 from '../container/Services/Custom App/Webapplication/Application2';
+import Application3 from '../container/Services/Custom App/Webapplication/Application3';
+import Application4 from '../container/Services/Custom App/Webapplication/Application4';
+import Application5 from '../container/Services/Custom App/Webapplication/Application5';
 
 
 

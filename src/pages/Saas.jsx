@@ -1,9 +1,9 @@
 import React from "react";
-import Saas2 from "./Saas2";
-import Saas3 from "./Saas3";
-import Saas4 from "./Saas4";
-import Saas5 from "./Saas5";
-import bg19 from "../../../../assets/bg19.jpg";
+import Saas2 from "../container/Services/Custom App/Saas/Saas2";
+import Saas3 from "../container/Services/Custom App/Saas/Saas3";
+import Saas4 from "../container/Services/Custom App/Saas/Saas4";
+import Saas5 from "../container/Services/Custom App/Saas/Saas5";
+import bg19 from "../assets/bg19.jpg";
 const Saas = () => {
   const clients = [
     {

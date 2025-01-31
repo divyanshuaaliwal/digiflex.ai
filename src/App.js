@@ -1,21 +1,16 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-
+import Hero from './pages/Hero';
+import Mobile from './pages/Mobile';
+import Saas from './pages/Saas';
+import Website from './pages/Website';
+import Application from './pages/Application';
+import Amp from './pages/Amp';
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Reviews from "./components/Reviews";
-
-
-import Hero from '../src/container/Services/Custom App/CEM/Hero';
-import Mobile from '../src/container/Services/Custom App/Intregation/Mobile';
-import Saas from '../src/container/Services/Custom App/Saas/Saas';
-import Website from '../src/container/Services/Custom App/Website/Website';
-import Application from '../src/container/Services/Custom App/Webapplication/Application';
-import Amp from '../src/container/Services/Custom App/MobileApp/Amp';
-
-
 import SoftwareTestManagement from "./pages/SoftwareTestManagement";
 import TestAutomation from "./pages/TestAutomation";
 import PerformanceTesting from "./pages/PerformanceTesting";
