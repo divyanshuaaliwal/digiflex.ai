@@ -1,23 +1,7 @@
 import React, { useState } from 'react'; 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-
-
-import r1 from '../../../../assets/Mobile.jpg';
-import r2 from '../../../../assets/Mobile2.jpg';
-import r3 from '../../../../assets/Mobile3.jpg';
-import r4 from '../../../../assets/Mobile4.jpg';
-import r5 from '../../../../assets/Mobile5.jpg';
-import r6 from '../../../../assets/Mobile6.jpg';
-import r7 from '../../../../assets/Mobile7.jpg';
-import r8 from '../../../../assets/Mobile8.jpg';
-import r9 from '../../../../assets/Mobile9.jpg';
-
-import Db1 from '../../../../assets/1.jpg';
-import Db2 from '../../../../assets/2.jpg';
-import Db3 from '../../../../assets/3.jpg';
-import Db4 from '../../../../assets/4.jpg';
-import Db5 from '../../../../assets/5.jpg';
-import Db6 from '../../../../assets/6.jpg';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, FaJava, FaAndroid, FaApple, FaWindows, FaDatabase } from 'react-icons/fa';
+import { SiMysql, SiPostgresql, SiMongodb } from 'react-icons/si';
 
 const WebApplication4 = () => {
   const [activeTab, setActiveTab] = useState('programming');
@@ -25,15 +9,30 @@ const WebApplication4 = () => {
   const categories = {
     programming: {
       title: 'Programming Languages',
-      items: [r1, r2, r3, r4, r5, r6, r7, r8, r9]
+      icons: [
+        <FaHtml5 key="html5" size={40} className="text-[#E34F26]" />, 
+        <FaCss3Alt key="css3" size={40} className="text-[#1572B6]" />, 
+        <FaJs key="javascript" size={40} className="text-[#F7DF1E]" />, 
+        <FaReact key="react" size={40} className="text-[#61DAFB]" />, 
+        <FaPython key="python" size={40} className="text-[#3776AB]" />, 
+        <FaJava key="java" size={40} className="text-[#007396]" />
+      ]
     },
     mobile: {
       title: 'Mobile & Platforms',
-      items: [r1, r2, r3, r4, r5, r6, r7, r8, r9]
+      icons: [
+        <FaAndroid key="android" size={40} className="text-[#3DDC84]" />, 
+        <FaApple key="apple" size={40} className="text-[#A2AAAD]" />, 
+        <FaWindows key="windows" size={40} className="text-[#0078D6]" />
+      ]
     },
     databases: {
       title: 'Databases',
-      items: [Db1, Db2, Db3, Db4, Db5, Db6]
+      icons: [
+        <SiMysql key="mysql" size={40} className="text-[#4479A1]" />, 
+        <SiPostgresql key="postgresql" size={40} className="text-[#336791]" />, 
+        <SiMongodb key="mongodb" size={40} className="text-[#47A248]" />
+      ]
     }
   };
 
@@ -52,18 +51,14 @@ const WebApplication4 = () => {
         {Object.entries(categories).map(([key, category]) => (
           <div 
             key={key}
-            className="bg-gray-50 rounded-lg p-6 shadow-lg transition-transform transform hover:scale-105"
+            className="bg-gray-50 rounded-lg p-6 shadow-lg transition-transform transform hover:scale-105 flex flex-col items-center"
           >
-            <h3 className="text-xl font-semibold text-[#4A90E2] mb-6">
+            <div className="flex gap-4 flex-wrap justify-center">
+              {category.icons.map((icon) => icon)}
+            </div>
+            <h3 className="text-xl font-semibold text-[#4A90E2] mt-4">
               {category.title}
             </h3>
-            <div className="flex flex-wrap gap-3">
-              {category.items.map((image, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <img src={image} alt="Technology" className="w-16 h-16 rounded-full" />
-                </div>
-              ))}
-            </div>
           </div>
         ))}
       </div>
