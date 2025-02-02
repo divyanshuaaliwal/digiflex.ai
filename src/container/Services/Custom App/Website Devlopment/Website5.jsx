@@ -10,76 +10,46 @@ export default function Website5() {
       </h1>
 
       <div className="grid md:grid-cols-2 gap-8">
-        {/* Left side - Pricing Tables */}
+        {/* Left side - Image showcasing website development */}
         <div className="p-6 border rounded-lg">
           <img
             src={bg9}
-            alt="Website Development Cost Breakdown"
+            alt="Website Development Services"
             width="500"
             height="300"
             className="w-full h-auto"
           />
-
           <div className="space-y-4 mt-6">
-            <div className="flex justify-between border-b pb-2">
-              <span>Website Design</span>
-              <span className="font-semibold">Rs 6000- 40000</span>
-            </div>
-            <div className="flex justify-between border-b pb-2">
-              <span>Website Maintenance</span>
-              <span className="font-semibold">Rs. 3000- 12000/Year</span>
-            </div>
-            <div className="flex justify-between border-b pb-2">
-              <span>Website Marketing</span>
-              <span className="font-semibold">Rs. 20000- 60000/Month</span>
-            </div>
-            <div className="flex justify-between border-b pb-2">
-              <span>If Hire Any Agency/Freelancer</span>
-              <span className="font-semibold">Rs 2000- 25000</span>
-            </div>
-            <div className="flex justify-between border-b pb-2">
-              <span>Website Maintenance By Agency</span>
-              <span className="font-semibold">Rs. 2000- 10000/Year</span>
-            </div>
+            <p className="text-lg text-gray-700">
+              We provide top-tier website development services tailored to your business needs. Whether you're looking to establish an online presence, expand your e-commerce capabilities, or create a custom web application, our expert team ensures your vision is brought to life with high-quality design and functionality.
+            </p>
           </div>
         </div>
 
-        {/* Right side - Business Types Table */}
+        {/* Right side - Services Information */}
         <div className="p-6 border rounded-lg">
-          <h2 className="text-xl font-bold mb-4">WEBSITE DEVELOPMENT COST FROM RANKON</h2>
+          <h2 className="text-xl font-bold mb-4">OUR WEBSITE DEVELOPMENT SERVICES</h2>
 
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead>
-                <tr className="border-b">
-                  <th className="text-left py-2">BUSINESS TYPE</th>
-                  <th className="text-left py-2">COST</th>
-                  <th className="text-left py-2">ANNUAL WEBSITE MAINTENANCE COST</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b">
-                  <td className="py-2">Informational Website</td>
-                  <td className="py-2">Rs. 600-1500 Per Year</td>
-                  <td className="py-2">3 Pages (Rs.2500-5000)</td>
-                </tr>
-                <tr className="border-b">
-                  <td className="py-2">Business Website</td>
-                  <td className="py-2">Rs. 1500-2000 Per Year</td>
-                  <td className="py-2">5-10 Pages (Rs.5000-10000)</td>
-                </tr>
-                <tr className="border-b">
-                  <td className="py-2">E-commerce Website</td>
-                  <td className="py-2">Rs. 3000-5000 Per Year</td>
-                  <td className="py-2">Up to 10 Products (Rs.15000)</td>
-                </tr>
-                <tr className="border-b">
-                  <td className="py-2">Website Application</td>
-                  <td className="py-2">Rs. 5000-10000 Per Year</td>
-                  <td className="py-2">2-10 Web Pages (Rs.45000)</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="space-y-4">
+            <div className="space-y-2">
+              <h3 className="font-semibold text-lg">Informational Website</h3>
+              <p>Perfect for businesses or individuals looking to share information, showcase services, and provide easy navigation for visitors. Includes up to 3 pages.</p>
+            </div>
+
+            <div className="space-y-2">
+              <h3 className="font-semibold text-lg">Business Website</h3>
+              <p>Ideal for companies looking to establish an online presence. This includes up to 5-10 pages with essential business information and contact details.</p>
+            </div>
+
+            <div className="space-y-2">
+              <h3 className="font-semibold text-lg">E-commerce Website</h3>
+              <p>Perfect for businesses that sell products online. This includes advanced product catalog features, shopping cart integration, and secure payment options.</p>
+            </div>
+
+            <div className="space-y-2">
+              <h3 className="font-semibold text-lg">Web Application Development</h3>
+              <p>Custom web applications designed to meet the unique needs of your business, whether it’s a customer portal, internal tool, or anything in between.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -90,11 +60,7 @@ export default function Website5() {
           <Link to="#" className="text-red-600 hover:text-red-700 font-semibold">
             RANKON Technologies
           </Link>{" "}
-          now. Click on the link to know how much does it{" "}
-          <Link to="#" className="text-red-600 hover:text-red-700 font-semibold">
-            cost to create a website
-          </Link>{" "}
-          in India. Contact us for more details!
+          now. Click on the link to know more about how we can help you build your dream website.
         </p>
 
         {/* WhatsApp Icon */}

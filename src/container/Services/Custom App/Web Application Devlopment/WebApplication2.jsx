@@ -1,7 +1,7 @@
 import React from 'react';
 import { Smartphone, Zap, Layers } from 'lucide-react';
 
-const Application2 = () => {
+const WebApplication2 = () => {
   const services = [
     {
       id: 1,
@@ -55,4 +55,4 @@ const Application2 = () => {
   );
 };
 
-export default Application2;
+export default WebApplication2;

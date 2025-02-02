@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Application5 = () => {
+const WebApplication5 = () => {
   const pricingTiers = [
     {
       icon: "📄",
@@ -101,4 +101,4 @@ const Application5 = () => {
   );
 };
 
-export default Application5;
+export default WebApplication5;

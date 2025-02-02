@@ -19,7 +19,7 @@ import Logo9 from '../../../../assets/Logo9.jpg';
 import Logo10 from '../../../../assets/Logo10.jpg';
 
 
-const Application3 = () => {
+const WebApplication3 = () => {
   const industries = [
     { name: 'Healthcare', image: Hd },
     { name: 'Travel & Tourism', image: Hd2 },
@@ -109,4 +109,4 @@ const Application3 = () => {
   );
 };
 
-export default Application3;
+export default WebApplication3;

@@ -19,7 +19,7 @@ import Db4 from '../../../../assets/4.jpg';
 import Db5 from '../../../../assets/5.jpg';
 import Db6 from '../../../../assets/6.jpg';
 
-const Application4 = () => {
+const WebApplication4 = () => {
   const [activeTab, setActiveTab] = useState('programming');
   
   const categories = {
@@ -80,4 +80,4 @@ const Application4 = () => {
   );
 };
 
-export default Application4;
+export default WebApplication4;

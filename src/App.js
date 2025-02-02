@@ -52,13 +52,13 @@ function App() {
         <Route path="/services/testing/security-testing" element={<SecurityTesting />}/>
         <Route path="/services/testing/selenium-automation-testing" element={<SeleniumAutomationTesting />}/>
 
-        <Route path="/services/custom-apps/intregration" element={<IntregrationandMigration/>} />
+        <Route path="/services/custom-apps/IntregrationandMigration" element={<IntregrationandMigration/>} />
         <Route path="/services/custom-apps/cem-devlopment" element={<CemDevlopment/>} />
-        <Route path="/services/custom-apps/saas" element={<SaasDeclopment/>} />
-        <Route path="/services/custom-apps/desktop" element={<WebsiteDevlopment/>} />
+        <Route path="/services/custom-apps/SaasDevlopment" element={<SaasDeclopment/>} />
+        <Route path="/services/custom-apps/WebsiteDevlopment" element={<WebsiteDevlopment/>} />
         <Route path="/services/custom-apps/block-chain" element={<BlockChainDevlopment/>} />
-        <Route path="/services/custom-apps/mobile" element={<MobileAppDevlopment/>} />
-        <Route path="/services/custom-apps/web" element={<WebApplicationDevlopment/>} />
+        <Route path="/services/custom-apps/MobileAppDevlopment" element={<MobileAppDevlopment/>} />
+        <Route path="/services/custom-apps/webApplicationDevlopment" element={<WebApplicationDevlopment/>} />
 
         <Route path="/services/consulting/mobile-consulting" element={<MobileConsulting />} />
         <Route path="/services/consulting/web-consulting" element={<WebConsulting />} />

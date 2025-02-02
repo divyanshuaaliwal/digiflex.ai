@@ -1,8 +1,8 @@
 import imagg from '../assets/progressive-app-concept-illustration-b.png';
-import Application2 from '../container/Services/Custom App/Web Application Devlopment/Application2';
-import Application3 from '../container/Services/Custom App/Web Application Devlopment/Application3';
-import Application4 from '../container/Services/Custom App/Web Application Devlopment/Application4';
-import Application5 from '../container/Services/Custom App/Web Application Devlopment/Application5';
+import WebApplication2 from '../container/Services/Custom App/Web Application Devlopment/WebApplication2';
+import WebApplication3 from '../container/Services/Custom App/Web Application Devlopment/WebApplication3';
+import WebApplication4 from '../container/Services/Custom App/Web Application Devlopment/WebApplication4';
+import WebApplication5 from '../container/Services/Custom App/Web Application Devlopment/WebApplication5';
 
 
 
@@ -40,10 +40,10 @@ export default function Application() {
       </div>
 
       {/* Render Additional Sections */}
-      <Application2 />
-      <Application3 />
-      <Application4 />
-      <Application5 />
+      <WebApplication2/>
+      <WebApplication3/>
+      <WebApplication4/>
+      <WebApplication5/>
      
     </>
   );

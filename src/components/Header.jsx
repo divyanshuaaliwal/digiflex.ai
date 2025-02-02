@@ -80,12 +80,12 @@ const Navbar = () => {
           color: 'text-green-500',
           description: 'Full-featured e-commerce solutions with secure payment processing.',
           features: [
-            { icon: ShoppingCart, title: 'Mobile App Development', path: '/services/custom-apps/mobile' },
-            { icon: Database, title: 'Web Application Development', path: '/services/custom-apps/web' },
-            { icon: ShoppingBag, title: 'Website Development', path: '/services/custom-apps/desktop' },
-            { icon: LineChart, title: 'SaaS Development', path: '/services/custom-apps/saas' },
+            { icon: ShoppingCart, title: 'Mobile App Development', path: '/services/custom-apps/MobileAppDevlopment' },
+            { icon: Database, title: 'Web Application Development', path: '/services/custom-apps/webApplicationDevlopment' },
+            { icon: ShoppingBag, title: 'Website Development', path: '/services/custom-apps/WebsiteDevlopment' },
+            { icon: LineChart, title: 'SaaS Development', path: '/services/custom-apps/SaasDevlopment' },
             { icon: Globe, title: 'Blockchain Development', path: '/services/custom-apps/block-chain' },
-            { icon: Server, title: 'Integration and Migration', path: '/services/custom-apps/intregration' },
+            { icon: Server, title: 'Integration and Migration', path: '/services/custom-apps/IntregrationandMigration' },
             { icon: Server, title: 'CEM Development', path: '/services/custom-apps/cem-devlopment' }
           ],
           image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80'

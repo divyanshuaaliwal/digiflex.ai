@@ -36,8 +36,9 @@ const Hero = () => {
 
     <Cards/>
     <Thirds/>
-    <KnowledgeSection/>
     <Four/>
+    <KnowledgeSection/>
+    
     
 
     </>

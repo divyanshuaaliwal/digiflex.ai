@@ -1,26 +1,67 @@
 import React from 'react';
+import { Code, Clipboard, CheckCircle, Coffee, ShoppingCart } from 'lucide-react';  // Importing icons
+import bussse from '../../../../assets/Busssensss.png';
+
+const processSteps = [
+  {
+    title: "Planning",
+    description: "We start by understanding your business needs, defining the goals, and outlining the structure of the website to meet your objectives and audience.",
+    icon: <Clipboard className="w-8 h-8 text-[#172554]" />, // Add icon
+  },
+  {
+    title: "Design",
+    description: "Our creative team designs visually appealing mockups, wireframes, and interactive prototypes that align with your brand identity and user experience expectations.",
+    icon: <Coffee className="w-8 h-8 text-[#172554]" />, // Add icon
+  },
+  {
+    title: "Development",
+    description: "Our skilled developers turn the designs into a fully functional website by integrating the necessary technology and tools, ensuring a responsive, mobile-friendly platform.",
+    icon: <Code className="w-8 h-8 text-[#172554]" />, // Add icon
+  },
+  {
+    title: "Testing",
+    description: "We perform thorough testing across various devices and browsers to ensure everything functions perfectly, from usability to load time and security.",
+    icon: <CheckCircle className="w-8 h-8 text-[#172554]" />, // Add icon
+  },
+  {
+    title: "Launch",
+    description: "Once all tests are complete, we deploy the website to the live environment, ensuring a smooth transition with no downtime, so your site is up and running.",
+    icon: <ShoppingCart className="w-8 h-8 text-[#172554]" />, // Add icon
+  },
+  {
+    title: "Maintenance",
+    description: "After launch, we provide ongoing support to address any bugs, update content, and optimize for performance, ensuring the website remains functional and up-to-date.",
+    icon: <Clipboard className="w-8 h-8 text-[#172554]" />, // Add icon
+  },
+];
 
 const packages = [
   {
     title: "STARTUP WEBSITE",
-    price: "10,000 INR/ 150 USD",
     subtitle: "Best for Startups",
+    description: "Perfect for entrepreneurs and small businesses looking to establish a digital presence. Simple, professional, and cost-effective.",
     buttonText: "Startup Plan",
-    bgColor: "bg-[#172554]", // Custom blue background color
+    bgColor: "bg-[#172554]",
+    logo: "https://via.placeholder.com/50",
+    icon: <Clipboard className="w-8 h-8 text-white" />, // Add icon for packages
   },
   {
     title: "SMALL BUSINESS",
-    price: "20,000 INR/ 250 USD",
     subtitle: "Best for Small Business",
+    description: "Ideal for growing small businesses that need more functionality, such as a blog, contact form, and customer engagement tools.",
     buttonText: "Small Business Plan",
     bgColor: "bg-[#172554]",
+    logo: "https://via.placeholder.com/50",
+    icon: <Code className="w-8 h-8 text-white" />, // Add icon for packages
   },
   {
     title: "ECOMMERCE WEBSITE",
-    price: "35,000 INR/ 420 USD",
     subtitle: "Best for Large Business",
+    description: "Designed for larger businesses with complex product catalogs, advanced search options, and full eCommerce capabilities.",
     buttonText: "Ecommerce Website Plan",
     bgColor: "bg-[#172554]",
+    logo: "https://via.placeholder.com/50",
+    icon: <ShoppingCart className="w-8 h-8 text-white" />, // Add icon for packages
   },
 ];
 
@@ -52,21 +93,14 @@ export default function Website4() {
                 className={`${pkg.bgColor} text-white text-center rounded-lg shadow-lg`}
               >
                 <div className="space-y-4 pb-4 p-6">
-                  {/* Icon (optional) */}
+                  {/* Logo and Icon */}
                   <div className="mx-auto bg-white rounded-full p-4 w-20 h-20 flex items-center justify-center">
-                    <svg
-                      className="w-12 h-12 text-[#172554]"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22c-5.309 0-9-3.691-9-9s3.691-9 9-9 9 3.691 9 9-3.691 9-9 9z"
-                      />
-                    </svg>
+                    {pkg.icon} {/* Display icon */}
+                    <img src={pkg.logo} alt={`${pkg.title} logo`} className="w-12 h-12 object-contain" />
                   </div>
                   <h3 className="text-xl font-bold">{pkg.title}</h3>
-                  <div className="text-2xl font-bold">{pkg.price}</div>
                   <p className="text-sm">{pkg.subtitle}</p>
+                  <p className="text-gray-200">{pkg.description}</p>
                   <Button className="bg-[#172554] hover:bg-[#0f1e3e]">
                     {pkg.buttonText}
                   </Button>
@@ -84,57 +118,58 @@ export default function Website4() {
         </div>
 
         {/* Value Proposition */}
-        <div className="space-y-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-[#172554]">
-            Does It Make A Value To Get A Business Website Development Service?
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="space-y-4">
-              <p className="text-gray-700">
-                Hire RankON Technologies- A leading website development company
-                in India for top-rated mobile responsive and SEO-friendly website
-                development services. More than{" "}
-                <span className="font-bold">60% of small businesses</span> have a
-                website, whereas{" "}
-                <span className="font-bold">30% of small businesses</span> with a
-                web presence make more than{" "}
-                <span className="font-bold">25%</span> of their revenue online.
-              </p>
+        <div className="w-full h-screen flex items-center justify-center bg-gray-50">
+          <div className="space-y-8 w-full max-w-screen-xl flex items-center justify-between px-8">
+            <div className="space-y-4 w-full md:w-1/2">
+              <h2 className="text-3xl md:text-4xl font-bold text-center text-[#172554] mb-8">
+                Does It Make A Value To Get A Business Website Development Service?
+              </h2>
+              <div className="space-y-4">
+                <p className="text-gray-700 text-lg">
+                  Hire Digiflex.ai – A leading website development company specializing in mobile-responsive and SEO-friendly websites. Over 60% of small businesses have a website, and many make significant revenue from it.
+                </p>
+                <p className="text-lg text-gray-700">
+                  Investing in a website not only builds your online presence but also positions your business for growth in a digital-first world.
+                </p>
+              </div>
             </div>
-
-            {/* Process Steps */}
-            <div className="grid grid-cols-3 gap-4">
-              <div className="bg-cyan-400 p-4 rounded-lg text-white text-center">
-                <p className="font-semibold">Listen</p>
-              </div>
-              <div className="bg-pink-500 p-4 rounded-lg text-white text-center">
-                <p className="font-semibold">Design</p>
-              </div>
-              <div className="bg-yellow-400 p-4 rounded-lg text-white text-center">
-                <p className="font-semibold">Develop</p>
-              </div>
-              <div className="bg-orange-400 p-4 rounded-lg text-white text-center">
-                <p className="font-semibold">Testing</p>
-              </div>
-              <div className="bg-blue-600 p-4 rounded-lg text-white text-center">
-                <p className="font-semibold">Launch</p>
-              </div>
+            <div className="w-1/2 hidden md:block">
+              <img
+                src={bussse} // Replace with the actual image URL
+                alt="Business Website"
+                className="w-full h-auto object-cover"
+              />
             </div>
           </div>
         </div>
-      </div>
 
-      {/* WhatsApp Button */}
-      <a
-        href="https://wa.me/your-number"
-        className="fixed bottom-6 left-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
-        aria-label="Contact on WhatsApp"
-      >
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.129.332.202.043.073.043.423-.101.827z" />
-        </svg>
-      </a>
+        {/* Development Process Steps */}
+        <div>
+          <h2 className="text-3xl font-bold text-center text-navy-900 mb-4">
+            Our Website Development Process
+          </h2>
+          <p className="text-center text-gray-600 mb-12">
+            Here is a streamlined overview of our custom web app development process.
+          </p>
+
+          <div className="grid md:grid-cols-6 gap-4">
+            {processSteps.map((step, index) => (
+              <div key={index} className="relative">
+                <div className="flex flex-col items-center">
+                  <div className="w-8 h-8 bg-[#172554] rounded-full mb-4 flex items-center justify-center">
+                    {step.icon} {/* Display icon */}
+                  </div>
+                  {index < processSteps.length - 1 && (
+                    <div className="absolute top-4 left-1/2 w-full h-0.5 bg-blue-200"></div>
+                  )}
+                  <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
+                  <p className="text-sm text-gray-600 text-center">{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
