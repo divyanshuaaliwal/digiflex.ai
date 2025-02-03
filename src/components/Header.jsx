@@ -64,12 +64,12 @@ const Navbar = () => {
           color: 'text-blue-500',
           description: 'Native and cross-platform mobile applications for iOS and Android.',
           features: [
-            { icon:  Trello, title: 'Brand Strategy', path: '#' },
-            { icon: Smartphone, title: 'Design Consulting', path: '#' },
-            { icon: Blocks , title: 'Product Design', path: '#' },
-            { icon: Rocket, title: 'UX Research', path: '#' },
-            { icon: Code, title: 'UI & Animation', path: '#' },
-            { icon: Cloud, title: 'Design Testing', path: '#' },
+            { icon:  Trello, title: 'Brand Strategy', path: '/services/ui-ux/BrandStrategy' },
+            { icon: Smartphone, title: 'Design Consulting', path: '/services/ui-ux/designconsulting' },
+            { icon: Blocks , title: 'Product Design', path: '/services/ui-ux/productdesign' },
+            { icon: Rocket, title: 'UX Research', path: '/services/ui-ux/uxresearch' },
+            { icon: Code, title: 'UI & Animation', path: '/services/ui-ux/uianimation' },
+            { icon: Cloud, title: 'Design Testing', path: '/services/ui-ux/design-testing' },
           ],
           image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80'
         },

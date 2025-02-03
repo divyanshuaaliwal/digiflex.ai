@@ -28,6 +28,13 @@ import DevopsConsulting from './pages/DevopsConsulting';
 import TestingConsulting from './pages/TestingConsulting';
 import AiConsulting from './pages/AiConsulting';
 
+import BrandStrategy from './pages/BrandStrategy';
+import DesignConsulting from './pages/DesignConsulting';
+import ProductDesign from './pages/ProductDesign';
+import UxResearch from './pages/UxResearch';
+import UiAnimation from './pages/UiAnimation';
+import DesignTesting from "./pages/DesignTesting";
+
 function App() {
   const location = useLocation();
 
@@ -67,8 +74,15 @@ function App() {
         <Route path="/services/consulting/testing-consulting" element={<TestingConsulting />} />
         <Route path="/services/consulting/ai-consulting" element={<AiConsulting />} />
 
+        <Route path="/services/ui-ux/brandStrategy" element={<BrandStrategy />} />
+        <Route path="/services/ui-ux/designconsulting" element={<DesignConsulting />} />
+        <Route path="/services/ui-ux/productdesign" element={<ProductDesign />} />
+        <Route path="/services/ui-ux/uxresearch" element={<UxResearch />} />
+        <Route path="/services/ui-ux/uianimation" element={<UiAnimation/>}/>
+        <Route path="/services/ui-ux/design-testing" element={<DesignTesting />} />
+
             
-        </Routes>
+      </Routes>
 
       <Reviews />
       <Contact />
