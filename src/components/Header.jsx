@@ -242,7 +242,7 @@ const Navbar = () => {
                                 </button>
                                 <a
                                     href="#"
-                                    className="border border-[#98CA3F] text-[#98CA3F] px-6 py-2 hover:bg-[#98CA3F] hover:text-white transition-colors text-sm"
+                                    className="border border-blue-600 text-blue-600 px-6 py-2 hover:bg-blue-500 hover:text-white transition-colors text-sm"
                                 >
                                     CONTACT US
                                 </a>
