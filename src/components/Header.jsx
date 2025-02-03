@@ -6,7 +6,8 @@ import { Search, X, Menu,
   ShoppingCart, 
   Database, 
   Cpu, 
-  BarChart3, 
+  Trello,
+  Blocks , 
   Cloud,
   Code,
   Server,
@@ -14,7 +15,6 @@ import { Search, X, Menu,
   Rocket,
   ShoppingBag,
   Clock,
-  ChevronDown
 } from 'lucide-react';
 import logo from "../assets/digiflex.png";
 
@@ -64,12 +64,12 @@ const Navbar = () => {
           color: 'text-blue-500',
           description: 'Native and cross-platform mobile applications for iOS and Android.',
           features: [
-            { icon: Smartphone, title: 'Brand Strategy', path: '#' },
+            { icon:  Trello, title: 'Brand Strategy', path: '#' },
             { icon: Smartphone, title: 'Design Consulting', path: '#' },
-            { icon: Code, title: 'Product Design', path: '#' },
-            { icon: Code, title: 'UX Research', path: '#' },
+            { icon: Blocks , title: 'Product Design', path: '#' },
+            { icon: Rocket, title: 'UX Research', path: '#' },
             { icon: Code, title: 'UI & Animation', path: '#' },
-            { icon: Code, title: 'Design Testing', path: '#' },
+            { icon: Cloud, title: 'Design Testing', path: '#' },
           ],
           image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80'
         },
