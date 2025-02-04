@@ -1,70 +1,149 @@
-import React from 'react';
-import { RefreshCw, Search, Layout, Palette, Send } from "lucide-react";
-import { RefreshCcw, Code, Users, Smartphone } from "lucide-react";
-import { Brain, Building2, ShoppingCart, Heart } from 'lucide-react';
-
-
-
-
+import { motion } from "framer-motion"
+import {
+  RefreshCw,
+  Search,
+  Layout,
+  Palette,
+  Send,
+  RefreshCcw,
+  Code,
+  Users,
+  Smartphone,
+  Brain,
+  Building2,
+  ShoppingCart,
+  Heart,
+} from "lucide-react"
 
 // FeatureCard Component
 const FeatureCard = ({ title, description, titleColor }) => {
   return (
-    <div className="flex-1 p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="flex-1 p-8 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-200"
+    >
       <h3 className={`text-2xl font-bold mb-4 ${titleColor}`}>{title}</h3>
       <p className="text-gray-600 leading-relaxed">{description}</p>
-    </div>
-  );
-};
+    </motion.div>
+  )
+}
 
 // TimelineItem Component
 const TimelineItem = ({ icon: Icon, title, items }) => {
   return (
-    <div className="flex-1 relative">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
+      className="flex-1 relative"
+    >
       <div className="flex flex-col items-center">
-        <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-4">
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-4"
+        >
           <Icon className="w-8 h-8 text-white" />
-        </div>
-        <h3 className="text-xl font-bold mb-4 text-center">{title}</h3>
-        <ul className="space-y-2">
+        </motion.div>
+        <motion.h3
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="text-xl font-bold mb-4 text-center"
+        >
+          {title}
+        </motion.h3>
+        <motion.ul
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+          className="space-y-2"
+        >
           {items.map((item, index) => (
-            <li key={index} className="text-gray-600 text-center">{item}</li>
+            <motion.li key={index} whileHover={{ scale: 1.05 }} className="text-gray-600 text-center">
+              {item}
+            </motion.li>
           ))}
-        </ul>
+        </motion.ul>
       </div>
-    </div>
-  );
-};
+    </motion.div>
+  )
+}
 
 // ServiceCard Component
 const ServiceCard = ({ icon: Icon, title, description }) => {
   return (
-    <div className="p-8 hover:bg-gray-50 transition-colors duration-300">
-      <div className="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center mb-4">
-        <Icon className="w-6 h-6 text-white" />
-      </div>
-      <h3 className="text-xl font-bold mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-};
+    <motion.div
+      whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)" }}
+      whileTap={{ scale: 0.95 }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="p-8 bg-white rounded-lg shadow-lg transition-all duration-300 border border-gray-200"
+    >
+      <motion.div
+        whileHover={{ rotate: 360 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+        className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-4"
+      >
+        <Icon className="w-8 h-8 text-white" />
+      </motion.div>
+      <h3 className="text-xl font-bold mb-3 text-gray-800">{title}</h3>
+      <p className="text-gray-600 leading-relaxed">{description}</p>
+    </motion.div>
+  )
+}
 
 // ProcessStep Component
 const ProcessStep = ({ icon, step, title, description }) => {
   return (
-    <div className="group flex flex-col items-center text-center">
-      <div className="relative mb-4">
-        <div className="absolute -inset-2 bg-blue-100 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      viewport={{ once: true }}
+      className="group flex flex-col items-center text-center"
+    >
+      <motion.div className="relative mb-4" whileHover={{ scale: 1.1 }}>
+        <motion.div
+          className="absolute -inset-2 bg-blue-100 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          animate={{ scale: [0.8, 1.2, 1] }}
+          transition={{ duration: 0.6 }}
+        ></motion.div>
         {icon}
-        <span className="absolute -top-2 -right-2 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm">
+        <motion.span
+          className="absolute -top-2 -right-2 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm"
+          animate={{ rotate: [0, 360] }}
+          transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+        >
           {step}
-        </span>
-      </div>
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-};
+        </motion.span>
+      </motion.div>
+      <motion.h3
+        className="text-xl font-semibold mb-2"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+      >
+        {title}
+      </motion.h3>
+      <motion.p
+        className="text-gray-600"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+      >
+        {description}
+      </motion.p>
+    </motion.div>
+  )
+}
 
 // ArrowIcon Component
 const ArrowIcon = () => {
@@ -74,8 +153,8 @@ const ArrowIcon = () => {
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
       </svg>
     </div>
-  );
-};
+  )
+}
 
 // Cards array
 const Cards = [
@@ -96,8 +175,8 @@ const Cards = [
     description:
       "We understand the fast-paced demands of modern business. Tight deadlines? No problem. Our agile workflow ensures you get high-quality assets exactly when you need them – no compromises.",
     titleColor: "text-blue-900",
-  }
-];
+  },
+]
 
 // Timeline Items array
 const timelineItems = [
@@ -125,8 +204,8 @@ const timelineItems = [
     icon: Send,
     title: "Delivery",
     items: ["Finalize UX deliverables", "Style guide & functional specs", "Suggestions/next steps"],
-  }
-];
+  },
+]
 
 // Services array
 const servicescard2 = [
@@ -165,99 +244,185 @@ const servicescard2 = [
     title: "UI for web and mobile",
     description:
       "Our UI design solutions bring aesthetics and functionality, making your product shine on every screen.",
-  }
-];
+  },
+]
 
 // Industries array
 const industries = [
   {
     icon: <Brain className="w-12 h-12" />,
     title: "AI & Machine Learning",
-    description: "Maxiom provides UI/UX consulting for AI and machine learning platforms, designing interfaces that simplify complex data interactions."
+    description:
+      "Maxiom provides UI/UX consulting for AI and machine learning platforms, designing interfaces that simplify complex data interactions.",
   },
   {
     icon: <Building2 className="w-12 h-12" />,
     title: "Finance",
-    description: "Maxiom's consulting services for financial platforms ensure secure, user-friendly interfaces that provide real-time data visualization."
+    description:
+      "Maxiom's consulting services for financial platforms ensure secure, user-friendly interfaces that provide real-time data visualization.",
   },
   {
     icon: <ShoppingCart className="w-12 h-12" />,
     title: "E-commerce & Retail",
-    description: "Our UI/UX consulting for e-commerce helps create engaging and intuitive shopping experiences."
+    description: "Our UI/UX consulting for e-commerce helps create engaging and intuitive shopping experiences.",
   },
   {
     icon: <Heart className="w-12 h-12" />,
     title: "Healthcare",
-    description: "Maxiom's UI/UX consulting services for healthcare focus on creating user-friendly interfaces that improve patient outcomes."
-  }
-];
+    description:
+      "Maxiom's UI/UX consulting services for healthcare focus on creating user-friendly interfaces that improve patient outcomes.",
+  },
+]
 
 // Steps array
 const steps = [
   {
-    icon: <svg className="w-8 h-8 transition-colors duration-300 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-    </svg>,
+    icon: (
+      <svg
+        className="w-8 h-8 transition-colors duration-300 group-hover:text-blue-600"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+        />
+      </svg>
+    ),
     title: "Discovery & analysis",
-    description: "We begin by understanding your unique challenges and goals to tailor our solution to your specific needs."
+    description:
+      "We begin by understanding your unique challenges and goals to tailor our solution to your specific needs.",
   },
   {
-    icon: <svg className="w-8 h-8 transition-colors duration-300 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-    </svg>,
+    icon: (
+      <svg
+        className="w-8 h-8 transition-colors duration-300 group-hover:text-blue-600"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+        />
+      </svg>
+    ),
     title: "Strategic planning",
-    description: "Our experts craft a detailed roadmap that aligns with your objectives and ensures successful implementation."
+    description:
+      "Our experts craft a detailed roadmap that aligns with your objectives and ensures successful implementation.",
   },
   {
-    icon: <svg className="w-8 h-8 transition-colors duration-300 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-    </svg>,
+    icon: (
+      <svg
+        className="w-8 h-8 transition-colors duration-300 group-hover:text-blue-600"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+        />
+      </svg>
+    ),
     title: "Design & development",
-    description: "We design and develop a customized solution, leveraging cutting-edge technology and best practices."
+    description: "We design and develop a customized solution, leveraging cutting-edge technology and best practices.",
   },
   {
-    icon: <svg className="w-8 h-8 transition-colors duration-300 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-    </svg>,
+    icon: (
+      <svg
+        className="w-8 h-8 transition-colors duration-300 group-hover:text-blue-600"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+        />
+      </svg>
+    ),
     title: "Implementation",
-    description: "Our team seamlessly integrates the solution into your existing infrastructure, ensuring minimal disruption."
+    description:
+      "Our team seamlessly integrates the solution into your existing infrastructure, ensuring minimal disruption.",
   },
   {
-    icon: <svg className="w-8 h-8 transition-colors duration-300 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>,
+    icon: (
+      <svg
+        className="w-8 h-8 transition-colors duration-300 group-hover:text-blue-600"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+    ),
     title: "Optimization",
-    description: "We continuously monitor and optimize the solution to enhance performance and deliver maximum ROI."
+    description: "We continuously monitor and optimize the solution to enhance performance and deliver maximum ROI.",
   },
   {
-    icon: <svg className="w-8 h-8 transition-colors duration-300 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-    </svg>,
+    icon: (
+      <svg
+        className="w-8 h-8 transition-colors duration-300 group-hover:text-blue-600"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    ),
     title: "Ongoing support",
-    description: "Maxiom provides ongoing support and maintenance to ensure long-term success and adaptability."
-  }
-];
-
-
+    description: "Maxiom provides ongoing support and maintenance to ensure long-term success and adaptability.",
+  },
+]
 
 const Body = () => {
   return (
     <>
       {/* section 1 */}
-      <div className="w-full bg-gray-900 py-16 px-4">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="w-full bg-gray-900 py-16 px-4"
+      >
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Column */}
-          <div className="flex items-center">
+          <motion.div
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="flex items-center"
+          >
             <h2 className="text-4xl md:text-6xl font-bold text-white hover:text-blue-900 transition-colors duration-300">
-              Why Choose Digiflex for{' '}
-              <span className="text-blue-900">UI/UX Design?</span>
+              Why Choose Digiflex for <span className="text-blue-900">UI/UX Design?</span>
             </h2>
-          </div>
+          </motion.div>
 
           {/* Right Column */}
-          <div className="flex flex-col space-y-6">
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+            className="flex flex-col space-y-6"
+          >
             <p className="text-xl md:text-xl text-gray-100 leading-relaxed hover:text-gray-300 transition-colors duration-300">
-              Businesses we've partnered with have experienced greater alignment between user needs and business objectives, resulting in enhanced engagement and boosted conversions.
+              Businesses we've partnered with have experienced greater alignment between user needs and business
+              objectives, resulting in enhanced engagement and boosted conversions.
             </p>
 
             <div className="text-xl md:text-xl text-gray-100 leading-relaxed">
@@ -273,33 +438,26 @@ const Body = () => {
             <p className="text-xl md:text-xlxl text-gray-100 leading-relaxed hover:text-gray-300 transition-colors duration-300">
               Let us help you create intuitive designs that drive meaningful results for your business.
             </p>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       {/* section 2 */}
       <div className="w-full bg-white py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          {/* Heading */}
+          <motion.h2
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-6xl font-bold text-black text-center mb-16 hover:text-blue-900 transition-colors duration-300"
+          >
+            What Makes Digiflex Your Ideal <span className="text-blue-900">Graphic Design</span> Partner?
+          </motion.h2>
           <div className="flex flex-col md:flex-row md:justify-between md:space-x-12 space-y-12 md:space-y-0">
-            <div className="w-full bg-white py-16 px-4">
-              <div className="max-w-6xl mx-auto">
-                <h2 className="text-4xl md:text-6xl font-bold text-black text-center mb-16 hover:text-blue-900 transition-colors duration-300">
-                  What Makes Digiflex Your Ideal{' '}
-                  <span className="text-blue-900">Graphic Design</span> Partner?
-                </h2>
-                <div className="flex flex-col md:flex-row md:justify-between md:space-x-12 space-y-12 md:space-y-0">
-                  {Cards.map((Cards, index) => (
-                    <FeatureCard
-                      key={index}
-                      title={Cards.title}
-                      description={Cards.description}
-                      titleColor={Cards.titleColor}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
+            {Cards.map((card, index) => (
+              <FeatureCard key={index} title={card.title} description={card.description} titleColor={card.titleColor} />
+            ))}
           </div>
         </div>
       </div>
@@ -307,11 +465,16 @@ const Body = () => {
       {/* section 3 */}
       <div className="w-full bg-white py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-6xl font-bold text-center mb-16 hover:text-blue-900 transition-colors duration-300">
-            Our{' '}
-            <span className="text-blue-900"> Design </span>
+          <motion.h2
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-6xl font-bold text-center mb-16 hover:text-blue-900 transition-colors duration-300"
+          >
+            Our <span className="text-blue-900"> Design </span>
             Process
-          </h2>
+          </motion.h2>
 
           {/* Timeline */}
           <div className="flex flex-col md:flex-row gap-8 md:gap-4 relative">
@@ -321,7 +484,13 @@ const Body = () => {
           </div>
 
           {/* Testing Cycle */}
-          <div className="mt-20 max-w-md mx-auto text-center">
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="mt-20 max-w-md mx-auto text-center"
+          >
             <div className="relative w-48 h-48 mx-auto mb-8">
               <div className="absolute inset-0 border-4 border-blue-700 rounded-full animate-[spin_20s_linear_infinite]">
                 <div className="absolute -right-3 top-1/2 w-6 h-6 bg-blue-700 rounded-full transform -translate-y-1/2"></div>
@@ -332,30 +501,31 @@ const Body = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* section 4 */}
       <div className="w-full bg-white py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
             <p className="text-blue-900 font-bold text-lg mb-4">Let's transform your UI/UX</p>
             <h2 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
               WHAT WE <span className="text-blue-900"> CAN </span>
               <br />
               DO FOR <span className="text-blue-900"> YOU? </span>
             </h2>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3">
-            {servicescard2.map((servicescard2, index) => (
-              <ServiceCard
-                key={index}
-                icon={servicescard2.icon}
-                title={servicescard2.title}
-                description={servicescard2.description}
-              />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {servicescard2.map((service, index) => (
+              <ServiceCard key={index} icon={service.icon} title={service.title} description={service.description} />
             ))}
           </div>
         </div>
@@ -365,7 +535,13 @@ const Body = () => {
       <div className="w-full bg-white py-20 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
-          <div className="mb-16 max-w-2xl">
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="mb-16 max-w-2xl"
+          >
             <span className="inline-block px-4 py-2 bg-blue-900 text-white text-sm font-medium rounded-md mb-8">
               STRATEGIC UX CONSULTING
             </span>
@@ -374,21 +550,26 @@ const Body = () => {
               Industry-Specific
               <div className="relative">
                 <span className="relative z-10">UI/UX Consulting</span>
-                <div className="absolute bottom left-0 right-60 h-1 bg-blue-900"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-blue-900"></div>
               </div>
               Solutions
             </h2>
 
             <p className="text-lg text-black">
-              Maxiom delivers tailored UI/UX consulting solutions across various industries, creating intuitive interfaces that enhance efficiency, security, and user engagement.
+              Maxiom delivers tailored UI/UX consulting solutions across various industries, creating intuitive
+              interfaces that enhance efficiency, security, and user engagement.
             </p>
-          </div>
+          </motion.div>
 
           {/* Industries Flex Container */}
           <div className="flex flex-col md:flex-row flex-wrap gap-12">
             {industries.map((industry, index) => (
-              <div
+              <motion.div
                 key={index}
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className="flex-1 basis-[calc(50%-24px)] space-y-4 p-6 rounded-lg transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-blue-100 hover:-translate-y-2 hover:scale-105 transform"
               >
                 <div className="text-blue-900 transition-transform duration-300 transform group-hover:scale-110">
@@ -398,7 +579,7 @@ const Body = () => {
                   {industry.title}
                 </h3>
                 <p className="text-black leading-relaxed">{industry.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -406,29 +587,31 @@ const Body = () => {
 
       {/* section 6 */}
       <div className="max-w-7xl mx-auto px-4 py-12 mb-20">
-        <h1 className="text-6xl font-bold text-center mb-12">
-          The Maxiom{' '}
+        <motion.h1
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-6xl font-bold text-center mb-12"
+        >
+          The Maxiom{" "}
           <span className="underline decoration-blue-500 hover:decoration-blue-700 transition-colors duration-300">
             UI/UX Consulting
-          </span>{' '}
+          </span>{" "}
           Process
-        </h1>
+        </motion.h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {steps.map((step, index) => (
             <div key={index} className="flex flex-col md:flex-row items-center">
-              <ProcessStep
-                icon={step.icon}
-                step={index + 1}
-                title={step.title}
-                description={step.description}
-              />
+              <ProcessStep icon={step.icon} step={index + 1} title={step.title} description={step.description} />
               {index < steps.length - 1 && index % 3 !== 2 && <ArrowIcon />}
             </div>
           ))}
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Body;
+export default Body
+

@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'; 
+import { motion } from 'framer-motion';
 import { Code, Download, HeadphonesIcon, Shield, Workflow } from 'lucide-react';
 
 export default function Amp() {
@@ -68,14 +69,20 @@ export default function Amp() {
     <section className="w-full py-12">
       <div className="container px-4 md:px-6">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature) => (
-            <div key={feature.title} className="rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+          {features.map((feature, index) => (
+            <motion.div 
+              key={feature.title} 
+              className="rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
               <div className="mb-4 flex items-center">
                 {feature.icon}
                 <h3 className="ml-3 text-xl font-semibold">{feature.title}</h3>
               </div>
               <p className="text-sm text-muted-foreground">{feature.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
@@ -90,12 +97,18 @@ export default function Amp() {
         
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {processSteps.map((step, index) => (
-                <div key={step.title} className="flex flex-col items-center text-center bg-gradient-to-br from-[#0066cc] to-[#004c99] p-8 rounded-lg shadow-xl transition-transform transform hover:scale-105">
+                <motion.div 
+                  key={step.title} 
+                  className="flex flex-col items-center text-center bg-gradient-to-br from-[#0066cc] to-[#004c99] p-8 rounded-lg shadow-xl transition-transform transform hover:scale-105"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
                   <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-white text-[#0066cc]">
                     {step.icon}
                   </div>
                   <p className="text-xl font-semibold text-white">{step.title}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

@@ -1,7 +1,8 @@
 import React, { useState } from 'react'; 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, FaJava, FaAndroid, FaApple, FaWindows, FaDatabase } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, FaJava, FaAndroid, FaApple, FaWindows } from 'react-icons/fa';
 import { SiMysql, SiPostgresql, SiMongodb } from 'react-icons/si';
+import { motion } from 'framer-motion';
 
 const WebApplication4 = () => {
   const [activeTab, setActiveTab] = useState('programming');
@@ -37,21 +38,29 @@ const WebApplication4 = () => {
   };
 
   return (
-    <div className="bg-white p-8 max-w-6xl mx-auto">
-      <div className="mb-8">
-        <h2 className="text-3xl font-bold text-[#4A90E2] mb-4">
+    <div className="bg-white px-4 py-10 md:p-12 lg:p-16 xl:p-20 max-w-7xl mx-auto">
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }} 
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="mb-8 text-center"
+      >
+        <h2 className="text-3xl md:text-4xl font-bold text-[#4A90E2] mb-4">
           Technologies & Frameworks We Use
         </h2>
-        <p className="text-gray-700 text-lg leading-relaxed">
+        <p className="text-gray-700 text-lg md:text-xl leading-relaxed">
           As a leading web development company, we are proud to have a team of expert developers skilled in the following core technologies:
         </p>
-      </div>
+      </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {Object.entries(categories).map(([key, category]) => (
-          <div 
+          <motion.div 
             key={key}
-            className="bg-gray-50 rounded-lg p-6 shadow-lg transition-transform transform hover:scale-105 flex flex-col items-center"
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="bg-gray-50 rounded-lg p-6 shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 flex flex-col items-center"
           >
             <div className="flex gap-4 flex-wrap justify-center">
               {category.icons.map((icon) => icon)}
@@ -59,17 +68,39 @@ const WebApplication4 = () => {
             <h3 className="text-xl font-semibold text-[#4A90E2] mt-4">
               {category.title}
             </h3>
-          </div>
+          </motion.div>
         ))}
       </div>
       
       <div className="flex justify-center mt-8 space-x-4">
-        <button className="p-3 rounded-full bg-[#4A90E2] text-white hover:bg-[#357ABD] transition-all">
+        <button className="p-3 rounded-full bg-[#4A90E2] text-white hover:bg-[#357ABD] transition-all shadow-md">
           <ChevronLeft size={24} />
         </button>
-        <button className="p-3 rounded-full bg-[#E94E77] text-white hover:bg-[#D03D65] transition-all">
+        <button className="p-3 rounded-full bg-[#E94E77] text-white hover:bg-[#D03D65] transition-all shadow-md">
           <ChevronRight size={24} />
         </button>
+      </div>
+
+      {/* Extra Content for Larger Screens */}
+      <div className="hidden lg:block mt-16 text-center">
+        <h3 className="text-2xl font-bold text-[#4A90E2]">Why Choose Us?</h3>
+        <p className="text-gray-700 text-lg mt-4 max-w-3xl mx-auto">
+          Our team is proficient in the latest technologies and frameworks, ensuring secure, scalable, and high-performing web solutions.
+        </p>
+        <div className="mt-6 flex justify-center gap-8">
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md w-1/3">
+            <h4 className="text-xl font-semibold text-[#4A90E2]">Expert Developers</h4>
+            <p className="text-gray-600 mt-2">Skilled professionals with years of experience.</p>
+          </div>
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md w-1/3">
+            <h4 className="text-xl font-semibold text-[#4A90E2]">Cutting-edge Tech</h4>
+            <p className="text-gray-600 mt-2">We use the latest tools and frameworks.</p>
+          </div>
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md w-1/3">
+            <h4 className="text-xl font-semibold text-[#4A90E2]">Customer-centric</h4>
+            <p className="text-gray-600 mt-2">Focused on providing the best solutions for clients.</p>
+          </div>
+        </div>
       </div>
     </div>
   );
