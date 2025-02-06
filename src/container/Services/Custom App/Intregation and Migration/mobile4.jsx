@@ -1,6 +1,5 @@
 import React from 'react';
-
-
+import { motion } from 'framer-motion';
 
 const ChevronLeft = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -16,19 +15,10 @@ const ChevronRight = () => (
 
 const Mobile4 = () => {
   const clients = [
-    { 
-      name: 'RIZE', 
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnbkwaakT0MqX9mJruYXOhkDz4AV6oGEcxeg&s" 
-    },
-    { 
-      name: 'Seeke', 
-      logo: "https://i.pinimg.com/736x/2d/34/b4/2d34b4c4556e1243267348e547bc924c.jpg"},
-    { 
-      name: 'Shortlist', 
-      logo: "https://i.pinimg.com/736x/af/78/cd/af78cd2e9ca405148101b95a75620e3c.jpg" },
-    { 
-      name: 'Smiling Mind', 
-      logo: "https://i.pinimg.com/736x/30/f7/78/30f778228ca4d53bb62deb8d7726d633.jpg" }
+    { name: 'RIZE', logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnbkwaakT0MqX9mJruYXOhkDz4AV6oGEcxeg&s" },
+    { name: 'Seeke', logo: "https://i.pinimg.com/736x/2d/34/b4/2d34b4c4556e1243267348e547bc924c.jpg" },
+    { name: 'Shortlist', logo: "https://i.pinimg.com/736x/af/78/cd/af78cd2e9ca405148101b95a75620e3c.jpg" },
+    { name: 'Smiling Mind', logo: "https://i.pinimg.com/736x/30/f7/78/30f778228ca4d53bb62deb8d7726d633.jpg" }
   ];
 
   const projects = [
@@ -42,63 +32,93 @@ const Mobile4 = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-16 space-y-16">
       {/* Clients Section */}
-      <div className="bg-gray-50 py-12 px-4 rounded-lg">
+      <motion.div
+        className="bg-gray-50 py-12 px-4 rounded-lg"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Our Clients</h2>
           <div className="relative">
-            <button className="absolute left-0 top-1/2 -translate-y-1/2 p-2 bg-white rounded-full shadow-lg">
+            <motion.button
+              className="absolute left-0 top-1/2 -translate-y-1/2 p-2 bg-white rounded-full shadow-lg"
+              whileHover={{ scale: 1.1 }}
+            >
               <ChevronLeft />
-            </button>
+            </motion.button>
             <div className="flex justify-between items-center px-12">
               {clients.map((client) => (
-                <div key={client.name} className="flex items-center justify-center">
+                <motion.div
+                  key={client.name}
+                  className="flex items-center justify-center"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                >
                   <img
                     src={client.logo}
                     alt={`${client.name} logo`}
                     className="h-[80px] object-contain"
                   />
-                </div>
+                </motion.div>
               ))}
             </div>
-            <button className="absolute right-0 top-1/2 -translate-y-1/2 p-2 bg-white rounded-full shadow-lg">
+            <motion.button
+              className="absolute right-0 top-1/2 -translate-y-1/2 p-2 bg-white rounded-full shadow-lg"
+              whileHover={{ scale: 1.1 }}
+            >
               <ChevronRight />
-            </button>
+            </motion.button>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Projects Section */}
-      <div className="max-w-6xl mx-auto">
-      <h2 className="text-4xl font-extrabold text-center mb-12 text-gray-800 tracking-wide">
-        Our Projects
-      </h2>
-      <div className="grid md:grid-cols-2 gap-12 items-center">
-        <div className="relative">
-          <div className="relative w-full aspect-square overflow-hidden rounded-2xl shadow-2xl backdrop-blur-lg bg-white/10 border border-white/40">
-            {/* Project Device Frame */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/40 to-[#172554] rounded-[2rem] p-4 shadow-lg">
-              <div className="relative h-full w-full bg-white/70 rounded-[1.7rem] overflow-hidden border border-white/30">
-                <img
-                  src="https://i.pinimg.com/736x/fc/d8/31/fcd8310354601ee5a6f161324cee0ada.jpg"
-                  alt="Project screenshot"
-                  className="w-full h-full object-cover"
-                />
+      <motion.div
+        className="max-w-6xl mx-auto"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      >
+        <h2 className="text-4xl font-extrabold text-center mb-12 text-gray-800 tracking-wide">
+          Our Projects
+        </h2>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <motion.div
+            className="relative"
+            initial={{ scale: 0.8 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1, delay: 0.7 }}
+          >
+            <div className="relative w-full aspect-square overflow-hidden rounded-2xl shadow-2xl backdrop-blur-lg bg-white/10 border border-white/40">
+              {/* Project Device Frame */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/40 to-[#172554] rounded-[2rem] p-4 shadow-lg">
+                <div className="relative h-full w-full bg-white/70 rounded-[1.7rem] overflow-hidden border border-white/30">
+                  <img
+                    src="https://i.pinimg.com/736x/fc/d8/31/fcd8310354601ee5a6f161324cee0ada.jpg"
+                    alt="Project screenshot"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
-          </div>
+          </motion.div>
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.9 }}
+          >
+            <h3 className="text-3xl font-bold leading-tight text-gray-900">
+              {projects[0].title}
+            </h3>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              {projects[0].description}
+            </p>
+          </motion.div>
         </div>
-        <div className="space-y-6">
-          <h3 className="text-3xl font-bold leading-tight text-gray-900">
-            {projects[0].title}
-          </h3>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            {projects[0].description}
-          </p>
-        </div>
-      </div>
-    </div>
-    
-    
+      </motion.div>
     </div>
   );
 };

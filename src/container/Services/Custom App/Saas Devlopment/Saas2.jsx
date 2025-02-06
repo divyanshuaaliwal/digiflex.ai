@@ -47,7 +47,13 @@ const Saas2 = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="flex flex-col p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-all duration-300"
+            className="flex flex-col p-6 bg-white shadow-lg rounded-lg"
+            style={{ transitionDelay: `${index * 200}ms` }}
+            whileHover={{
+              scale: 1.05,  // Scales the card up when hovered
+              boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)", // Adds shadow effect
+              transition: { duration: 0.3 } // Smooth transition for hover effect
+            }}
           >
             <div className="flex items-center mb-4">
               <div className="bg-blue-50 rounded-lg p-3">

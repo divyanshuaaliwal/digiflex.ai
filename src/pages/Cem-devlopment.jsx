@@ -34,10 +34,13 @@ const Hero = () => {
 
 
 
-    <Cards/>
+    
     <Thirds/>
     <Four/>
+    <Cards/>
     <KnowledgeSection/>
+   
+   
     
     
 

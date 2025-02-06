@@ -1,7 +1,8 @@
 import React from 'react';
-import bg10 from '../../../../assets/bg10.png'
-import bg11 from '../../../../assets/bg11.png'
+import bg10 from '../../../../assets/bg10.png';
+import bg11 from '../../../../assets/bg11.png';
 import bg12 from '../../../../assets/bg12.jpg';
+import { motion } from 'framer-motion';
 
 const Mobile2 = () => {
   return (
@@ -10,26 +11,43 @@ const Mobile2 = () => {
         <h2 className="text-3xl font-bold mb-8">Key Features</h2>
         <div className="flex flex-col md:flex-row justify-center items-center">
           
-          <div className="md:w-1/3 p-4">
-            <div className=" p-4 rounded-full inline-block mb-4">
+          {/* First Feature with Animation */}
+          <motion.div
+            className="md:w-1/3 p-4"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+          >
+            <div className="p-4 rounded-full inline-block mb-4">
               <img src={bg11} alt="End-To-End Consulting Icon" />
             </div>
             <h3 className="text-xl font-semibold mb-2">End-To-End Consulting</h3>
-            <p>From creating data architecture to creating automated transfer scripts, from creating data warehouses to running your automated scripts, we can help you at every step.
-            </p>
-          </div>
+            <p>From creating data architecture to creating automated transfer scripts, from creating data warehouses to running your automated scripts, we can help you at every step.</p>
+          </motion.div>
           
-          <div className="md:w-1/3 p-4">
+          {/* Center Image with Animation */}
+          <motion.div
+            className="md:w-1/3 p-4"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
             <img src={bg12} alt="Center Image" className="w-full object-cover rounded-lg" />
-          </div>
+          </motion.div>
           
-          <div className="md:w-1/3 p-4">
-            <div className=" p-4 rounded-full inline-block mb-4">
+          {/* Third Feature with Animation */}
+          <motion.div
+            className="md:w-1/3 p-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.8 }}
+          >
+            <div className="p-4 rounded-full inline-block mb-4">
               <img src={bg10} alt="Automated Data Transfer Icon" />
             </div>
             <h3 className="text-xl font-semibold mb-2">Automated Data Transfer</h3>
             <p>Algoworks focuses on an automated tool-based data migration approach offering minimal code changes, leaving the investment in business logic intact.</p>
-          </div>
+          </motion.div>
           
         </div>
       </div>
