@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { tabs, servicesData, descriptions, animations } from './constants';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { tabs, servicesData, descriptions, animations } from "./constants";
 
 const ServiceCard = ({ title, description, icon: Icon }) => {
   return (
     <motion.div
       variants={animations.item}
-      whileHover={{ y: -5 }}
-      className="bg-white rounded-lg p-8 shadow-lg"
+      whileHover={{ y: -5, scale: 1.05 }}
+      className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform"
     >
       <div className="text-blue-800 mb-6">
         <Icon size={30} strokeWidth={1.5} />
@@ -20,46 +20,46 @@ const ServiceCard = ({ title, description, icon: Icon }) => {
 
 const TabContent = ({ activeTab }) => (
   <motion.p
-    className="text-gray-600 text-center max-w-3xl mx-auto mb-12"
+    className="text-gray-600 text-center max-w-3xl mx-auto mb-12 text-lg"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
-    transition={{ delay: 0.2 }}
+    transition={{ delay: 0.2, duration: 0.5 }}
   >
     {descriptions[activeTab]}
   </motion.p>
 );
 
 export const ServicesSection = () => {
-  const [activeTab, setActiveTab] = useState('full-cycle');
+  const [activeTab, setActiveTab] = useState("full-cycle");
 
   return (
-    <div className="min-h-screen bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
-      <motion.div 
+    <div className=" bg-white py-10 px-4 sm:px-6 lg:px-8">
+      <motion.div
         className="max-w-7xl mx-auto"
         initial="hidden"
         animate="show"
         variants={animations.container}
       >
-        <motion.h2 
-          className="text-5xl font-bold text-blue-800 text-center mb-6"
+        <motion.h2
+          className="text-5xl font-extrabold text-blue-800 text-center mb-6"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           WE WORK WITH
         </motion.h2>
-        
+
         <TabContent activeTab={activeTab} />
 
-        <div className="flex justify-center space-x-4 mb-16">
+        <div className="flex justify-center space-x-4">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                 activeTab === tab.id
-                  ? 'bg-blue-800 text-white' 
-                  : 'bg-white text-gray-500 hover:bg-gray-100'
+                  ? "bg-blue-800 text-white shadow-md hover:scale-105"
+                  : "bg-white text-gray-500 hover:bg-blue-50 hover:text-blue-800"
               }`}
             >
               {tab.label}

@@ -62,7 +62,7 @@ const IndustriesSection = () => {
   return (
     <section 
       ref={sectionRef} 
-      className="py-16 bg-gray-100 overflow-hidden text-blue-900"
+      className="py-16 bg-white overflow-hidden text-blue-900"
     >
       <div className="container mx-auto px-4">
         <h2 className={`

@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Monitor, Globe, Laptop, Building } from 'lucide-react';
+import React, { useEffect, useRef, useState } from "react";
+import { Monitor, Globe, Laptop, Building } from "lucide-react";
 
 const TypesAndExampleSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,8 +36,8 @@ const TypesAndExampleSection = () => {
         "Customer portals",
         "Online auctions",
         "Service apps (e.g., flight booking apps)",
-        "Online banking apps"
-      ]
+        "Online banking apps",
+      ],
     },
     {
       icon: Globe,
@@ -45,8 +45,8 @@ const TypesAndExampleSection = () => {
       items: [
         "Corporate websites",
         "Portfolio websites",
-        "Digital media websites"
-      ]
+        "Digital media websites",
+      ],
     },
     {
       icon: Laptop,
@@ -60,8 +60,8 @@ const TypesAndExampleSection = () => {
         "Government portals",
         "Insurance portals",
         "Investor portals",
-        "Community portals"
-      ]
+        "Community portals",
+      ],
     },
     {
       icon: Building,
@@ -73,54 +73,72 @@ const TypesAndExampleSection = () => {
         "Financial management software",
         "Document management software",
         "Knowledge and learning management software",
-        "Custom web applications for specific enterprise needs"
-      ]
-    }
+        "Custom web applications for specific enterprise needs",
+      ],
+    },
   ];
 
   return (
-    <section 
-      ref={sectionRef} 
-      className="py-16 bg-gray-100 overflow-hidden text-blue-900"
+    <section
+      ref={sectionRef}
+      className="py-16 bg-white overflow-hidden text-blue-900"
     >
       <div className="container mx-auto px-4">
-        <h2 className={`
+        <h2
+          className={`
           text-3xl font-bold text-center mb-6 
           transform transition-all duration-700 
-          ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}
-        `}>
-          Types and Examples of Web Software We Work With
+          ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }
+        `}
+        >
+          Types and Examples of{" "}
+          <span className="text-black hover:text-blue-900">Web Software</span>{" "}
+          We Work With
         </h2>
-        <p className={`
+        <p
+          className={`
           text-center text-gray-600 mb-12 
           transform transition-all duration-700 delay-200
-          ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}
-        `}>
-          Web solutions have different everything: architecture, level of interactivity, user experience, design, etc. Thanks to our vast experience, we can quickly understand your specific solution and know what is important in your case.
+          ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }
+        `}
+        >
+          Web solutions have different everything: architecture, level of
+          interactivity, user experience, design, etc. Thanks to our vast
+          experience, we can quickly understand your specific solution and know
+          what is important in your case.
         </p>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {cardData.map((card, index) => (
-            <div 
+            <div
               key={card.title}
               className={`
-                bg-white p-8 rounded-lg shadow-sm 
-                transform transition-all duration-700 
-                hover:scale-105 hover:shadow-lg
-                ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}
+                bg-white p-8 rounded-lg shadow-lg 
+                transform transition-all duration-500 
+                hover:scale-105 hover:shadow-blue-200
+                ${
+                  isVisible
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-20 opacity-0"
+                }
               `}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
               <div className="flex items-center mb-6">
-                <card.icon className="w-8 h-8 text-blue-600 mr-4 
-                  transform transition-transform duration-300 
-                  group-hover:rotate-12" 
+                <card.icon
+                  className="w-8 h-8 text-blue-600 mr-4 
+                  transform transition-all duration-300 
+                  group-hover:rotate-12 hover:text-blue-800"
                 />
                 <h3 className="text-xl font-semibold">{card.title}</h3>
               </div>
               <ul className="space-y-3 text-gray-600">
-                {card.items.map(item => (
-                  <li 
+                {card.items.map((item) => (
+                  <li
                     key={item}
                     className="
                       transform transition-all duration-300 

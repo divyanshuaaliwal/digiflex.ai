@@ -7,15 +7,15 @@ export const ReasonCard = ({ reason, index, expandedIndex, setExpandedIndex }) =
   return (
     <motion.div
       variants={animations.item}
-      className="bg-gray-50 rounded-lg shadow-sm overflow-hidden"
+      className="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:scale-105"
     >
       <button
         onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
-        className="w-full text-left p-6 flex items-center justify-between hover:bg-gray-100 transition-colors"
+        className="w-full text-left p-6 flex items-center justify-between hover:bg-gray-200 transition-colors rounded-lg"
       >
         <div className="flex gap-4 items-center">
           <CheckCircle2 className="w-6 h-6 text-blue-600 flex-shrink-0" />
-          <h3 className="font-semibold text-gray-900">{reason.title}</h3>
+          <h3 className="font-semibold text-gray-900 text-lg">{reason.title}</h3>
         </div>
         <motion.div
           animate={{ rotate: expandedIndex === index ? 180 : 0 }}
@@ -33,7 +33,7 @@ export const ReasonCard = ({ reason, index, expandedIndex, setExpandedIndex }) =
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <div className="px-6 pb-6 pt-2 text-gray-600 border-t border-gray-100">
+            <div className="px-6 pb-6 pt-2 text-gray-600 border-t border-gray-200">
               {reason.description}
             </div>
           </motion.div>
@@ -47,10 +47,11 @@ export const Reasons = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   return (
-    <div className="mt-24">
+    <div className="mt-10">
       <motion.h2 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
         className="text-5xl font-bold text-blue-800 mb-12 text-center"
       >
         Reasons To Choose Consultation In Software Testing
@@ -63,10 +64,12 @@ export const Reasons = () => {
           transition={{ duration: 0.8 }}
           className="relative h-[400px] rounded-lg overflow-hidden"
         >
-          <img 
+          <motion.img 
             src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
             alt="Software Testing Analytics"
             className="w-full h-full object-cover"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
           />
         </motion.div>
 

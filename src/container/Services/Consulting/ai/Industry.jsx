@@ -99,7 +99,7 @@ export default function Industry() {
   const [activeIndustry, setActiveIndustry] = useState('healthcare');
 
   return (
-    <div className="min-h bg-gray-50 text-gray-900">
+    <div className="min-h bg-white text-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <h1 className="text-5xl font-bold mb-16 text-blue-800 text-center">
           Developing smart solutions for every industry
@@ -112,10 +112,10 @@ export default function Industry() {
               {Object.keys(industries).map((industry) => (
                 <button
                   key={industry}
-                  className={`block text-xl transition-colors duration-200 ${
+                  className={`block text-xl transition-all duration-300 transform hover:scale-105 ${
                     activeIndustry === industry
-                      ? 'text-blue-600'
-                      : 'text-gray-600 hover:text-gray-900'
+                      ? 'text-blue-600 font-semibold'
+                      : 'text-gray-600 hover:text-blue-500'
                   }`}
                   onClick={() => setActiveIndustry(industry)}
                 >
@@ -132,12 +132,12 @@ export default function Industry() {
           <div className="col-span-12 lg:col-span-9">
             <div className="grid grid-cols-12 gap-8">
               {/* Image */}
-              <div className="col-span-12 lg:col-span-6">
-                <div className="relative h-[400px] rounded-lg overflow-hidden">
+              <div className="col-span-12 lg:col-span-6 relative group">
+                <div className="relative h-[400px] rounded-lg overflow-hidden transition-all duration-500 transform group-hover:scale-110">
                   <img
                     src={industries[activeIndustry].image}
                     alt={industries[activeIndustry].title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 </div>
@@ -145,10 +145,10 @@ export default function Industry() {
 
               {/* Content */}
               <div className="col-span-12 lg:col-span-6">
-                <h2 className="text-3xl font-bold mb-4 text-blue-800">
+                <h2 className="text-3xl font-bold mb-4 text-blue-800 animate__animated animate__fadeIn animate__delay-1s">
                   {industries[activeIndustry].title}
                 </h2>
-                <p className="text-gray-700 mb-8">
+                <p className="text-gray-700 mb-8 animate__animated animate__fadeIn animate__delay-2s">
                   {industries[activeIndustry].description}
                 </p>
 
@@ -157,11 +157,11 @@ export default function Industry() {
                   {industries[activeIndustry].solutions.map((solution, index) => (
                     <div
                       key={index}
-                      className="border-b border-gray-200 pb-2 hover:text-blue-600 transition-colors duration-200"
+                      className="border-b border-gray-200 pb-2 hover:text-blue-600 transition-all duration-300 transform hover:scale-105"
                     >
                       <a href="#" className="flex items-center justify-between">
                         {solution}
-                        <ArrowRight className="h-4 w-4" />
+                        <ArrowRight className="h-4 w-4 transition-transform transform group-hover:translate-x-2" />
                       </a>
                     </div>
                   ))}

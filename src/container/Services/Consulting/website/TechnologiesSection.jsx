@@ -47,7 +47,7 @@ const TechnologiesSection = () => {
   return (
     <section 
       ref={sectionRef} 
-      className="py-16 bg-gray-100 overflow-hidden text-blue-900"
+      className="py-16 bg-white overflow-hidden text-blue-900"
     >
       <div className="container mx-auto px-4">
         <h2 className={`
@@ -63,18 +63,20 @@ const TechnologiesSection = () => {
             <div 
               key={tech.title}
               className={`
-                bg-white p-6 border border-200 rounded-lg 
+                bg-white p-6 border border-gray-200 rounded-lg 
                 transform transition-all duration-700 
-                hover:scale-105 hover:shadow-lg
+                hover:scale-105 hover:shadow-xl 
                 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}
               `}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
               <tech.icon className="w-12 h-12 text-blue-600 mb-4 
                 transform transition-transform duration-300 
-                group-hover:rotate-12" 
+                group-hover:rotate-12 group-hover:scale-110" 
               />
-              <h3 className="text-xl font-semibold mb-4">{tech.title}</h3>
+              <h3 className="text-xl font-semibold mb-4 transition-all duration-300 hover:text-blue-600">
+                {tech.title}
+              </h3>
               <p className="text-gray-600 
                 transform transition-all duration-300 
                 hover:translate-x-2 hover:text-blue-600
