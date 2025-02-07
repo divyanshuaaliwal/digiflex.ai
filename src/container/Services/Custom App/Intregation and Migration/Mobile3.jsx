@@ -1,7 +1,7 @@
 import React from "react";
+import { motion } from "framer-motion";
 import bg14 from '../../../../assets/bg14.jpg';
 import bg6 from "../../../../assets/bg6.png"; 
-
 
 const Mobile3 = () => {
   const arr3 = 'https://i.pinimg.com/736x/f8/91/11/f891114391b563ea7ceb7ab3dd712259.jpg';
@@ -52,9 +52,14 @@ const Mobile3 = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {services.map((service, index) => (
-          <div
+          <motion.div
             key={index}
             className="bg-white text-black p-4 rounded-lg flex flex-col items-center"
+            whileHover={{
+              scale: 1.05,  // Scale up the card on hover
+              boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)", // Add a shadow effect
+              transition: { duration: 0.3 } // Smooth transition
+            }}
           >
             <div className="bg-black p-2 rounded-full mb-4">
               <img
@@ -73,7 +78,7 @@ const Mobile3 = () => {
               businesses to transition applications efficiently while minimizing
               downtime and maximizing scalability in modernized environments.
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
