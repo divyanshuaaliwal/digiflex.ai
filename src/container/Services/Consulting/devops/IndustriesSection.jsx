@@ -110,7 +110,7 @@ function IndustriesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-6">
-            Industries We Serve
+            Industries We <span className='text-black hover:text-blue-900'>Serve</span> 
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto text-lg">
             At Digiflex.ai, we specialize in delivering DevOps advisory services and building scalable, future-ready IT infrastructures.

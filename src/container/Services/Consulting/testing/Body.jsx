@@ -66,14 +66,14 @@ function Body() {
       </div>
 
       {/* Process Section */}
-      <section className="bg-gray-50 py-10 px-4 sm:px-6 lg:px-8">
+      <section className="bg-white py-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <ProcessSection steps={processSteps} />
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="bg-gray-50 py-10 px-4 sm:px-6 lg:px-8">
+      <section className="bg-white py-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <ServicesSection 
             services={servicesData[activeTab]}

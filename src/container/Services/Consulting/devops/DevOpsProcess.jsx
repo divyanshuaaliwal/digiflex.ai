@@ -28,7 +28,7 @@ function DevOpsProcess() {
   ];
 
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-50 py-16">
       <div className="container mx-auto px-4">
         <motion.h2 
           initial={{ opacity: 0, y: -20 }}
@@ -38,19 +38,34 @@ function DevOpsProcess() {
             transition: { duration: 0.5 }
           }}
           viewport={{ once: true }}
-          className="text-5xl font-bold text-blue-900 text-center mb-16"
+          className="text-5xl font-extrabold text-blue-900 text-center mb-16"
         >
           Our DevOps Consulting Process
         </motion.h2>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {processSteps.map((step, index) => (
-            <ProcessCard
+            <motion.div
               key={index}
-              icon={step.icon}
-              title={step.title}
-              description={step.description}
-              index={index}
-            />
+              className="bg-white p-8 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <div className="flex items-center mb-4">
+                <motion.div 
+                  className="text-blue-600 mr-4 p-4 rounded-full bg-blue-50"
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <step.icon className="w-8 h-8" />
+                </motion.div>
+                <h3 className="text-2xl font-semibold text-blue-800">{step.title}</h3>
+              </div>
+              <p className="text-gray-600">{step.description}</p>
+            </motion.div>
           ))}
         </div>
       </div>
