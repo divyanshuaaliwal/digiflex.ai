@@ -24,13 +24,6 @@ import img24 from "../../../../assets/securitybc.png"
 import img25 from "../../../../assets/Bottlenecks.png"
 import img26 from "../../../../assets/costimg.png"
 
-
-
-
-
-
-
-
 export const Data = [
     {
         img:img1,
@@ -64,18 +57,12 @@ export const newData = [
         "data":"Asset Tokenization converts real-world assets into digital tokens on a blockchain."
     }
 ]
-
 export const Data2 = [
     {
         img:img7,
         "header":"Polygon ",
         "data":"First zero knowledge scaling solution compatible with Ethereum Virtual Machine for smart contracts"
     },
-    // {
-    //     img:img8,
-    //     "header":"zkSync Hyperchains",
-    //     "data":"zkSync Hyperchains is a scalable Ethereum layer-2 solution using zk-rollups to enhance speed, reduce costs, and maintain security."
-    // },
     {
         img:img9,
         "header":"Avalanche ",
@@ -94,7 +81,6 @@ export const Data2 = [
         "data":"Arbitrum Orbit enables developers to create Layer 3 chains on Arbitrum for enhanced scalability and customization."
     }
 ]
-
 export const Data3 = [
     {
         img:img17,

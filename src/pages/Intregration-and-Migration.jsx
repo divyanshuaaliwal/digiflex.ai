@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import bg8 from "../assets/bg8.png";
+import videoBg from "../assets/blockchain_video.mp4";
 import Mobile2 from "../container/Services/Custom App/Intregation and Migration/Mobile2";
 import Mobile3 from "../container/Services/Custom App/Intregation and Migration/Mobile3";
 import Mobile4 from "../container/Services/Custom App/Intregation and Migration/mobile4";
@@ -8,50 +8,46 @@ import Mobile4 from "../container/Services/Custom App/Intregation and Migration/
 const Mobile = () => {
   return (
     <>
-      <div className="bg-[#1A2E6F] text-white p-8 md:p-16 relative min-h-screen flex flex-col md:flex-row items-center justify-center">
-        {/* Image Section */}
-        <motion.img
-          src={bg8}
-          alt="Left Image"
-          className="w-full md:w-1/2 h-auto object-cover mb-8 md:mb-0"
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-        />
+      <div className="relative w-full h-screen flex items-center justify-center text-center text-white overflow-hidden">
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        >
+          <source src={videoBg} type="video/mp4" />
+        </video>
 
         {/* Content Section */}
         <motion.div
-          className="w-full md:w-1/2 text-center md:text-left"
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
+          className="relative z-10 max-w-2xl px-4"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
             Integration and Migration Made Easier!!
           </h1>
-          <p className="mt-4 text-base md:text-lg">
+          <p className="mt-4 text-lg">
             At Digiflex.ai, we deliver cutting-edge, risk-mitigated migration
             and integration solutions tailored to meet the unique needs of our
-            clients across the globe. Our expertise lies in ensuring a seamless
-            transition to advanced technologies, minimizing disruptions, and
-            maximizing efficiency.
+            clients across the globe.
           </p>
-          <p className="hidden md:block mt-4 text-base md:text-lg">
-            With a strong focus on innovation and client-centric strategies, we
-            empower businesses to embrace digital transformation confidently.
-            From secure data migrations to optimized system integrations,
-            Digiflex.ai guarantees reliable solutions that drive growth and
-            success.
+          <p className="mt-4 text-lg">
+            Our expertise lies in ensuring a seamless transition to advanced technologies,
+            minimizing disruptions, and maximizing efficiency.
           </p>
-          <div className="mt-6 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start">
+          <div className="mt-6 flex flex-col md:flex-row items-center justify-center">
             <motion.button
-              className="bg-white text-black px-6 py-3 mr-0 md:mr-4 mb-4 md:mb-0 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300"
+              className="bg-white text-black px-6 py-3 m-2 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300"
               whileHover={{ scale: 1.05 }}
             >
               LEARN MORE
             </motion.button>
             <motion.button
-              className="bg-white text-black px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300"
+              className="bg-white text-black px-6 py-3 m-2 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300"
               whileHover={{ scale: 1.05 }}
             >
               CONTACT US
