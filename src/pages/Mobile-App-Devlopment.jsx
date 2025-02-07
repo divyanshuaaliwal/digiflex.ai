@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
-import videoBg from '../../src/assets/circle.mp4';
+import videoBg from '../assets/blockchain_video.mp4';
 import Amp2 from '../container/Services/Custom App/Mobile App Devlopment/Amp2';
 import Amp3 from '../container/Services/Custom App/Mobile App Devlopment/Amp3';
 import Amp5 from '../container/Services/Custom App/Mobile App Devlopment/Amp5';

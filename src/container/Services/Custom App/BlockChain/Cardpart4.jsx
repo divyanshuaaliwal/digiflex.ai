@@ -22,7 +22,7 @@ const platforms = [
 const Cardpart4 = () => {
   return (
     <div className="mt-40 text-center">
-      <h1 className="text-5xl font-bold">
+      <h1 className="text-5xl font-bold text-[#1A2E6F]">
         Blockchain Development Platforms <br /> We Support ...
       </h1>
 
@@ -33,13 +33,11 @@ const Cardpart4 = () => {
         popular platforms that support blockchain development and their key features.
       </p>
 
-      {/* Blockchain Platforms Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 px-10">
         {platforms.map((platform, index) => (
           <div
             key={index}
-            className="border border-gray-300 p-5 rounded-xl shadow-md hover:bg-gray-100 
-                       transition duration-300 ease-in-out flex flex-col items-center"
+            className="border border-gray-300 p-5 rounded-xl shadow-md hover:shadow-2xl transform transition-all duration-300 ease-in-out hover:scale-105"
           >
             <img src={platform.img} alt={platform.name} className="w-24 h-24 object-contain mx-auto" />
             <p className="text-lg font-semibold mt-3">{platform.name}</p>
