@@ -6,16 +6,15 @@ import DevProcess from "./DevProcess";
 import PriceModels from "./PriceModels";
 import FAQ from "./FAQ";
 
-
 const Body = () => {
   return (
     <>
       <Features />
       <Industry />
       <ToolsTech />
-      <DevProcess/>
-      <PriceModels/>
-      <FAQ/>
+      <DevProcess />
+      <PriceModels />
+      <FAQ />
     </>
   );
 };
