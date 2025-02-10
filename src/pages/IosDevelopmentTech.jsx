@@ -1,6 +1,6 @@
 import React from "react";
-import Body from "../container/Technology/MobileAppDev/IOS Devlopment/Body";
-import Hero from "../container/Technology/MobileAppDev/IOS Devlopment/Hero";
+import Body from "../container/Technology/Mobile/IOS Devlopment/Body";
+import Hero from "../container/Technology/Mobile/IOS Devlopment/Hero";
 
 const IosDevelopmentTech = () => {
   return (

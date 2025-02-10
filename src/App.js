@@ -35,8 +35,13 @@ import UxResearch from "./pages/UxResearch";
 import UiAnimation from "./pages/UiAnimation";
 import DesignTesting from "./pages/DesignTesting";
 
-
 import AngularDevelopment from "./pages/AngularDevelopment";
+import ReactDevelopment from "./pages/ReactDevelopment";
+import VueDevelopment from "./pages/VueDevelopment";
+import BootstrapDevelopment from "./pages/BootstrapDevelopment";
+import KnowkoutjsDevelopment from "./pages/KnowkoutjsDevelopment";
+import NextjsDevelopment from "./pages/NextjsDevelopment";
+
 import IosDevelopmentTech from "./pages/IosDevelopmentTech";
 
 function App() {
@@ -153,18 +158,23 @@ function App() {
 
         {/* Technology */}
 
+        {/* Frontend Technology */}
+        <Route path="/tech/frontend/angular" element={<AngularDevelopment />} />
+        <Route path="/tech/frontend/react" element={<ReactDevelopment />} />
+        <Route path="/tech/frontend/vue" element={<VueDevelopment />} />
         <Route
-          path="/technology/frontend/angular"
-          element={<AngularDevelopment />}
+          path="/tech/frontend/bootstrap"
+          element={<BootstrapDevelopment />}
         />
- <Route
-          path="/technology/mobileappdev/iosdevelopment"
-          element={<IosDevelopmentTech/>}
+        <Route
+          path="/tech/frontend/knockout"
+          element={<KnowkoutjsDevelopment />}
         />
+        <Route path="/tech/frontend/nextjs" element={<NextjsDevelopment />} />
 
+        {/* Mobile Technology */}
 
-
-
+        <Route path="/tech/mobile/ios" element={<IosDevelopmentTech />} />
       </Routes>
 
       <Reviews />
