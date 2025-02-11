@@ -34,14 +34,14 @@ const SmartFeatures = () => {
 
   return (
     <motion.div
-      className="w-full py-16 bg-white text-[#172554] px-6 md:px-12"
+      className="w-full py-16 bg-gray-50 text-gray-800 px-6 md:px-12"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
       {/* Title */}
       <motion.h2
-        className="text-4xl font-bold text-center mb-10"
+        className="text-4xl font-bold text-center mb-10 text-gray-900"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -54,26 +54,26 @@ const SmartFeatures = () => {
         {features.map((feature, index) => (
           <motion.div
             key={index}
-            className="p-6 bg-[#172554] text-white rounded-xl shadow-md border border-[#172554] cursor-pointer hover:bg-[#1e3a8a] transition"
+            className="p-6 bg-white rounded-xl shadow border border-gray-200 cursor-pointer hover:shadow-lg transition transform hover:-translate-y-1"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
             onClick={() => toggleFeature(index)}
           >
-            {/* Feature Title */}
+            {/* Feature Header */}
             <div className="flex justify-between items-center">
-              <span className="text-lg font-semibold">✅ {feature.title}</span>
+              <span className="text-lg font-semibold">{feature.title}</span>
               {openFeature === index ? (
-                <ChevronUp className="w-6 h-6 text-white" />
+                <ChevronUp className="w-6 h-6 text-gray-600" />
               ) : (
-                <ChevronDown className="w-6 h-6 text-white" />
+                <ChevronDown className="w-6 h-6 text-gray-600" />
               )}
             </div>
 
-            {/* Feature Description (Expandable) */}
+            {/* Expandable Feature Description */}
             {openFeature === index && (
               <motion.p
-                className="mt-4 text-sm bg-white text-[#172554] p-4 rounded-lg shadow-sm border border-[#172554]"
+                className="mt-4 text-base text-gray-700"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 transition={{ duration: 0.4 }}

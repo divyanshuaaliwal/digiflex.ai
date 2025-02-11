@@ -12,15 +12,16 @@ const techStack = [
 
 export default function TechStack() {
   return (
-    <div className="p-10 bg-white text-black">
+    <div className="p-10 bg-white text-[#1A2E6F]">
       <motion.h2 
-        className="text-4xl font-bold text-center mb-10"
+        className="text-5xl font-bold text-center mb-10 text-[#1A2E6F]"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         Our Tech Stack
       </motion.h2>
+
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {techStack.map((tech, index) => (
           <motion.div 
@@ -32,11 +33,11 @@ export default function TechStack() {
           >
             <div className="bg-gray-100 p-5 rounded-2xl shadow-lg">
               <div className="flex flex-col items-center text-center">
-                <div className="text-5xl text-yellow-500 mb-3">{tech.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{tech.category}</h3>
-                <ul className="text-gray-700">
+                <div className="text-6xl text-yellow-500 mb-3">{tech.icon}</div>
+                <h3 className="text-2xl font-semibold mb-2 text-black">{tech.category}</h3>
+                <ul className="text-black space-y-1">
                   {tech.items.map((item, i) => (
-                    <motion.li key={i} whileHover={{ scale: 1.1 }}>
+                    <motion.li key={i} whileHover={{ scale: 1.1 }} className="text-lg">
                       {item}
                     </motion.li>
                   ))}

@@ -41,9 +41,9 @@ const steps = [
 
 const AndroidDevelopmentProcess = () => {
   return (
-    <div className="bg-white text-gray-900 py-16 px-6 md:px-12">
+    <div className="bg-white text-[#1A2E6F] py-16 px-6 md:px-12">
       <motion.h2
-        className="text-4xl md:text-5xl font-bold text-center mb-12"
+        className="text-5xl font-bold text-center mb-12 text-[#1A2E6F]"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -55,16 +55,16 @@ const AndroidDevelopmentProcess = () => {
         {steps.map((step, index) => (
           <motion.div
             key={step.id}
-            className="bg-gray-100 p-6 md:p-8 rounded-2xl shadow-lg border border-gray-200 hover:shadow-2xl transition-shadow duration-300"
+            className="bg-gray-100 p-6 rounded-2xl shadow-lg border border-gray-200 hover:shadow-2xl transition-shadow duration-300"
             initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl md:text-2xl font-semibold flex items-center">
-              <span className="mr-3 text-2xl md:text-3xl">{step.id}</span> {step.title}
+            <h3 className="text-xl font-semibold flex items-center text-black">
+              <span className="mr-3 text-xl">{step.id}</span> {step.title}
             </h3>
-            <p className="text-gray-600 mt-3">{step.description}</p>
+            <p className="text-gray-900 text-lg mt-3">{step.description}</p>
           </motion.div>
         ))}
       </div>

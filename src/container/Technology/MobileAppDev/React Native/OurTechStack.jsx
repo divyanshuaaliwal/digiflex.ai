@@ -43,7 +43,7 @@ const OurTechStack = () => {
       transition={{ duration: 1 }}
     >
       <motion.h2 
-        className="text-4xl font-bold text-center mb-10 text-[#172554]"
+        className="text-5xl font-semibold text-center mb-10 text-[#172554]"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -61,7 +61,7 @@ const OurTechStack = () => {
             whileHover={{ scale: 1.1 }}
           >
             <motion.h3 
-              className="text-2xl font-semibold mb-4 flex items-center text-[#172554]"
+              className="text-xl font-medium mb-4 flex items-center text-black"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
@@ -72,7 +72,7 @@ const OurTechStack = () => {
               {stack.items.map((item, idx) => (
                 <motion.li 
                   key={idx} 
-                  className="text-lg flex items-center"
+                  className="text-lg flex items-center text-gray-900"
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}

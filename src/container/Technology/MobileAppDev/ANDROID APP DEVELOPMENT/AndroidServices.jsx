@@ -13,18 +13,20 @@ const services = [
 const AndroidServices = () => {
   return (
     <div className="min-h-screen bg-white p-12 flex flex-col items-center">
-      <h1 className="text-5xl font-extrabold text-gray-900 mb-12 text-center">Our Android Development Services</h1>
+      <h1 className="text-5xl font-bold text-[#1A2E6F] mb-12 text-center">
+        Our Android Development Services
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl">
         {services.map((service, index) => (
           <div
             key={index}
-            className="flex flex-col items-center text-center p-6 border rounded-xl shadow-sm bg-gradient-to-br from-gray-50 to-gray-100 hover:shadow-lg transition"
+            className="flex flex-col items-center text-center p-6 border rounded-2xl shadow-sm bg-gradient-to-br from-gray-50 to-gray-100 hover:shadow-lg transition"
           >
             <div className="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-pink-500 shadow-md mb-4">
               <service.icon className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">{service.title}</h3>
-            <p className="text-gray-600">{service.description}</p>
+            <h3 className="text-xl font-semibold text-black mb-2">{service.title}</h3>
+            <p className="text-gray-900 text-lg">{service.description}</p>
           </div>
         ))}
       </div>

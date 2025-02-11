@@ -17,54 +17,56 @@ const SmartFeatures = () => {
             </div>
           </div>
         </div>
+
         {/* Right Section */}
         <div className="md:w-1/2 p-8 flex flex-col justify-center">
-          <h2 className="text-4xl font-bold text-[#172554] mb-6">
+          <h2 className="text-5xl font-bold text-[#1A2E6F] mb-6">
             Smart Android App Features We Offer
           </h2>
-          <p className="text-gray-600 mb-8">
+          <p className="text-gray-600 text-lg mb-8">
             We offer cutting-edge features tailored to enhance user engagement
             and business growth.
           </p>
           <ul className="space-y-6">
             <li className="flex items-start">
-              <span className="text-[#172554] font-bold text-2xl mr-4">💡</span>
+              <span className="text-[#1A2E6F] font-bold text-2xl mr-4">💡</span>
               <p className="text-lg">
                 <strong>AI Chatbots:</strong> Enhance customer engagement with
                 smart assistants.
               </p>
             </li>
             <li className="flex items-start">
-              <span className="text-[#172554] font-bold text-2xl mr-4">📍</span>
+              <span className="text-[#1A2E6F] font-bold text-2xl mr-4">📍</span>
               <p className="text-lg">
                 <strong>Location-Based Services:</strong> GPS tracking,
                 geofencing, and mapping.
               </p>
             </li>
             <li className="flex items-start">
-              <span className="text-[#172554] font-bold text-2xl mr-4">🔔</span>
+              <span className="text-[#1A2E6F] font-bold text-2xl mr-4">🔔</span>
               <p className="text-lg">
                 <strong>Push Notifications & Analytics:</strong> Personalized
                 user engagement.
               </p>
             </li>
             <li className="flex items-start">
-              <span className="text-[#172554] font-bold text-2xl mr-4">🔑</span>
+              <span className="text-[#1A2E6F] font-bold text-2xl mr-4">🔑</span>
               <p className="text-lg">
                 <strong>Biometric Authentication:</strong> Face unlock &
                 fingerprint security.
               </p>
             </li>
             <li className="flex items-start">
-              <span className="text-[#172554] font-bold text-2xl mr-4">📡</span>
+              <span className="text-[#1A2E6F] font-bold text-2xl mr-4">📡</span>
               <p className="text-lg">
-                <strong>IoT Connectivity:</strong> Smart home automation &
-                device control.
+                <strong>IoT Connectivity:</strong> Smart home automation & device control.
               </p>
             </li>
           </ul>
+
+          {/* Buttons */}
           <div className="mt-8 flex gap-6">
-            <button className="bg-[#172554] text-white px-6 py-3 rounded-lg shadow hover:bg-orange-600 text-lg">
+            <button className="bg-[#1A2E6F] text-white px-6 py-3 rounded-lg shadow hover:bg-orange-600 text-lg">
               Get Started
             </button>
             <button className="bg-gray-100 text-gray-600 px-6 py-3 rounded-lg shadow hover:bg-gray-200 text-lg">

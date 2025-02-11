@@ -1,5 +1,5 @@
 import React from 'react';
-import videoBg from '../../../../assets/blockchain_video.mp4';
+import videoBg from '../../../../assets/Moobile.mp4';
 
 const HeroSection = () => {
   return (

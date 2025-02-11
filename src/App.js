@@ -35,6 +35,8 @@ import UxResearch from "./pages/UxResearch";
 import UiAnimation from "./pages/UiAnimation";
 import DesignTesting from "./pages/DesignTesting";
 
+// Frontend Technology
+
 import AngularDevelopment from "./pages/AngularDevelopment";
 import ReactDevelopment from "./pages/ReactDevelopment";
 import VueDevelopment from "./pages/VueDevelopment";
@@ -42,10 +44,14 @@ import BootstrapDevelopment from "./pages/BootstrapDevelopment";
 import KnowkoutjsDevelopment from "./pages/KnowkoutjsDevelopment";
 import NextjsDevelopment from "./pages/NextjsDevelopment";
 
+// Mobile App Devlopment
+
 import IosDevelopmentTech from "./pages/IosDevelopmentTech";
-import AndroidAppDevlopment from "./pages/AndroidAppDevlopment"
+import AndroidAppDevlopment from "./pages/AndroidAppDevlopment";
 import ReactNative from "./pages/ReactNative";
 import FlutterAppDevlopment from "./pages/FlutterAppDevlopment";
+import NativeScript from "./pages/NativeScript";
+import XamarinAppDEvlopment from "./pages/XamarinAppDEvlopment";
 
 function App() {
   const location = useLocation();
@@ -159,8 +165,6 @@ function App() {
           element={<DesignTesting />}
         />
 
-        {/* Technology */}
-
         {/* Frontend Technology */}
         <Route path="/tech/frontend/angular" element={<AngularDevelopment />} />
         <Route path="/tech/frontend/react" element={<ReactDevelopment />} />
@@ -176,15 +180,21 @@ function App() {
         <Route path="/tech/frontend/nextjs" element={<NextjsDevelopment />} />
 
         {/* Mobile Technology */}
-
-        <Route path="/tech/mobile/ios" element={<IosDevelopmentTech/>} />
-        <Route path="/tech/AndroidAppDevlopment" element={<AndroidAppDevlopment/>} />
-        <Route path="/tech/ReactNative" element={<ReactNative/>} />
-        <Route path="/tech/FlutterDevlopment" element={<FlutterAppDevlopment/>} />
-        
-
-
-
+        <Route path="/tech/mobile/ios" element={<IosDevelopmentTech />} />
+        <Route
+          path="/tech/AndroidAppDevlopment"
+          element={<AndroidAppDevlopment />}
+        />
+        <Route path="/tech/ReactNative" element={<ReactNative />} />
+        <Route
+          path="/tech/FlutterDevlopment"
+          element={<FlutterAppDevlopment />}
+        />
+        <Route path="/tech/NativeScript" element={<NativeScript />} />
+        <Route
+          path="/tech/XamarinAppDevlopment"
+          element={<XamarinAppDEvlopment />}
+        />
       </Routes>
 
       <Reviews />

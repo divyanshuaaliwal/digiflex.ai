@@ -12,8 +12,9 @@ const ReactNative = () => {
       <WhyChooseReactNative/>
       <OurTechStack/>
       <OurServices/>
-      <SmartFeatures/>
       <IndustriesWeServe/>
+      <SmartFeatures/>
+      
       
     </div>
   )
