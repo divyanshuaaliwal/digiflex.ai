@@ -43,6 +43,9 @@ import KnowkoutjsDevelopment from "./pages/KnowkoutjsDevelopment";
 import NextjsDevelopment from "./pages/NextjsDevelopment";
 
 import IosDevelopmentTech from "./pages/IosDevelopmentTech";
+import AndroidAppDevlopment from "./pages/AndroidAppDevlopment"
+import ReactNative from "./pages/ReactNative";
+import FlutterAppDevlopment from "./pages/FlutterAppDevlopment";
 
 function App() {
   const location = useLocation();
@@ -174,7 +177,14 @@ function App() {
 
         {/* Mobile Technology */}
 
-        <Route path="/tech/mobile/ios" element={<IosDevelopmentTech />} />
+        <Route path="/tech/mobile/ios" element={<IosDevelopmentTech/>} />
+        <Route path="/tech/AndroidAppDevlopment" element={<AndroidAppDevlopment/>} />
+        <Route path="/tech/ReactNative" element={<ReactNative/>} />
+        <Route path="/tech/FlutterDevlopment" element={<FlutterAppDevlopment/>} />
+        
+
+
+
       </Routes>
 
       <Reviews />

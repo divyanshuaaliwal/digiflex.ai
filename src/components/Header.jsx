@@ -251,14 +251,14 @@ const Navbar = () => {
         {
           icon: Smartphone,
           title: "Android App Development",
-          path: "/tech/mobile/android",
+          path: "/tech/AndroidAppDevlopment",
         },
         {
           icon: Smartphone,
           title: "React Native",
-          path: "/tech/mobile/react-native",
+          path: "/tech/ReactNative",
         },
-        { icon: Smartphone, title: "Flutter", path: "/tech/mobile/flutter" },
+        { icon: Smartphone, title: "Flutter", path: "/tech/FlutterDevlopment" },
         {
           icon: Smartphone,
           title: "NativeScript",
