@@ -10,7 +10,7 @@ const WhyDigiflex = () => {
             className="text-5xl font-extrabold mb-4"
             style={{ color: '#172554' }}
           >
-            📌 4. Why Digiflex for Xamarin Development?
+            📌  Why Digiflex for Xamarin Development?
           </h2>
           <p className="text-gray-700 text-lg">
             Unlock the full potential of your mobile strategy with our expert Xamarin solutions.

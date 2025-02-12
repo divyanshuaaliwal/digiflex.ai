@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Heading from "../../../../Layout/Heading";
 
 const steps = [
   {
@@ -42,14 +43,17 @@ const steps = [
 const AndroidDevelopmentProcess = () => {
   return (
     <div className="bg-white text-[#1A2E6F] py-16 px-6 md:px-12">
-      <motion.h2
+      
+    <Heading
+    
         className="text-5xl font-bold text-center mb-12 text-[#1A2E6F]"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
         Our Android Development Process
-      </motion.h2>
+     
+      </Heading>
 
       <div className="max-w-5xl mx-auto grid gap-8">
         {steps.map((step, index) => (

@@ -3,8 +3,17 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      colors: {
+        // Define custom blue shades for headings
+        'digiflex-blue': {
+          600: '#2563EB', // custom blue-600
+          900: '#1E3A8A', // custom blue-900
+        },
+        // Define a custom black for subheadings (optional since Tailwind already provides black)
+        'digiflex-black': '#000000',
+      },
       animation: {
-        // Existing animations
+        // Your existing and new animations
         'gradient-extreme': 'gradient 15s ease infinite',
         'gradient-reverse': 'gradient 15s ease-in-out infinite reverse',
         'gradient-move': 'gradientMove 3s linear infinite',
@@ -16,15 +25,11 @@ export default {
         'glow': 'glow 2s ease-in-out infinite',
         'bounce-subtle': 'bounce 5s ease-in-out infinite',
         'spin-slow': 'spin 3s linear infinite',
-        
         // New animations
         'float': 'float 10s ease-in-out infinite',
         'orbit': 'orbit 20s linear infinite',
       },
-      
       keyframes: {
-        // Existing keyframes if any
-        
         // New keyframes
         float: {
           '0%, 100%': { transform: 'translate(0, 0) rotate(0deg)' },
@@ -33,14 +38,12 @@ export default {
         orbit: {
           '0%': { transform: 'rotate(0deg) translateX(50px) rotate(0deg)' },
           '100%': { transform: 'rotate(360deg) translateX(50px) rotate(-360deg)' },
-        }
+        },
       },
-      
       backgroundSize: {
         '400%': '400% 400%',
       },
     },
   },
-  
   plugins: [],
 };

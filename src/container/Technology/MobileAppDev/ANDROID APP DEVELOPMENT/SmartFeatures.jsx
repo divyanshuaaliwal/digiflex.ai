@@ -1,4 +1,5 @@
 import React from "react";
+import Heading from "../../../../Layout/Heading";
 
 const SmartFeatures = () => {
   return (
@@ -20,9 +21,12 @@ const SmartFeatures = () => {
 
         {/* Right Section */}
         <div className="md:w-1/2 p-8 flex flex-col justify-center">
-          <h2 className="text-5xl font-bold text-[#1A2E6F] mb-6">
+
+          <Heading>
+          
             Smart Android App Features We Offer
-          </h2>
+         
+          </Heading>
           <p className="text-gray-600 text-lg mb-8">
             We offer cutting-edge features tailored to enhance user engagement
             and business growth.

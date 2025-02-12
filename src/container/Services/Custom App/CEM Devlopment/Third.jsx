@@ -3,7 +3,7 @@ import bg4 from "../../../../assets/bg4.png";
 
 const Thirds = () => {
   return (
-    <div className="partner-section p-8 bg-gray-100">
+    <div className="partner-section p-8 bg-white">
       {/* Partner Logos Section */}
       <div className="partner-logos text-center mb-8">
         <h2 className="partner-heading text-xl text-gray-800 mb-4">

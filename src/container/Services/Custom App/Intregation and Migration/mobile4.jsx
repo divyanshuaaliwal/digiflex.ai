@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Heading from '../../../../Layout/Heading';
 
 const ChevronLeft = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -39,7 +40,7 @@ const Mobile4 = () => {
         transition={{ duration: 1 }}
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Clients</h2>
+          <Heading>Our Clients</Heading>
           <div className="relative">
             <motion.button
               className="absolute left-0 top-1/2 -translate-y-1/2 p-2 bg-white rounded-full shadow-lg"
@@ -81,9 +82,7 @@ const Mobile4 = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        <h2 className="text-4xl font-extrabold text-center mb-12 text-gray-800 tracking-wide">
-          Our Projects
-        </h2>
+      <Heading>Our Clients</Heading>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             className="relative"

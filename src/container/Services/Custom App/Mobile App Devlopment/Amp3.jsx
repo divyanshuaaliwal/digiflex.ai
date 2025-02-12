@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Download, HeadphonesIcon, Shield, Workflow } from 'lucide-react';
 
@@ -44,18 +44,18 @@ export default function Amp() {
 
   return (
     <section className="w-full py-12">
-      <div className="container px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
             <motion.div 
               key={feature.title} 
-              className="rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md hover:scale-105"
+              className="rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md hover:scale-105 text-center md:text-left"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="mb-4 flex items-center">
+              <div className="mb-4 flex items-center justify-center md:justify-start">
                 {feature.icon}
                 <h3 className="ml-3 text-xl font-semibold">{feature.title}</h3>
               </div>

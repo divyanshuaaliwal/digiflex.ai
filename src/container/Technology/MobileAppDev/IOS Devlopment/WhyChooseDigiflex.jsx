@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import img from '../../../../assets/IOS5.jpg'
-import img2 from '../../../../assets/IOS4.jpg'
-import img3 from '../../../../assets/IOS3.jpg'
-import img4 from '../../../../assets/IOS2.jpg'
-import img5 from '../../../../assets/IOS.jpg'
+import img from '../../../../assets/IOS5.jpg';
+import img2 from '../../../../assets/IOS4.jpg';
+import img3 from '../../../../assets/IOS3.jpg';
+import img4 from '../../../../assets/IOS2.jpg';
+import img5 from '../../../../assets/IOS.jpg';
 
 const features = [
   {
@@ -54,8 +54,7 @@ const FeatureStep = ({ title, isActive, onClick }) => {
       }`}
       whileHover={{ scale: isActive ? 1 : 1.02 }}
     >
-      <h3 className="text-lg font-semibold text-blue-900 mb-2">{title}</h3>
-      <div className={`h-1 w-16 rounded ${isActive ? 'bg-blue-500' : 'bg-gray-300'}`} />
+      <h3 className="text-lg font-semibold text-black mb-2">{title}</h3>
     </motion.div>
   );
 };
@@ -69,8 +68,9 @@ const FeatureContent = ({ feature }) => {
       className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-center bg-white rounded-lg p-6 shadow-sm"
     >
       <div>
+        {/* Apply the gradient to the feature title if desired */}
         <motion.h3 
-          className="text-4xl font-bold text-blue-900 mb-4"
+          className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-900 bg-clip-text text-transparent mb-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
@@ -108,25 +108,31 @@ export default function WhyChooseDigiflex() {
   return (
     <div className="bg-gray-50 py-12">
       <div className="container mx-auto px-4 max-w-6xl">
-        <div className="text-center mb-8 relative">
+        {/* Main Heading & Subheading */}
+        <div className="text-center mb-8">
+          {/* Main Heading with Gradient */}
           <motion.h2 
-            className="text-5xl font-bold text-blue-900 inline-block relative"
+            className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-900 bg-clip-text text-transparent inline-block"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
             Why Choose Digiflex?
-            <motion.div 
-              className="absolute bottom-0 left-0 right-0 h-1 bg-blue-950 rounded-full"
-              initial={{ width: 0 }}
-              whileInView={{ width: '100%' }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              viewport={{ once: true }}
-            />
           </motion.h2>
+          {/* Subheading with Black Text */}
+          <motion.p
+            className="mt-4 text-xl text-black"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            Your trusted partner for innovative iOS solutions.
+          </motion.p>
         </div>
         
+        {/* Feature Steps */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-6">
           {features.map((feature) => (
             <FeatureStep
@@ -138,8 +144,12 @@ export default function WhyChooseDigiflex() {
           ))}
         </div>
 
+        {/* Feature Content */}
         <AnimatePresence mode="wait">
-          <FeatureContent key={activeFeature} feature={features.find(f => f.id === activeFeature)} />
+          <FeatureContent 
+            key={activeFeature} 
+            feature={features.find(f => f.id === activeFeature)} 
+          />
         </AnimatePresence>
       </div>
     </div>

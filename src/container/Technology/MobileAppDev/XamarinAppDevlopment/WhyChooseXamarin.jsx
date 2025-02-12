@@ -8,7 +8,7 @@ const WhyChooseXamarin = () => {
           {/* Header Section */}
           <div className="px-6 py-8 border-b border-gray-200">
             <h2 className="text-4xl font-bold" style={{ color: '#172554' }}>
-              🚀 2. Why Choose Xamarin for App Development?
+              🚀  Why Choose Xamarin for App Development?
             </h2>
           </div>
           {/* Content Section */}

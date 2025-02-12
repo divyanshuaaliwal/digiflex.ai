@@ -5,15 +5,21 @@ import NativeScriptServices from '../container/Technology/MobileAppDev/NativeScr
 import NativeScriptProcess from '../container/Technology/MobileAppDev/NativeScript/NativeScriptProcess'
 import IndustriesSection from '../container/Technology/MobileAppDev/NativeScript/IndustriesSection'
 
+
 const NativeScript = () => {
   return (
-    <div>
+    <>
+
+      
       <Hero/>
       <NativeScriptBenefits/>
       <NativeScriptServices/>
       <NativeScriptProcess/>
       <IndustriesSection/>
-    </div>
+      
+      
+      
+    </>
   )
 }
 

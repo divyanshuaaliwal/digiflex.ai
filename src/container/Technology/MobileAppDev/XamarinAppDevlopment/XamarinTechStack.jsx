@@ -40,7 +40,7 @@ const XamarinTechStack = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-5xl font-extrabold mb-4 text-blue-900">
-            🔹 5. Our Xamarin Tech Stack
+            🔹  Our Xamarin Tech Stack
           </h2>
           <p className="text-gray-700 text-lg">
             Empowering mobile solutions with a robust and modern tech stack.

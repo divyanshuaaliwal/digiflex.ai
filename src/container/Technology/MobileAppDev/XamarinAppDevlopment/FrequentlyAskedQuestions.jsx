@@ -66,7 +66,7 @@ const FrequentlyAskedQuestions = () => {
         {/* Section Heading */}
         <div className="text-center mb-8">
           <h2 className="text-4xl md:text-5xl font-bold mb-3" style={{ color: '#172554' }}>
-            ❓ 11. Frequently Asked Questions (FAQs)
+            ❓  Frequently Asked Questions (FAQs)
           </h2>
           <p className="text-black text-lg">Got questions? We're here to help.</p>
         </div>

@@ -1,14 +1,10 @@
 import { motion } from "framer-motion";
-import img1 from '../../../../assets/Healthcare.jpg'
-import img2 from '../../../../assets/Ecomerce.jpg'
-import img3 from '../../../../assets/Education.jpg'
-import img4 from '../../../../assets/fintech-investment-financial-internet-technology-concept.jpg'
-import img5 from '../../../../assets/enterprise.png'
-import img6 from '../../../../assets/Reacl-estate.jpg'
-
-
-
-
+import img1 from '../../../../assets/Healthcare.jpg';
+import img2 from '../../../../assets/Ecomerce.jpg';
+import img3 from '../../../../assets/Education.jpg';
+import img4 from '../../../../assets/fintech-investment-financial-internet-technology-concept.jpg';
+import img5 from '../../../../assets/enterprise.png';
+import img6 from '../../../../assets/Reacl-estate.jpg';
 
 export default function Industries() {
   const industries = [
@@ -16,7 +12,7 @@ export default function Industries() {
     { name: "E-commerce", image: img2, description: "Boost your online store with seamless shopping experiences." },
     { name: "Education", image: img3, description: "Engaging learning platforms for students and educators." },
     { name: "Finance & FinTech", image: img4, description: "Secure and efficient financial technology applications." },
-    { name: "Entertainment & Media", image:  img5, description: "Immersive experiences for streaming and media consumption." },
+    { name: "Entertainment & Media", image: img5, description: "Immersive experiences for streaming and media consumption." },
     { name: "Real Estate", image: img6, description: "Smart property solutions for buyers and sellers." },
   ];
 
@@ -24,7 +20,7 @@ export default function Industries() {
     <section className="py-16 bg-gray-100">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <motion.h2 
-          className="text-3xl font-bold text-gray-800 mb-6"
+          className="text-3xl font-bold text-[#172554] mb-6"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -32,7 +28,7 @@ export default function Industries() {
           Industries We Serve
         </motion.h2>
         <motion.p 
-          className="text-gray-600 mb-10"
+          className="text-black mb-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7 }}
@@ -57,8 +53,8 @@ export default function Industries() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
               />
-              <h3 className="text-xl font-semibold text-gray-700">{industry.name}</h3>
-              <p className="text-gray-600 mt-2">{industry.description}</p>
+              <h3 className="text-xl font-semibold text-black">{industry.name}</h3>
+              <p className="text-black mt-2">{industry.description}</p>
             </motion.div>
           ))}
         </div>

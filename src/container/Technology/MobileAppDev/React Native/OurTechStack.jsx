@@ -54,11 +54,12 @@ const OurTechStack = () => {
         {techStack.map((stack, index) => (
           <motion.div
             key={index}
-            className="p-6 bg-gray-50 rounded-xl shadow-md border border-[#172554] hover:shadow-lg transition transform hover:scale-105"
+            className="cursor-pointer p-6 bg-gradient-to-br from-white to-gray-100 rounded-xl shadow-xl border border-transparent transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:border-[#172554]"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.05, rotate: 0.5 }}
+            whileTap={{ scale: 0.97 }}
           >
             <motion.h3 
               className="text-xl font-medium mb-4 flex items-center text-black"

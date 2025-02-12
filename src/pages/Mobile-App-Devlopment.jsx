@@ -9,6 +9,10 @@ import Com from '../assets/Logo2.jpg';
 import Com2 from '../assets/Logo3.jpg';
 import Com3 from '../assets/Logo4.jpg';
 import Com4 from '../assets/Logo5.jpg';
+import Heading from '../Layout/Heading';
+import WrapperContainer from '../Layout/WrapperContainer';
+
+
 
 const Amp = () => {
   return (
@@ -54,10 +58,18 @@ const Amp = () => {
         </div>
       </div>
 
-      {/* Additional Sections */}
+      
+      <WrapperContainer>
       <Amp2 />
       <Amp3 />
       <Amp5 />
+      
+      </WrapperContainer>
+     
+  
+     
+ 
+      
     </>
   );
 };

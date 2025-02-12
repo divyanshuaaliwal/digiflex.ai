@@ -1,83 +1,139 @@
 import React from "react";
 import { motion } from "framer-motion";
-import bg14 from '../../../../assets/bg14.jpg';
-import bg6 from "../../../../assets/bg6.png"; 
+import bg14 from "../../../../assets/bg14.jpg";
+import bg6 from "../../../../assets/bg6.png";
+import Heading from "../../../../Layout/Heading";
+
+// Import some icons from lucide-react
+import {
+  RefreshCcw,
+  Settings,
+  Database,
+  UploadCloud,
+  Zap,
+  Cloud,
+} from "lucide-react";
 
 const Mobile3 = () => {
-  const arr3 = 'https://i.pinimg.com/736x/f8/91/11/f891114391b563ea7ceb7ab3dd712259.jpg';
-  const arr4 = 'https://i.pinimg.com/736x/45/26/9d/45269d6a36b14be5e2d650069c96abce.jpg';
-  const arr2 = 'https://i.pinimg.com/736x/20/35/f2/2035f251301bf9848e93f802413435b6.jpg';
-  const arr = 'https://i.pinimg.com/736x/11/90/34/1190346b604a8e9b6e6179e7df234ef6.jpg';
+  const arr3 =
+    "https://i.pinimg.com/736x/f8/91/11/f891114391b563ea7ceb7ab3dd712259.jpg";
+  const arr4 =
+    "https://i.pinimg.com/736x/45/26/9d/45269d6a36b14be5e2d650069c96abce.jpg";
+  const arr2 =
+    "https://i.pinimg.com/736x/20/35/f2/2035f251301bf9848e93f802413435b6.jpg";
+  const arr =
+    "https://i.pinimg.com/736x/11/90/34/1190346b604a8e9b6e6179e7df234ef6.jpg";
+
+  // Updated services array with icons for each card.
   const services = [
-    { imgSrc: bg14, text: "Application Porting & Migration Assessment" },
+    {
+      imgSrc: bg14,
+      text: "Application Porting & Migration Assessment",
+      icon: <RefreshCcw className="w-8 h-8 text-white" />,
+    },
     {
       imgSrc: bg6,
-      text: "Application re-engineering for better business functionality and faster operation",
+      text: "Application Re-engineering",
+      icon: <Settings className="w-8 h-8 text-white" />,
     },
-    { imgSrc: arr, text: "Data migration" },
+    {
+      imgSrc: arr,
+      text: "Data Migration",
+      icon: <Database className="w-8 h-8 text-white" />,
+    },
     {
       imgSrc: arr2,
-      text: "Upgrade Application within the same operating environment",
+      text: "Upgrade Application",
+      icon: <UploadCloud className="w-8 h-8 text-white" />,
     },
-    { imgSrc: arr3, text: "Technology migration" },
-    { imgSrc: arr4, text: "Cloud migration & transition" },
+    {
+      imgSrc: arr3,
+      text: "Technology Migration",
+      icon: <Zap className="w-8 h-8 text-white" />,
+    },
+    {
+      imgSrc: arr4,
+      text: "Cloud Migration & Transition",
+      icon: <Cloud className="w-8 h-8 text-white" />,
+    },
   ];
 
   return (
-    <div className="bg-[#1A2E6F] text-white p-8">
-      <h1 className="text-center text-2xl font-bold mb-4">
+    <div className="bg-gray-50 text-black p-8">
+      {/* Section Title */}
+      <Heading
+      
+        className="text-center text-2xl font-bold mb-4"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         How do we achieve success in Integration Migration Services?
-      </h1>
-      <p className="text-center mb-8">
-        At Digiflex.ai, we ensure success in integration and migration services
-        by leveraging advanced tools and technologies to deliver reliable,
-        efficient, and scalable solutions. Our approach includes: Expertise in
-        Data Migration Tools: We work with industry-standard tools like
-        DataLoader and cutting-edge third-party ETL tools such as Talend and
-        Jitterbit to streamline data transfer and ensure accuracy during
-        migrations. Seamless API Integration: By utilizing REST and SOAP APIs,
-        we synchronize your data effortlessly across systems, ensuring seamless
-        communication between platforms. Client-Centric Strategies: Our team
-        collaborates closely with clients to understand their unique
-        requirements, designing custom solutions that mitigate risks and
-        guarantee data integrity during migration. Proven Track Record: Through
-        meticulous planning and execution, we’ve consistently delivered
-        successful integration and migration projects that empower businesses to
-        unlock the full potential of their digital ecosystems. Digiflex.ai
-        stands as a trusted partner, delivering innovative solutions that drive
-        business success in the ever-evolving digital landscape.{" "}
-      </p>
+      
+      </Heading>
+      <motion.p
+        className="text-center mb-8 max-w-3xl mx-auto text-sm"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.7 }}
+      >
+        At Digiflex.ai, we ensure success in integration and migration services by
+        leveraging advanced tools and technologies to deliver reliable, efficient,
+        and scalable solutions. Our approach includes expertise in data migration tools,
+        seamless API integration, client-centric strategies, and a proven track record in
+        successful projects.
+      </motion.p>
+
+      {/* Optional Graphic */}
       <div className="flex justify-center mb-8">
-        <img src={bg6} alt="Mobile Graphic" className="w-[290px]" />
+        <motion.img
+          src={bg6}
+          alt="Mobile Graphic"
+          className="w-[290px]"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+      {/* Services Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="bg-white text-black p-4 rounded-lg flex flex-col items-center"
-            whileHover={{
-              scale: 1.05,  // Scale up the card on hover
-              boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)", // Add a shadow effect
-              transition: { duration: 0.3 } // Smooth transition
-            }}
+            className="relative overflow-hidden rounded-xl shadow-xl"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+            whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
           >
-            <div className="bg-black p-2 rounded-full mb-4">
-              <img
-                src={service.imgSrc}
-                alt={service.text}
-                className="w-16 h-16 rounded-full"
-              />
+            {/* Background Image */}
+            <img
+              src={service.imgSrc}
+              alt={service.text}
+              className="w-full h-56 object-cover"
+            />
+            {/* Dark Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+            {/* Content Overlay */}
+            <div className="absolute inset-0 flex flex-col justify-end p-4">
+              <motion.div
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.5 }}
+                className="mb-2 flex justify-center"
+              >
+                <div className="bg-blue-500 p-2 rounded-full inline-block">
+                  {service.icon}
+                </div>
+              </motion.div>
+              <h2 className="text-lg font-bold text-white text-center">
+                {service.text}
+              </h2>
+              <p className="text-xs text-white text-center mt-1">
+                Digiflex.ai specializes in evaluating application ecosystems for
+                seamless porting and migration.
+              </p>
             </div>
-            <h2 className="text-lg font-semibold mb-2 text-center">
-              {service.text}
-            </h2>
-            <p className="text-black text-center">
-              Digiflex.ai specializes in evaluating application ecosystems for
-              seamless porting and migration. Our detailed assessment ensures
-              compatibility, risk mitigation, and optimal performance, enabling
-              businesses to transition applications efficiently while minimizing
-              downtime and maximizing scalability in modernized environments.
-            </p>
           </motion.div>
         ))}
       </div>

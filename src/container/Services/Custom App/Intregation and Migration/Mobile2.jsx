@@ -3,12 +3,15 @@ import bg10 from '../../../../assets/bg10.png';
 import bg11 from '../../../../assets/bg11.png';
 import bg12 from '../../../../assets/bg12.jpg';
 import { motion } from 'framer-motion';
+import Heading from '../../../../Layout/Heading';
 
 const Mobile2 = () => {
   return (
     <section className="bg-[#F9FAFB] text-black py-12">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-8">Key Features</h2>
+      <Heading>
+  Key Features</Heading>
+        
         <div className="flex flex-col md:flex-row justify-center items-center">
           
           {/* First Feature with Animation */}

@@ -2,7 +2,7 @@ import React from "react";
 
 const KnowledgeSection = () => {
   return (
-    <div className="flex flex-wrap items-start gap-8 p-8 bg-gray-100 font-sans">
+    <div className="flex flex-wrap items-start gap-8 p-8 bg-white font-sans">
       {/* Knowledge Left Section */}
       <div className="flex-1">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">

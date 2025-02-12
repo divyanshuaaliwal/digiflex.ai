@@ -4,6 +4,7 @@ import Robo from "../../../../assets/global-data-security-personal-data-security
 import Rob from "../../../../assets/business-risk-concept-illustration-b.png";
 import difi from "../../../../assets/bg11.png";
 import { Shield, Users, FileCheck, Clock } from "lucide-react";
+import Heading from "../../../../Layout/Heading";
 
 const Amp2 = () => {
   const features = [
@@ -45,20 +46,17 @@ const Amp2 = () => {
               />
             </motion.div>
             <motion.div
-              className="md:w-1/2 max-w-xl"
+              className="md:w-1/2 max-w-xl text-center md:text-left"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               whileHover={{ scale: 1.05 }}
             >
-              <h2 className="text-4xl font-bold text-[#172554] mb-6">
-                Security & Compliance
-              </h2>
+              <Heading>Security & Compliance</Heading>
               <p className="text-lg text-gray-700 mb-4">
-                At <span className="font-bold text-[#172554]">Digiflex.ai</span>
-                , security is our top priority. We implement the latest
-                encryption standards, multi-layered security, and compliance
-                frameworks.
+                At <span className="font-bold text-[#172554]">Digiflex.ai</span>,
+                security is our top priority. We implement the latest encryption
+                standards, multi-layered security, and compliance frameworks.
               </p>
               <div className="space-y-6">
                 {features.map((feature, index) => (
@@ -81,32 +79,28 @@ const Amp2 = () => {
       </div>
 
       {/* 📢 Transparency Section */}
-      <div className="min-h-[50vh] w-full  flex items-center justify-center">
+      <div className="min-h-[50vh] w-full flex items-center justify-center">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <motion.div
-              className="px-4 py-6 w-full md:w-1/2"
+              className="px-4 py-6 w-full md:w-1/2 text-center md:text-left"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               whileHover={{ scale: 1.05 }}
             >
-              <h2 className="text-xl font-semibold text-black">
-                Transparency & Innovation
-              </h2>
-              <h1 className="text-black text-lg">
-                Digiflex.ai is an IT service and product-based company with over
-                25 years of experience, specializing in web application
-                development. They provide secure, scalable, and high-performance
-                web solutions tailored to meet both business goals and customer
-                needs. With a focus on delivering industry-specific enterprise
-                applications, Digiflex.ai excels in creating customized,
-                customer-centered web solutions. Their expertise ensures that
-                businesses can leverage cutting-edge technology to achieve
-                optimal performance, security, and scalability in their web
-                platforms, supporting a diverse range of industries with
-                tailored services and solutions that drive success.{" "}
-              </h1>
+              <Heading>Transparency & Innovation</Heading>
+              <p className="text-black text-lg">
+                Digiflex.ai is an IT service and product-based company with over 25
+                years of experience, specializing in web application development.
+                They provide secure, scalable, and high-performance web solutions
+                tailored to meet both business goals and customer needs. With a focus
+                on delivering industry-specific enterprise applications, Digiflex.ai
+                excels in creating customized, customer-centered web solutions. Their
+                expertise ensures that businesses can leverage cutting-edge technology
+                to achieve optimal performance, security, and scalability in their web
+                platforms.
+              </p>
               <motion.button
                 className="bg-[#017EFE] text-[#0c0c0d] px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all mt-4"
                 whileHover={{ scale: 1.1 }}
@@ -149,7 +143,7 @@ const Amp2 = () => {
               />
             </motion.div>
             <motion.div
-              className="px-4 py-6 w-full md:w-1/2"
+              className="px-4 py-6 w-full md:w-1/2 text-center md:text-left"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -160,17 +154,14 @@ const Amp2 = () => {
               </h2>
               <p className="text-[#172554] text-lg">
                 Digiflex.ai offers flexible engagement models designed for
-                **startups, enterprises, and growing businesses**. Whether you
-                require a **dedicated development team, fixed-price projects, or
-                an agile sprint-based model**, Digiflex.ai ensures seamless
-                execution. Their approach is tailored to your specific needs,
-                enabling efficient collaboration and successful project
-                delivery. By offering versatile options, Digiflex.ai supports
-                businesses in achieving their goals with the right resources and
-                strategies, regardless of size or complexity. With their
-                expertise, they provide customized solutions that drive growth
-                and innovation, making sure every project is handled with
-                precision and attention to detail.{" "}
+                <strong> startups, enterprises, and growing businesses</strong>.
+                Whether you require a <strong>dedicated development team, fixed-price
+                projects, or an agile sprint-based model</strong>, Digiflex.ai ensures
+                seamless execution. Their approach is tailored to your specific needs,
+                enabling efficient collaboration and successful project delivery.
+                By offering versatile options, Digiflex.ai supports businesses in
+                achieving their goals with the right resources and strategies, regardless
+                of size or complexity.
               </p>
               <motion.button
                 className="bg-[#017EFE] text-[#0c0c0d] px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all mt-4"

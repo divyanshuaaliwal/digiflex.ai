@@ -41,7 +41,7 @@ const SmartFeatures = () => {
     >
       {/* Title */}
       <motion.h2
-        className="text-4xl font-bold text-center mb-10 text-gray-900"
+        className="text-4xl font-bold text-center mb-10 text-[#172554]"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -62,18 +62,20 @@ const SmartFeatures = () => {
           >
             {/* Feature Header */}
             <div className="flex justify-between items-center">
-              <span className="text-lg font-semibold">{feature.title}</span>
+              <span className="text-lg font-semibold text-black">
+                {feature.title}
+              </span>
               {openFeature === index ? (
-                <ChevronUp className="w-6 h-6 text-gray-600" />
+                <ChevronUp className="w-6 h-6 text-black" />
               ) : (
-                <ChevronDown className="w-6 h-6 text-gray-600" />
+                <ChevronDown className="w-6 h-6 text-black" />
               )}
             </div>
 
             {/* Expandable Feature Description */}
             {openFeature === index && (
               <motion.p
-                className="mt-4 text-base text-gray-700"
+                className="mt-4 text-base text-black"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 transition={{ duration: 0.4 }}

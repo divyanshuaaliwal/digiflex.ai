@@ -4,6 +4,7 @@ import Cards from "../container/Services/Custom App/CEM Devlopment/Cards";
 import Thirds from "../container/Services/Custom App/CEM Devlopment/Third";
 import Four from "../container/Services/Custom App/CEM Devlopment/Four";
 import KnowledgeSection from "../container/Services/Custom App/CEM Devlopment/KnowledgeSection";
+import WrapperContainer from "../Layout/WrapperContainer";
 
 const Hero = () => {
   return (
@@ -38,11 +39,12 @@ const Hero = () => {
           </button>
         </div>
       </div>
-
+      <WrapperContainer>
       <Thirds />
       <Four />
       <Cards />
       <KnowledgeSection />
+    </WrapperContainer>
     </>
   );
 };

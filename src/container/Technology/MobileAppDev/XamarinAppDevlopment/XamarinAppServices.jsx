@@ -7,7 +7,7 @@ const XamarinAppServices = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-5xl font-extrabold mb-4" style={{ color: '#172554' }}>
-            🛠 3. Our Xamarin App Development Services
+            🛠  Our Xamarin App Development Services
           </h2>
           <p className="text-gray-700 text-lg">
             Discover how our specialized services can elevate your mobile strategy.

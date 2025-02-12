@@ -1,48 +1,85 @@
+import React from "react";
 import { motion } from "framer-motion";
-import { FaCode, FaPaintBrush, FaDatabase, FaServer, FaTools, FaBug } from "react-icons/fa";
+import {
+  FaCode,
+  FaPaintBrush,
+  FaDatabase,
+  FaServer,
+  FaTools,
+  FaBug,
+} from "react-icons/fa";
+import Heading from "../../../../Layout/Heading";
 
 const techStack = [
-  { category: "Programming Languages", items: ["Kotlin", "Java", "Dart (Flutter)"], icon: <FaCode /> },
-  { category: "UI Frameworks", items: ["Jetpack Compose", "XML Layouts"], icon: <FaPaintBrush /> },
-  { category: "Backend Services", items: ["Firebase", "AWS", "Google Cloud"], icon: <FaServer /> },
-  { category: "Databases", items: ["SQLite", "Room", "Firestore"], icon: <FaDatabase /> },
-  { category: "DevOps & Deployment", items: ["Google Play Console", "Fastlane", "Jenkins"], icon: <FaTools /> },
-  { category: "Testing & Debugging", items: ["JUnit", "Espresso", "Firebase Test Lab"], icon: <FaBug /> }
+  {
+    category: "Programming Languages",
+    items: ["Kotlin", "Java", "Dart (Flutter)"],
+    icon: <FaCode />,
+  },
+  {
+    category: "UI Frameworks",
+    items: ["Jetpack Compose", "XML Layouts"],
+    icon: <FaPaintBrush />,
+  },
+  {
+    category: "Backend Services",
+    items: ["Firebase", "AWS", "Google Cloud"],
+    icon: <FaServer />,
+  },
+  {
+    category: "Databases",
+    items: ["SQLite", "Room", "Firestore"],
+    icon: <FaDatabase />,
+  },
+  {
+    category: "DevOps & Deployment",
+    items: ["Google Play Console", "Fastlane", "Jenkins"],
+    icon: <FaTools />,
+  },
+  {
+    category: "Testing & Debugging",
+    items: ["JUnit", "Espresso", "Firebase Test Lab"],
+    icon: <FaBug />,
+  },
 ];
 
 export default function TechStack() {
   return (
     <div className="p-10 bg-white text-[#1A2E6F]">
-      <motion.h2 
+      <Heading
         className="text-5xl font-bold text-center mb-10 text-[#1A2E6F]"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         Our Tech Stack
-      </motion.h2>
+      </Heading>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
         {techStack.map((tech, index) => (
-          <motion.div 
+          <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gray-100 p-5 rounded-2xl shadow-lg">
-              <div className="flex flex-col items-center text-center">
-                <div className="text-6xl text-yellow-500 mb-3">{tech.icon}</div>
-                <h3 className="text-2xl font-semibold mb-2 text-black">{tech.category}</h3>
-                <ul className="text-black space-y-1">
-                  {tech.items.map((item, i) => (
-                    <motion.li key={i} whileHover={{ scale: 1.1 }} className="text-lg">
-                      {item}
-                    </motion.li>
-                  ))}
-                </ul>
+            <div className="flex flex-col items-center text-center p-6 border rounded-2xl shadow-sm bg-gradient-to-br from-gray-50 to-gray-100 hover:shadow-lg transition">
+              <div className="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-pink-500 shadow-md mb-4">
+                {React.cloneElement(tech.icon, {
+                  className: "w-8 h-8 text-[#1A2E6F]",
+                })}
               </div>
+              <h3 className="text-xl font-semibold text-black mb-2">
+                {tech.category}
+              </h3>
+              <ul className="text-gray-900 text-lg">
+                {tech.items.map((item, i) => (
+                  <li key={i} className="mb-1">
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           </motion.div>
         ))}

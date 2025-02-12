@@ -4,6 +4,7 @@ import videoBg from "../assets/blockchain_video.mp4";
 import Mobile2 from "../container/Services/Custom App/Intregation and Migration/Mobile2";
 import Mobile3 from "../container/Services/Custom App/Intregation and Migration/Mobile3";
 import Mobile4 from "../container/Services/Custom App/Intregation and Migration/mobile4";
+import WrapperContainer from "../Layout/WrapperContainer";
 
 const Mobile = () => {
   return (
@@ -68,10 +69,11 @@ const Mobile = () => {
         </button>
       </motion.div>
 
-      {/* Extra Sections */}
+      <WrapperContainer>
       <Mobile2 />
       <Mobile3 />
       <Mobile4 />
+      </WrapperContainer>
     </>
   );
 };

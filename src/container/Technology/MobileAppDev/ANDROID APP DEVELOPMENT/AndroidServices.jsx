@@ -1,5 +1,6 @@
 import React from "react";
 import { Smartphone, Layers, Brain, Glasses, Watch, ShoppingBag } from "lucide-react";
+import Heading from "../../../../Layout/Heading";
 
 const services = [
   { icon: Smartphone, title: "Native Android", description: "Kotlin & Java-based apps" },
@@ -13,9 +14,12 @@ const services = [
 const AndroidServices = () => {
   return (
     <div className="min-h-screen bg-white p-12 flex flex-col items-center">
-      <h1 className="text-5xl font-bold text-[#1A2E6F] mb-12 text-center">
+     
+    <Heading> 
+   
         Our Android Development Services
-      </h1>
+   
+      </Heading>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl">
         {services.map((service, index) => (
           <div
