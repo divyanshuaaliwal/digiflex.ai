@@ -35,15 +35,17 @@ import UxResearch from "./pages/UxResearch";
 import UiAnimation from "./pages/UiAnimation";
 import DesignTesting from "./pages/DesignTesting";
 
-<<<<<<< HEAD
 
 // Game Development 
 import MobileGameDevelopment from "./pages/MobileGameDevelopment";
-=======
+
 import ExchangeShoftware from "./pages/ExchangeShoftware"
 import InitialCoinOffering from "./pages/InitialCoinOffering"
 import CryptocurrencyApp from "./pages/CryptocurrencyApp"
->>>>>>> 3dcba1238263dd2b3d19e9b883ac34f31939effa
+
+import CryptocurrencyWallet from "./pages/CryptocurrencyWallet";
+import SmartContractDevelopment from "./pages/SmartContractDevelopment";
+
 
 // Frontend Technology
 
@@ -62,14 +64,9 @@ import ReactNative from "./pages/ReactNative";
 import FlutterAppDevlopment from "./pages/FlutterAppDevlopment";
 import NativeScript from "./pages/NativeScript";
 import XamarinAppDEvlopment from "./pages/XamarinAppDEvlopment";
-<<<<<<< HEAD
-import { Import } from "lucide-react";
 
 
-=======
-import CryptocurrencyWallet from "./pages/CryptocurrencyWallet";
-import SmartContractDevelopment from "./pages/SmartContractDevelopment";
->>>>>>> 3dcba1238263dd2b3d19e9b883ac34f31939effa
+
 
 function App() {
   const location = useLocation();
