@@ -35,6 +35,10 @@ import UxResearch from "./pages/UxResearch";
 import UiAnimation from "./pages/UiAnimation";
 import DesignTesting from "./pages/DesignTesting";
 
+
+// Game Development 
+import MobileGameDevelopment from "./pages/MobileGameDevelopment";
+
 // Frontend Technology
 
 import AngularDevelopment from "./pages/AngularDevelopment";
@@ -52,6 +56,9 @@ import ReactNative from "./pages/ReactNative";
 import FlutterAppDevlopment from "./pages/FlutterAppDevlopment";
 import NativeScript from "./pages/NativeScript";
 import XamarinAppDEvlopment from "./pages/XamarinAppDEvlopment";
+import { Import } from "lucide-react";
+
+
 
 function App() {
   const location = useLocation();
@@ -195,6 +202,8 @@ function App() {
           path="/tech/XamarinAppDevlopment"
           element={<XamarinAppDEvlopment />}
         />
+       {/* Game development */}
+        <Route  path="/services/game-development/mobile-game-development" element={<MobileGameDevelopment/>}/>
       </Routes>
 
       <Reviews />

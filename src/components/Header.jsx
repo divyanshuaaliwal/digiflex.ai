@@ -18,6 +18,11 @@ import {
   Rocket,
   ShoppingBag,
   Clock,
+  Joystick ,
+  Monitor ,
+  PenTool,
+  Glasses ,
+  UserCheck 
 } from "lucide-react";
 import logo from "../assets/digiflex.png";
 
@@ -32,6 +37,10 @@ const Navbar = () => {
   const [isSearchActive, setIsSearchActive] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const timeoutRef = useRef(null);
+
+
+  
+
 
   const navItems = [
     { label: "Home", href: "#" },
@@ -232,6 +241,56 @@ const Navbar = () => {
       image:
         "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
     },
+    
+    {
+      id: "GameDev",
+      icon: Joystick ,
+      title: "Game Development",
+      color: "text-purple-500",
+      description:
+        "Immersive game development services for mobile, PC, and VR/AR experiences.",
+      features: [
+        {
+          title: "Mobile Game Development",
+          icon: Smartphone,
+          path: "/services/game-development/mobile-game-development",
+        },
+        {
+          title: "Unity3D Game Development",
+          icon: Joystick ,
+          path: "/services/game-development/unity3d-game-development",
+        },
+        {
+          title: "Unreal Game Development",
+          icon: Joystick ,
+          path: "/services/game-development/unreal-game-development",
+        },
+        {
+          title: "PC Game Development",
+          icon: Monitor ,
+          path: "/services/game-development/pc-game-development",
+        },
+        {
+          title: "Game Art Services",
+          icon: PenTool ,
+          path: "/services/game-development/game-art-services",
+        },
+        {
+          title: "VR/XR Simulation",
+          icon: Glasses ,
+          path: "/services/game-development/vr-xr-simulation",
+        },
+        {
+          title: "Resource Augmentation",
+          icon: UserCheck  ,
+          path: "/services/game-development/resource-augmentation",
+        },
+      ],
+      image:
+        "https://images.unsplash.com/photo-1628744444372-b5b24ee41e28?auto=format&fit=crop&w=600&q=80",
+    },
+
+   
   ];
   // Technology dropdown content
   const technologies = [

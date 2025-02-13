@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Subheading from '../../../../Layout/Subheading';
+import WrapperContainer from '../../../../Layout/WrapperContainer';
 
 const PricingPlans = () => {
   const [billingCycle, setBillingCycle] = useState('yearly');
@@ -72,98 +74,88 @@ const PricingPlans = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white py-12 px-4">
-      <div className="max-w-7xl mx-auto">
-        {/* Billing Toggle */}
-        <div className="flex justify-center mb-12">
-          <div className="bg-gray-100 p-1 rounded-full inline-flex">
-            <button
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 
-                ${billingCycle === 'monthly' ? 'bg-white shadow-sm' : 'text-gray-500'}`}
-              onClick={() => setBillingCycle('monthly')}
-            >
-              Monthly
-            </button>
-            <button
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 
-                ${billingCycle === 'yearly' ? 'bg-purple-600 text-white shadow-sm' : 'text-gray-500'}`}
-              onClick={() => setBillingCycle('yearly')}
-            >
-              Yearly
-            </button>
+    <WrapperContainer>
+      
+        <div className="max-w-7xl mx-auto">
+          {/* Billing Toggle */}
+          <div className="flex justify-center mb-12">
+            <div className="bg-gray-100 p-1 rounded-full inline-flex">
+              <button
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 
+                  ${billingCycle === 'monthly' ? 'bg-white shadow-sm' : 'text-gray-500'}`}
+                onClick={() => setBillingCycle('monthly')}
+              >
+                Monthly
+              </button>
+              <button
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 
+                  ${billingCycle === 'yearly' ? 'bg-purple-600 text-white shadow-sm' : 'text-gray-500'}`}
+                onClick={() => setBillingCycle('yearly')}
+              >
+                Yearly
+              </button>
+            </div>
           </div>
-        </div>
 
-        {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {plans.map((plan) => (
-            <div
-              key={plan.name}
-              className="bg-gray-100 rounded-lg p-8 transform hover:-translate-y-1 transition-all duration-200 hover:shadow-lg"
-            >
-              <div className="space-y-6">
-                {/* Plan Icon & Name */}
-                <div className="flex flex-col items-center">
-                  <span className={`text-3xl mb-2 ${plan.iconColor || 'text-gray-400'}`}>
-                    {plan.icon}
-                  </span>
-                  <span className="text-sm font-medium text-gray-500">
-                    {plan.name}
-                  </span>
+          {/* Pricing Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {plans.map((plan) => (
+              <div
+                key={plan.name}
+                className="bg-gray-100 rounded-lg p-6 flex flex-col transform hover:-translate-y-1 transition-all duration-200 hover:shadow-lg"
+              >
+                <div className="flex-grow space-y-4">
+                  {/* Plan Icon & Name */}
+                  <div className="flex flex-col items-center">
+                    <span className={`text-2xl mb-2 ${plan.iconColor || 'text-gray-400'}`}>
+                      {plan.icon}
+                    </span>
+                    <span className="text-xs font-medium text-gray-500">{plan.name}</span>
+                  </div>
+
+                  {/* Plan Title */}
+                  <Subheading className="text-base">{plan.title}</Subheading>
+
+                  {/* Features List */}
+                  <ul className="space-y-3 flex-grow">
+                    {plan.features.map((feature) => (
+                      <li key={feature} className="flex items-start">
+                        <svg
+                          className="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                        <span className="text-gray-600 text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
-                {/* Plan Title */}
-                <h3 className="text-xl font-bold text-center">
-                  {plan.title}
-                </h3>
-
-                {/* Features List */}
-                <ul className="space-y-4">
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-start">
-                      <svg
-                        className="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                      <span className="text-gray-600 text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Price */}
-                {plan.price > 0 && (
-                  <div className="text-center bg-gray-50 py-4 rounded-md">
-                    <div className="text-2xl font-bold">
-                      ${plan.price} USD
-                    </div>
-                    <div className="text-sm text-gray-500">per year</div>
-                  </div>
-                )}
-
-                {/* Action Button */}
-                <button
-                  className={`w-full py-3 px-4 rounded-md text-center text-sm font-medium transition-colors duration-200
-                    ${plan.buttonVariant === 'black' 
-                      ? 'bg-black text-white hover:bg-gray-800' 
-                      : 'bg-purple-600 text-white hover:bg-purple-700'}`}
-                >
-                  {plan.buttonText}
-                </button>
+                {/* Price & Button - Always at Bottom */}
+                <div className="mt-auto">
+                  <button
+                    className={`w-full py-2 px-3 mt-4 rounded-md text-center text-sm font-medium transition-colors duration-200
+                      ${plan.buttonVariant === 'black' 
+                        ? 'bg-black text-white hover:bg-gray-800' 
+                        : 'bg-purple-600 text-white hover:bg-purple-700'}`}
+                  >
+                    {plan.buttonText}
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </div>
+      
+    </WrapperContainer>
   );
 };
 

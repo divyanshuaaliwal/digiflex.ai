@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Clock, Users, Code, Scale } from 'lucide-react';
+import { Shield, Clock, Users, Code, Scale, WrapText } from 'lucide-react';
+import Heading from '../../../../Layout/Heading';
+import Subheading from '../../../../Layout/Subheading';
+import WrapperContainer from '../../../../Layout/WrapperContainer';
 
 const BenefitCard = ({ icon: Icon, title, description, index }) => {
   const [isHovered, setIsHovered] = useState(false);
   
   return (
+    
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.2 }}
-      className="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 relative overflow-hidden"
+      className="bg-[#f3f4f6] p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 relative overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -22,10 +26,12 @@ const BenefitCard = ({ icon: Icon, title, description, index }) => {
         <div className="p-3 bg-blue-600 rounded-lg">
           <Icon className="w-6 h-6 text-white" />
         </div>
-        <h3 className="text-xl font-bold text-white">{title}</h3>
+        <Subheading>{title}</Subheading>
       </motion.div>
-      <p className="text-gray-300 text-sm leading-relaxed">{description}</p>
+      <p className="text-gray-700 text-sm leading-relaxed">{description}</p>
     </motion.div>
+    
+    
   );
 };
 
@@ -59,22 +65,21 @@ const GameAceBenefits = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-950 p-8">
+  <WrapperContainer>
+        
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="max-w-6xl mx-auto"
+        className=" mx-auto"
       >
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white mb-4">
-            Benefits of Creating Mobile Games with Game-Ace
-          </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <Heading> Benefits of Creating Mobile Games with Game-Ace</Heading>
+          <p className="text-gray-600 max-w-2xl mx-auto">
             Game-Ace develops cross-platform mobile games that ignite inspiration, draw attention, and engage large audiences.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols- lg:grid-cols-3 gap-6">
           {benefits.map((benefit, index) => (
             <BenefitCard key={index} {...benefit} index={index} />
           ))}
@@ -91,7 +96,8 @@ const GameAceBenefits = () => {
           </button>
         </motion.div>
       </motion.div>
-    </div>
+      </WrapperContainer>
+
   );
 };
 

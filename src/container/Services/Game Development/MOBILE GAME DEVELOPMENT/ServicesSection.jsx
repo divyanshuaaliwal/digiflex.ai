@@ -1,6 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+import Heading from "../../../../Layout/Heading";
+import Subheading from "../../../../Layout/Subheading";
+import WrapperContainer from "../../../../Layout/WrapperContainer";
+
+
+
 const services = [
   {
     title: "Full-Cycle Mobile Game Development",
@@ -36,10 +42,11 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="bg-white text-blue-500 py-20 px-5">
+    <WrapperContainer>
+
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-5xl font-bold uppercase">Mobile Game Development Services We Provide</h2>
-      </div>
+      <Heading >Mobile Game Development Services We Provide</Heading>
+       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
         {services.map((service, index) => (
@@ -48,12 +55,14 @@ const ServicesSection = () => {
             className="p-6 bg-gray-100 rounded-lg shadow-lg text-center flex flex-col items-center"
           >
             <div className="text-5xl mb-4">{service.icon}</div>
-            <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+            <Subheading>{service.title}</Subheading>
             <p className="text-gray-600">{service.description}</p>
           </motion.div>
         ))}
       </div>
-    </section>
+    
+
+    </WrapperContainer>
   );
 };
 
