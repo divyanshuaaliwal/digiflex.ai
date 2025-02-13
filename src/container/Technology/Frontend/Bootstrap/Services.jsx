@@ -8,39 +8,39 @@ import Paragraph from "../../../../Layout/Paragraph";
 const data = [
   {
     icon: <Boxes className="text-blue-500 w-10 h-10 mx-auto" />,
-    title: "Component-Based Architecture",
+    title: "Responsive Grid System",
     description:
-      "Build reusable and modular UI components for scalable applications.",
+      "Create fluid and responsive layouts with Bootstrap's 12-column grid system.",
   },
   {
     icon: <Cpu className="text-blue-500 w-10 h-10 mx-auto" />,
-    title: "State Management",
+    title: "Prebuilt Components",
     description:
-      "Efficiently manage state with React's Context API, Redux, or Zustand.",
+      "Utilize a rich set of UI components such as modals, carousels, and buttons.",
   },
   {
     icon: <Rocket className="text-blue-500 w-10 h-10 mx-auto" />,
-    title: "Performance Optimization",
+    title: "Performance & Optimization",
     description:
-      "Enhance performance using memoization, lazy loading, and virtual DOM.",
+      "Ensure fast loading speeds with Bootstrap's lightweight and modular approach.",
   },
   {
     icon: <Globe2 className="text-blue-500 w-10 h-10 mx-auto" />,
-    title: "Server-Side Rendering (SSR)",
+    title: "Cross-Browser Compatibility",
     description:
-      "Improve SEO and load speeds with Next.js and React Server Components.",
+      "Deliver consistent experiences across all modern browsers with Bootstrap.",
   },
   {
     icon: <Database className="text-blue-500 w-10 h-10 mx-auto" />,
-    title: "API Integration",
+    title: "Customizable Themes",
     description:
-      "Seamlessly fetch data from REST APIs or GraphQL with Axios or Fetch API.",
+      "Easily customize Bootstrap with SASS variables to match your brand identity.",
   },
   {
     icon: <TestTube className="text-blue-500 w-10 h-10 mx-auto" />,
-    title: "Testing & Debugging",
+    title: "Mobile-First Approach",
     description:
-      "Ensure reliability with Jest, React Testing Library, and Cypress.",
+      "Build fully responsive and touch-friendly interfaces optimized for all devices.",
   },
 ];
 
@@ -126,13 +126,13 @@ const Services = () => {
         animate="visible"
       >
         <motion.div
-          className="max-w-3xl mx-auto text-center mb-16"
+          className=" mx-auto text-center mb-16"
           variants={titleVariants}
         >
-          <Heading>Our Capabilities in React</Heading>
+          <Heading>Our Capabilities in Bootstrap</Heading>
           <Paragraph>
             Driving Digital Transformation with Performance-Oriented B2B/B2C
-            React Solutions
+            Bootstrap Solutions
           </Paragraph>
         </motion.div>
 

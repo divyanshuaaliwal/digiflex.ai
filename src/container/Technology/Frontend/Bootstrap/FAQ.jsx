@@ -1,30 +1,30 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import Heading from "../../../../Layout/Heading";
 import WrapperContainer from "../../../../Layout/WrapperContainer";
+import Heading from "../../../../Layout/Heading";
 import Paragraph from "../../../../Layout/Paragraph";
 
 const faqs = [
   {
-    question: "What is Angular?",
+    question: "What services do you offer in Bootstrap development?",
     answer:
-      "Angular is a platform and framework for building single-page client applications using HTML and TypeScript. It provides powerful features like two-way data binding, dependency injection, and component-based architecture.",
+      "We specialize in creating responsive, mobile-first websites and web applications using Bootstrap. Our services include UI/UX design, theme customization, component development, and performance optimization.",
   },
   {
-    question: "How does data binding work in Angular?",
+    question: "Why should I choose Bootstrap for my project?",
     answer:
-      "Angular provides two-way data binding using [(ngModel)] and one-way data binding using interpolation {{ }} and property binding [property]. This enables automatic synchronization of data between the model and view, making it easier to build dynamic applications.",
+      "Bootstrap provides a fast, responsive, and customizable framework that ensures consistency across devices. It includes a powerful grid system, reusable components, and extensive documentation, making development efficient.",
   },
   {
-    question: "What are Angular directives?",
+    question: "Can you customize Bootstrap themes?",
     answer:
-      "Directives are special markers in HTML that tell Angular how to behave. There are three types: structural directives like *ngIf and *ngFor that modify DOM layout, attribute directives like ngClass that change element appearance or behavior, and component directives that create custom elements.",
+      "Yes, we offer full customization of Bootstrap themes, including modifying styles, adding custom components, and integrating third-party plugins to match your brand identity and business needs.",
   },
   {
-    question: "What is Angular CLI?",
+    question: "Do you provide support and maintenance?",
     answer:
-      "Angular CLI (Command Line Interface) is a powerful development tool that helps in creating, developing, and managing Angular applications. It provides commands for generating components, services, pipes, and other features, along with built-in development server and build optimization tools.",
+      "Absolutely! We offer ongoing support and maintenance, ensuring that your Bootstrap-based website stays up-to-date with the latest technologies, security patches, and performance enhancements.",
   },
 ];
 
@@ -60,16 +60,19 @@ const FAQ = () => {
 
   return (
     <WrapperContainer>
+       <div className="mx-auto">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="text-center mb-12"
       >
-        <Heading>Angular Development FAQ</Heading>
-        <Paragraph>
-          Common questions about Angular development answered
-        </Paragraph>
+<Heading>
+Bootstrap Development FAQ
+</Heading>
+    <Paragraph>
+    Common questions about Bootstrap development answered
+    </Paragraph>
       </motion.div>
 
       <motion.div
@@ -142,6 +145,7 @@ const FAQ = () => {
           </motion.div>
         ))}
       </motion.div>
+      </div>
     </WrapperContainer>
   );
 };

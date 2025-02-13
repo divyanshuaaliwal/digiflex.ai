@@ -6,6 +6,9 @@ import {
   AiOutlineSafetyCertificate,
 } from "react-icons/ai";
 import { FaLaptopCode, FaSearch, FaTools } from "react-icons/fa";
+import WrapperContainer from "../../../../Layout/WrapperContainer";
+import Heading from "../../../../Layout/Heading";
+import Paragraph from "../../../../Layout/Paragraph";
 
 const Data = [
   {
@@ -67,14 +70,12 @@ const Card = ({ icon, title, description, color }) => {
 
 export const WhyReact = () => {
   return (
-    <div className="max-w-5xl mx-auto text-center p-8">
-      <h2 className="text-3xl font-bold text-gray-800">
-        Why ReactJS for Web Development
-      </h2>
-      <p className="text-gray-600 mt-2">
+    <WrapperContainer>
+      <Heading>Why ReactJS for Web Development</Heading>
+      <Paragraph>
         Let's elaborate on more points to know why ReactJS is best for web
         development needs.
-      </p>
+      </Paragraph>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
         {Data.map((item, index) => (
           <Card
@@ -86,6 +87,6 @@ export const WhyReact = () => {
           />
         ))}
       </div>
-    </div>
+    </WrapperContainer>
   );
 };
