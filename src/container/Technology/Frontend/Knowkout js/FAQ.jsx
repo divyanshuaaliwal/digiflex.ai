@@ -1,30 +1,30 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import Heading from "../../../../Layout/Heading";
 import WrapperContainer from "../../../../Layout/WrapperContainer";
+import Heading from "../../../../Layout/Heading";
 import Paragraph from "../../../../Layout/Paragraph";
 
 const faqs = [
   {
-    question: "What is Angular?",
+    question: "What is Knockout.js?",
     answer:
-      "Angular is a platform and framework for building single-page client applications using HTML and TypeScript. It provides powerful features like two-way data binding, dependency injection, and component-based architecture.",
+      "Knockout.js is a JavaScript library that helps developers create rich, responsive user interfaces with the MVVM (Model-View-ViewModel) pattern.",
   },
   {
-    question: "How does data binding work in Angular?",
+    question: "How does data binding work in Knockout.js?",
     answer:
-      "Angular provides two-way data binding using [(ngModel)] and one-way data binding using interpolation {{ }} and property binding [property]. This enables automatic synchronization of data between the model and view, making it easier to build dynamic applications.",
+      "Knockout.js uses declarative bindings to automatically update the UI whenever the underlying data changes. This is achieved through observables and computed observables.",
   },
   {
-    question: "What are Angular directives?",
+    question: "What are observables in Knockout.js?",
     answer:
-      "Directives are special markers in HTML that tell Angular how to behave. There are three types: structural directives like *ngIf and *ngFor that modify DOM layout, attribute directives like ngClass that change element appearance or behavior, and component directives that create custom elements.",
+      "Observables are special JavaScript objects in Knockout.js that track changes and update the UI automatically whenever their values change.",
   },
   {
-    question: "What is Angular CLI?",
+    question: "Can Knockout.js work with other frameworks?",
     answer:
-      "Angular CLI (Command Line Interface) is a powerful development tool that helps in creating, developing, and managing Angular applications. It provides commands for generating components, services, pipes, and other features, along with built-in development server and build optimization tools.",
+      "Yes, Knockout.js can be integrated with other frameworks and libraries such as jQuery, Angular, and React, providing flexibility in development.",
   },
 ];
 
@@ -66,9 +66,9 @@ const FAQ = () => {
         transition={{ duration: 0.6 }}
         className="text-center mb-12"
       >
-        <Heading>Angular Development FAQ</Heading>
+        <Heading>Knockout JS Development FAQ</Heading>
         <Paragraph>
-          Common questions about Angular development answered
+          Common questions about Bootstrap development answered
         </Paragraph>
       </motion.div>
 

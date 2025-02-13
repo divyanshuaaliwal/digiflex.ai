@@ -71,7 +71,7 @@ function Footer() {
     <footer className="bg-blue-950 text-white">
       <div className="container mx-auto px-4 py-4">
         {/* Logo - reduced margin bottom */}
-        <div className="mb-4">
+        <div className="mb-4 max-w-[1200px] mx-auto">
           <h1 className="text-3xl font-bold tracking-tight text-white">DIGIFLEX</h1>
         </div>
 
@@ -79,9 +79,9 @@ function Footer() {
         <div className="w-full h-px bg-blue-800 mb-4"></div>
 
         {/* Main Footer Content */}
-        <div className="flex flex-col lg:flex-row justify-between gap-8 mb-4">
+        <div className="flex flex-col lg:flex-row justify-between gap-8 mb-4 max-w-[1200px] mx-auto">
           {/* Locations Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 flex-grow">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 flex-grow ">
             {locations.map((loc, index) => (
               <React.Fragment key={loc.id}>
                 <div className="space-y-0.5">
@@ -101,7 +101,7 @@ function Footer() {
           </div>
 
           {/* Contacts Section */}
-          <div className="lg:w-72">
+          <div className="lg:w-72 ">
             <h2 className="text-xl font-bold mb-4 text-white">Contacts</h2>
             <div className="space-y-6">
               <div className="space-y-2">
@@ -132,7 +132,7 @@ function Footer() {
         <div className="w-full h-px bg-blue-800 mb-3"></div>
 
         {/* Footer Bottom - reduced gap and padding */}
-        <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between items-center max-w-[1200px] mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-2 mb-2 md:mb-0">
             <span className="text-sm text-gray-300">©2025 Digiflex. All rights reserved</span>
             <div className="flex gap-2">

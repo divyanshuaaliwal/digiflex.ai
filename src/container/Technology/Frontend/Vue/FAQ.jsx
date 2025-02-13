@@ -7,44 +7,34 @@ import Paragraph from "../../../../Layout/Paragraph";
 
 const faqData = [
   {
-    question: "What services do you offer?",
+    question: "What Vue.js services do you offer?",
     answer:
-      "We provide end-to-end React.js development services, including UI/UX design, frontend development, API integration, performance optimization, and ongoing maintenance.",
+      "We offer end-to-end Vue.js development services, including custom web app development, UI/UX design, performance optimization, API integration, and ongoing maintenance and support.",
   },
   {
-    question: "Why should I choose React.js for my project?",
+    question: "Why choose Vue.js for web development?",
     answer:
-      "React.js offers component-based architecture, high performance, and strong community support. It ensures fast rendering, scalability, and maintainability, making it ideal for modern web applications.",
+      "Vue.js is a lightweight, progressive framework that offers high performance, component-based architecture, reactive data binding, and easy integration with existing projects, making it an excellent choice for modern web applications.",
   },
   {
-    question: "Do you work with Next.js as well?",
+    question: "How experienced is your Vue.js development team?",
     answer:
-      "Yes, we specialize in Next.js for server-side rendering, static site generation, and API handling. It enhances SEO and performance for React applications.",
+      "Our team consists of skilled Vue.js developers with years of experience in building scalable, high-performance applications. We follow best practices and leverage the latest tools and libraries in the Vue.js ecosystem.",
   },
   {
-    question: "Can you migrate my existing app to React?",
+    question: "Do you build Vue.js applications from scratch?",
     answer:
-      "Absolutely! We help businesses migrate from older technologies to React.js, ensuring smooth transitions with minimal downtime and improved performance.",
+      "Yes, we specialize in building Vue.js applications from the ground up. We ensure the project is structured efficiently, follows best coding practices, and is optimized for performance and scalability.",
   },
   {
-    question: "What industries do you serve?",
+    question: "Can you integrate Vue.js with existing applications?",
     answer:
-      "We have experience working with startups, enterprises, and businesses in fintech, e-commerce, healthcare, education, and SaaS platforms.",
+      "Absolutely! Vue.js is highly adaptable and can be integrated into existing projects, whether it's a partial migration or adding interactive components to a legacy system.",
   },
   {
-    question: "How do you ensure the quality of your code?",
+    question: "Do you provide Vue.js consulting services?",
     answer:
-      "We follow best coding practices, conduct rigorous code reviews, implement automated testing, and use TypeScript for type safety and maintainability.",
-  },
-  {
-    question: "What is your typical project timeline?",
-    answer:
-      "Project timelines vary based on complexity, but most React projects take between 4 to 12 weeks. We provide detailed schedules after requirement analysis.",
-  },
-  {
-    question: "Do you offer post-launch support?",
-    answer:
-      "Yes, we offer maintenance, bug fixes, performance optimization, and feature enhancements after the project is launched.",
+      "Yes, we offer Vue.js consulting to help businesses choose the right architecture, optimize their Vue applications, and ensure best practices in development and deployment.",
   },
 ];
 
@@ -66,8 +56,8 @@ const FAQ = () => {
         <div className="text-center mb-12">
           <Heading>Frequently Asked Questions</Heading>
           <Paragraph>
-            Have questions? Here are some answers about our React.js development
-            services.
+            Have questions about our Vue.js development services? Here are some
+            of the most common inquiries we receive.
           </Paragraph>
         </div>
 
@@ -96,8 +86,8 @@ const FAQ = () => {
                     transition={{ duration: 0.3 }}
                   >
                     <ChevronDown
-                      className={`text-blue-500 transition-colors ${
-                        activeIndex === index ? "text-blue-700" : ""
+                      className={`text-green-500 transition-colors ${
+                        activeIndex === index ? "text-green-700" : ""
                       }`}
                     />
                   </motion.div>
@@ -124,7 +114,7 @@ const FAQ = () => {
                         height: { duration: 0.3 },
                       },
                     }}
-                    className="bg-blue-50 p-6 rounded-b-lg"
+                    className="bg-green-50 p-6 rounded-b-lg"
                   >
                     <p className="text-gray-700">{faq.answer}</p>
                   </motion.div>
