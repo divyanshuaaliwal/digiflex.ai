@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-
+import Subheading from '../../../../Layout/Subheading';
+import Heading from "../../../../Layout/Heading";
 const industries = [
   {
     icon: "🏥",
@@ -42,6 +43,8 @@ const IndustriesWeServe = () => {
       transition={{ duration: 1 }}
     >
       {/* Title */}
+
+      <Heading>
       <motion.h1
         className="text-5xl font-bold text-center mb-10"
         initial={{ opacity: 0, y: -20 }}
@@ -50,6 +53,7 @@ const IndustriesWeServe = () => {
       >
         Industries We Serve with React Native Apps
       </motion.h1>
+      </Heading>
 
       {/* Industry Grid */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -63,12 +67,13 @@ const IndustriesWeServe = () => {
           >
             <div className="flex flex-col items-center">
               {/* Industry Icon */}
-              <div className="w-16 h-16 flex items-center justify-center rounded-full bg-[#172554] text-white mb-4 text-3xl">
+            
+              <div className="w-16 h-16 flex items-center justify-center rounded-full bg-blue-900 text-white mb-4 text-3xl">
                 {industry.icon}
               </div>
-
+               <Subheading>
               {/* Industry Title */}
-              <h2 className="text-xl font-semibold mb-2">{industry.title}</h2>
+              {industry.title} </Subheading>
 
               {/* Industry Description */}
               <p className="text-base text-center text-gray-700">

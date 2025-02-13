@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-
+import Heading from '../../../../Layout/Heading';
 const techStack = [
   {
     id: "language",
@@ -106,7 +106,8 @@ export default function OurTechStack() {
     <div className="bg-gray-50 py-12">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-8">
-          <motion.h2
+        
+          <Heading
             className="text-5xl font-bold text-[#172554]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -114,7 +115,8 @@ export default function OurTechStack() {
             viewport={{ once: true }}
           >
             Our Flutter Tech Stack
-          </motion.h2>
+            </Heading>
+          
           <motion.div
             className="mx-auto mt-4 w-24 h-1 bg-[#172554]"
             initial={{ scaleX: 0 }}

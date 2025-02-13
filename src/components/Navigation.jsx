@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const footerLinks = {
   'FRONTEND WEB DEVELOPMENT': [
     'Angular JS Development',
@@ -43,7 +44,7 @@ const footerLinks = {
 
 const Navigation = () => {
   return (
-
+    
     <div className="flex justify-center items-center bg-blue-950 ">
         <div className="text-white py-12">
         <div className="container mx-auto px-4">

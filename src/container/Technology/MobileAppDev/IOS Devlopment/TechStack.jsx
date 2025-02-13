@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { FaCode, FaCogs, FaToolbox, FaDatabase, FaCloud, FaBug } from "react-icons/fa";
+import Heading from "../../../../Layout/Heading";
+import Subheading from "../../../../Layout/Subheading";
 
 const techStack = [
   { category: "Languages", items: "Swift, Objective-C", icon: FaCode },
@@ -12,16 +14,18 @@ const techStack = [
 
 export default function TechStack() {
   return (
-    <section className="bg-gradient-to-r from-blue-50 to-gray-100 py-16 px-6 md:px-16 lg:px-24">
+    <section className="bg-white py-16 px-6 md:px-16 lg:px-24">
       <motion.div
         className="max-w-6xl mx-auto text-center"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h2 className="text-5xl font-extrabold text-[#172554] mb-4 tracking-wide">
+        <Heading>
+        
           Our Tech Stack
-        </h2>
+        
+        </Heading>
         <p className="text-lg text-black mb-12">
           We leverage the latest technologies to build robust and high-performing iOS applications.
         </p>
@@ -40,9 +44,10 @@ export default function TechStack() {
             whileHover={{ scale: 1.05, rotate: 2 }}
             transition={{ duration: 0.3 }}
           >
-            <tech.icon className="text-4xl text-[#172554]" />
+            <tech.icon className="text-4xl text-blue-600" />
             <div>
-              <h3 className="text-2xl font-semibold text-black">{tech.category}</h3>
+            <Subheading>{tech.category}</Subheading>
+              
               <p className="text-md text-black">{tech.items}</p>
             </div>
           </motion.div>

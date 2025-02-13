@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Heading from "../../../../Layout/Heading";
 
 const WhyChooseReactNative = () => {
   const features = [
@@ -35,14 +36,16 @@ const WhyChooseReactNative = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <motion.h2
+    <Heading
+  
         className="text-4xl font-bold mb-10"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
         Why Choose React Native?
-      </motion.h2>
+      
+      </Heading>
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         {features.map((feature, index) => (
           <motion.div

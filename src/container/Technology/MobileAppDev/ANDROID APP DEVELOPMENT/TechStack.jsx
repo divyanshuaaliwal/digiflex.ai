@@ -9,6 +9,7 @@ import {
   FaBug,
 } from "react-icons/fa";
 import Heading from "../../../../Layout/Heading";
+import Subheading from "../../../../Layout/Subheading";
 
 const techStack = [
   {
@@ -70,9 +71,11 @@ export default function TechStack() {
                   className: "w-8 h-8 text-[#1A2E6F]",
                 })}
               </div>
-              <h3 className="text-xl font-semibold text-black mb-2">
+              <Subheading>
+             
                 {tech.category}
-              </h3>
+           
+              </Subheading>
               <ul className="text-gray-900 text-lg">
                 {tech.items.map((item, i) => (
                   <li key={i} className="mb-1">

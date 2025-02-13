@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Heading from '../../../../Layout/Heading';
 import {
   HeartPulse,
   ShoppingCart,
@@ -46,14 +47,15 @@ const IndustriesWeServe = () => {
   return (
     <div className="py-20 bg-white text-[#172554] text-center">
       {/* Main Heading */}
-      <motion.h2
+     <Heading
+      
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         className="text-5xl font-extrabold mb-10 text-[#172554]"
       >
-        🌍 Industries We Serve with Flutter Apps
-      </motion.h2>
+          Industries We Serve with Flutter Apps
+        </Heading>
 
       {/* Industries Grid */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6">

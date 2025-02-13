@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaCode, FaCogs, FaServer, FaDatabase, FaBug, FaTools } from "react-icons/fa";
+import Heading from "../../../../Layout/Heading";
 
 const techStack = [
   {
@@ -42,14 +43,16 @@ const OurTechStack = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <motion.h2 
+    <Heading
+ 
         className="text-5xl font-semibold text-center mb-10 text-[#172554]"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
         Our React Native Tech Stack
-      </motion.h2>
+    
+      </Heading>
       <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {techStack.map((stack, index) => (
           <motion.div

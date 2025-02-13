@@ -5,6 +5,8 @@ import img3 from '../../../../assets/Education.jpg';
 import img4 from '../../../../assets/fintech-investment-financial-internet-technology-concept.jpg';
 import img5 from '../../../../assets/enterprise.png';
 import img6 from '../../../../assets/Reacl-estate.jpg';
+import Heading from "../../../../Layout/Heading";
+import Subheading from "../../../../Layout/Subheading";
 
 export default function Industries() {
   const industries = [
@@ -17,16 +19,18 @@ export default function Industries() {
   ];
 
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <motion.h2 
+       <Heading
+     
           className="text-3xl font-bold text-[#172554] mb-6"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           Industries We Serve
-        </motion.h2>
+       
+        </Heading>
         <motion.p 
           className="text-black mb-10"
           initial={{ opacity: 0 }}
@@ -53,7 +57,12 @@ export default function Industries() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
               />
-              <h3 className="text-xl font-semibold text-black">{industry.name}</h3>
+
+              <Subheading>
+            {industry.name}
+              
+              </Subheading>
+              
               <p className="text-black mt-2">{industry.description}</p>
             </motion.div>
           ))}

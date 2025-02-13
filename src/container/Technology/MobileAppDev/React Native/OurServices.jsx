@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import Heading from "../../../../Layout/Heading";
 const OurServices = () => {
   const services = [
     {
@@ -32,14 +32,15 @@ const OurServices = () => {
       transition={{ duration: 1 }}
     >
       {/* Title */}
-      <motion.h1
+       <Heading
+      
         className="text-5xl font-semibold text-[#172554] text-center mb-10 mt-6"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
         Our React Native Development Services
-      </motion.h1>
+      </Heading>
 
       {/* Services List */}
       <motion.div

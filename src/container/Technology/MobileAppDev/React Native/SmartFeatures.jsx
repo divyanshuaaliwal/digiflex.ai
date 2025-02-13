@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
-
+import Heading from '../../../../Layout/Heading';
 const features = [
   {
     title: "Push Notifications",
@@ -40,15 +40,16 @@ const SmartFeatures = () => {
       transition={{ duration: 1 }}
     >
       {/* Title */}
-      <motion.h2
+      <Heading
+      
         className="text-4xl font-bold text-center mb-10 text-[#172554]"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
         Smart Features We Implement in React Native Apps
-      </motion.h2>
-
+     
+      </Heading>
       {/* Features List */}
       <div className="max-w-4xl mx-auto space-y-6">
         {features.map((feature, index) => (

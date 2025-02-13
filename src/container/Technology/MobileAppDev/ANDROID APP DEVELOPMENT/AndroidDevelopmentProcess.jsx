@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Heading from "../../../../Layout/Heading";
+import Subheading from "../../../../Layout/Subheading";
 
 const steps = [
   {
@@ -65,9 +66,14 @@ const AndroidDevelopmentProcess = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl font-semibold flex items-center text-black">
-              <span className="mr-3 text-xl">{step.id}</span> {step.title}
-            </h3>
+
+          <Subheading>
+            
+              <span className="mr-3 text-xl">{step.id}</span> 
+              
+              {step.title}
+              
+            </Subheading>
             <p className="text-gray-900 text-lg mt-3">{step.description}</p>
           </motion.div>
         ))}

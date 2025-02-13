@@ -1,6 +1,7 @@
 import React from "react";
 import { Smartphone, Layers, Brain, Glasses, Watch, ShoppingBag } from "lucide-react";
 import Heading from "../../../../Layout/Heading";
+import Subheading from "../../../../Layout/Subheading";
 
 const services = [
   { icon: Smartphone, title: "Native Android", description: "Kotlin & Java-based apps" },
@@ -29,7 +30,8 @@ const AndroidServices = () => {
             <div className="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-pink-500 shadow-md mb-4">
               <service.icon className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-black mb-2">{service.title}</h3>
+            <Subheading>
+            {service.title}</Subheading>
             <p className="text-gray-900 text-lg">{service.description}</p>
           </div>
         ))}

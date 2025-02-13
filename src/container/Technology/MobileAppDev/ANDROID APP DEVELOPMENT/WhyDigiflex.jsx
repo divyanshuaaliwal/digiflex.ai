@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaMobileAlt, FaBolt, FaLock, FaRobot, FaRocket, FaCloud } from 'react-icons/fa';
 import Heading from '../../../../Layout/Heading';
+import Subheading from '../../../../Layout/Subheading';
 
 const features = [
   {
@@ -58,7 +59,8 @@ export default function WhyDigiflex() {
             className="flex flex-col items-center text-center p-6 border rounded-2xl shadow-sm bg-gradient-to-br from-gray-50 to-gray-100 hover:shadow-lg transition"
           >
             {feature.icon}
-            <h3 className="text-xl font-semibold text-black mb-2 mt-4">{feature.title}</h3>
+            <Subheading>
+            {feature.title}</Subheading>
             <p className="text-gray-900 text-lg">{feature.description}</p>
           </motion.div>
         ))}

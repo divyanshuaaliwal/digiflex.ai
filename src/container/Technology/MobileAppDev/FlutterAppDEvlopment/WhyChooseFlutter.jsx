@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
-
+import Heading from '../../../../Layout/Heading';
 const features = [
   {
     title: "Single Codebase, Multi-Platform",
@@ -34,14 +34,16 @@ const WhyChooseFlutter = () => {
   return (
     <section className="bg-gray-50 py-20 px-6 text-[#172554]">
       {/* Main Heading with Animated Underline */}
-      <motion.h2
+      
+      <Heading
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         className="text-5xl font-extrabold text-center mb-4 text-[#172554]"
       >
         Why Choose Flutter for App Development?
-      </motion.h2>
+        </Heading>
+      
       <motion.div
         className="mx-auto mb-12 w-24 h-1 bg-[#172554]"
         initial={{ scaleX: 0 }}
