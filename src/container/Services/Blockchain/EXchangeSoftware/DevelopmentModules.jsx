@@ -8,7 +8,9 @@ import {
   Code,
   Key,
   MessageSquare
-} from 'lucide-react';
+} from 'lucide-react'
+import Heading from '../../../../Layout/Heading';
+import WrapperContainer from '../../../../Layout/WrapperContainer';
 
 const ModuleCard = ({ title, description, icon: Icon }) => (
   <div className="relative bg-white border border-gray-300 shadow-md rounded-lg overflow-hidden hover:bg-gray-100 transition-all duration-300 cursor-pointer group">
@@ -73,12 +75,18 @@ const CryptoExchangeModules = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white p-8">
+    <>
+   <WrapperContainer>
+   <div className="min-h-screen bg-white p-8">
       <div className="max-w-6xl mx-auto">
       <div className="bg-white py-10 flex justify-center">
-        <h1 className="text-3xl font-bold text-center max-w-3xl shadow-md p-4 rounded-md cursor-pointer text-[#1E3A8A]">
+        <Heading>
+        <h1 >
           Our Crypto Exchange Development Solutions
         </h1>
+
+        </Heading>
+       
       </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -93,6 +101,11 @@ const CryptoExchangeModules = () => {
         </div>
       </div>
     </div>
+   </WrapperContainer>
+  
+   
+    </>
+   
   );
 };
 

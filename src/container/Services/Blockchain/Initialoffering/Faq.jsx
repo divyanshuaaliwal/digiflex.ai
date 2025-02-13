@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import Heading from "../../../../Layout/Heading";
+import Paragraph from "../../../../Layout/Paragraph";
+import WrapperContainer from "../../../../Layout/WrapperContainer";
+
 
 const faqs = [
   {
@@ -37,14 +41,21 @@ const Faq = () => {
   };
 
   return (
-    <div className="bg-white py-16 px-6">
+ <WrapperContainer>
+        <div className="bg-white py-16 px-6">
       <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-4xl font-extrabold text-gray-900 mb-6">
+        <Heading>
+        <h2>
           Frequently Asked Questions
         </h2>
-        <p className="text-gray-600 text-lg mb-10 leading-relaxed">
+
+        </Heading>
+        <Paragraph>
+        <p>
           Get answers to the most common questions about **Initial Coin Offering (ICO)** and how it works.
         </p>
+
+        </Paragraph>
       </div>
 
       {/* FAQ Section */}
@@ -78,6 +89,11 @@ const Faq = () => {
         ))}
       </div>
     </div>
+ </WrapperContainer>
+    
+
+   
+ 
   );
 };
 

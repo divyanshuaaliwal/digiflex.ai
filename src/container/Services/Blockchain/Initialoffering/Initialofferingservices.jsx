@@ -1,5 +1,7 @@
 import React from "react";
-import { FaUserCheck, FaClipboardList, FaShieldAlt, FaGlobe, FaFileContract, FaUserShield } from "react-icons/fa";
+import { FaUserCheck, FaClipboardList, FaShieldAlt, FaGlobe, FaFileContract, FaUserShield } from "react-icons/fa"
+import Heading from "../../../../Layout/Heading";
+import WrapperContainer from "../../../../Layout/WrapperContainer";
 
 const features = [
   {
@@ -36,10 +38,16 @@ const features = [
 
 const Initialofferingservices= () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-6">
+  
+
+<WrapperContainer>
+<div className="min-h-screen  py-12 px-6">
       <div className="max-w-6xl mx-auto text-center">
         {/* Header Section */}
-        <h1 className="text-3xl font-bold text-gray-800 mb-8">Our Services</h1>
+        <Heading>
+        <h1 >Our Services</h1>
+
+        </Heading>
       
       </div>
 
@@ -54,6 +62,10 @@ const Initialofferingservices= () => {
         ))}
       </div>
     </div>
+</WrapperContainer>
+ 
+  
+    
   );
 };
 
