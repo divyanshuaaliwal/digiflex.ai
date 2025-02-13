@@ -1,5 +1,7 @@
 import React from "react";
 import { FaCogs, FaShieldAlt, FaChartLine, FaLightbulb, FaRocket, FaUsers } from "react-icons/fa";
+import Heading from "../../../../Layout/Heading";
+import WrapperContainer from "../../../../Layout/WrapperContainer";
 
 const features = [
   {
@@ -36,9 +38,13 @@ const features = [
 
 const Whychoose = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-6">
+    <WrapperContainer>
+        <div className="min-h-screen py-12 px-6">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-2xl font-bold text-gray-800 mb-8">Why Choose Us As Your ICO Development Company?</h2>
+        <Heading>
+        <h2>Why Choose Us As Your ICO Development Company?</h2>
+
+        </Heading>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 max-w-6xl mx-auto">
@@ -51,6 +57,11 @@ const Whychoose = () => {
         ))}
       </div>
     </div>
+    </WrapperContainer>
+       
+
+       
+  
   );
 };
 

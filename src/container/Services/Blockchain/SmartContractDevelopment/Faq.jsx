@@ -6,25 +6,29 @@ const Faq = () => {
 
   const faqData = [
     {
-      question: 'How much does it cost to build a cryptocurrency exchange platform?',
-      answer: 'The cost of building a cryptocurrency exchange platform can vary significantly based on features, complexity, and security requirements. Basic platforms typically start from $50,000, while more sophisticated exchanges can cost $150,000 or more. Factors affecting cost include trading engine complexity, security measures, user interface, and regulatory compliance requirements.'
-    },
-    {
-      question: 'How long does white label crypto exchange development take?',
-      answer: 'White label crypto exchange development typically takes 2-4 months. This timeline includes customization, branding, testing, and deployment. The exact duration depends on specific requirements, customizations needed, and the complexity of additional features requested.'
-    },
-    {
-      question: 'How to create a cryptocurrency exchange?',
-      answer: 'Creating a cryptocurrency exchange involves several key steps: 1) Define your target market and features 2) Choose between white-label solution or custom development 3) Ensure legal compliance and obtain necessary licenses 4) Implement robust security measures 5) Integrate payment systems and cryptocurrencies 6) Test thoroughly for security and performance 7) Launch and maintain the platform.'
-    },
-    {
-      question: 'What are the benefits of hiring Appinventiv as your cryptocurrency exchange development company?',
-      answer: 'Benefits include experienced blockchain developers, comprehensive security measures, scalable architecture, regulatory compliance expertise, ongoing technical support, and proven track record in crypto exchange development.'
-    },
-    {
-      question: 'What are some of the top features of a cryptocurrency exchange platform?',
-      answer: 'Key features include: Multi-currency support, secure wallet integration, real-time trading engine, advanced order types, KYC/AML compliance, two-factor authentication, liquidity aggregation, customer support system, and mobile accessibility.'
-    }
+        question: "What is a Smart Contract?",
+        answer: "A smart contract is a self-executing contract with the terms of the agreement directly written into code. It runs on blockchain networks and executes automatically when predefined conditions are met."
+      },
+      {
+        question: "Which blockchain platforms support Smart Contracts?",
+        answer: "Popular platforms include Ethereum, Binance Smart Chain, Solana, Polygon, and Hyperledger. Ethereum is the most widely used for smart contract development."
+      },
+      {
+        question: "What programming languages are used for Smart Contracts?",
+        answer: "Solidity (Ethereum), Rust (Solana), Vyper (Ethereum), and Chaincode (Hyperledger) are commonly used for developing smart contracts."
+      },
+      {
+        question: "Are Smart Contracts secure?",
+        answer: "Smart contracts are secure when properly written and audited. However, vulnerabilities like reentrancy attacks and overflow bugs can be exploited, so security audits are essential."
+      },
+      {
+        question: "How do Smart Contracts execute transactions?",
+        answer: "Once deployed on the blockchain, smart contracts execute automatically based on predefined conditions, eliminating the need for intermediaries."
+      },
+      {
+        question: "Can Smart Contracts interact with external data?",
+        answer: "Yes, through oracles like Chainlink, smart contracts can fetch external data (e.g., weather, stock prices) securely."
+      },
   ];
 
   const toggleFaq = (index) => {

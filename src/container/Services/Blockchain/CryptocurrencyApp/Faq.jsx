@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import WrapperContainer from '../../../../Layout/WrapperContainer'
+import Heading from '../../../../Layout/Heading';
 
 const Faq = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -31,8 +33,11 @@ const Faq = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-8 font-sans bg-gradient-to-r from-gray-100 to-gray-200 min-h-screen">
-      <h1 className="text-center text-3xl font-bold text-gray-900 mb-8 bg-gradient-to-r from-blue-900 to-blue-500 bg-clip-text text-transparent">Frequently Asked Questions</h1>
+  <WrapperContainer>
+<div className="max-w-4xl mx-auto p-8  to-gray-200 min-h-screen">
+    <Heading>
+      <h1>Frequently Asked Questions</h1>
+    </Heading>
       <div className="space-y-4">
         {faqData.map((faq, index) => {
           const isOpen = openIndex === index;
@@ -51,6 +56,8 @@ const Faq = () => {
         })}
       </div>
     </div>
+   </WrapperContainer>
+
   );
 };
 

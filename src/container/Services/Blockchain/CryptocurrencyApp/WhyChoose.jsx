@@ -1,5 +1,7 @@
 import React from 'react';
 import { ShieldCheck, Code, BarChart, Lock, Headphones, Globe } from 'lucide-react';
+import Heading from '../../../../Layout/Heading';
+import WrapperContainer from '../../../../Layout/WrapperContainer';
 
 const WhyChooseCard = ({ title, description, icon: Icon }) => (
   <div className="bg-white shadow-md rounded-xl p-8 flex flex-col items-center text-center space-y-4 transition-transform transform hover:scale-105 hover:shadow-lg">
@@ -46,13 +48,18 @@ const WhyChoose= () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+   
+<WrapperContainer>
+<div className="min-h-screen  py-12">
       
    
       <div className="bg-white py-10 flex justify-center">
-        <h1 className="text-3xl font-bold text-center max-w-3xl shadow-md p-4 rounded-md cursor-pointer text-[#1E3A8A]">
+        <Heading>
+        <h1>
         Why Choose Digiflex for Cryptocurrency App Development?
         </h1>
+        </Heading>
+      
       </div>
 
     
@@ -72,6 +79,11 @@ const WhyChoose= () => {
         </div>
       </div>
     </div>
+</WrapperContainer>
+     
+  
+   
+ 
   );
 };
 

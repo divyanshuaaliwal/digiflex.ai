@@ -7,7 +7,7 @@
  
  function Hero() {
    const letterRefs = useRef([]);
-   const text = " Cryptocurrency Development Company";
+   const text = " Cryptocurrency Wallet";
  
    useEffect(() => {
      letterRefs.current.forEach((letter, index) => {
@@ -72,7 +72,7 @@
  
            {/* Animated Description with Glowing Effect */}
            <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12 animate-glow">
-           Cryptocurrency Development Company
+             Cryptocurrency Wallet
              <span className="relative inline-block group mx-2">
                guiding you through design
                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 animate-pulse"></span>

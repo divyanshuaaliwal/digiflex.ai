@@ -18,6 +18,9 @@ import {
   Rocket,
   ShoppingBag,
   Clock,
+  Signature,
+  Currency,
+  Wallet,
 } from "lucide-react";
 import logo from "../assets/digiflex.png";
 
@@ -227,6 +230,43 @@ const Navbar = () => {
           icon: Globe,
           title: "Selenium Automation Testing",
           path: "/services/testing/selenium-automation-testing",
+        },
+      ],
+      image:
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
+    },
+    {
+      id: "BlockchainDev",
+      icon: Cpu,
+      title: "Blockchain Development",
+      color: "text-yellow-500",
+      description:
+        "Cutting-edge solutions using blockchain technologies.",
+      features: [
+        {
+          icon: Cpu,
+          title: "Exhange Software",
+          path: "/services/blockchain/exchangesoftware",
+        },
+        {
+          icon: Database,
+          title: "Initial Coin Offering",
+          path: "/services/blockchain/initialcoinoffering",
+        },
+        {
+          icon: Currency,
+          title: "Cryptocurrency App",
+          path: "/services/blockchain/cryptocurrency",
+        },
+        {
+          icon: Wallet,
+          title: "Cryptocurrency Wallet",
+          path: "/services/blockchain/cryptocurrencywallet",
+        },
+        {
+          icon: Signature,
+          title: "Smart Contract",
+          path: "/services/blockchain/smartcontractdevelopment",
         },
       ],
       image:

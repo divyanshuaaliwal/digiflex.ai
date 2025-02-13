@@ -35,6 +35,10 @@ import UxResearch from "./pages/UxResearch";
 import UiAnimation from "./pages/UiAnimation";
 import DesignTesting from "./pages/DesignTesting";
 
+import ExchangeShoftware from "./pages/ExchangeShoftware"
+import InitialCoinOffering from "./pages/InitialCoinOffering"
+import CryptocurrencyApp from "./pages/CryptocurrencyApp"
+
 // Frontend Technology
 
 import AngularDevelopment from "./pages/AngularDevelopment";
@@ -52,6 +56,8 @@ import ReactNative from "./pages/ReactNative";
 import FlutterAppDevlopment from "./pages/FlutterAppDevlopment";
 import NativeScript from "./pages/NativeScript";
 import XamarinAppDEvlopment from "./pages/XamarinAppDEvlopment";
+import CryptocurrencyWallet from "./pages/CryptocurrencyWallet";
+import SmartContractDevelopment from "./pages/SmartContractDevelopment";
 
 function App() {
   const location = useLocation();
@@ -164,6 +170,24 @@ function App() {
           path="/services/ui-ux/design-testing"
           element={<DesignTesting />}
         />
+
+        <Route
+          path="/services/blockchain/exchangesoftware"
+          element={<ExchangeShoftware/>}
+        />
+        <Route
+          path="/services/blockchain/initialcoinoffering"
+          element={<InitialCoinOffering/>}
+        />
+        <Route
+          path="/services/blockchain/cryptocurrency"
+          element={<CryptocurrencyApp/>}
+        />
+
+        <Route path="/services/blockchain/smartcontractdevelopment" element={<SmartContractDevelopment/>}/>
+
+
+        <Route  path="/services/blockchain/cryptocurrencywallet" element={<CryptocurrencyWallet/>} />
 
         {/* Frontend Technology */}
         <Route path="/tech/frontend/angular" element={<AngularDevelopment />} />
