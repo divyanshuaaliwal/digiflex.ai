@@ -7,7 +7,7 @@ const KnowledgeSection = () => {
     <div className="flex flex-wrap items-start gap-8 p-8 bg-white font-sans">
       {/* Knowledge Left Section */}
       <div className="flex-1">
-        <Heading className="text-2xl font-bold text-gray-800 mb-4">
+        <Heading >
           Enable Solutions
         </Heading>
         <Subheading className="text-xl text-gray-600 mb-4">

@@ -63,7 +63,7 @@ export default function Website4() {
     <section className="py-16 px-4 bg-gray-100">
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Website Development Packages */}
-        <Heading className="text-3xl md:text-4xl font-bold text-center text-gray-800">
+        <Heading>
           Our Website Development Packages
         </Heading>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -86,7 +86,7 @@ export default function Website4() {
         {/* Business Website Value Section */}
         <div className="flex flex-col md:flex-row items-center justify-between bg-white p-8 space-y-8 md:space-y-0 rounded-lg shadow-md">
           <div className="md:w-1/2 space-y-4">
-            <Heading className="text-3xl md:text-4xl font-bold text-gray-800">
+            <Heading>
               Does It Make A Value To Get A Business Website?
             </Heading>
             <p className="text-lg text-gray-700">
@@ -99,7 +99,7 @@ export default function Website4() {
         </div>
 
         {/* Website Development Process */}
-        <Heading className="text-3xl font-bold text-center text-gray-800">
+        <Heading>
           Our Website Development Process
         </Heading>
         <Subheading className="text-center text-gray-600">

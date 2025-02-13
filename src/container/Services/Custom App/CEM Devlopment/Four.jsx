@@ -17,8 +17,8 @@ const Four = () => {
         </button>
       </div>
       <div className="flex-1">
-        <Heading className="text-2xl text-gray-900 mb-4">
-          Optimize Operations
+        <Heading >
+        OptiOps
         </Heading>
         <Subheading className="text-lg text-gray-600 mb-4">
           Knowledge Management

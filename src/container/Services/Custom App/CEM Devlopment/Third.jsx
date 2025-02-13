@@ -58,8 +58,8 @@ const Thirds = () => {
           />
         </div>
         <div className="workspace-right flex-1">
-          <Heading className="text-2xl text-gray-800 mb-2">
-            Manage every interaction from one AI-powered workspace.
+          <Heading>
+            Intermanage
           </Heading>
           <Subheading className="text-xl text-gray-600 mb-4">
             Case Management
