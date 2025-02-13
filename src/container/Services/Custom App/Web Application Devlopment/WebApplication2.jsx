@@ -1,6 +1,8 @@
 import React from 'react';
 import { Smartphone, Zap, Layers } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Heading from '../../../../Layout/Heading';
+import Subheading from '../../../../Layout/Subheading';
 
 const WebApplication2 = () => {
   const services = [
@@ -36,10 +38,10 @@ const WebApplication2 = () => {
         transition={{ duration: 0.8 }}
       >
         {/* Title Section */}
-        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-center md:text-left">
+        <Heading>
           Empowering Your Business <br />
           with Mobile-First Excellence
-        </h1>
+        </Heading>
 
         <p className="mb-12 text-gray-700 max-w-3xl text-center md:text-left mx-auto md:mx-0">
           Recognizing the need of the era, we have developed comprehensive expertise that helps you tap into this growing market by enabling seamless, integrated experiences across devices.
@@ -57,7 +59,7 @@ const WebApplication2 = () => {
               whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)" }}
             >
               <div className="mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+              <Subheading>{service.title}</Subheading>
               <p className="text-gray-700">{service.description}</p>
             </motion.div>
           ))}
@@ -65,11 +67,9 @@ const WebApplication2 = () => {
 
         {/* Extra Content for Laptops & Desktops */}
         <div className="hidden lg:block mt-12">
-          <h2 className="text-2xl font-semibold text-gray-900">
-            Why Choose Our Mobile-First Approach?
-          </h2>
+          <Subheading>Why Choose Our Mobile-First Approach?</Subheading>
           <p className="text-gray-700 mt-3 max-w-4xl">
-            Our solutions prioritize **speed, security, and seamless user experience**, ensuring your business thrives in the digital-first world. Whether it's **progressive web apps, cross-platform applications, or native solutions**, we build applications that scale with your needs.
+            Our solutions prioritize <strong>speed, security, and seamless user experience</strong>, ensuring your business thrives in the digital-first world. Whether it's <strong>progressive web apps, cross-platform applications, or native solutions</strong>, we build applications that scale with your needs.
           </p>
         </div>
       </motion.div>

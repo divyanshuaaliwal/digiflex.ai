@@ -1,19 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  ArrowRight, 
-  MessageSquare, 
-  UserCheck, 
-  Zap, 
-  Settings 
-} from 'lucide-react';
+import { ArrowRight, MessageSquare, UserCheck, Zap, Settings } from 'lucide-react';
+import Heading from '../../../../Layout/Heading';
+import Subheading from '../../../../Layout/Subheading';
 
 const Cards = () => {
   return (
     <>
       <br />
       <div className="flex items-center justify-center text-lg font-bold text-black mb-6">
-        Extend the power of Service Cloud with these related products.
+        <Heading>
+          Extend the power of Service Cloud with these related products.
+        </Heading>
       </div>
 
       <div className="grid grid-cols-1 gap-4 p-4 mt-4 bg-white rounded-xl shadow-md md:grid-cols-2 lg:grid-cols-4">
@@ -29,9 +27,9 @@ const Cards = () => {
           <div className="flex justify-center mb-2">
             <MessageSquare className="h-8 w-8 text-blue-500" />
           </div>
-          <h3 className="text-lg font-semibold text-gray-800 mb-1">
+          <Subheading>
             Omni-Channel Routing
-          </h3>
+          </Subheading>
           <p className="text-gray-500 text-sm mb-3">
             Optimizes customer interactions by directing them across channels like phone, email, and chat.
           </p>
@@ -52,9 +50,9 @@ const Cards = () => {
           <div className="flex justify-center mb-2">
             <UserCheck className="h-8 w-8 text-green-500" />
           </div>
-          <h3 className="text-lg font-semibold text-gray-800 mb-1">
+          <Subheading>
             Self-Service
-          </h3>
+          </Subheading>
           <p className="text-gray-500 text-sm mb-3">
             Intuitive portals and chatbots that empower customers to get support instantly.
           </p>
@@ -75,9 +73,9 @@ const Cards = () => {
           <div className="flex justify-center mb-2">
             <Zap className="h-8 w-8 text-yellow-500" />
           </div>
-          <h3 className="text-lg font-semibold text-gray-800 mb-1">
+          <Subheading>
             Einstein for Service
-          </h3>
+          </Subheading>
           <p className="text-gray-500 text-sm mb-3">
             Leverages AI to automate tasks and deliver personalized, data-driven experiences.
           </p>
@@ -98,9 +96,9 @@ const Cards = () => {
           <div className="flex justify-center mb-2">
             <Settings className="h-8 w-8 text-purple-500" />
           </div>
-          <h3 className="text-lg font-semibold text-gray-800 mb-1">
+          <Subheading>
             Customer Service Automation & Process
-          </h3>
+          </Subheading>
           <p className="text-gray-500 text-sm mb-3">
             Streamlines support tasks with AI and chatbots to automate ticket routing and FAQs.
           </p>

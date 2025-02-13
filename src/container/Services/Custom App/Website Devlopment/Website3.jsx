@@ -6,12 +6,20 @@ import {
   PenToolIcon,
   WrenchIcon,
 } from "lucide-react";
+import Heading from "../../../../Layout/Heading";
+import Subheading from "../../../../Layout/Subheading";
 
 const ServiceCard = ({ icon, title, description, linkText = "VIEW MORE" }) => (
   <div className="flex flex-col space-y-4 p-6 bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105 md:p-8">
-    <div className="w-12 h-12 text-[#172554] flex items-center justify-center">{icon}</div>
-    <h3 className="text-xl font-semibold text-[#172554]">{title}</h3>
-    <p className="text-gray-600 leading-relaxed text-sm md:text-base">{description}</p>
+    <div className="w-12 h-12 text-[#172554] flex items-center justify-center">
+      {icon}
+    </div>
+    <Subheading className="text-xl font-semibold text-[#172554]">
+      {title}
+    </Subheading>
+    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+      {description}
+    </p>
     {linkText && (
       <button className="text-[#172554] hover:text-blue-700 text-sm font-medium uppercase text-left w-fit">
         {linkText}
@@ -61,9 +69,11 @@ export default function Website3() {
   ];
 
   return (
-    <section className="py-16 px-4 bg-[#172554] text-white">
+    <section className="py-16 px-4  text-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-center text-3xl font-bold mb-10">Our Services</h2>
+        <Heading className="text-center text-3xl font-bold mb-10">
+          Our Services
+        </Heading>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <ServiceCard

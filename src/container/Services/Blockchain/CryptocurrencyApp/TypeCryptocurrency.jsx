@@ -8,6 +8,9 @@ import {
   Users
 } from 'lucide-react';
 
+import Heading from '../../../../Layout/Heading';
+import WrapperContainer from '../../../../Layout/WrapperContainer';
+
 const ServiceCard = ({ title, description, icon }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -23,7 +26,8 @@ const ServiceCard = ({ title, description, icon }) => {
   const IconComponent = iconComponents[icon];
 
   return (
-    <div
+
+        <div
       className="relative bg-white shadow-lg rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -46,6 +50,8 @@ const ServiceCard = ({ title, description, icon }) => {
         </div>
       </div>
     </div>
+ 
+ 
   );
 };
 
@@ -84,12 +90,16 @@ const CoverServices = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 p-8">
+   <WrapperContainer>
+       <div className="min-h-screen p-8">
       <div className="max-w-7xl mx-auto">
         <div className="bg-white py-10 flex justify-center mb-8">
-          <h1 className="text-3xl font-bold text-center max-w-3xl shadow-md p-4 rounded-md cursor-pointer text-[#1E3A8A]">
+          <Heading>
+          <h1>
             Types of Cryptocurrency
           </h1>
+          </Heading>
+         
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -104,6 +114,11 @@ const CoverServices = () => {
         </div>
       </div>
     </div>
+   </WrapperContainer>
+     
+  
+  
+   
   );
 };
 

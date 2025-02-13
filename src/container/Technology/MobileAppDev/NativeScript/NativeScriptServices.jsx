@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { FaMobileAlt, FaSync, FaPaintBrush, FaServer, FaBug, FaTools, FaUsers, FaRocket, FaLock, FaChartLine, FaCogs, FaHeadset } from "react-icons/fa";
+import Heading from '../../../../Layout/Heading';
+import Subheading from '../../../../Layout/Subheading';
 
 const services = [
   { icon: <FaMobileAlt />, title: "Custom NativeScript App Development", description: "Tailored solutions for businesses" },
@@ -21,16 +23,17 @@ const whyDigiflex = [
 
 export default function NativeScriptServices() {
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16 bg-[#F3F4F6]">
       <div className="max-w-6xl mx-auto text-center px-4">
-        <motion.h2
-          className="text-3xl font-bold text-gray-800 mb-8 flex justify-center items-center gap-2"
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          🛠 Our NativeScript App Development Services
-        </motion.h2>
+          <Heading className="text-3xl font-bold text-gray-800 mb-8 flex justify-center items-center gap-2">
+            🛠 Our NativeScript App Development Services
+          </Heading>
+        </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <motion.div
@@ -40,22 +43,25 @@ export default function NativeScriptServices() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
+              whileHover={{ scale: 1.1 }}
             >
-              <div className="text-4xl text-blue-500 mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-700 mb-2">{service.title}</h3>
+              <motion.div initial={{ rotate: 0 }} whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
+                <div className="text-4xl text-blue-500 mb-4">{service.icon}</div>
+              </motion.div>
+              <Subheading>{service.title}</Subheading>
               <p className="text-gray-600">{service.description}</p>
             </motion.div>
           ))}
         </div>
-        
-        <motion.h2
-          className="text-3xl font-bold text-[#172554] mt-16 mb-8 flex justify-center items-center gap-2"
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          📌 Why Digiflex for NativeScript Development?
-        </motion.h2>
+          <Heading className="text-3xl font-bold text-[#172554] mt-16 mb-8 flex justify-center items-center gap-2">
+            📌 Why Digiflex for NativeScript Development?
+          </Heading>
+        </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {whyDigiflex.map((reason, index) => (
             <motion.div
@@ -65,9 +71,12 @@ export default function NativeScriptServices() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
+              whileHover={{ scale: 1.1 }}
             >
-              <div className="text-4xl text-green-500 mb-4">{reason.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-700 mb-2">{reason.title}</h3>
+              <motion.div initial={{ rotate: 0 }} whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
+                <div className="text-4xl text-green-500 mb-4">{reason.icon}</div>
+              </motion.div>
+              <Subheading>{reason.title}</Subheading>
               <p className="text-gray-600">{reason.description}</p>
             </motion.div>
           ))}

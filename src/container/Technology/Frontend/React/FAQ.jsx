@@ -1,28 +1,51 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, HelpCircle } from 'lucide-react';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown, HelpCircle } from "lucide-react";
+import WrapperContainer from "../../../../Layout/WrapperContainer";
+import Heading from "../../../../Layout/Heading";
+import Paragraph from "../../../../Layout/Paragraph";
 
 const faqData = [
   {
-    question: "What technologies do you specialize in?",
-    answer: "We specialize in React.js, Next.js, TypeScript, and modern web development technologies. Our team is proficient in creating scalable, high-performance web applications using the latest frameworks and best practices."
+    question: "What services do you offer?",
+    answer:
+      "We provide end-to-end React.js development services, including UI/UX design, frontend development, API integration, performance optimization, and ongoing maintenance.",
   },
   {
-    question: "How long does a typical project take?",
-    answer: "Project duration varies depending on complexity. A typical web application can take 4-12 weeks. We provide detailed project timelines after an initial consultation and requirement analysis."
+    question: "Why should I choose React.js for my project?",
+    answer:
+      "React.js offers component-based architecture, high performance, and strong community support. It ensures fast rendering, scalability, and maintainability, making it ideal for modern web applications.",
   },
   {
-    question: "Do you offer ongoing support?",
-    answer: "Yes, we provide comprehensive post-development support. Our support packages include bug fixes, performance optimization, and feature enhancements to ensure your application remains cutting-edge."
+    question: "Do you work with Next.js as well?",
+    answer:
+      "Yes, we specialize in Next.js for server-side rendering, static site generation, and API handling. It enhances SEO and performance for React applications.",
   },
   {
-    question: "What is your development process?",
-    answer: "Our development process follows agile methodologies. We begin with requirement gathering, move to design and prototyping, iterative development, rigorous testing, and finally deployment with continuous support."
+    question: "Can you migrate my existing app to React?",
+    answer:
+      "Absolutely! We help businesses migrate from older technologies to React.js, ensuring smooth transitions with minimal downtime and improved performance.",
   },
   {
-    question: "How do you ensure code quality?",
-    answer: "We implement strict code review processes, use TypeScript for type safety, conduct comprehensive unit and integration testing, and follow industry-standard coding guidelines and best practices."
-  }
+    question: "What industries do you serve?",
+    answer:
+      "We have experience working with startups, enterprises, and businesses in fintech, e-commerce, healthcare, education, and SaaS platforms.",
+  },
+  {
+    question: "How do you ensure the quality of your code?",
+    answer:
+      "We follow best coding practices, conduct rigorous code reviews, implement automated testing, and use TypeScript for type safety and maintainability.",
+  },
+  {
+    question: "What is your typical project timeline?",
+    answer:
+      "Project timelines vary based on complexity, but most React projects take between 4 to 12 weeks. We provide detailed schedules after requirement analysis.",
+  },
+  {
+    question: "Do you offer post-launch support?",
+    answer:
+      "Yes, we offer maintenance, bug fixes, performance optimization, and feature enhancements after the project is launched.",
+  },
 ];
 
 const FAQ = () => {
@@ -33,54 +56,49 @@ const FAQ = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-4">
-      <motion.div 
+    <WrapperContainer>
+      <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="container mx-auto max-w-4xl"
+        className="container mx-auto "
       >
         <div className="text-center mb-12">
-          <motion.h2 
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="text-4xl font-bold text-gray-900 mb-4 flex items-center justify-center"
-          >
-            <HelpCircle className="mr-4 text-blue-500" size={40} />
-            Frequently Asked Questions
-          </motion.h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Got questions? We've got answers. Here are some of the most common inquiries about our React development services.
-          </p>
+          <Heading>Frequently Asked Questions</Heading>
+          <Paragraph>
+            Have questions? Here are some answers about our React.js development
+            services.
+          </Paragraph>
         </div>
 
         <div className="space-y-4">
           {faqData.map((faq, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ 
-                duration: 0.4, 
-                delay: index * 0.1 
+              transition={{
+                duration: 0.4,
+                delay: index * 0.1,
               }}
             >
-              <motion.div 
+              <motion.div
                 onClick={() => toggleFAQ(index)}
                 className="bg-white rounded-lg shadow-md cursor-pointer hover:shadow-lg transition-shadow"
                 whileTap={{ scale: 0.98 }}
               >
                 <div className="flex justify-between items-center p-6">
-                  <h3 className="text-lg font-semibold text-gray-800">{faq.question}</h3>
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    {faq.question}
+                  </h3>
                   <motion.div
                     animate={{ rotate: activeIndex === index ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <ChevronDown 
+                    <ChevronDown
                       className={`text-blue-500 transition-colors ${
-                        activeIndex === index ? 'text-blue-700' : ''
-                      }`} 
+                        activeIndex === index ? "text-blue-700" : ""
+                      }`}
                     />
                   </motion.div>
                 </div>
@@ -90,21 +108,21 @@ const FAQ = () => {
                 {activeIndex === index && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
-                    animate={{ 
-                      opacity: 1, 
-                      height: 'auto',
-                      transition: { 
+                    animate={{
+                      opacity: 1,
+                      height: "auto",
+                      transition: {
                         duration: 0.3,
-                        height: { duration: 0.3 }
-                      }
+                        height: { duration: 0.3 },
+                      },
                     }}
-                    exit={{ 
-                      opacity: 0, 
+                    exit={{
+                      opacity: 0,
                       height: 0,
-                      transition: { 
+                      transition: {
                         duration: 0.3,
-                        height: { duration: 0.3 }
-                      }
+                        height: { duration: 0.3 },
+                      },
                     }}
                     className="bg-blue-50 p-6 rounded-b-lg"
                   >
@@ -116,7 +134,7 @@ const FAQ = () => {
           ))}
         </div>
       </motion.div>
-    </div>
+    </WrapperContainer>
   );
 };
 

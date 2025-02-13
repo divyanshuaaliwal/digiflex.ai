@@ -46,11 +46,11 @@ const WhyChooseReactNative = () => {
         Why Choose React Native?
       
       </Heading>
-      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         {features.map((feature, index) => (
           <motion.div
             key={index}
-            className="flex items-center p-6 bg-[#172554] text-white rounded-xl shadow-lg border border-[#172554] hover:shadow-xl transition transform hover:scale-105"
+            className="flex items-center p-6 bg-blue-500 text-white rounded-xl shadow-lg border border-[#172554] hover:shadow-xl transition transform hover:scale-105"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}

@@ -1,15 +1,16 @@
 import React from "react";
 import bg4 from "../../../../assets/bg4.png";
+import Heading from "../../../../Layout/Heading";
+import Subheading from "../../../../Layout/Subheading";
 
 const Thirds = () => {
   return (
     <div className="partner-section p-8 bg-white">
       {/* Partner Logos Section */}
       <div className="partner-logos text-center mb-8">
-        <h2 className="partner-heading text-xl text-gray-800 mb-4">
-          Get the most out of your agent console with thousands of partner apps
-          and experts.
-        </h2>
+        <Heading className="partner-heading text-xl text-gray-800 mb-4">
+          Get the most out of your agent console with thousands of partner apps and experts.
+        </Heading>
         <div className="logos flex justify-center gap-4 flex-wrap mb-4">
           <img
             src="https://i.pinimg.com/736x/48/e0/f3/48e0f3e95f00646880441f490bf008f5.jpg"
@@ -57,10 +58,12 @@ const Thirds = () => {
           />
         </div>
         <div className="workspace-right flex-1">
-          <h3 className="text-2xl text-gray-800 mb-2">
-            Manage every interaction from one AI-powered workspace.
-          </h3>
-          <h4 className="text-xl text-gray-600 mb-4">Case Management</h4>
+          <Heading>
+            Intermanage
+          </Heading>
+          <Subheading className="text-xl text-gray-600 mb-4">
+            Case Management
+          </Subheading>
           <p>
             Effortlessly handle all customer interactions from a single
             AI-powered workspace designed for efficiency and productivity.

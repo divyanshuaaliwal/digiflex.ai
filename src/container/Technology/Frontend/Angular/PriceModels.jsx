@@ -1,6 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Check, Star, Zap, Shield } from "lucide-react";
+import Heading from "../../../../Layout/Heading";
+import WrapperContainer from "../../../../Layout/WrapperContainer";
+import Paragraph from "../../../../Layout/Paragraph";
 
 const pricingPlans = [
   {
@@ -12,9 +15,9 @@ const pricingPlans = [
       "Responsive design",
       "1-month support",
       "Code review",
-      "Basic SEO optimization"
+      "Basic SEO optimization",
     ],
-    color: "blue"
+    color: "blue",
   },
   {
     name: "Standard Plan",
@@ -25,10 +28,10 @@ const pricingPlans = [
       "Custom UI components",
       "3-month support",
       "Performance optimization",
-      "Advanced integrations"
+      "Advanced integrations",
     ],
     color: "purple",
-    popular: true
+    popular: true,
   },
   {
     name: "Premium Plan",
@@ -39,9 +42,9 @@ const pricingPlans = [
       "Advanced UI/UX",
       "6-month support",
       "24/7 priority support",
-      "Custom feature development"
+      "Custom feature development",
     ],
-    color: "teal"
+    color: "teal",
   },
 ];
 
@@ -51,26 +54,26 @@ const PriceModels = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const cardVariants = {
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       y: 50,
-      scale: 0.9 
+      scale: 0.9,
     },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       scale: 1,
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 12
-      }
+        damping: 12,
+      },
     },
     hover: {
       scale: 1.03,
@@ -78,45 +81,41 @@ const PriceModels = () => {
       transition: {
         type: "spring",
         stiffness: 400,
-        damping: 15
-      }
-    }
+        damping: 15,
+      },
+    },
   };
 
   const featureVariants = {
     hidden: { opacity: 0, x: -20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       x: 0,
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 10
-      }
-    }
+        damping: 10,
+      },
+    },
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 text-blue-900 flex flex-col items-center p-8">
+    <WrapperContainer>
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, type: "spring" }}
         className="text-center mb-16"
       >
-        <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          Angular Development Pricing
-        </h1>
-        <p className="text-lg text-blue-700 max-w-2xl">
-          Choose the perfect plan for your project needs
-        </p>
+        <Heading>Angular Development Pricing</Heading>
+        <Paragraph>Choose the perfect plan for your project needs</Paragraph>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 "
       >
         {pricingPlans.map((plan, index) => {
           const Icon = plan.icon;
@@ -124,7 +123,7 @@ const PriceModels = () => {
           const colorClass = {
             blue: "from-blue-500 to-blue-600",
             purple: "from-purple-500 to-purple-600",
-            teal: "from-teal-500 to-teal-600"
+            teal: "from-teal-500 to-teal-600",
           }[plan.color];
 
           return (
@@ -133,7 +132,7 @@ const PriceModels = () => {
               variants={cardVariants}
               whileHover="hover"
               className={`relative bg-white rounded-2xl shadow-lg overflow-hidden ${
-                isPopular ? 'ring-2 ring-purple-500' : ''
+                isPopular ? "ring-2 ring-purple-500" : ""
               }`}
             >
               {isPopular && (
@@ -143,7 +142,7 @@ const PriceModels = () => {
                   </span>
                 </div>
               )}
-              
+
               <div className={`bg-gradient-to-r ${colorClass} text-white p-8`}>
                 <Icon className="w-12 h-12 mb-4" strokeWidth={1.5} />
                 <h2 className="text-2xl font-bold mb-2">{plan.name}</h2>
@@ -164,7 +163,7 @@ const PriceModels = () => {
                     </motion.li>
                   ))}
                 </ul>
-                
+
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -177,7 +176,7 @@ const PriceModels = () => {
           );
         })}
       </motion.div>
-    </div>
+    </WrapperContainer>
   );
 };
 

@@ -1,5 +1,7 @@
 import React from "react";
-import bg5 from '../../../../assets/bg5.png';
+import bg5 from "../../../../assets/bg5.png";
+import Heading from "../../../../Layout/Heading";
+import Subheading from "../../../../Layout/Subheading";
 
 const Four = () => {
   return (
@@ -15,8 +17,12 @@ const Four = () => {
         </button>
       </div>
       <div className="flex-1">
-        <h2 className="text-2xl text-gray-900 mb-4">Resolve disruptions faster to decrease costs and maximize ROI.</h2>
-        <h4 className="text-lg text-gray-600 mb-4">Knowledge Management</h4>
+        <Heading >
+        OptiOps
+        </Heading>
+        <Subheading className="text-lg text-gray-600 mb-4">
+          Knowledge Management
+        </Subheading>
         <div className="flex gap-4 mb-4">
           <button className="bg-blue-700 text-white py-3 px-6 font-semibold rounded-lg hover:bg-blue-800">
             Watch Demo
@@ -26,10 +32,12 @@ const Four = () => {
           </button>
         </div>
         <div className="mb-4">
-          <h5 className="text-blue-600 text-xl mb-2">Knowledge Base</h5>
+          <Subheading className="text-blue-600 text-xl mb-2">
+            Knowledge Base
+          </Subheading>
           <p className="text-gray-600 text-base mb-4">
             Stay one step ahead of potential disruptions with powerful incident management tools seamlessly integrated into Service Cloud. By monitoring systems through out-of-the-box integrations, these tools proactively detect potential problems, enabling businesses to take swift action before they escalate into widespread issues. With the ability to track and manage incidents in real-time, businesses can minimize downtime and enhance operational efficiency.
-            The integration of incident management into Service Cloud empowers service and operations teams to work in unison
+            The integration of incident management into Service Cloud empowers service and operations teams to work in unison.
           </p>
         </div>
         <ul className="list-none p-0">

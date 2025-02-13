@@ -1,5 +1,8 @@
 import React from "react";
 import { FaCoins, FaDollarSign, FaUsers, FaChartLine, FaGlobe, FaClock } from "react-icons/fa";
+import Heading from "../../../../Layout/Heading";
+import WrapperContainer from "../../../../Layout/WrapperContainer";
+
 
 const benefits = [
   {
@@ -36,10 +39,15 @@ const benefits = [
 
 const Initialofferingbenifits = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-6">
+
+    <WrapperContainer>
+       <div className="min-h-screen py-12 px-6">
       <div className="max-w-6xl mx-auto text-center">
         {/* Header Section */}
-        <h1 className="text-3xl font-bold text-gray-800 mb-8">Benefits of Initial Coin Offering (ICO)</h1>
+        <Heading>
+
+        <h1 >Benefits of Initial Coin Offering (ICO)</h1>
+        </Heading>
       </div>
 
       {/* Benefits Section */}
@@ -53,6 +61,12 @@ const Initialofferingbenifits = () => {
         ))}
       </div>
     </div>
+    </WrapperContainer>
+     
+
+
+   
+   
   );
 };
 

@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Settings, Users, Box, HeartHandshake } from "lucide-react";
+import Heading from "../../../../Layout/Heading";
+import Subheading from "../../../../Layout/Subheading";
 
 const Saas2 = () => {
   const features = [
@@ -34,9 +36,9 @@ const Saas2 = () => {
         transition={{ duration: 0.8 }}
         className="text-center mb-16"
       >
-        <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+        <Heading>
           Why Choose LeewayHertz for Your Next SaaS Development Project?
-        </h2>
+        </Heading>
       </motion.div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -50,9 +52,9 @@ const Saas2 = () => {
             className="flex flex-col p-6 bg-white shadow-lg rounded-lg"
             style={{ transitionDelay: `${index * 200}ms` }}
             whileHover={{
-              scale: 1.05,  // Scales the card up when hovered
-              boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)", // Adds shadow effect
-              transition: { duration: 0.3 } // Smooth transition for hover effect
+              scale: 1.05,
+              boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)",
+              transition: { duration: 0.3 }
             }}
           >
             <div className="flex items-center mb-4">
@@ -60,9 +62,9 @@ const Saas2 = () => {
                 {feature.icon}
               </div>
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+            <Subheading >
               {feature.title}
-            </h3>
+            </Subheading>
             <p className="text-gray-600 leading-relaxed">
               {feature.description}
             </p>
@@ -72,7 +74,9 @@ const Saas2 = () => {
 
       {/* Extra Content for Larger Screens */}
       <div className="hidden lg:block mt-16 p-8 bg-gray-100 rounded-lg shadow-lg">
-        <h3 className="text-2xl font-semibold text-gray-900 text-center mb-4">Additional Insights</h3>
+        <Subheading className="text-2xl  text-center mb-4">
+          Additional Insights
+        </Subheading>
         <p className="text-gray-700 text-center">
           Our SaaS solutions empower businesses with seamless scalability, enhanced security, and optimized user experiences. Join our growing list of successful partners today!
         </p>

@@ -5,6 +5,7 @@ import Rob from "../../../../assets/business-risk-concept-illustration-b.png";
 import difi from "../../../../assets/bg11.png";
 import { Shield, Users, FileCheck, Clock } from "lucide-react";
 import Heading from "../../../../Layout/Heading";
+import Subheading from "../../../../Layout/Subheading";
 
 const Amp2 = () => {
   const features = [
@@ -52,11 +53,9 @@ const Amp2 = () => {
               transition={{ duration: 0.8 }}
               whileHover={{ scale: 1.05 }}
             >
-              <Heading>Security & Compliance</Heading>
+              <Heading>Securpliance</Heading>
               <p className="text-lg text-gray-700 mb-4">
-                At <span className="font-bold text-[#172554]">Digiflex.ai</span>,
-                security is our top priority. We implement the latest encryption
-                standards, multi-layered security, and compliance frameworks.
+                At <span className="font-bold text-[#172554]">Digiflex.ai</span>, security is our top priority. We implement the latest encryption standards, multi-layered security, and compliance frameworks.
               </p>
               <div className="space-y-6">
                 {features.map((feature, index) => (
@@ -89,20 +88,12 @@ const Amp2 = () => {
               transition={{ duration: 0.8 }}
               whileHover={{ scale: 1.05 }}
             >
-              <Heading>Transparency & Innovation</Heading>
+              <Heading>Transnovation</Heading>
               <p className="text-black text-lg">
-                Digiflex.ai is an IT service and product-based company with over 25
-                years of experience, specializing in web application development.
-                They provide secure, scalable, and high-performance web solutions
-                tailored to meet both business goals and customer needs. With a focus
-                on delivering industry-specific enterprise applications, Digiflex.ai
-                excels in creating customized, customer-centered web solutions. Their
-                expertise ensures that businesses can leverage cutting-edge technology
-                to achieve optimal performance, security, and scalability in their web
-                platforms.
+                Digiflex.ai is an IT service and product-based company with over 25 years of experience, specializing in web application development. They provide secure, scalable, and high-performance web solutions tailored to meet both business goals and customer needs. With a focus on delivering industry-specific enterprise applications, Digiflex.ai excels in creating customized, customer-centered web solutions. Their expertise ensures that businesses can leverage cutting-edge technology to achieve optimal performance, security, and scalability in their web platforms.
               </p>
               <motion.button
-                className="bg-[#017EFE] text-[#0c0c0d] px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all mt-4"
+                className="bg-[#3730A3] text-[#0c0c0d] px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all mt-4"
                 whileHover={{ scale: 1.1 }}
               >
                 Learn More
@@ -149,9 +140,9 @@ const Amp2 = () => {
               transition={{ duration: 0.8 }}
               whileHover={{ scale: 1.05 }}
             >
-              <h2 className="text-xl font-semibold text-[#172554]">
-                Flexible Engagement Model
-              </h2>
+              <Heading >
+              Flexagement
+              </Heading>
               <p className="text-[#172554] text-lg">
                 Digiflex.ai offers flexible engagement models designed for
                 <strong> startups, enterprises, and growing businesses</strong>.
@@ -164,7 +155,7 @@ const Amp2 = () => {
                 of size or complexity.
               </p>
               <motion.button
-                className="bg-[#017EFE] text-[#0c0c0d] px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all mt-4"
+                className="bg-[#3730A3] text-[#0c0c0d] px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all mt-4"
                 whileHover={{ scale: 1.1 }}
               >
                 Get Started

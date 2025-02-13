@@ -35,9 +35,15 @@ import UxResearch from "./pages/UxResearch";
 import UiAnimation from "./pages/UiAnimation";
 import DesignTesting from "./pages/DesignTesting";
 
+<<<<<<< HEAD
 
 // Game Development 
 import MobileGameDevelopment from "./pages/MobileGameDevelopment";
+=======
+import ExchangeShoftware from "./pages/ExchangeShoftware"
+import InitialCoinOffering from "./pages/InitialCoinOffering"
+import CryptocurrencyApp from "./pages/CryptocurrencyApp"
+>>>>>>> 3dcba1238263dd2b3d19e9b883ac34f31939effa
 
 // Frontend Technology
 
@@ -56,9 +62,14 @@ import ReactNative from "./pages/ReactNative";
 import FlutterAppDevlopment from "./pages/FlutterAppDevlopment";
 import NativeScript from "./pages/NativeScript";
 import XamarinAppDEvlopment from "./pages/XamarinAppDEvlopment";
+<<<<<<< HEAD
 import { Import } from "lucide-react";
 
 
+=======
+import CryptocurrencyWallet from "./pages/CryptocurrencyWallet";
+import SmartContractDevelopment from "./pages/SmartContractDevelopment";
+>>>>>>> 3dcba1238263dd2b3d19e9b883ac34f31939effa
 
 function App() {
   const location = useLocation();
@@ -171,6 +182,24 @@ function App() {
           path="/services/ui-ux/design-testing"
           element={<DesignTesting />}
         />
+
+        <Route
+          path="/services/blockchain/exchangesoftware"
+          element={<ExchangeShoftware/>}
+        />
+        <Route
+          path="/services/blockchain/initialcoinoffering"
+          element={<InitialCoinOffering/>}
+        />
+        <Route
+          path="/services/blockchain/cryptocurrency"
+          element={<CryptocurrencyApp/>}
+        />
+
+        <Route path="/services/blockchain/smartcontractdevelopment" element={<SmartContractDevelopment/>}/>
+
+
+        <Route  path="/services/blockchain/cryptocurrencywallet" element={<CryptocurrencyWallet/>} />
 
         {/* Frontend Technology */}
         <Route path="/tech/frontend/angular" element={<AngularDevelopment />} />

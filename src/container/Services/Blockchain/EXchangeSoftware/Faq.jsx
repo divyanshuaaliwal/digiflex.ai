@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import WrapperContainer from '../../../../Layout/WrapperContainer';
 
 const Faq = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -35,7 +36,6 @@ const Faq = () => {
     margin: '0 auto',
     padding: '60px 20px',
     fontFamily: 'Arial, sans-serif',
-    background: 'linear-gradient(135deg, #f6f9fc 0%, #eef2f7 100%)',
     minHeight: '100vh',
   };
 
@@ -116,6 +116,9 @@ const Faq = () => {
   });
 
   return (
+    <>
+    
+    <WrapperContainer>
     <div style={containerStyle}>
       <h1 style={headerStyle}>Frequently Asked Questions</h1>
       <div style={faqContainerStyle}>
@@ -146,6 +149,10 @@ const Faq = () => {
         })}
       </div>
     </div>
+    </WrapperContainer>
+    
+    </>
+   
   );
 };
 

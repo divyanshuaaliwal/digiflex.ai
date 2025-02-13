@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Heading from '../../../../Layout/Heading';
+import Heading from "../../../../Layout/Heading";
+import Subheading from "../../../../Layout/Subheading"; // Import Subheading
 import {
   Smartphone,
   Palette,
@@ -46,17 +47,26 @@ const services = [
 const OurServices = () => {
   return (
     <section className="bg-white py-20 px-6 text-[#172554]">
-      {/* Main Heading */}
+      {/* Main Title */}
       <Heading
-     
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-5xl font-extrabold text-center mb-4 text-[#172554]"
+        className="text-5xl font-extrabold text-center mb-2 text-[#172554]"
       >
         🛠 Our Flutter App Development Services
-     
       </Heading>
+      
+      {/* Subheading in Title */}
+      <Subheading
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.2 }}
+        className="text-xl text-center mb-8 text-[#172554]"
+      >
+        Transforming ideas into high-performance, beautiful apps.
+      </Subheading>
+      
       <motion.div
         className="mx-auto mb-12 w-24 h-1 bg-[#172554]"
         initial={{ scaleX: 0 }}
@@ -80,9 +90,10 @@ const OurServices = () => {
               className="mb-4 transition duration-300"
               style={{ color: "inherit" }}
             />
-            <h3 className="text-2xl font-semibold text-black transition duration-300 hover:text-white">
+              <Subheading>
+          
               {service.title}
-            </h3>
+            </Subheading>
             <p className="mt-2 text-lg text-gray-600 transition duration-300 hover:text-gray-300">
               {service.description}
             </p>

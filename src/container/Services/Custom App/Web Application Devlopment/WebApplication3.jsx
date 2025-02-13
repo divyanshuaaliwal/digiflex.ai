@@ -19,6 +19,8 @@ import Logo8 from "../../../../assets/Logo8.jpg";
 import Logo9 from "../../../../assets/Logo9.jpg";
 import Logo10 from "../../../../assets/Logo10.jpg";
 
+import Subheading from "../../../../Layout/Subheading";
+
 const industries = [
   { name: "Healthcare", image: Hd },
   { name: "Travel & Tourism", image: Hd2 },
@@ -52,9 +54,9 @@ const WebApplication3 = () => {
         transition={{ duration: 0.8 }}
       >
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-3xl font-bold text-gray-900">
+          <Subheading>
             Industries We Cater To
-          </h2>
+          </Subheading>
           <Menu className="w-6 h-6 text-gray-600 cursor-pointer" />
         </div>
 
@@ -80,9 +82,9 @@ const WebApplication3 = () => {
                   className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-end">
-                  <h3 className="text-white text-xl font-semibold p-4">
+                  <Subheading className="text-white text-xl font-semibold p-4">
                     {industry.name}
-                  </h3>
+                  </Subheading>
                 </div>
               </motion.div>
             ))}
@@ -139,14 +141,14 @@ const WebApplication3 = () => {
 
       {/* Extra Content for Larger Screens */}
       <div className="hidden lg:block mt-12 text-center">
-        <h2 className="text-2xl font-semibold text-gray-900">
+        <Subheading >
           Why Choose Us?
-        </h2>
+        </Subheading>
         <p className="text-gray-700 mt-3 max-w-4xl mx-auto">
-          We specialize in building **scalable and high-performing** software
-          solutions tailored to various industries. Whether you’re a **startup**
-          or an **enterprise**, we ensure **seamless integration, security, and
-          user engagement.**
+          We specialize in building <strong>scalable and high-performing</strong>{" "}
+          software solutions tailored to various industries. Whether you’re a{" "}
+          <strong>startup</strong> or an <strong>enterprise</strong>, we ensure{" "}
+          <strong>seamless integration, security, and user engagement.</strong>
         </p>
       </div>
     </div>

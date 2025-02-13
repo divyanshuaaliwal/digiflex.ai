@@ -18,11 +18,17 @@ import {
   Rocket,
   ShoppingBag,
   Clock,
+<<<<<<< HEAD
   Joystick ,
   Monitor ,
   PenTool,
   Glasses ,
   UserCheck 
+=======
+  Signature,
+  Currency,
+  Wallet,
+>>>>>>> 3dcba1238263dd2b3d19e9b883ac34f31939effa
 } from "lucide-react";
 import logo from "../assets/digiflex.png";
 
@@ -241,6 +247,7 @@ const Navbar = () => {
       image:
         "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
     },
+<<<<<<< HEAD
     
     {
       id: "GameDev",
@@ -291,6 +298,45 @@ const Navbar = () => {
     },
 
    
+=======
+    {
+      id: "BlockchainDev",
+      icon: Cpu,
+      title: "Blockchain Development",
+      color: "text-yellow-500",
+      description:
+        "Cutting-edge solutions using blockchain technologies.",
+      features: [
+        {
+          icon: Cpu,
+          title: "Exhange Software",
+          path: "/services/blockchain/exchangesoftware",
+        },
+        {
+          icon: Database,
+          title: "Initial Coin Offering",
+          path: "/services/blockchain/initialcoinoffering",
+        },
+        {
+          icon: Currency,
+          title: "Cryptocurrency App",
+          path: "/services/blockchain/cryptocurrency",
+        },
+        {
+          icon: Wallet,
+          title: "Cryptocurrency Wallet",
+          path: "/services/blockchain/cryptocurrencywallet",
+        },
+        {
+          icon: Signature,
+          title: "Smart Contract",
+          path: "/services/blockchain/smartcontractdevelopment",
+        },
+      ],
+      image:
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
+    },
+>>>>>>> 3dcba1238263dd2b3d19e9b883ac34f31939effa
   ];
   // Technology dropdown content
   const technologies = [
@@ -304,12 +350,12 @@ const Navbar = () => {
       features: [
         {
           icon: Smartphone,
-          title: "iOS App Development",
+          title: "IOS App",
           path: "/tech/mobile/ios",
         },
         {
           icon: Smartphone,
-          title: "Android App Development",
+          title: "Android App",
           path: "/tech/AndroidAppDevlopment",
         },
         {
