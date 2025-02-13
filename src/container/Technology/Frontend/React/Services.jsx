@@ -1,51 +1,60 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Boxes, Cpu, Rocket, Globe2, Database, TestTube } from "lucide-react";
+import WrapperContainer from "../../../../Layout/WrapperContainer";
+import Heading from "../../../../Layout/Heading";
+import Paragraph from "../../../../Layout/Paragraph";
 
 const data = [
   {
     icon: <Boxes className="text-blue-500 w-10 h-10 mx-auto" />,
     title: "Component-Based Architecture",
-    description: "Build reusable and modular UI components for scalable applications."
+    description:
+      "Build reusable and modular UI components for scalable applications.",
   },
   {
     icon: <Cpu className="text-blue-500 w-10 h-10 mx-auto" />,
     title: "State Management",
-    description: "Efficiently manage state with React's Context API, Redux, or Zustand."
+    description:
+      "Efficiently manage state with React's Context API, Redux, or Zustand.",
   },
   {
     icon: <Rocket className="text-blue-500 w-10 h-10 mx-auto" />,
     title: "Performance Optimization",
-    description: "Enhance performance using memoization, lazy loading, and virtual DOM."
+    description:
+      "Enhance performance using memoization, lazy loading, and virtual DOM.",
   },
   {
     icon: <Globe2 className="text-blue-500 w-10 h-10 mx-auto" />,
     title: "Server-Side Rendering (SSR)",
-    description: "Improve SEO and load speeds with Next.js and React Server Components."
+    description:
+      "Improve SEO and load speeds with Next.js and React Server Components.",
   },
   {
     icon: <Database className="text-blue-500 w-10 h-10 mx-auto" />,
     title: "API Integration",
-    description: "Seamlessly fetch data from REST APIs or GraphQL with Axios or Fetch API."
+    description:
+      "Seamlessly fetch data from REST APIs or GraphQL with Axios or Fetch API.",
   },
   {
     icon: <TestTube className="text-blue-500 w-10 h-10 mx-auto" />,
     title: "Testing & Debugging",
-    description: "Ensure reliability with Jest, React Testing Library, and Cypress."
-  }
+    description:
+      "Ensure reliability with Jest, React Testing Library, and Cypress.",
+  },
 ];
 
 const Card = ({ icon, title, description }) => {
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.8, y: 50 },
-    visible: { 
-      opacity: 1, 
-      scale: 1, 
-      y: 0, 
-      transition: { 
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: {
         duration: 0.6,
-        ease: "easeOut"
-      } 
+        ease: "easeOut",
+      },
     },
   };
 
@@ -57,23 +66,23 @@ const Card = ({ icon, title, description }) => {
       variants={cardVariants}
       initial="hidden"
       animate="visible"
-      whileHover={{ 
+      whileHover={{
         y: -10,
-        transition: { duration: 0.3 }
+        transition: { duration: 0.3 },
       }}
     >
-      <motion.div 
+      <motion.div
         className="mb-6 relative"
-        whileHover={{ 
+        whileHover={{
           rotate: 360,
           scale: 1.2,
-          transition: { duration: 0.5 } 
+          transition: { duration: 0.5 },
         }}
       >
         <div className="absolute inset-0 bg-blue-100 rounded-full blur-xl opacity-20" />
         {icon}
       </motion.div>
-      <motion.h2 
+      <motion.h2
         className="text-2xl font-bold mb-3 text-gray-800 relative"
         whileHover={{ scale: 1.05 }}
       >
@@ -98,44 +107,43 @@ const Services = () => {
 
   const titleVariants = {
     hidden: { opacity: 0, y: -50 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
         duration: 0.8,
-        ease: "easeOut"
-      } 
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-16">
+    <WrapperContainer>
       <motion.div
         className="container mx-auto px-4 sm:px-6 lg:px-8"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        <motion.div 
+        <motion.div
           className="max-w-3xl mx-auto text-center mb-16"
           variants={titleVariants}
         >
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-gray-900 leading-tight">
-            Our Capabilities in React
-          </h1>
-          <p className="text-xl text-gray-600 leading-relaxed">
-            Driving Digital Transformation with Performance-Oriented B2B/B2C React Solutions
-          </p>
+          <Heading>Our Capabilities in React</Heading>
+          <Paragraph>
+            Driving Digital Transformation with Performance-Oriented B2B/B2C
+            React Solutions
+          </Paragraph>
         </motion.div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {data.map((item, index) => (
             <Card key={index} {...item} />
           ))}
         </div>
       </motion.div>
-    </div>
+    </WrapperContainer>
   );
 };
 
-export default Services; 
+export default Services;

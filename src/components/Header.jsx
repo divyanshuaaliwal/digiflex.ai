@@ -285,12 +285,12 @@ const Navbar = () => {
       features: [
         {
           icon: Smartphone,
-          title: "iOS App Development",
+          title: "IOS App",
           path: "/tech/mobile/ios",
         },
         {
           icon: Smartphone,
-          title: "Android App Development",
+          title: "Android App",
           path: "/tech/AndroidAppDevlopment",
         },
         {
@@ -302,9 +302,9 @@ const Navbar = () => {
         {
           icon: Smartphone,
           title: "NativeScript",
-          path: "/tech/NativeScript",
+          path: "/tech/mobile/nativescript",
         },
-        { icon: Smartphone, title: "Xamarin", path: "/tech/XamarinAppDevlopment" },
+        { icon: Smartphone, title: "Xamarin", path: "/tech/mobile/xamarin" },
       ],
       image:
         "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80",

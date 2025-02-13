@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Heading from "../../../../Layout/Heading";
+
 const OurServices = () => {
   const services = [
     {
@@ -26,14 +27,13 @@ const OurServices = () => {
 
   return (
     <motion.div
-      className="w-full min-h-screen bg-white text-[#172554] px-6 md:px-12 flex flex-col justify-center items-center"
+      className="w-full min-h-screen bg-gray-50 text-[#172554] px-6 md:px-12 flex flex-col justify-center items-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
       {/* Title */}
-       <Heading
-      
+      <Heading
         className="text-5xl font-semibold text-[#172554] text-center mb-10 mt-6"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ const OurServices = () => {
 
       {/* Services List */}
       <motion.div
-        className="flex flex-col space-y-6 w-full max-w-2xl"
+        className="flex flex-col space-y-6 w-full max-w-[950px]"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7 }}
@@ -52,11 +52,11 @@ const OurServices = () => {
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="flex items-center p-5 bg-white text-white rounded-xl shadow-md border border-[#172554] hover:shadow-lg transition transform hover:scale-105"
+            className="flex items-center p-5 bg-white rounded-xl shadow-md border border-gray-200 transition-transform duration-300 transform hover:scale-105 hover:shadow-xl hover:border-blue-600"
             whileHover={{ scale: 1.05 }}
           >
             <span className="text-4xl mr-4">{service.icon}</span>
-            <p className="text-xl font-medium text-black">{service.text}</p>
+            <p className="text-xl font-medium text-gray-800">{service.text}</p>
           </motion.div>
         ))}
       </motion.div>

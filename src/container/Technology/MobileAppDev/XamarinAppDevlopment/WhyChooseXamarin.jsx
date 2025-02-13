@@ -1,50 +1,42 @@
 import React from 'react';
+import { FaCheckCircle } from 'react-icons/fa';
+import Heading from "../../../../Layout/Heading";
+import Subheading from "../../../../Layout/Subheading";
+
+const reasons = [
+  "Single Codebase for iOS, Android & Windows – Code once, deploy everywhere",
+  "Native-Like UI & Performance – Full access to native APIs & controls",
+  "Powered by Microsoft .NET & C# – Secure & enterprise-ready technology",
+  "Supports MVVM Architecture – Improves code maintainability",
+  "Seamless Integration with Microsoft Ecosystem – Azure, Visual Studio, DevOps"
+];
 
 const WhyChooseXamarin = () => {
   return (
-    <section className="py-12 bg-gradient-to-r from-blue-100 to-white">
-      <div className="max-w-3xl mx-auto px-4">
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+    <section className="py-16 bg-gradient-to-r from-white-500 to-white-200">
+      <div className="max-w-5xl mx-auto px-4">
+        <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
           {/* Header Section */}
-          <div className="px-6 py-8 border-b border-gray-200">
-            <h2 className="text-4xl font-bold" style={{ color: '#172554' }}>
-              🚀  Why Choose Xamarin for App Development?
-            </h2>
+          <div className=" px-8 py-6">
+          <Heading>
+          
+              <span>🚀</span> Why Choose Xamarin for App Development?
+            </Heading>
+            
           </div>
-          {/* Content Section */}
-          <div className="px-6 py-8">
-            <ul className="space-y-6">
-              <li className="flex items-center">
-                <span className="text-green-500 text-2xl mr-4">✅</span>
-                <span className="text-black text-lg">
-                  Single Codebase for iOS, Android &amp; Windows – Code once, deploy everywhere
-                </span>
-              </li>
-              <li className="flex items-center">
-                <span className="text-green-500 text-2xl mr-4">✅</span>
-                <span className="text-black text-lg">
-                  Native-Like UI &amp; Performance – Full access to native APIs &amp; controls
-                </span>
-              </li>
-              <li className="flex items-center">
-                <span className="text-green-500 text-2xl mr-4">✅</span>
-                <span className="text-black text-lg">
-                  Powered by Microsoft .NET &amp; C# – Secure &amp; enterprise-ready technology
-                </span>
-              </li>
-              <li className="flex items-center">
-                <span className="text-green-500 text-2xl mr-4">✅</span>
-                <span className="text-black text-lg">
-                  Supports MVVM Architecture – Improves code maintainability
-                </span>
-              </li>
-              <li className="flex items-center">
-                <span className="text-green-500 text-2xl mr-4">✅</span>
-                <span className="text-black text-lg">
-                  Seamless Integration with Microsoft Ecosystem – Azure, Visual Studio, DevOps
-                </span>
-              </li>
-            </ul>
+          {/* Reasons Grid */}
+          <div className="px-8 py-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {reasons.map((reason, index) => (
+                <div
+                  key={index}
+                  className="flex items-start space-x-4 p-4 border rounded-lg hover:shadow-lg transition-shadow duration-300"
+                >
+                  <FaCheckCircle className="text-blue-600 text-3xl mt-1" />
+                  <p className="text-gray-800 text-lg">{reason}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

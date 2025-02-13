@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Star, Building2, Tag, ChevronLeft, ChevronRight } from 'lucide-react';
-
+import Heading from '../Layout/Heading';
 const initialReviews = [
     {
         id: 1,
@@ -149,7 +149,7 @@ const Reviews = () => {
         <div className="my-12 bg-white text-black px-4 py-12 w-11/12 mx-auto">
             <div className="max-w-[90%] mx-auto">
                 
-                <h1 className="text-5xl font-semibold text-[#1A2E6F] mb-16 text-center">Reviews</h1>
+                <Heading>Reviews</Heading>
                 
                 <div className="relative">
                 {/* Left Arrow */}

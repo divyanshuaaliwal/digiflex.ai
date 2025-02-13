@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import Heading from '../../../../Layout/Heading';
+import Subheading from '../../../../Layout/Subheading';
 
 const Saas5 = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -53,8 +55,12 @@ const Saas5 = () => {
     <div className="max-w-6xl mx-auto px-4 py-8">
       {/* Header Section */}
       <div className="mb-12">
-        <h1 className="text-3xl font-bold mb-2">Dive Deeper</h1>
-        <h2 className="text-xl text-gray-600 mb-8">into Our Insights</h2>
+        <Heading className="text-3xl font-bold mb-2">
+          Dive Deeper
+        </Heading>
+        <Subheading className="text-xl text-gray-600 mb-8">
+          into Our Insights
+        </Subheading>
         
         {/* Insights Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -67,7 +73,9 @@ const Saas5 = () => {
               />
               <div className="p-4">
                 <div className="text-sm text-blue-600 mb-2">{insight.category}</div>
-                <h3 className="text-lg font-medium">{insight.title}</h3>
+                <Subheading className="text-lg font-medium">
+                  {insight.title}
+                </Subheading>
               </div>
             </div>
           ))}
@@ -76,7 +84,9 @@ const Saas5 = () => {
 
       {/* FAQ Section */}
       <div className="mt-16">
-        <h2 className="text-2xl font-bold mb-8">FAQs - SaaS Application Development Services</h2>
+        <Heading className="text-2xl font-bold mb-8">
+          FAQs - SaaS Application Development Services
+        </Heading>
         
         <div className="space-y-4">
           {faqs.map((faq, index) => (

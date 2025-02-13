@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Heading from '../../../../Layout/Heading';
+
 const features = [
   {
     title: "Push Notifications",
@@ -41,21 +42,20 @@ const SmartFeatures = () => {
     >
       {/* Title */}
       <Heading
-      
         className="text-4xl font-bold text-center mb-10 text-[#172554]"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
         Smart Features We Implement in React Native Apps
-     
       </Heading>
+
       {/* Features List */}
-      <div className="max-w-4xl mx-auto space-y-6">
+      <div className="max-w-6xl mx-auto space-y-6">
         {features.map((feature, index) => (
           <motion.div
             key={index}
-            className="p-6 bg-white rounded-xl shadow border border-gray-200 cursor-pointer hover:shadow-lg transition transform hover:-translate-y-1"
+            className="p-6 bg-white rounded-xl shadow-md border border-gray-200 cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:shadow-xl hover:border-blue-600"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -63,20 +63,20 @@ const SmartFeatures = () => {
           >
             {/* Feature Header */}
             <div className="flex justify-between items-center">
-              <span className="text-lg font-semibold text-black">
+              <span className="text-lg font-semibold text-[#172554]">
                 {feature.title}
               </span>
               {openFeature === index ? (
-                <ChevronUp className="w-6 h-6 text-black" />
+                <ChevronUp className="w-6 h-6 text-[#172554]" />
               ) : (
-                <ChevronDown className="w-6 h-6 text-black" />
+                <ChevronDown className="w-6 h-6 text-[#172554]" />
               )}
             </div>
 
             {/* Expandable Feature Description */}
             {openFeature === index && (
               <motion.p
-                className="mt-4 text-base text-black"
+                className="mt-4 text-base text-gray-700"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 transition={{ duration: 0.4 }}

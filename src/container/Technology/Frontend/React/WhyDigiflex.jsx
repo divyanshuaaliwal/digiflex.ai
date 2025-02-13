@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Star, Users, Shield, Handshake, DollarSign, Atom } from "lucide-react";
+import WrapperContainer from "../../../../Layout/WrapperContainer";
+import Heading from "../../../../Layout/Heading";
 
 const whyChooseSections = [
   {
@@ -37,16 +39,9 @@ const whyChooseSections = [
 
 const WhyDigiflex = () => {
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-blue-100 py-16 px-4">
+    <WrapperContainer>
       <div className="container mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl font-bold text-center mb-12 text-gray-900"
-        >
-          Why is Softradix the best for React JS Development?
-        </motion.h2>
+        <Heading>Why is Digiflex the best for React JS Development?</Heading>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Features List */}
@@ -93,7 +88,7 @@ const WhyDigiflex = () => {
               <pre className="text-sm text-gray-300 overflow-x-auto">
                 <code>
                   {`// React Component Example
-function SoftradixDevelopment() {
+function Digiflex Development() {
   const [technology, setTechnology] = useState('React');
   
   return (
@@ -116,7 +111,7 @@ function SoftradixDevelopment() {
           </motion.div>
         </div>
       </div>
-    </div>
+    </WrapperContainer>
   );
 };
 

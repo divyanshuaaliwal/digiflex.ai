@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
-
+import Heading from "../../../../Layout/Heading";
 const processSteps = [
   {
     id: 1,
@@ -47,14 +47,16 @@ export default function NativeScriptProcess() {
   return (
     <div className="py-16 bg-gray-100">
       <div className="max-w-6xl mx-auto text-center px-4">
-        <motion.h2
+        
+       <Heading
           className="text-3xl text-[#172554] font-bold mb-6"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           Our NativeScript App Development Process
-        </motion.h2>
+          </Heading>
+       
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {processSteps.map((step) => (
             <motion.div

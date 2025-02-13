@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Heading from '../../../../Layout/Heading';
+import Subheading from '../../../../Layout/Subheading';
 
 const WebApplication5 = () => {
   const pricingTiers = [
@@ -35,20 +37,33 @@ const WebApplication5 = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-16">
       {/* Pricing Section */}
-      <motion.div className="mb-24" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-        <h2 className="text-3xl font-bold text-center text-navy-900 mb-4">
+      <motion.div 
+        className="mb-24" 
+        initial={{ opacity: 0 }} 
+        animate={{ opacity: 1 }} 
+        transition={{ duration: 1 }}
+      >
+        <Heading className="text-3xl font-bold text-center text-navy-900 mb-4">
           Cost of Web Development Projects
-        </h2>
-        <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+        </Heading>
+        <Subheading className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
           The cost of web application development depends on various factors such as service scope, sourcing model, technical design pattern, and software complexity.
-        </p>
+        </Subheading>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
           {pricingTiers.map((tier, index) => (
-            <motion.div key={index} className="bg-white p-6 rounded-lg shadow-lg text-center" whileHover={{ scale: 1.05 }}>
+            <motion.div 
+              key={index} 
+              className="bg-white p-6 rounded-lg shadow-lg text-center" 
+              whileHover={{ scale: 1.05 }}
+            >
               <div className="text-4xl mb-4">{tier.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">Starting at ${tier.price}</h3>
-              <p className="text-gray-600">{tier.title}</p>
+              <Subheading className="text-xl font-semibold mb-2">
+                Starting at ${tier.price}
+              </Subheading>
+              <Subheading className="text-gray-600">
+                {tier.title}
+              </Subheading>
               <p className="text-sm text-gray-500">{tier.description}</p>
             </motion.div>
           ))}
@@ -56,24 +71,36 @@ const WebApplication5 = () => {
       </motion.div>
 
       {/* Process Section */}
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }}>
-        <h2 className="text-3xl font-bold text-center text-navy-900 mb-4">
+      <motion.div 
+        initial={{ opacity: 0 }} 
+        animate={{ opacity: 1 }} 
+        transition={{ duration: 1.5 }}
+      >
+        <Heading className="text-3xl font-bold text-center text-navy-900 mb-4">
           Our Web App Development Process
-        </h2>
-        <p className="text-center text-gray-600 mb-12">
+        </Heading>
+        <Subheading className="text-center text-gray-600 mb-12">
           Here is a streamlined overview of our custom web app development process.
-        </p>
+        </Subheading>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {processSteps.map((step, index) => (
-            <motion.div key={index} className="relative" whileHover={{ scale: 1.05 }}>
+            <motion.div 
+              key={index} 
+              className="relative" 
+              whileHover={{ scale: 1.05 }}
+            >
               <div className="flex flex-col items-center">
                 <div className="w-8 h-8 bg-blue-500 rounded-full mb-4"></div>
                 {index < processSteps.length - 1 && (
                   <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-full h-0.5 bg-blue-200"></div>
                 )}
-                <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
-                <p className="text-sm text-gray-600 text-center">{step.description}</p>
+                <Subheading className="text-lg font-semibold mb-2">
+                  {step.title}
+                </Subheading>
+                <p className="text-sm text-gray-600 text-center">
+                  {step.description}
+                </p>
               </div>
             </motion.div>
           ))}

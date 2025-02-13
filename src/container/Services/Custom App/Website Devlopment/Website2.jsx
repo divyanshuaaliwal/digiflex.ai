@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Heading from "../../../../Layout/Heading";
 const Button = ({ children, className, ...props }) => {
   return (
     <button
@@ -37,7 +37,7 @@ const Website2 = () => {
         
         {/* As Seen On Section */}
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-blue-600 text-xl sm:text-2xl font-semibold uppercase">Featured In</h2>
+          <Heading>Featured In</Heading>
         </div>
 
         {/* Media Logos */}

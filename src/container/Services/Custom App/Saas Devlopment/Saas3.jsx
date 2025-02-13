@@ -1,5 +1,7 @@
 import React from 'react';
 import { PhoneCall, ArrowUp, MoveRight } from 'lucide-react';
+import Heading from '../../../../Layout/Heading';
+import Subheading from '../../../../Layout/Subheading';
 
 const Saas3 = () => {
   const caseStudies = [
@@ -31,10 +33,9 @@ const Saas3 = () => {
         {/* Header */}
         <div className="mb-12 flex justify-between items-center">
           <div>
-            <h2 className="text-4xl font-light text-gray-900">
-              Our<br />
-              Case Studies
-            </h2>
+            <Heading >
+              Our Case Studies
+            </Heading>
           </div>
           <button className="bg-blue-500 text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-blue-600 transition-colors">
             View More Portfolios
@@ -58,15 +59,14 @@ const Saas3 = () => {
                   </span>
                 </div>
                 <div className="absolute bottom-4 left-4">
-                  <h3 className="text-white text-lg font-medium">{study.title}</h3>
+                  <Subheading className="text-white text-lg font-medium">
+                    {study.title}
+                  </Subheading>
                 </div>
               </div>
             </div>
           ))}
         </div>
-
-        
-        
       </div>
     </div>
   );

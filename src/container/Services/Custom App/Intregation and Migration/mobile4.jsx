@@ -1,15 +1,36 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Heading from '../../../../Layout/Heading';
+import Subheading from '../../../../Layout/Subheading';
 
 const ChevronLeft = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <path d="M15 18l-6-6 6-6" />
   </svg>
 );
 
 const ChevronRight = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <path d="M9 18l6-6-6-6" />
   </svg>
 );
@@ -82,7 +103,7 @@ const Mobile4 = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-      <Heading>Our Clients</Heading>
+        <Heading>Our Clients</Heading>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             className="relative"
@@ -109,9 +130,9 @@ const Mobile4 = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.9 }}
           >
-            <h3 className="text-3xl font-bold leading-tight text-gray-900">
+            <Subheading>
               {projects[0].title}
-            </h3>
+            </Subheading>
             <p className="text-lg text-gray-700 leading-relaxed">
               {projects[0].description}
             </p>
