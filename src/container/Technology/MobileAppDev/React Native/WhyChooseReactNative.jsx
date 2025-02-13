@@ -50,7 +50,7 @@ const WhyChooseReactNative = () => {
         {features.map((feature, index) => (
           <motion.div
             key={index}
-            className="flex items-center p-6 bg-[#172554] text-white rounded-xl shadow-lg border border-[#172554] hover:shadow-xl transition transform hover:scale-105"
+            className="flex items-center p-6 bg-blue-500 text-white rounded-xl shadow-lg border border-[#172554] hover:shadow-xl transition transform hover:scale-105"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
