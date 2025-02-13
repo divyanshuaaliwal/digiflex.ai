@@ -3,6 +3,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, FaJava, FaAndroid, FaApple, FaWindows } from 'react-icons/fa';
 import { SiMysql, SiPostgresql, SiMongodb } from 'react-icons/si';
 import { motion } from 'framer-motion';
+import Heading from '../../../../Layout/Heading';
+import Subheading from '../../../../Layout/Subheading';
 
 const WebApplication4 = () => {
   const [activeTab, setActiveTab] = useState('programming');
@@ -16,7 +18,7 @@ const WebApplication4 = () => {
         <FaJs key="javascript" size={40} className="text-[#F7DF1E]" />, 
         <FaReact key="react" size={40} className="text-[#61DAFB]" />, 
         <FaPython key="python" size={40} className="text-[#3776AB]" />, 
-        <FaJava key="java" size={40} className="text-[#007396]" />
+     
       ]
     },
     mobile: {
@@ -45,12 +47,12 @@ const WebApplication4 = () => {
         transition={{ duration: 0.6 }}
         className="mb-8 text-center"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-[#4A90E2] mb-4">
+        <Heading>
           Technologies & Frameworks We Use
-        </h2>
-        <p className="text-gray-700 text-lg md:text-xl leading-relaxed">
+        </Heading>
+        <Subheading className="text-gray-700 text-lg md:text-xl leading-relaxed">
           As a leading web development company, we are proud to have a team of expert developers skilled in the following core technologies:
-        </p>
+        </Subheading>
       </motion.div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -65,9 +67,9 @@ const WebApplication4 = () => {
             <div className="flex gap-4 flex-wrap justify-center">
               {category.icons.map((icon) => icon)}
             </div>
-            <h3 className="text-xl font-semibold text-[#4A90E2] mt-4">
+            <Subheading className="text-xl font-semibold text-[#4A90E2] mt-4">
               {category.title}
-            </h3>
+            </Subheading>
           </motion.div>
         ))}
       </div>
@@ -83,42 +85,46 @@ const WebApplication4 = () => {
 
       {/* Extra Content for Larger Screens */}
       <div className="hidden lg:block mt-16 text-center">
-      <motion.h3
-        className="text-2xl font-bold text-[#4A90E2]"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        Why Choose Us?
-      </motion.h3>
-      <motion.p
-        className="text-gray-700 text-lg mt-4 max-w-3xl mx-auto"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.7, delay: 0.2 }}
-      >
-        Our team is proficient in the latest technologies and frameworks, ensuring secure, scalable, and high-performing web solutions.
-      </motion.p>
-      <div className="mt-6 flex justify-center gap-8">
-        {[
-          { title: "Expert Developers", desc: "Skilled professionals with years of experience." },
-          { title: "Cutting-edge Tech", desc: "We use the latest tools and frameworks." },
-          { title: "Customer-centric", desc: "Focused on providing the best solutions for clients." }
-        ].map((item, index) => (
-          <motion.div
-            key={index}
-            className="bg-gray-100 p-6 rounded-lg shadow-md w-1/3"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: index * 0.3 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <h4 className="text-xl font-semibold text-[#4A90E2]">{item.title}</h4>
-            <p className="text-gray-600 mt-2">{item.desc}</p>
-          </motion.div>
-        ))}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Subheading className="text-2xl font-bold text-[#4A90E2]">
+            Why Choose Us?
+          </Subheading>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
+          <Subheading className="text-gray-700 text-lg mt-4 max-w-3xl mx-auto">
+            Our team is proficient in the latest technologies and frameworks, ensuring secure, scalable, and high-performing web solutions.
+          </Subheading>
+        </motion.div>
+        <div className="mt-6 flex justify-center gap-8">
+          {[
+            { title: "Expert Developers", desc: "Skilled professionals with years of experience." },
+            { title: "Cutting-edge Tech", desc: "We use the latest tools and frameworks." },
+            { title: "Customer-centric", desc: "Focused on providing the best solutions for clients." }
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              className="bg-gray-100 p-6 rounded-lg shadow-md w-1/3"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.3 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <Subheading className="text-xl font-semibold text-[#4A90E2]">
+                {item.title}
+              </Subheading>
+              <p className="text-gray-600 mt-2">{item.desc}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
     </div>
   );
 };

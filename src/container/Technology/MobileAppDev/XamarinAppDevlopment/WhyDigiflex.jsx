@@ -1,4 +1,6 @@
-import React from 'react';
+import React from "react";
+import Heading from "../../../../Layout/Heading";
+import Subheading from "../../../../Layout/Subheading";
 
 const WhyDigiflex = () => {
   return (
@@ -6,14 +8,11 @@ const WhyDigiflex = () => {
       <div className="max-w-5xl mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2
-            className="text-5xl font-extrabold mb-4"
-            style={{ color: '#172554' }}
-          >
-            📌  Why Digiflex for Xamarin Development?
-          </h2>
+          <Heading>📌 Why Digiflex for Xamarin Development? </Heading>
+
           <p className="text-gray-700 text-lg">
-            Unlock the full potential of your mobile strategy with our expert Xamarin solutions.
+            Unlock the full potential of your mobile strategy with our expert
+            Xamarin solutions.
           </p>
         </div>
         {/* Services Grid */}
@@ -67,7 +66,7 @@ const ServiceCard = ({ image, icon, title, description }) => {
       <div className="p-6">
         <div className="flex items-center mb-4">
           <span className="text-4xl mr-4">{icon}</span>
-          <h3 className="text-xl font-bold text-gray-800">{title}</h3>
+          <Subheading>{title}</Subheading>
         </div>
         <p className="text-gray-600">{description}</p>
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import Subheading from "../../../../Layout/Subheading";
 
 const Amp5 = () => {
   const services = [
@@ -48,13 +49,13 @@ const Amp5 = () => {
               </div>
 
               {/* Text Content */}
-              <h3 className="text-xl font-semibold text-gray-900">
+              <Subheading>
                 {service.title}
-              </h3>
+              </Subheading>
               <p className="text-gray-600 flex-grow">{service.description}</p>
 
               {/* Button */}
-              <button className="bg-[#172554] text-white px-6 py-2 rounded-md flex items-center hover:bg-teal-700 transition-all duration-300 self-center md:self-start">
+              <button className="bg-[#3730A3] text-white px-6 py-2 rounded-md flex items-center hover:bg-teal-700 transition-all duration-300 self-center md:self-start">
                 Learn More <ArrowRight className="ml-2" />
               </button>
             </div>

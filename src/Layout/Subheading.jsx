@@ -2,7 +2,7 @@ import React from 'react';
 
 const Subheading = ({ children, className = '' }) => {
   return (
-    <h3 className={`text-xl font-semibold text-blue-600 mb-2 mt-4 ${className}`}>
+    <h3 className={`text-xl font-semibold text-blue-900 mb-2 mt-4 ${className}`}>
       {children}
     </h3>
   );

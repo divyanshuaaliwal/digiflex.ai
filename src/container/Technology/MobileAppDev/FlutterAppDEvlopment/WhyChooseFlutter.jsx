@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
-import Heading from '../../../../Layout/Heading';
+import Heading from "../../../../Layout/Heading";
+import Subheading from "../../../../Layout/Subheading";
+
 const features = [
   {
     title: "Single Codebase, Multi-Platform",
@@ -32,20 +34,21 @@ const features = [
 
 const WhyChooseFlutter = () => {
   return (
-    <section className="bg-gray-50 py-20 px-6 text-[#172554]">
+    <section className="bg-gray-50 py-20 px-6">
       {/* Main Heading with Animated Underline */}
-      
-      <Heading
+      <Heading 
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="text-5xl font-extrabold text-center mb-4 text-[#172554]"
+        className="text-5xl font-extrabold text-center mb-4"
+        style={{ color: "var(--theme-color, #007bff)" }} // Fallback color
       >
         Why Choose Flutter for App Development?
-        </Heading>
-      
+      </Heading>
+
       <motion.div
-        className="mx-auto mb-12 w-24 h-1 bg-[#172554]"
+        className="mx-auto mb-12 w-24 h-1"
+        style={{ backgroundColor: "var(--theme-color, #007bff)" }} // Fallback color
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 1 }}
         transition={{ duration: 0.5 }}
@@ -60,13 +63,14 @@ const WhyChooseFlutter = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.15, duration: 0.4 }}
             whileHover={{ scale: 1.07 }}
-            className="p-8 bg-white rounded-xl shadow-lg flex items-start space-x-4 border border-transparent hover:border-2 hover:border-[#172554] transition"
+            className="p-8 bg-white rounded-xl shadow-lg flex items-start space-x-4 border border-transparent hover:border-2 transition"
+            style={{ borderColor: "var(--theme-color, #007bff)" }} // Fallback color
           >
-            <CheckCircle size={32} className="text-[#172554] mt-1" />
+            <CheckCircle size={32} className="mt-1" style={{ color: "var(--theme-color, #007bff)" }} />
             <div>
-              <h3 className="text-xl font-semibold text-black">
+              <Subheading className="text-xl font-semibold text-black">
                 {feature.title}
-              </h3>
+              </Subheading>
               <p className="text-gray-600 mt-2 leading-relaxed">
                 {feature.description}
               </p>

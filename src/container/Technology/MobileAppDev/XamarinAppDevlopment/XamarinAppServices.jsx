@@ -1,14 +1,16 @@
 import React from 'react';
-
+import Heading from "../../../../Layout/Heading";
+import Subheading from "../../../../Layout/Subheading";
 const XamarinAppServices = () => {
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-5xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-extrabold mb-4" style={{ color: '#172554' }}>
+         <Heading>
+         
             🛠  Our Xamarin App Development Services
-          </h2>
+        </Heading>
           <p className="text-gray-700 text-lg">
             Discover how our specialized services can elevate your mobile strategy.
           </p>
@@ -19,9 +21,9 @@ const XamarinAppServices = () => {
           <div className="flex items-start bg-white p-6 rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
             <div className="text-4xl mr-4">📱</div>
             <div>
-              <h3 className="text-xl font-bold text-gray-800">
+              <Subheading>
                 Custom Xamarin App Development
-              </h3>
+              </Subheading>
               <p className="text-gray-600 mt-2">
                 Tailor-made business solutions.
               </p>
@@ -31,9 +33,9 @@ const XamarinAppServices = () => {
           <div className="flex items-start bg-white p-6 rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
             <div className="text-4xl mr-4">🔄</div>
             <div>
-              <h3 className="text-xl font-bold text-gray-800">
+              <Subheading>
                 Xamarin App Migration & Modernization
-              </h3>
+              </Subheading>
               <p className="text-gray-600 mt-2">
                 Upgrade legacy apps to Xamarin.
               </p>
@@ -43,9 +45,9 @@ const XamarinAppServices = () => {
           <div className="flex items-start bg-white p-6 rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
             <div className="text-4xl mr-4">🎨</div>
             <div>
-              <h3 className="text-xl font-bold text-gray-800">
+              <Subheading>
                 Native UI/UX with Xamarin.Forms
-              </h3>
+              </Subheading>
               <p className="text-gray-600 mt-2">
                 Stunning, high-performing user interfaces.
               </p>
@@ -55,9 +57,9 @@ const XamarinAppServices = () => {
           <div className="flex items-start bg-white p-6 rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
             <div className="text-4xl mr-4">📡</div>
             <div>
-              <h3 className="text-xl font-bold text-gray-800">
+              <Subheading>
                 Backend & API Integration
-              </h3>
+              </Subheading>
               <p className="text-gray-600 mt-2">
                 Azure, REST APIs, GraphQL, Firebase.
               </p>
@@ -67,9 +69,9 @@ const XamarinAppServices = () => {
           <div className="flex items-start bg-white p-6 rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
             <div className="text-4xl mr-4">🛠️</div>
             <div>
-              <h3 className="text-xl font-bold text-gray-800">
+              <Subheading>
                 Xamarin App Testing & Debugging
-              </h3>
+              </Subheading>
               <p className="text-gray-600 mt-2">
                 Performance tuning & security audits.
               </p>
@@ -79,9 +81,9 @@ const XamarinAppServices = () => {
           <div className="flex items-start bg-white p-6 rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
             <div className="text-4xl mr-4">🔧</div>
             <div>
-              <h3 className="text-xl font-bold text-gray-800">
+              <Subheading>
                 Post-Launch Maintenance & Support
-              </h3>
+              </Subheading>
               <p className="text-gray-600 mt-2">
                 Continuous improvements & updates.
               </p>

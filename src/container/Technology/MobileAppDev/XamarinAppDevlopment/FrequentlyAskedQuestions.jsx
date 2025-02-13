@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import Heading from "../../../../Layout/Heading";
+import Subheading from "../../../../Layout/Subheading";
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -65,10 +66,10 @@ const FrequentlyAskedQuestions = () => {
       <div className="max-w-[90%] md:max-w-5xl mx-auto px-4 fade-in">
         {/* Section Heading */}
         <div className="text-center mb-8">
-          <h2 className="text-4xl md:text-5xl font-bold mb-3" style={{ color: '#172554' }}>
+          <Heading>
             ❓  Frequently Asked Questions (FAQs)
-          </h2>
-          <p className="text-black text-lg">Got questions? We're here to help.</p>
+          </Heading>
+          <p className="text-blue-900 text-lg">Got questions? We're here to help.</p>
         </div>
         {/* FAQ Cards */}
         <div className="bg-white shadow-lg rounded-xl p-6 md:p-8">

@@ -1,16 +1,22 @@
 import React from "react";
+import Heading from "../../../../Layout/Heading";
+import Subheading from "../../../../Layout/Subheading";
 
 const KnowledgeSection = () => {
   return (
     <div className="flex flex-wrap items-start gap-8 p-8 bg-white font-sans">
       {/* Knowledge Left Section */}
       <div className="flex-1">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">
-          Empower agents and customers to quickly find the answers they need.
-        </h2>
-        <h4 className="text-xl text-gray-600 mb-4">Knowledge Management</h4>
+        <Heading className="text-2xl font-bold text-gray-800 mb-4">
+          Enable Solutions
+        </Heading>
+        <Subheading className="text-xl text-gray-600 mb-4">
+          Knowledge Management
+        </Subheading>
         <div className="mb-6">
-          <h5 className="text-lg font-semibold text-blue-600 mb-2">Knowledge Base</h5>
+          <Subheading className="text-lg font-semibold text-blue-600 mb-2">
+            Knowledge Base
+          </Subheading>
           <p className="text-base text-gray-600 mb-4">
             Help reps and customers quickly find the best answers to commonly asked
             questions and solve cases faster with knowledge articles. Easily surface

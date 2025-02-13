@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import Heading from '../../../../Layout/Heading';
+import Subheading from '../../../../Layout/Subheading';
+
 const techStack = [
   {
     id: "language",
@@ -52,7 +54,7 @@ const TechStep = ({ title, isActive, onClick }) => {
       }`}
       whileHover={{ scale: isActive ? 1 : 1.02 }}
     >
-      <h3 className="text-lg font-semibold text-black mb-0">{title}</h3>
+      <h3 className="text-lg font-semibold text-blue-600 mb-0">{title}</h3>
       <motion.span
         animate={{ rotate: isActive ? 180 : 0 }}
         transition={{ duration: 0.3 }}
@@ -73,12 +75,12 @@ const TechContent = ({ feature }) => {
       className="mt-6 p-6 bg-white rounded-lg shadow-md text-center"
     >
       <motion.h3
-        className="text-4xl font-bold text-black mb-4"
+       
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
-        {feature.title}
+        <Heading>{feature.title}</Heading>
       </motion.h3>
       <motion.p
         className="text-gray-600 leading-relaxed"
@@ -106,7 +108,6 @@ export default function OurTechStack() {
     <div className="bg-gray-50 py-12">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-8">
-        
           <Heading
             className="text-5xl font-bold text-[#172554]"
             initial={{ opacity: 0, y: 20 }}
@@ -115,8 +116,13 @@ export default function OurTechStack() {
             viewport={{ once: true }}
           >
             Our Flutter Tech Stack
-            </Heading>
-          
+          </Heading>
+
+          {/* Subheading Added */}
+          <Subheading className="text-lg text-gray-600 mt-2 max-w-2xl mx-auto">
+            Explore the core technologies and tools that power our Flutter applications.
+          </Subheading>
+
           <motion.div
             className="mx-auto mt-4 w-24 h-1 bg-[#172554]"
             initial={{ scaleX: 0 }}

@@ -46,7 +46,7 @@ const WhyChooseReactNative = () => {
         Why Choose React Native?
       
       </Heading>
-      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         {features.map((feature, index) => (
           <motion.div
             key={index}

@@ -63,17 +63,7 @@ const Saas4 = () => {
         </div>
 
         {/* Fixed Side Buttons */}
-        <div className="fixed right-0 top-1/2 -translate-y-1/2 flex flex-col gap-2 mr-4 z-50">
-          <div className="bg-blue-500 text-white p-4 rounded-lg cursor-pointer hover:bg-blue-600 transition-colors">
-            Fast Track Your Project
-          </div>
-          <div className="bg-blue-500 text-white p-3 rounded-full cursor-pointer hover:bg-blue-600 transition-colors">
-            <ArrowUp className="w-6 h-6" />
-          </div>
-          <div className="bg-blue-500 text-white p-3 rounded-full cursor-pointer hover:bg-blue-600 transition-colors">
-            <PhoneCall className="w-6 h-6" />
-          </div>
-        </div>
+        
       </div>
     </div>
   );

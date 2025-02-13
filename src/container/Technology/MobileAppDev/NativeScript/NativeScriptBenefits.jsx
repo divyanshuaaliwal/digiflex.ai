@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
+import Heading from "../../../../Layout/Heading";
 
 const features = [
   "True Native Performance – Full access to iOS and Android APIs",
@@ -11,16 +12,18 @@ const features = [
 
 export default function NativeScriptBenefits() {
   return (
-    <section className="bg-white py-16 px-6 text-#172554 text-center">
-      <motion.h2
+    <section className="bg-[#F3F4F6] py-16 px-6 text-#172554 text-center">
+      
+      <Heading
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="text-4xl font-bold mb-6 text-[#172554]"
       >
         🚀 Why Choose NativeScript for App Development?
-      </motion.h2>
-      <div className="max-w-3xl mx-auto">
+        </Heading>
+     
+      <div className="max-w-6xl mx-auto">
         {features.map((feature, index) => (
           <motion.div
             key={index}

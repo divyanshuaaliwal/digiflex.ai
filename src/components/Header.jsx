@@ -245,12 +245,12 @@ const Navbar = () => {
       features: [
         {
           icon: Smartphone,
-          title: "iOS App Development",
+          title: "IOS App",
           path: "/tech/mobile/ios",
         },
         {
           icon: Smartphone,
-          title: "Android App Development",
+          title: "Android App",
           path: "/tech/AndroidAppDevlopment",
         },
         {

@@ -5,7 +5,8 @@ import Saas3 from "../container/Services/Custom App/Saas Devlopment/Saas3";
 import Saas4 from "../container/Services/Custom App/Saas Devlopment/Saas4";
 import Saas5 from "../container/Services/Custom App/Saas Devlopment/Saas5";
 import videoBg from "../assets/blockchain_video.mp4"; // Video Background
-
+import Heading from '../../src/Layout/Heading';
+import Subheading from '../../src/Layout/Subheading';
 const clients = [
   { name: "Universal", src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyBM7RW2MYrGDHBmKM99UUycqt995yTLhWww&s" },
   { name: "NHS", src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShGtutCNQT5sDXQvTm17rkNot67tFpR38Jig&s" },
@@ -67,7 +68,8 @@ const Saas = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Clients</h2>
+        <Heading>Our Clients</Heading>
+          
           <p className="text-gray-600">
             The world's leading companies trust our software development expertise.
           </p>
@@ -86,32 +88,30 @@ const Saas = () => {
         </div>
       </div>
 
-      {/* Why Choose Our SaaS Solutions? */}
+     
       <div className="bg-gray-100 py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-6">
-            Why Choose Our SaaS Solutions?
-          </h2>
+         <Heading>Why Choose Our SaaS Solutions?</Heading>
           <div className="grid md:grid-cols-3 gap-8">
             <motion.div
               className="p-6 bg-white rounded-lg shadow-md"
               whileHover={{ scale: 1.05 }}
             >
-              <h3 className="text-xl font-semibold mb-2">Scalability</h3>
+              <Subheading className="text-xl font-semibold mb-2">Scalability</Subheading>
               <p className="text-gray-600">Our solutions grow with your business needs.</p>
             </motion.div>
             <motion.div
               className="p-6 bg-white rounded-lg shadow-md"
               whileHover={{ scale: 1.05 }}
             >
-              <h3 className="text-xl font-semibold mb-2">Security</h3>
+              <Subheading className="text-xl font-semibold mb-2">Security</Subheading>
               <p className="text-gray-600">We implement top security measures to protect your data.</p>
             </motion.div>
             <motion.div
               className="p-6 bg-white rounded-lg shadow-md"
               whileHover={{ scale: 1.05 }}
             >
-              <h3 className="text-xl font-semibold mb-2">Seamless Integration</h3>
+              <Subheading className="text-xl font-semibold mb-2">Seamless Integration</Subheading>
               <p className="text-gray-600">Compatible with various platforms and tools.</p>
             </motion.div>
           </div>

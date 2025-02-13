@@ -1,6 +1,7 @@
 import React from 'react';
 import { Menu, Mail, Phone } from 'lucide-react';
 import { SocialIcon } from 'react-social-icons';
+import WrapperContainer from '../Layout/WrapperContainer';
 
 const locations = [
   {
@@ -68,6 +69,7 @@ const socialLinks = [
 
 function Footer() {
   return (
+    
     <footer className="bg-blue-950 text-white">
       <div className="container mx-auto px-4 py-4">
         {/* Logo - reduced margin bottom */}
