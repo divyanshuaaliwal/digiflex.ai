@@ -35,17 +35,15 @@ import UxResearch from "./pages/UxResearch";
 import UiAnimation from "./pages/UiAnimation";
 import DesignTesting from "./pages/DesignTesting";
 
-
-// Game Development 
+// Game Development
 import MobileGameDevelopment from "./pages/MobileGameDevelopment";
 
-import ExchangeShoftware from "./pages/ExchangeShoftware"
-import InitialCoinOffering from "./pages/InitialCoinOffering"
-import CryptocurrencyApp from "./pages/CryptocurrencyApp"
+import ExchangeShoftware from "./pages/ExchangeShoftware";
+import InitialCoinOffering from "./pages/InitialCoinOffering";
+import CryptocurrencyApp from "./pages/CryptocurrencyApp";
 
 import CryptocurrencyWallet from "./pages/CryptocurrencyWallet";
 import SmartContractDevelopment from "./pages/SmartContractDevelopment";
-
 
 // Frontend Technology
 
@@ -64,10 +62,14 @@ import ReactNative from "./pages/ReactNative";
 import FlutterAppDevlopment from "./pages/FlutterAppDevlopment";
 import NativeScript from "./pages/NativeScript";
 import XamarinAppDEvlopment from "./pages/XamarinAppDEvlopment";
-import HtmlAppDevlopment from "./pages/HtmlAppDevlopment";
 
+//Cloud
 
-
+import Azure from "./pages/Azure";
+import Cloud_Migration from "./pages/Cloud_Migration";
+import Google from "./pages/Google";
+import Intercloud_Migration from "./pages/Intercloud";
+import AWS from "./pages/AWS";
 
 function App() {
   const location = useLocation();
@@ -183,21 +185,26 @@ function App() {
 
         <Route
           path="/services/blockchain/exchangesoftware"
-          element={<ExchangeShoftware/>}
+          element={<ExchangeShoftware />}
         />
         <Route
           path="/services/blockchain/initialcoinoffering"
-          element={<InitialCoinOffering/>}
+          element={<InitialCoinOffering />}
         />
         <Route
           path="/services/blockchain/cryptocurrency"
-          element={<CryptocurrencyApp/>}
+          element={<CryptocurrencyApp />}
         />
 
-        <Route path="/services/blockchain/smartcontractdevelopment" element={<SmartContractDevelopment/>}/>
+        <Route
+          path="/services/blockchain/smartcontractdevelopment"
+          element={<SmartContractDevelopment />}
+        />
 
-
-        <Route  path="/services/blockchain/cryptocurrencywallet" element={<CryptocurrencyWallet/>} />
+        <Route
+          path="/services/blockchain/cryptocurrencywallet"
+          element={<CryptocurrencyWallet />}
+        />
 
         {/* Frontend Technology */}
         <Route path="/tech/frontend/angular" element={<AngularDevelopment />} />
@@ -229,13 +236,24 @@ function App() {
           path="/tech/XamarinAppDevlopment"
           element={<XamarinAppDEvlopment />}
         />
-
+        {/* Game development */}
         <Route
-          path="/tech/HtmlAppDevlopment"
-          element={<HtmlAppDevlopment/>}
+          path="/services/game-development/mobile-game-development"
+          element={<MobileGameDevelopment />}
         />
-       {/* Game development */}
-        <Route  path="/services/game-development/mobile-game-development" element={<MobileGameDevelopment/>}/>
+
+        {/* Cloud */}
+        <Route path="/services/cloud/azure" element={<Azure />} />
+        <Route
+          path="/services/cloud/cloud_migration"
+          element={<Cloud_Migration />}
+        />
+        <Route path="/services/cloud/google_components" element={<Google />} />
+        <Route
+          path="/services/cloud/intercloud_Migration"
+          element={<Intercloud_Migration />}
+        />
+        <Route path="/services/cloud/AWS" element={<AWS />} />
       </Routes>
 
       <Reviews />

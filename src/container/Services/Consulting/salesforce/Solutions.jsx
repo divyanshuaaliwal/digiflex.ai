@@ -1,111 +1,112 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { BarChart3, Timer, Cuboid as Cube, Network } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { BarChart3, Timer, Cuboid as Cube, Network } from "lucide-react";
+import WrapperContainer from "../../../../Layout/WrapperContainer";
+import Heading from "../../../../Layout/Heading";
 
 const solutions = [
   {
     icon: <BarChart3 className="w-12 h-12 text-blue-600" />,
     title: "Salesforce Enablement",
-    description: "At Digiflex.ai, we guide your team with tailored strategies to maximize Salesforce's value for your business.",
+    description:
+      "At Digiflex.ai, we guide your team with tailored strategies to maximize Salesforce's value for your business.",
     features: [
       "Assessments",
       "Platform enablement",
       "Increase scale & engagement",
       "Cross-platform data management",
-      "Established best practices"
-    ]
+      "Established best practices",
+    ],
   },
   {
     icon: <Timer className="w-12 h-12 text-blue-600" />,
     title: "Salesforce Platform-as-a-Service",
-    description: "At Digiflex.ai, we harness the full potential of Salesforce to optimize your customers' experiences.",
+    description:
+      "At Digiflex.ai, we harness the full potential of Salesforce to optimize your customers' experiences.",
     features: [
       "Implementation services",
       "Re-implementation services",
       "Managed services",
-      "Custom development"
-    ]
+      "Custom development",
+    ],
   },
   {
     icon: <Cube className="w-12 h-12 text-blue-600" />,
     title: "Strategy, Vision & Governance",
-    description: "At Digiflex.ai, we partner with you to visualize, plan, and prioritize Salesforce features, ensuring continuous value throughout your Salesforce journey.",
+    description:
+      "At Digiflex.ai, we partner with you to visualize, plan, and prioritize Salesforce features, ensuring continuous value throughout your Salesforce journey.",
     features: [
       "Vision & Strategy development",
       "Center of Excellence (COE)",
       "CRM & marketing automation maturity models",
       "Capability & capacity maps",
-      "Short & long-term roadmaps"
-    ]
+      "Short & long-term roadmaps",
+    ],
   },
   {
     icon: <Network className="w-12 h-12 text-blue-600" />,
     title: "Integration Expertise",
-    description: "At Digiflex.ai, we specialize in seamlessly integrating Salesforce across your technology stack to maximize its capabilities and deliver optimal results.",
+    description:
+      "At Digiflex.ai, we specialize in seamlessly integrating Salesforce across your technology stack to maximize its capabilities and deliver optimal results.",
     features: [
       "Industry-specific and proprietary tool integrations",
       "Cloud data storage",
-      "Engineering solutions, process development, and data governance and hygiene"
-    ]
-  }
+      "Engineering solutions, process development, and data governance and hygiene",
+    ],
+  },
 ];
 
 function Solutions() {
   return (
-    <div className="container mx-auto px-4 py-16">
-      <motion.h1 
-        className="text-4xl font-bold text-center text-blue-900 mb-16"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        SALESFORCE SOLUTION AREAS
-      </motion.h1>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {solutions.map((solution, index) => (
-          <motion.div 
-            key={index} 
-            className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.1, duration: 0.5 }}
-            whileHover={{
-              y: -5,
-              transition: { duration: 0.2 }
-            }}
-          >
-            <motion.div 
-              className="flex justify-center mb-6"
-              whileHover={{ scale: 1.1, rotate: 360 }}
-              transition={{ duration: 0.6, type: "spring" }}
+    <WrapperContainer>
+      <div className="container mx-auto px-4 py-16">
+        <Heading>SALESFORCE SOLUTION AREAS</Heading>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {solutions.map((solution, index) => (
+            <motion.div
+              key={index}
+              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              whileHover={{
+                y: -5,
+                transition: { duration: 0.2 },
+              }}
             >
-              {solution.icon}
+              <motion.div
+                className="flex justify-center mb-6"
+                whileHover={{ scale: 1.1, rotate: 360 }}
+                transition={{ duration: 0.6, type: "spring" }}
+              >
+                {solution.icon}
+              </motion.div>
+              <h2 className="text-xl font-semibold text-blue-900 text-center mb-4">
+                {solution.title}
+              </h2>
+              <p className="text-gray-600 mb-6 text-center">
+                {solution.description}
+              </p>
+              <ul className="space-y-2">
+                {solution.features.map((feature, featureIndex) => (
+                  <motion.li
+                    key={featureIndex}
+                    className="text-gray-700 flex items-start"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 + featureIndex * 0.05 }}
+                  >
+                    <span className="text-indigo-600 mr-2">•</span>
+                    {feature}
+                  </motion.li>
+                ))}
+              </ul>
             </motion.div>
-            <h2 className="text-xl font-semibold text-blue-900 text-center mb-4">
-              {solution.title}
-            </h2>
-            <p className="text-gray-600 mb-6 text-center">
-              {solution.description}
-            </p>
-            <ul className="space-y-2">
-              {solution.features.map((feature, featureIndex) => (
-                <motion.li 
-                  key={featureIndex} 
-                  className="text-gray-700 flex items-start"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: (index * 0.1) + (featureIndex * 0.05) }}
-                >
-                  <span className="text-indigo-600 mr-2">•</span>
-                  {feature}
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </WrapperContainer>
   );
 }
 

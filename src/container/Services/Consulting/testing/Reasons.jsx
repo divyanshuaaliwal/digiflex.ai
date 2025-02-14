@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle2, ChevronDown } from 'lucide-react';
-import { reasons, animations } from './constants';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { CheckCircle2, ChevronDown } from "lucide-react";
+import { reasons, animations } from "./constants";
+import WrapperContainer from "../../../../Layout/WrapperContainer";
+import Heading from "../../../../Layout/Heading";
 
-export const ReasonCard = ({ reason, index, expandedIndex, setExpandedIndex }) => {
+export const ReasonCard = ({
+  reason,
+  index,
+  expandedIndex,
+  setExpandedIndex,
+}) => {
   return (
     <motion.div
       variants={animations.item}
@@ -15,7 +22,9 @@ export const ReasonCard = ({ reason, index, expandedIndex, setExpandedIndex }) =
       >
         <div className="flex gap-4 items-center">
           <CheckCircle2 className="w-6 h-6 text-blue-600 flex-shrink-0" />
-          <h3 className="font-semibold text-gray-900 text-lg">{reason.title}</h3>
+          <h3 className="font-semibold text-gray-900 text-lg">
+            {reason.title}
+          </h3>
         </div>
         <motion.div
           animate={{ rotate: expandedIndex === index ? 180 : 0 }}
@@ -47,49 +56,44 @@ export const Reasons = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   return (
-    <div className="mt-10">
-      <motion.h2 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="text-5xl font-bold text-blue-800 mb-12 text-center"
-      >
-        Reasons To Choose Consultation In Software Testing
-      </motion.h2>
+    <WrapperContainer>
+      <div className="mt-10">
+        <Heading> Reasons To Choose Consultation In Software Testing</Heading>
 
-      <div className="grid md:grid-cols-2 gap-8">
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="relative h-[400px] rounded-lg overflow-hidden"
-        >
-          <motion.img 
-            src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-            alt="Software Testing Analytics"
-            className="w-full h-full object-cover"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-          />
-        </motion.div>
-
-        <motion.div
-          variants={animations.container}
-          initial="hidden"
-          animate="show"
-          className="space-y-4"
-        >
-          {reasons.map((reason, index) => (
-            <ReasonCard 
-              key={index}
-              reason={reason}
-              index={index}
-              expandedIndex={expandedIndex}
-              setExpandedIndex={setExpandedIndex}
+        <div className="grid md:grid-cols-2 gap-8">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="relative h-[400px] rounded-lg overflow-hidden"
+          >
+            <motion.img
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+              alt="Software Testing Analytics"
+              className="w-full h-full object-cover"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
             />
-          ))}
-        </motion.div>
+          </motion.div>
+
+          <motion.div
+            variants={animations.container}
+            initial="hidden"
+            animate="show"
+            className="space-y-4"
+          >
+            {reasons.map((reason, index) => (
+              <ReasonCard
+                key={index}
+                reason={reason}
+                index={index}
+                expandedIndex={expandedIndex}
+                setExpandedIndex={setExpandedIndex}
+              />
+            ))}
+          </motion.div>
+        </div>
       </div>
-    </div>
+    </WrapperContainer>
   );
 };

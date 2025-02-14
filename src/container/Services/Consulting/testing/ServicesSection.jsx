@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { tabs, servicesData, descriptions, animations } from "./constants";
+import WrapperContainer from "../../../../Layout/WrapperContainer";
+import Heading from "../../../../Layout/Heading";
 
 const ServiceCard = ({ title, description, icon: Icon }) => {
   return (
@@ -33,21 +35,14 @@ export const ServicesSection = () => {
   const [activeTab, setActiveTab] = useState("full-cycle");
 
   return (
-    <div className=" bg-white py-10 px-4 sm:px-6 lg:px-8">
+    <WrapperContainer>
       <motion.div
         className="max-w-7xl mx-auto"
         initial="hidden"
         animate="show"
         variants={animations.container}
       >
-        <motion.h2
-          className="text-5xl font-extrabold text-blue-800 text-center mb-6"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          WE WORK WITH
-        </motion.h2>
+        <Heading>WE WORK WITH</Heading>
 
         <TabContent activeTab={activeTab} />
 
@@ -82,6 +77,6 @@ export const ServicesSection = () => {
           </motion.div>
         </AnimatePresence>
       </motion.div>
-    </div>
+    </WrapperContainer>
   );
 };
