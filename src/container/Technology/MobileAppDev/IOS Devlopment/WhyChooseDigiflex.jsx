@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import Heading from '../../../../Layout/Heading'
 import img from '../../../../assets/IOS5.jpg';
 import img2 from '../../../../assets/IOS4.jpg';
 import img3 from '../../../../assets/IOS3.jpg';
@@ -111,15 +111,17 @@ export default function WhyChooseDigiflex() {
         {/* Main Heading & Subheading */}
         <div className="text-center mb-8">
           {/* Main Heading with Gradient */}
-          <motion.h2 
-            className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-900 bg-clip-text text-transparent inline-block"
+          
+          <Heading
+            className="text-5xl pb-6 font-bold "
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
             Why Choose Digiflex?
-          </motion.h2>
+            </Heading>
+         
           {/* Subheading with Black Text */}
           <motion.p
             className="mt-4 text-xl text-black"

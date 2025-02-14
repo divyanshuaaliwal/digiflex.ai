@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Heading from "../Layout/Heading";
 const ContactForm = () => {
 
     const [formData, setFormData] = useState({
@@ -82,32 +82,31 @@ const ContactForm = () => {
             <div className="md:w-1/2 md:pr-8 p-4">
                 
                 {/* Main Heading */}
-                
-                <h1 className="text-5xl md:text-5xl font-semibold mb-4 text-[#1A2E6F]">
-                    Contact Our Sales Team
-                </h1>
+                <Heading>                 Contact Our Sales Team
+        </Heading>
+               
 
                 {/* Subtitle and Content */}
                 <p className="text-sm md:text-base text-gray-600 mb-6">Let’s explore how Notion can work for you.</p>
+               <ul className="space-y-4 text-sm md:text-base border rounded-md bg-stone-100 px-3 py-4">
+                   
+                <li className="flex items-start">
+                    <span className="text-indigo-500 font-bold text-lg mr-2">✓</span>
+                    <span className="font-semibold text-black">One flexible tool for your entire company to share knowledge, ship projects, and collaborate.</span>
+                </li>
                 
-                <ul className="space-y-4 text-sm md:text-base border rounded-md bg-stone-100 px-3 py-4">
-                    
-                    <li className="flex items-start">
-                        <span className="text-indigo-500 font-bold text-lg mr-2">✓</span>
-                        <span className="font-semibold text-black">One flexible tool for your entire company to share knowledge, ship projects, and collaborate.</span>
-                    </li>
-                    
-                    <li className="flex items-start">
-                        <span className="text-indigo-500 font-bold text-lg mr-2">✓</span>
-                        <span className="font-semibold text-black">Enterprise features to securely manage user access and security.</span>
-                    </li>
-                    
-                    <li className="flex items-start">
-                        <span className="text-indigo-500 font-bold text-lg mr-2">✓</span>
-                        <span className="font-semibold text-black">Dedicated support to work with you on your setup and help you build the best plan for your company.</span>
-                    </li>
-                    
-                </ul>
+                <li className="flex items-start">
+                    <span className="text-indigo-500 font-bold text-lg mr-2">✓</span>
+                    <span className="font-semibold text-black">Enterprise features to securely manage user access and security.</span>
+                </li>
+                
+                <li className="flex items-start">
+                    <span className="text-indigo-500 font-bold text-lg mr-2">✓</span>
+                    <span className="font-semibold text-black">Dedicated support to work with you on your setup and help you build the best plan for your company.</span>
+                </li>
+                
+            </ul>
+                
                 
                 <p className="text-xs md:text-sm text-gray-500 mt-6">
                     Looking for support? Visit{" "}
