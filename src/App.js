@@ -65,6 +65,14 @@ import FlutterAppDevlopment from "./pages/FlutterAppDevlopment";
 import NativeScript from "./pages/NativeScript";
 import XamarinAppDEvlopment from "./pages/XamarinAppDEvlopment";
 
+//Cloud
+
+import Azure from "./pages/Azure";
+import Cloud_Migration from './pages/Cloud_Migration'
+import Google from "./pages/Google";
+import Intercloud_Migration from "./pages/Intercloud"
+import AWS from "./pages/AWS";
+
 
 
 
@@ -230,6 +238,16 @@ function App() {
         />
        {/* Game development */}
         <Route  path="/services/game-development/mobile-game-development" element={<MobileGameDevelopment/>}/>
+      
+      {/* Cloud */}
+      <Route path="/services/cloud/azure" element={<Azure/>} />
+      <Route path="/services/cloud/cloud_migration" element={<Cloud_Migration/>}/>
+      <Route path="/services/cloud/google_components" element={<Google/>} />
+      <Route path="/services/cloud/intercloud_Migration" element={<Intercloud_Migration/>}/>
+      <Route path="/services/cloud/AWS" element={<AWS/>}/>
+
+
+
       </Routes>
 
       <Reviews />

@@ -244,6 +244,21 @@ const Navbar = () => {
       image:
         "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
     },
+
+    { id: 'CS', 
+      icon: Cpu, 
+      title: 'Cloud',
+      color: 'text-yellow-500',
+      description: 'Cloud services offer online computing resources like storage, servers, and software, enabling scalability and cost-efficiency. ',
+      features: [
+        { icon: Cpu, title: 'Google Cloud', path: '/services/cloud/google_components' },
+        { icon: Cpu, title: 'Azure Cloud', path: '/services/cloud/azure'},
+        { icon: Cpu, title: 'Cloud Migration', path: '/services/cloud/cloud_migration'},
+        { icon: Cpu, title: 'Intercloud Migration', path: '/services/cloud/intercloud_Migration'},
+        { icon: Cpu, title: 'AWS', path: '/services/cloud/AWS'}      
+        ],
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80'
+    },
     
     {
       id: "BlockchainDev",
