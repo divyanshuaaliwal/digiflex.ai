@@ -1,12 +1,10 @@
 import { motion } from "framer-motion";
 import { Star, Users, BarChart, Target } from "lucide-react";
+import WrapperContainer from "../../../../Layout/WrapperContainer";
 
 export const BenefitsSection = () => {
   return (
-    <section className="py-16 relative bg-gray-50 overflow-hidden">
-      {/* Background Gradient Animation */}
-      <div className="absolute inset-0 bg-white opacity-50 transition-all duration-700 hover:opacity-100"></div>
-
+    <WrapperContainer>
       <div className="relative container mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12">
         {/* Benefits List */}
         <div className="space-y-8">
@@ -54,7 +52,7 @@ export const BenefitsSection = () => {
           <div className="absolute inset-0 bg-white opacity-10 transition-opacity duration-500 hover:opacity-20"></div>
         </motion.div>
       </div>
-    </section>
+    </WrapperContainer>
   );
 };
 

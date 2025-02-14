@@ -1,89 +1,104 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  HeartPulse, 
-  Briefcase, 
-  Shield, 
-  Globe, 
-  ShoppingBag, 
-  Truck, 
-  Home, 
-  GraduationCap, 
-  Factory, 
-  Film, 
-  BookOpen, 
-  Car 
-} from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  HeartPulse,
+  Briefcase,
+  Shield,
+  Globe,
+  ShoppingBag,
+  Truck,
+  Home,
+  GraduationCap,
+  Factory,
+  Film,
+  BookOpen,
+  Car,
+} from "lucide-react";
+import WrapperContainer from "../../../../Layout/WrapperContainer";
+import Heading from "../../../../Layout/Heading";
+import Paragraph from "../../../../Layout/Paragraph";
 
 const industries = [
   {
-    name: 'HEALTHCARE',
+    name: "HEALTHCARE",
     icon: HeartPulse,
-    description: "Delivering secure, scalable, and compliant IT solutions to enhance patient care and streamline medical operations."
+    description:
+      "Delivering secure, scalable, and compliant IT solutions to enhance patient care and streamline medical operations.",
   },
   {
-    name: 'FINANCIAL AND BANKING',
+    name: "FINANCIAL AND BANKING",
     icon: Briefcase,
-    description: "Enabling seamless, secure, and real-time financial transactions with cutting-edge fintech innovations."
+    description:
+      "Enabling seamless, secure, and real-time financial transactions with cutting-edge fintech innovations.",
   },
   {
-    name: 'INSURANCE',
+    name: "INSURANCE",
     icon: Shield,
-    description: "Modernizing legacy systems to improve claims processing, risk assessment, and customer experience."
+    description:
+      "Modernizing legacy systems to improve claims processing, risk assessment, and customer experience.",
   },
   {
-    name: 'INTERNET SERVICES AND SOFTWARE',
+    name: "INTERNET SERVICES AND SOFTWARE",
     icon: Globe,
-    description: "Building robust, scalable platforms to power the digital economy and drive user engagement."
+    description:
+      "Building robust, scalable platforms to power the digital economy and drive user engagement.",
   },
   {
-    name: 'RETAIL & E-COMMERCE',
+    name: "RETAIL & E-COMMERCE",
     icon: ShoppingBag,
-    description: "Transforming shopping experiences with AI-driven personalization and seamless omnichannel solutions."
+    description:
+      "Transforming shopping experiences with AI-driven personalization and seamless omnichannel solutions.",
   },
   {
-    name: 'LOGISTICS & DELIVERY & SUPPLY CHAIN',
+    name: "LOGISTICS & DELIVERY & SUPPLY CHAIN",
     icon: Truck,
-    description: "Optimizing operations with IoT, AI, and real-time tracking for efficient supply chain management."
+    description:
+      "Optimizing operations with IoT, AI, and real-time tracking for efficient supply chain management.",
   },
   {
-    name: 'REAL ESTATE',
+    name: "REAL ESTATE",
     icon: Home,
-    description: "Digitizing property management and enhancing customer experiences with smart, data-driven solutions."
+    description:
+      "Digitizing property management and enhancing customer experiences with smart, data-driven solutions.",
   },
   {
-    name: 'EDUCATION',
+    name: "EDUCATION",
     icon: GraduationCap,
-    description: "Empowering learning ecosystems with scalable EdTech platforms and immersive e-learning tools."
+    description:
+      "Empowering learning ecosystems with scalable EdTech platforms and immersive e-learning tools.",
   },
   {
-    name: 'MANUFACTURING',
+    name: "MANUFACTURING",
     icon: Factory,
-    description: "Driving Industry 4.0 with smart automation, predictive maintenance, and IoT-enabled production systems."
+    description:
+      "Driving Industry 4.0 with smart automation, predictive maintenance, and IoT-enabled production systems.",
   },
   {
-    name: 'ENTERTAINMENT',
+    name: "ENTERTAINMENT",
     icon: Film,
-    description: "Revolutionizing content creation, distribution, and engagement with AI and cloud-based solutions."
+    description:
+      "Revolutionizing content creation, distribution, and engagement with AI and cloud-based solutions.",
   },
   {
-    name: 'PUBLISHING',
+    name: "PUBLISHING",
     icon: BookOpen,
-    description: "Streamlining content workflows and enabling digital transformation for modern publishing needs."
+    description:
+      "Streamlining content workflows and enabling digital transformation for modern publishing needs.",
   },
   {
-    name: 'AUTOMOTIVE',
+    name: "AUTOMOTIVE",
     icon: Car,
-    description: "Accelerating innovation with connected vehicles, autonomous driving technologies, and smart manufacturing."
-  }
+    description:
+      "Accelerating innovation with connected vehicles, autonomous driving technologies, and smart manufacturing.",
+  },
 ];
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.2 }
-  }
+    transition: { staggerChildren: 0.2 },
+  },
 };
 
 const itemVariants = {
@@ -91,13 +106,13 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 100 }
-  }
+    transition: { type: "spring", stiffness: 100 },
+  },
 };
 
 function IndustriesSection() {
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-white py-20">
+    <WrapperContainer>
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -105,18 +120,16 @@ function IndustriesSection() {
         variants={containerVariants}
         className="max-w-7xl mx-auto px-4"
       >
-        <motion.div 
-          variants={itemVariants}
-          className="text-center mb-16"
-        >
-          <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 mb-6">
-            Industries We <span className='text-black hover:text-blue-900'>Serve</span> 
-          </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto text-lg">
-            At Digiflex.ai, we specialize in delivering DevOps advisory services and building scalable, future-ready IT infrastructures.
-            From startups to enterprises, we empower organizations across diverse industries—including FinTech, Healthcare, Retail, and
-            SaaS—to streamline operations, accelerate innovation, and gain a competitive edge in today's fast-paced digital landscape.
-          </p>
+        <motion.div variants={itemVariants} className="text-center mb-16">
+          <Heading>Industries We Serve</Heading>
+          <Paragraph>
+            At Digiflex.ai, we specialize in delivering DevOps advisory services
+            and building scalable, future-ready IT infrastructures. From
+            startups to enterprises, we empower organizations across diverse
+            industries—including FinTech, Healthcare, Retail, and SaaS—to
+            streamline operations, accelerate innovation, and gain a competitive
+            edge in today's fast-paced digital landscape.
+          </Paragraph>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -126,9 +139,9 @@ function IndustriesSection() {
               <motion.div
                 key={industry.name}
                 variants={itemVariants}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.03,
-                  transition: { type: "spring", stiffness: 300 }
+                  transition: { type: "spring", stiffness: 300 },
                 }}
                 className="group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all"
               >
@@ -147,7 +160,7 @@ function IndustriesSection() {
           })}
         </div>
       </motion.div>
-    </div>
+    </WrapperContainer>
   );
 }
 

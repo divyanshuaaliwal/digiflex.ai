@@ -1,37 +1,32 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import WrapperContainer from '../../../../Layout/WrapperContainer';
+import Heading from '../../../../Layout/Heading';
+import Subheading from '../../../../Layout/Subheading';
+import Paragraph from '../../../../Layout/Paragraph';
 
 function Process({ steps, visibleSteps }) {
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+   <WrapperContainer>
+      <div>
         {/* Section Header with Animation */}
-        <motion.h2
-          className="text-5xl font-bold mb-4 text-center text-blue-900"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          Our Well-organized Approach for
-        </motion.h2>
+  <Heading>
+  Our Well-organized Approach for
+  </Heading>
         <motion.h3
           className="text-5xl font-bold mb-12 text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-900">
-            AI Consulting
-          </span>
+       <Subheading>
+       AI Consulting
+       </Subheading>
         </motion.h3>
-        <motion.p
-          className="text-lg text-gray-800 mb-16 text-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.4 }}
-        >
-          At Digiflex.ai, we follow a structured and strategic methodology to deliver high-quality AI solutions. Our approach ensures seamless integration, optimized performance, and tangible business outcomes for our clients.
-        </motion.p>
+   <Paragraph>
+   At Digiflex.ai, we follow a structured and strategic methodology to deliver high-quality AI solutions. Our approach ensures seamless integration, optimized performance, and tangible business outcomes for our clients.
+
+   </Paragraph>
 
         <div className="space-y-12 relative">
           {/* Vertical Line */}
@@ -70,7 +65,7 @@ function Process({ steps, visibleSteps }) {
           ))}
         </div>
       </div>
-    </section>
+      </WrapperContainer>
   );
 }
 

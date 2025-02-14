@@ -18,16 +18,22 @@ import {
   Rocket,
   ShoppingBag,
   Clock,
-  Joystick ,
-  Monitor ,
+  Joystick,
+  Monitor,
   PenTool,
-  Glasses ,
-  UserCheck ,
+  Glasses,
+  UserCheck,
   Signature,
   Currency,
   Wallet,
+  Code2Icon,
+  CodeSquareIcon,
 } from "lucide-react";
 import logo from "../assets/digiflex.png";
+import { FaAngular, FaBootstrap, FaReact, FaVuejs } from "react-icons/fa";
+import { GiKnockedOutStars, GiKnockout } from "react-icons/gi";
+import { RiNextjsFill } from "react-icons/ri";
+import { FcNext } from "react-icons/fc";
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -40,10 +46,6 @@ const Navbar = () => {
   const [isSearchActive, setIsSearchActive] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const timeoutRef = useRef(null);
-
-
-  
-
 
   const navItems = [
     { label: "Home", href: "#" },
@@ -245,28 +247,42 @@ const Navbar = () => {
         "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
     },
 
-    { id: 'CS', 
-      icon: Cpu, 
-      title: 'Cloud',
-      color: 'text-yellow-500',
-      description: 'Cloud services offer online computing resources like storage, servers, and software, enabling scalability and cost-efficiency. ',
+    {
+      id: "CS",
+      icon: Cpu,
+      title: "Cloud",
+      color: "text-yellow-500",
+      description:
+        "Cloud services offer online computing resources like storage, servers, and software, enabling scalability and cost-efficiency. ",
       features: [
-        { icon: Cpu, title: 'Google Cloud', path: '/services/cloud/google_components' },
-        { icon: Cpu, title: 'Azure Cloud', path: '/services/cloud/azure'},
-        { icon: Cpu, title: 'Cloud Migration', path: '/services/cloud/cloud_migration'},
-        { icon: Cpu, title: 'Intercloud Migration', path: '/services/cloud/intercloud_Migration'},
-        { icon: Cpu, title: 'AWS', path: '/services/cloud/AWS'}      
-        ],
-      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80'
+        {
+          icon: Cpu,
+          title: "Google Cloud",
+          path: "/services/cloud/google_components",
+        },
+        { icon: Cpu, title: "Azure Cloud", path: "/services/cloud/azure" },
+        {
+          icon: Cpu,
+          title: "Cloud Migration",
+          path: "/services/cloud/cloud_migration",
+        },
+        {
+          icon: Cpu,
+          title: "Intercloud Migration",
+          path: "/services/cloud/intercloud_Migration",
+        },
+        { icon: Cpu, title: "AWS", path: "/services/cloud/AWS" },
+      ],
+      image:
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
     },
-    
+
     {
       id: "BlockchainDev",
       icon: Cpu,
       title: "Blockchain Development",
       color: "text-yellow-500",
-      description:
-        "Cutting-edge solutions using blockchain technologies.",
+      description: "Cutting-edge solutions using blockchain technologies.",
       features: [
         {
           icon: Cpu,
@@ -300,7 +316,7 @@ const Navbar = () => {
 
     {
       id: "GameDev",
-      icon: Joystick ,
+      icon: Joystick,
       title: "Game Development",
       color: "text-purple-500",
       description:
@@ -313,38 +329,38 @@ const Navbar = () => {
         },
         {
           title: "Unity3D Game Development",
-          icon: Joystick ,
+          icon: Joystick,
           path: "/services/game-development/unity3d-game-development",
         },
         {
           title: "Unreal Game Development",
-          icon: Joystick ,
+          icon: Joystick,
           path: "/services/game-development/unreal-game-development",
         },
         {
           title: "PC Game Development",
-          icon: Monitor ,
+          icon: Monitor,
           path: "/services/game-development/pc-game-development",
         },
         {
           title: "Game Art Services",
-          icon: PenTool ,
+          icon: PenTool,
           path: "/services/game-development/game-art-services",
         },
         {
           title: "VR/XR Simulation",
-          icon: Glasses ,
+          icon: Glasses,
           path: "/services/game-development/vr-xr-simulation",
         },
         {
           title: "Resource Augmentation",
-          icon: UserCheck  ,
+          icon: UserCheck,
           path: "/services/game-development/resource-augmentation",
         },
       ],
       image:
         "https://images.unsplash.com/photo-1628744444372-b5b24ee41e28?auto=format&fit=crop&w=600&q=80",
-    },   
+    },
   ];
   // Technology dropdown content
   const technologies = [
@@ -377,7 +393,11 @@ const Navbar = () => {
           title: "NativeScript",
           path: "/tech/NativeScript",
         },
-        { icon: Smartphone, title: "Xamarin", path: "/tech/XamarinAppDevlopment" },
+        {
+          icon: Smartphone,
+          title: "Xamarin",
+          path: "/tech/XamarinAppDevlopment",
+        },
       ],
       image:
         "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80",
@@ -390,12 +410,24 @@ const Navbar = () => {
       description:
         "Modern frontend frameworks and libraries for building responsive web applications.",
       features: [
-        { icon: Code, title: "Angular", path: "/tech/frontend/angular" },
-        { icon: Code, title: "React.js", path: "/tech/frontend/react" },
-        { icon: Code, title: "Vue.js", path: "/tech/frontend/vue" },
-        { icon: Code, title: "Bootstrap", path: "/tech/frontend/bootstrap" },
-        { icon: Code, title: "Knockout.js", path: "/tech/frontend/knockout" },
-        { icon: Code, title: "Next.js", path: "/tech/frontend/nextjs" },
+        { icon: FaAngular, title: "Angular", path: "/tech/frontend/angular" },
+        { icon: FaReact, title: "React.js", path: "/tech/frontend/react" },
+        { icon: FaVuejs, title: "Vue.js", path: "/tech/frontend/vue" },
+        {
+          icon: FaBootstrap,
+          title: "Bootstrap",
+          path: "/tech/frontend/bootstrap",
+        },
+        {
+          icon: Code2Icon,
+          title: "Knockout.js",
+          path: "/tech/frontend/knockout",
+        },
+        {
+          icon: CodeSquareIcon,
+          title: "Next.js",
+          path: "/tech/frontend/nextjs",
+        },
       ],
       image:
         "https://images.unsplash.com/photo-1555066931-bf19f8fd1085?auto=format&fit=crop&w=600&q=80",

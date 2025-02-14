@@ -1,31 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
 import { Monitor, Globe, Laptop, Building } from "lucide-react";
+import WrapperContainer from "../../../../Layout/WrapperContainer";
+import Heading from "../../../../Layout/Heading";
+import Paragraph from "../../../../Layout/Paragraph";
 
 const TypesAndExampleSection = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
-
   const cardData = [
     {
       icon: Monitor,
@@ -79,38 +57,15 @@ const TypesAndExampleSection = () => {
   ];
 
   return (
-    <section
-      ref={sectionRef}
-      className="py-16 bg-white overflow-hidden text-blue-900"
-    >
+    <WrapperContainer>
       <div className="container mx-auto px-4">
-        <h2
-          className={`
-          text-3xl font-bold text-center mb-6 
-          transform transition-all duration-700 
-          ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }
-        `}
-        >
-          Types and Examples of{" "}
-          <span className="text-black hover:text-blue-900">Web Software</span>{" "}
-          We Work With
-        </h2>
-        <p
-          className={`
-          text-center text-gray-600 mb-12 
-          transform transition-all duration-700 delay-200
-          ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }
-        `}
-        >
+        <Heading>Types and Examples of Web Software We Work With</Heading>
+        <Paragraph>
           Web solutions have different everything: architecture, level of
           interactivity, user experience, design, etc. Thanks to our vast
           experience, we can quickly understand your specific solution and know
           what is important in your case.
-        </p>
+        </Paragraph>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {cardData.map((card, index) => (
@@ -120,11 +75,7 @@ const TypesAndExampleSection = () => {
                 bg-white p-8 rounded-lg shadow-lg 
                 transform transition-all duration-500 
                 hover:scale-105 hover:shadow-blue-200
-                ${
-                  isVisible
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-20 opacity-0"
-                }
+              
               `}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
@@ -153,7 +104,7 @@ const TypesAndExampleSection = () => {
           ))}
         </div>
       </div>
-    </section>
+    </WrapperContainer>
   );
 };
 

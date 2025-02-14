@@ -1,5 +1,8 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import WrapperContainer from "../../../../Layout/WrapperContainer";
+import Heading from "../../../../Layout/Heading";
+import Paragraph from "../../../../Layout/Paragraph";
 
 const MethodologySection = () => {
   const [activeItem, setActiveItem] = React.useState(null);
@@ -18,7 +21,8 @@ const MethodologySection = () => {
     "DATA-DRIVEN DECISIONS": {
       description:
         "Digiflex.ai empowers businesses to make informed design and strategic decisions using advanced analytics and user behavior insights.",
-      impact: "Enhances website performance by up to 65% through targeted optimizations.",
+      impact:
+        "Enhances website performance by up to 65% through targeted optimizations.",
       details: [
         "Advanced web analytics for actionable insights",
         "Comprehensive user behavior tracking",
@@ -28,7 +32,8 @@ const MethodologySection = () => {
     "SEO CONTENT": {
       description:
         "We craft strategically optimized content that ranks high on search engines while delivering genuine value to users.",
-      impact: "Increases organic traffic by up to 75% and enhances search engine rankings.",
+      impact:
+        "Increases organic traffic by up to 75% and enhances search engine rankings.",
       details: [
         "In-depth keyword research",
         "Data-driven content strategy",
@@ -38,7 +43,8 @@ const MethodologySection = () => {
     "ONGOING OPTIMIZATION": {
       description:
         "Stay ahead of the competition with continuous monitoring and iterative improvements for top-notch performance and user experience.",
-      impact: "Ensures a competitive edge with 50% faster adaptation to market changes.",
+      impact:
+        "Ensures a competitive edge with 50% faster adaptation to market changes.",
       details: [
         "Regular performance audits",
         "Continuous improvements for better results",
@@ -48,14 +54,13 @@ const MethodologySection = () => {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <WrapperContainer>
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-blue-900 mb-4">
-          Our <span className="text-black hover:text-blue-900 ">Web Consultants</span> Best Practices
-        </h2>
-        <p className="text-center text-gray-600 mb-12">
-          We utilize data-driven best practices and industry insights to inform our consulting strategy.
-        </p>
+        <Heading>Our Web Consultants Best Practices</Heading>
+        <Paragraph>
+          We utilize data-driven best practices and industry insights to inform
+          our consulting strategy.
+        </Paragraph>
 
         <div className="grid md:grid-cols-4 gap-8 relative">
           {Object.keys(methodologyDetails).map((item, index) => (
@@ -99,7 +104,9 @@ const MethodologySection = () => {
                     }}
                     className="overflow-hidden mt-4"
                   >
-                    <p className="text-sm mb-2">{methodologyDetails[item].description}</p>
+                    <p className="text-sm mb-2">
+                      {methodologyDetails[item].description}
+                    </p>
                     <div className="mt-2">
                       <p className="font-semibold text-sm mb-1">Key Aspects:</p>
                       <ul className="list-disc list-inside text-xs">
@@ -110,7 +117,9 @@ const MethodologySection = () => {
                     </div>
                     <div className="mt-2 text-sm">
                       <p className="font-semibold">Impact:</p>
-                      <p className="text-yellow-200">{methodologyDetails[item].impact}</p>
+                      <p className="text-yellow-200">
+                        {methodologyDetails[item].impact}
+                      </p>
                     </div>
                   </motion.div>
                 )}
@@ -126,7 +135,7 @@ const MethodologySection = () => {
           ))}
         </div>
       </div>
-    </section>
+    </WrapperContainer>
   );
 };
 

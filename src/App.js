@@ -66,13 +66,10 @@ import XamarinAppDEvlopment from "./pages/XamarinAppDEvlopment";
 //Cloud
 
 import Azure from "./pages/Azure";
-import Cloud_Migration from './pages/Cloud_Migration'
+import Cloud_Migration from "./pages/Cloud_Migration";
 import Google from "./pages/Google";
-import Intercloud_Migration from "./pages/Intercloud"
+import Intercloud_Migration from "./pages/Intercloud";
 import AWS from "./pages/AWS";
-
-
-
 
 function App() {
   const location = useLocation();
@@ -239,18 +236,24 @@ function App() {
           path="/tech/XamarinAppDevlopment"
           element={<XamarinAppDEvlopment />}
         />
-       {/* Game development */}
-        <Route  path="/services/game-development/mobile-game-development" element={<MobileGameDevelopment/>}/>
-      
-      {/* Cloud */}
-      <Route path="/services/cloud/azure" element={<Azure/>} />
-      <Route path="/services/cloud/cloud_migration" element={<Cloud_Migration/>}/>
-      <Route path="/services/cloud/google_components" element={<Google/>} />
-      <Route path="/services/cloud/intercloud_Migration" element={<Intercloud_Migration/>}/>
-      <Route path="/services/cloud/AWS" element={<AWS/>}/>
+        {/* Game development */}
+        <Route
+          path="/services/game-development/mobile-game-development"
+          element={<MobileGameDevelopment />}
+        />
 
-
-
+        {/* Cloud */}
+        <Route path="/services/cloud/azure" element={<Azure />} />
+        <Route
+          path="/services/cloud/cloud_migration"
+          element={<Cloud_Migration />}
+        />
+        <Route path="/services/cloud/google_components" element={<Google />} />
+        <Route
+          path="/services/cloud/intercloud_Migration"
+          element={<Intercloud_Migration />}
+        />
+        <Route path="/services/cloud/AWS" element={<AWS />} />
       </Routes>
 
       <Reviews />
