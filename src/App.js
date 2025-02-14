@@ -35,17 +35,15 @@ import UxResearch from "./pages/UxResearch";
 import UiAnimation from "./pages/UiAnimation";
 import DesignTesting from "./pages/DesignTesting";
 
-
-// Game Development 
+// Game Development
 import MobileGameDevelopment from "./pages/MobileGameDevelopment";
 
-import ExchangeShoftware from "./pages/ExchangeShoftware"
-import InitialCoinOffering from "./pages/InitialCoinOffering"
-import CryptocurrencyApp from "./pages/CryptocurrencyApp"
+import ExchangeShoftware from "./pages/ExchangeShoftware";
+import InitialCoinOffering from "./pages/InitialCoinOffering";
+import CryptocurrencyApp from "./pages/CryptocurrencyApp";
 
 import CryptocurrencyWallet from "./pages/CryptocurrencyWallet";
 import SmartContractDevelopment from "./pages/SmartContractDevelopment";
-
 
 // Frontend Technology
 
@@ -190,21 +188,26 @@ function App() {
 
         <Route
           path="/services/blockchain/exchangesoftware"
-          element={<ExchangeShoftware/>}
+          element={<ExchangeShoftware />}
         />
         <Route
           path="/services/blockchain/initialcoinoffering"
-          element={<InitialCoinOffering/>}
+          element={<InitialCoinOffering />}
         />
         <Route
           path="/services/blockchain/cryptocurrency"
-          element={<CryptocurrencyApp/>}
+          element={<CryptocurrencyApp />}
         />
 
-        <Route path="/services/blockchain/smartcontractdevelopment" element={<SmartContractDevelopment/>}/>
+        <Route
+          path="/services/blockchain/smartcontractdevelopment"
+          element={<SmartContractDevelopment />}
+        />
 
-
-        <Route  path="/services/blockchain/cryptocurrencywallet" element={<CryptocurrencyWallet/>} />
+        <Route
+          path="/services/blockchain/cryptocurrencywallet"
+          element={<CryptocurrencyWallet />}
+        />
 
         {/* Frontend Technology */}
         <Route path="/tech/frontend/angular" element={<AngularDevelopment />} />
