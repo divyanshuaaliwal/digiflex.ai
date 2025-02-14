@@ -62,6 +62,7 @@ import ReactNative from "./pages/ReactNative";
 import FlutterAppDevlopment from "./pages/FlutterAppDevlopment";
 import NativeScript from "./pages/NativeScript";
 import XamarinAppDEvlopment from "./pages/XamarinAppDEvlopment";
+import HtmlDevlopment from "./pages/HtmlAppDevlopment"
 
 //Cloud
 
@@ -236,6 +237,10 @@ function App() {
           path="/tech/XamarinAppDevlopment"
           element={<XamarinAppDEvlopment />}
         />
+        <Route
+        path="/tech/HtmlDevlopment"
+        element={<HtmlDevlopment/>}
+      />
         {/* Game development */}
         <Route
           path="/services/game-development/mobile-game-development"

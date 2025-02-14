@@ -398,6 +398,11 @@ const Navbar = () => {
           title: "Xamarin",
           path: "/tech/XamarinAppDevlopment",
         },
+        {
+          icon: Smartphone,
+          title: "HTMl APP",
+          path: "/tech/HtmlDevlopment",
+        },
       ],
       image:
         "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80",
