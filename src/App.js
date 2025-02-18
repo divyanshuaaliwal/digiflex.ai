@@ -75,11 +75,6 @@ import Cloud_Migration from "./pages/Cloud_Migration";
 import Google from "./pages/Google";
 import Intercloud_Migration from "./pages/Intercloud";
 import AWS from "./pages/AWS";
-<<<<<<< HEAD
-import WebsiteTechDevlopmet from "./pages/WebsiteTechDevlopmet";
-=======
-import CloudNative from "./pages/CloudNative";
->>>>>>> 17d210cba63f55e7ca58d0767024f2e5c8114a9f
 
 function App() {
   const location = useLocation();
