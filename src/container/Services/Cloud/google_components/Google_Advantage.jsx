@@ -1,6 +1,8 @@
 import React from "react";
 import WrapperContainer from '../../../../Layout/WrapperContainer';
 import Heading from '../../../../Layout/Heading';
+import Subheading from '../../../../Layout/Subheading';
+import Paragraph from '../../../../Layout/Paragraph';
 
 const advantages = [
   {
@@ -38,49 +40,31 @@ const advantages = [
 ];
 
 function Google_Advantage() {
- 
+
   return (
-    <>
+
     <WrapperContainer>
-      <div>
-        <div>
-        <Heading>
-          <h1>
-            Advantage of Google Cloud
-          </h1>
-        </Heading>
-          <div className="grid grid-cols-1 md:grid-cols-2 mt-[80px] gap-10">
-            {advantages.map((item, index) => (
-              <div
-                key={index}
-                className="p-6 bg-white rounded-lg border border-gray-200 hover:shadow-2xl transform transition-all duration-300 ease-in-out hover:scale-105"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-lg font-medium text-gray-900">
-                    {item.title}
-                  </h3>
-                  <svg
-                    className="w-5 h-5 text-blue-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </div>
-                <p className="text-gray-600 text-base">{item.description}</p>
-              </div>
-            ))}
+      <Heading>
+        <h1>Advantage of Google Cloud</h1>
+      </Heading>
+      <div className="grid grid-cols-1 md:grid-cols-2 mt-[80px] gap-6 md:gap-8 lg:gap-10">
+        {advantages.map((item, index) => (
+          <div
+            key={index}
+            className="p-4 md:p-5 lg:p-6 bg-white rounded-lg border border-gray-200 hover:shadow-xl transform transition-all duration-300 ease-in-out hover:scale-105 w-11/12 mx-auto"
+          >
+            <div className="flex items-center justify-between mb-3">
+              <Subheading>
+                <h3 className="text-md md:text-lg font-medium">{item.title}</h3>
+              </Subheading>
+            </div>
+            <Paragraph>
+              <p className="text-gray-600 text-sm md:text-base">{item.description}</p>
+            </Paragraph>
           </div>
-        </div>
+        ))}
       </div>
-      </WrapperContainer>
-    </>
+    </WrapperContainer>
   );
 }
 

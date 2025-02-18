@@ -5,7 +5,7 @@ import azure from '../../../../assets/Microsoft-Azure-logo.png'
 function Azure_Hero() {
   return (
     <>
-        <div className="relative w-full h-[640px] overflow-hidden">
+        <div className="relative w-full h-[600px] overflow-hidden">
         <video
           autoPlay
           loop
@@ -19,7 +19,7 @@ function Azure_Hero() {
           <p className="text-[50px] uppercase">
             Azure for cloud computing 
           </p>
-          <p className='mt-1'>A platform, offering a wide range of services for building, deploying, and managing <br/> applications through Microsoft-managed data centers. It provides solutions in computing, storage, <br/>networking, AI, machine learning, DevOps, security, and more.</p>
+          <p className="mt-2 max-w-[600px]">A platform, offering a wide range of services for building, deploying, and managing applications through Microsoft-managed data centers. It provides solutions in computing, storage,networking, AI, machine learning, DevOps, security, and more.</p>
           <img src={azure} alt='google cloud' className='w-1/6 '/>
         </div>
         </div>

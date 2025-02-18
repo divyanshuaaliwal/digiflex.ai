@@ -6,13 +6,14 @@ import Azure_learning from '../../../../assets/Azore_learning.jpg';
 import Azure_security from '../../../../assets/Azore_security.png'
 import Heading from "../../../../Layout/Heading";
 import WrapperContainer from "../../../../Layout/WrapperContainer";
+import Subheading from "../../../../Layout/Subheading";
 
 const services = [
   {
     icon: Azure_computer,
     title: "Compute Services",
     brief: "Virtual Machines (VMs), App Services, AKS",
-    details: "Azure provides scalable compute resources with Virtual Machines, Kubernetes, and App Services for hosting and managing applications efficiently.",
+    details: "Azure provides scalable compute resources with Virtual Machines, Kubernetes, and App Services for hosting .",
   },
   {
     icon: Azure_storage,
@@ -65,9 +66,11 @@ function Azure_feature() {
               <div className="w-16 h-16 mx-auto mb-2">
                 <img src={service.icon} alt="icon" className="w-full h-full" />
               </div>
-
+              
               <div className="text-center">
+              <Subheading>
                 <h2 className="text-xl font-bold">{service.title}</h2>
+                </Subheading>
                 <p className="text-gray-700 group-hover:text-white">{service.brief}</p>
               </div>
 

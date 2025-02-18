@@ -1,38 +1,53 @@
 import React from "react";
 import { carddata } from "./Data";
+import WrapperContainer from "../../../../Layout/WrapperContainer";
+import Heading from "../../../../Layout/Heading";
+import Paragraph from "../../../../Layout/Paragraph";
+import Subheading from "../../../../Layout/Subheading";
 
 const Cardpart3 = () => {
   return (
-    <div className="mt-32 text-center">
-    <h1 className="text-5xl font-extrabold text-[#1A2E6F] mb-6">
-      Blockchain Application Development
-    </h1>
-  
-    <div className="max-w-4xl mx-auto px-6">
-      <p className="text-lg text-gray-600 mb-10">
-        Blockchain application development involves creating decentralized
-        apps (dApps) or systems that leverage blockchain technology for
-        transparency, security, and immutability. It includes designing smart
-        contracts, integrating wallets, and ensuring scalability while
-        addressing user needs in areas like finance, supply chain, and
-        identity management.
-      </p>
-  
-      <div className="flex justify-center gap-8 mt-10">
+    <WrapperContainer>
+      <div>
+        <Heading>
+          <h1>Blockchain Application Development</h1>
+        </Heading>
+        <Paragraph>
+          <p className="mt-2 text-center">
+            Blockchain application development involves creating decentralized
+            apps (dApps) or systems that leverage blockchain technology for
+            transparency, security, and immutability. It includes designing
+            smart contracts, integrating wallets, and ensuring scalability while
+            addressing user needs in areas like finance, supply chain, and
+            identity management.
+          </p>
+        </Paragraph>
+      </div>
+
+      {/* Cards Section */}
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
         {carddata.map((item, index) => (
           <div
             key={index}
-            className="bg-white border border-gray-200 rounded-xl w-80 p-6 shadow-lg hover:shadow-2xl transform transition-all duration-300 ease-in-out hover:scale-105"
+            className="bg-white border border-gray-200 rounded-xl w-full max-w-sm h-[320px] p-6 shadow-lg hover:shadow-xl transform transition-all duration-300 ease-in-out hover:scale-105 flex flex-col justify-between"
           >
-            <img src={item.img} alt={item.name} className="w-20 h-20 mx-auto mb-4" />
-            <p className="text-xl font-semibold text-gray-800">{item.name}</p>
-            <p className="text-sm text-gray-500 mt-2">{item.data}</p>
+            <img
+              src={item.img}
+              alt={item.name}
+              className="w-20 h-20 mx-auto mb-4"
+            />
+            <Subheading>
+              <p className="text-xl font-semibold text-center">{item.name}</p>
+            </Subheading>
+            <Paragraph>
+              <p className=" text-center overflow-hidden text-ellipsis">
+                {item.data}
+              </p>
+            </Paragraph>
           </div>
         ))}
       </div>
-    </div>
-  </div>
-  
+    </WrapperContainer>
   );
 };
 

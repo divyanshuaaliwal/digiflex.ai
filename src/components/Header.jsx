@@ -1,7 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
+  Boxes,
+  MoveUpRight,
   Search,
+  Cloudy ,
   X,
   Menu,
   Globe,
@@ -247,6 +250,7 @@ const Navbar = () => {
         "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
     },
 
+<<<<<<< Updated upstream
     {
       id: "CS",
       icon: Cpu,
@@ -275,6 +279,24 @@ const Navbar = () => {
       ],
       image:
         "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
+=======
+    { id: 'CS', 
+      icon: Cloudy, 
+      title: 'Cloud',
+      color: 'text-[#00C8D5]',
+      description: 'Cloud services offer online computing resources like storage, servers, and software, enabling scalability and cost-efficiency. ',
+      features: [
+        { icon: Cloud, title: 'Google Cloud', path: '/services/cloud/google_components' },
+        { icon: Cloud, title: 'Azure Cloud', path: '/services/cloud/azure'},
+        { icon: Server, title: 'AWS', path: '/services/cloud/AWS'},      
+        { icon: MoveUpRight, title: 'Cloud Migration', path: '/services/cloud/cloud_migration'},
+        { icon: MoveUpRight, title: 'Intercloud Migration', path: '/services/cloud/intercloud_Migration'},
+        { icon: Boxes, title: 'Cloud Native', path: '/services/cloud/CloudNative'},
+        { icon: Database, title: 'Cloud Optimization', path: '/services/cloud/CloudOptimization'},    
+
+        ],
+      image: 'https://img.freepik.com/premium-vector/cloud-computing-technology-with-circuit-cloud-white-background-vector-illustration_493806-13570.jpg'
+>>>>>>> Stashed changes
     },
 
     {

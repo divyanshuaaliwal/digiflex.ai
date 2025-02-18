@@ -4,7 +4,7 @@ import video from '../../../../assets/Google_video.mp4'
 function Intercloud_hero() {
   return (
     <>
-        <div className="relative w-full h-[640px] overflow-hidden">
+        <div className="relative w-full h-[600px] overflow-hidden">
         <video
           autoPlay
           loop
@@ -18,7 +18,7 @@ function Intercloud_hero() {
           <p className="text-[50px] uppercase">
           Intercloud Migration 
           </p>
-          <p className='mt-1'>Intercloud migration refers to the process of transferring applications, workloads, or data between different cloud service providers.<br/> It allows organizations to optimize costs, improve performance, and enhance flexibility in cloud computing environments.</p>
+          <p className="mt-2 max-w-[600px]">Intercloud migration refers to the process of transferring applications, workloads, or data between different cloud service providers.It allows organizations to optimize costs, improve performance, and enhance flexibility in cloud computing environments.</p>
         </div>
         </div>
     </>
