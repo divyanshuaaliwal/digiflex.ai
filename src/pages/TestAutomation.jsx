@@ -7,17 +7,20 @@ import ImprovementSection from '../container/Services/Testing and QA/Test Automa
 import AutomationServices from '../container/Services/Testing and QA/Test Automation/AutomationServices';
 import ContentSlider from '../container/Services/Testing and QA/Test Automation/ContentSlider';
 import TestingCapabilities from '../container/Services/Testing and QA/Test Automation/TestingCapabilities';
+import WrapperContainer from '../Layout/WrapperContainer';
 
 const TestAutomation = () => {
     return (
         <div>
             <TestAutomationHeroSection/>
+			<WrapperContainer>
 			<Body/>
 			<TestAutomationFeatures/>
 			<ImprovementSection/>
 			<AutomationServices/>
 			<ContentSlider/>
 			<TestingCapabilities/>
+			</WrapperContainer>
         </div>
     )
 }

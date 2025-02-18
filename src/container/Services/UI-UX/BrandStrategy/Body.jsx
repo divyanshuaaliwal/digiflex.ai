@@ -1,12 +1,13 @@
 import React from 'react';
 import brandwhy from '../../../../assets/brandwhy.jpg';
 import brandstrategy from '../../../../assets/brandstrategy.jpg';
-
+import WrapperContainer from '../../../../Layout/WrapperContainer';
 
 
 
 const Body = () => {
   return (
+    <WrapperContainer>
     <div className="w-full min-h-screen bg-gray-50">
       {/* Why Us Section */}
       <section className="px-4 sm:px-8 md:px-16 lg:px-24 py-16">
@@ -151,6 +152,7 @@ const Body = () => {
         </div>
       </section>
     </div>
+    </WrapperContainer>
   );
 };
 

@@ -71,6 +71,7 @@ import Cloud_Migration from "./pages/Cloud_Migration";
 import Google from "./pages/Google";
 import Intercloud_Migration from "./pages/Intercloud";
 import AWS from "./pages/AWS";
+import WebsiteTechDevlopmet from "./pages/WebsiteTechDevlopmet";
 
 function App() {
   const location = useLocation();
@@ -241,6 +242,13 @@ function App() {
         path="/tech/HtmlDevlopment"
         element={<HtmlDevlopment/>}
       />
+
+      <Route
+      path="/tech/web/mean"
+      element={<WebsiteTechDevlopmet/>}
+    />
+
+
         {/* Game development */}
         <Route
           path="/services/game-development/mobile-game-development"

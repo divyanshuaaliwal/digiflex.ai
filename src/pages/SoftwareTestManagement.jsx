@@ -8,12 +8,14 @@ import Benifits from '../container/Services/Testing and QA/Software Test Managem
 import BodyData from '../container/Services/Testing and QA/Software Test Management/BodyData';
 import AnalystRecognition from '../container/Services/Testing and QA/Software Test Management/AnalystRecognition';
 import AccelerateBusiness from '../container/Services/Testing and QA/Software Test Management/AccelerateBusiness';
+import WrapperContainer from '../Layout/WrapperContainer';
 
 
 const SoftwareTestManagement = () => {
   return (
     <div>
         <Hero/>
+		<WrapperContainer>
 		<Overview/>
 		<ScalableAutomation/>
 		<TestManagementSystem/>
@@ -21,6 +23,7 @@ const SoftwareTestManagement = () => {
 		<BodyData/>
 		<AnalystRecognition/>
 		<AccelerateBusiness/>
+		</WrapperContainer>
     </div>
   )
 }

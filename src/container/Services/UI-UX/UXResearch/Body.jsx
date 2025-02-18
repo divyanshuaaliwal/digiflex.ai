@@ -1,5 +1,6 @@
 import {React, useState} from 'react';
-import uxreasearch43 from '../../../../assets/uxreasearch43.jpg'
+import uxreasearch43 from '../../../../assets/uxreasearch43.jpg';
+import WrapperContainer from '../../../../Layout/WrapperContainer';
 
 
 // section 2
@@ -66,6 +67,7 @@ const ServicesHero = () => {
   return (
 <>
     {/*Section 1 */}
+    <WrapperContainer>
     <div className="bg-white min-h-[400px] w-full mb-10 relative overflow-hidden p-4 md:p-8">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8">
         {/* Main Content */}
@@ -287,6 +289,7 @@ const ServicesHero = () => {
         </p>
       </div>
     </div>
+    </WrapperContainer>
 </>
   );
 };

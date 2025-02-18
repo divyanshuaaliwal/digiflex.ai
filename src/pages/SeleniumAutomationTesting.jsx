@@ -8,11 +8,12 @@ import SpeedBenefits from '../container/Services/Testing and QA/Selenium Automat
 import ProductShowcase from '../container/Services/Testing and QA/Selenium Automation Testing/ProductShowcase'
 import IntegrationShowcase from '../container/Services/Testing and QA/Selenium Automation Testing/IntegrationShowcase'
 import RealAutomation from '../container/Services/Testing and QA/Selenium Automation Testing/RealAutomation'
-
+import WrapperContainer from '../Layout/WrapperContainer';
 const SeleniumAutomationTesting = () => {
     return (
         <div>
             <SeleniumAutomationHeroSection/>
+            <WrapperContainer>
             <BusinessAIHeader/>
             <RealAutomation/>
             <OutcomesSection/>
@@ -20,6 +21,7 @@ const SeleniumAutomationTesting = () => {
             <SpeedBenefits/>
             <ProductShowcase/>
             <IntegrationShowcase/>
+            </WrapperContainer>
         </div>
     )
 }

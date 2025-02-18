@@ -1,5 +1,6 @@
 import React from 'react'
-import uianimation51 from '../../../../assets/uianimation51.jpg'
+import uianimation51 from '../../../../assets/uianimation51.jpg';
+import WrapperContainer from '../../../../Layout/WrapperContainer';
 
 // Section 3
   const approaches = [
@@ -280,6 +281,7 @@ function Body() {
     <>
 
     {/*Section 1*/}
+   
     <div className="bg-gray-900 text-white min-h-[500px] w-full py-16 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
         {/* What We Do section */}
@@ -313,6 +315,7 @@ function Body() {
     </div>
 
     {/*Section 2*/}
+    <WrapperContainer>
     <div className="bg-white w-full p-4 sm:p-6 md:p-8 lg:p-16">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-12">
         {/* Left Content Section */}
@@ -575,7 +578,7 @@ function Body() {
       </div>
     </div>
 
-
+    </WrapperContainer>
     </>
   )
 }

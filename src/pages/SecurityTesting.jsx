@@ -7,17 +7,20 @@ import DigitalTransformation from '../container/Services/Testing and QA/Security
 import WebAppPenetrationTesting from '../container/Services/Testing and QA/Security Testing/WebAppPenetrationTesting';
 import WebAppPenetrationTestingProcess from '../container/Services/Testing and QA/Security Testing/WebAppPenetrationTestingProcess';
 import SecurityApproach from '../container/Services/Testing and QA/Security Testing/SecurityApproach';
+import WrapperContainer from '../Layout/WrapperContainer';
 
 const SecurityTestingServices = () => {
   return (
     <div>
         <HeroSection/>
+        <WrapperContainer>
         <CyberDefenseSection/>
         <SecurityOperations/>
         <DigitalTransformation/>
         <WebAppPenetrationTesting/>
         <WebAppPenetrationTestingProcess/>
         <SecurityApproach/>
+        </WrapperContainer>
     </div>
   )
 }

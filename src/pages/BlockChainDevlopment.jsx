@@ -7,6 +7,7 @@ import Cardpart4 from "../container/Services/Custom App/BlockChain/Cardpart4";
 import Cardpart5 from "../container/Services/Custom App/BlockChain/Cardpart5";
 import Card6part from "../container/Services/Custom App/BlockChain/Card6part";
 import videoBg from "../assets/blockchain_video.mp4";
+import WrapperContainer from "../Layout/WrapperContainer";
 
 function Home() {
   return (
@@ -52,12 +53,14 @@ function Home() {
 
       {/* Blockchain Service Components */}
       <div>
+      <WrapperContainer>
         <Cardpart1 />
         <Cardparten2 />
         <Cardpart3 />
         <Cardpart4 />
         <Cardpart5 />
         <Card6part />
+        </WrapperContainer>
       </div>
     </>
   );

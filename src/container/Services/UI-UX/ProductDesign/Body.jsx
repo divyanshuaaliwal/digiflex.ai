@@ -4,6 +4,7 @@ import { Code, Users, Layout, Smartphone, Video, Box } from 'lucide-react';
 import productdesign32 from '../../../../assets/productdesign32.png';
 import productdesign33 from '../../../../assets/productdesign33.png';
 import productdesign34 from '../../../../assets/productdesign34.png';
+import WrapperContainer from '../../../../Layout/WrapperContainer';
 
 
 // section 1 
@@ -70,6 +71,7 @@ const DigitalProducts = () => {
   return (
 <>
     {/*section 1*/}
+      <WrapperContainer>
     <div className="relative z-10 flex items-center justify-center min-h-screen bg-white px-4 sm:px-6 md:px-8 py-12 md:py-16">
       <div className="w-full max-w-7xl flex flex-col items-start space-y-8">
         <div className="space-y-4 w-full">
@@ -335,6 +337,8 @@ const DigitalProducts = () => {
         </div>
       </div>
     </div>
+
+    </WrapperContainer>
 </>
   );
 };
