@@ -1,40 +1,58 @@
 import React from "react";
 import { Data, newData } from "./Data";
+import WrapperContainer from "../../../../Layout/WrapperContainer";
+import Subheading from "../../../../Layout/Subheading";
 
 export const Cardpart1 = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center"> 
+      <WrapperContainer>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {Data.map((item, index) => (
+            <div
+              key={index}
+              className="border-b-4 border-gray-300 p-3 rounded-lg hover:transform transition-all duration-300 ease-in-out hover:scale-105 "
+            >
+              <img
+                src={item.img}
+                alt={item.header}
+                className="w-28 h-32 object-cover mx-auto rounded-t-lg"
+              />
+              <Subheading>
+                <p className="font-bold px-5 py-2 text-center">
+                  {item.header}
+                </p>
+              </Subheading>
+              <p className=" px-4 text-sm text-center">
+                {item.data}
+              </p>
+            </div>
+          ))}
+        </div>
 
-<div className="flex flex-wrap justify-center gap-6 w-full mt-24">
-  {Data.map((item, index) => (
-    <div
-      key={index}
-      className="w-72 h-96 border border-gray-400 rounded-2xl text-center p-5 
-                 shadow-[inset_0px_-5px_2px_gray] flex flex-col items-center justify-between hover:transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-[inset_0px_-5px_2px_gray]"
-    >
-      <img src={item.img} alt={item.header} className="w-32 h-32 object-cover mx-auto rounded-t-lg" />
-      <p className="font-bold px-5 py-2 text-lg">{item.header}</p>
-      <p className="text-gray-500 px-4 text-sm">{item.data}</p>
-    </div>
-  ))}
-</div>
-
-<div className="flex flex-wrap justify-center gap-6 w-full mt-24">
-  {newData.map((item, index) => (
-    <div
-      key={index}
-      className="w-72 h-96 border border-gray-400 rounded-2xl text-center p-5 shadow-[inset_0px_5px_2px_gray] flex flex-col items-center justify-between hover:transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-[inset_0px_5px_2px_gray]"
-    >
-      <img src={item.img} alt={item.header} className="w-32 h-32 object-cover mx-auto rounded-t-lg" />
-
-      <p className="font-bold text-lg px-8 py-5 ">{item.header}</p>
-
-      <p className="text-gray-500 text-sm px-4 flex-grow overflow-hidden text-ellipsis">{item.data}</p>
-    </div>
-  ))}
-</div>
-</div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
+          {newData.map((item, index) => (
+            <div
+              key={index}
+              className="border-t-4 border-gray-300 p-3  rounded-lg hover:transform transition-all duration-300 ease-in-out hover:scale-105 "
+            >
+              <img
+                src={item.img}
+                alt={item.header}
+                className="w-28 h-32 object-cover mx-auto rounded-t-lg"
+              />
+              <Subheading>
+                <p className="font-bold px-8 py-5 text-center">
+                  {item.header}
+                </p>
+              </Subheading>
+              <p className=" text-sm px-4 text-center">
+                {item.data}
+              </p>
+            </div>
+          ))}
+        </div>
+      </WrapperContainer>
     </>
   );
 };

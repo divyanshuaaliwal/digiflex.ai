@@ -5,7 +5,7 @@ import google_img from '../../../../assets/Google-Cloud-Logo.png'
 function Google_hero() {
   return (
     <>
-        <div className="relative w-full h-[640px] overflow-hidden">
+        <div className="relative w-full h-[600px] overflow-hidden">
         <video
           autoPlay
           loop
@@ -19,7 +19,7 @@ function Google_hero() {
           <p className="text-[50px] uppercase">
             Gogle cloud 
           </p>
-          <p className='mt-1'>Google Cloud is a suite of cloud computing services provided by Google.<br/> It offers scalable computing, storage, and machine learning solutions backed by Google's robust infrastructure.</p>
+          <p className="mt-2 max-w-[600px]">Google Cloud is a suite of cloud computing services provided by Google.It offers scalable computing, storage, and machine learning solutions backed by Google's robust infrastructure.</p>
           <img src={google_img} alt='google cloud' className='w-1/6 '/>
         </div>
         </div>

@@ -62,7 +62,11 @@ import ReactNative from "./pages/ReactNative";
 import FlutterAppDevlopment from "./pages/FlutterAppDevlopment";
 import NativeScript from "./pages/NativeScript";
 import XamarinAppDEvlopment from "./pages/XamarinAppDEvlopment";
+<<<<<<< Updated upstream
 import HtmlDevlopment from "./pages/HtmlAppDevlopment"
+=======
+import CloudOptimization from './pages/CloudOptimization';
+>>>>>>> Stashed changes
 
 //Cloud
 
@@ -71,7 +75,11 @@ import Cloud_Migration from "./pages/Cloud_Migration";
 import Google from "./pages/Google";
 import Intercloud_Migration from "./pages/Intercloud";
 import AWS from "./pages/AWS";
+<<<<<<< HEAD
 import WebsiteTechDevlopmet from "./pages/WebsiteTechDevlopmet";
+=======
+import CloudNative from "./pages/CloudNative";
+>>>>>>> 17d210cba63f55e7ca58d0767024f2e5c8114a9f
 
 function App() {
   const location = useLocation();
@@ -238,6 +246,7 @@ function App() {
           path="/tech/XamarinAppDevlopment"
           element={<XamarinAppDEvlopment />}
         />
+<<<<<<< Updated upstream
         <Route
         path="/tech/HtmlDevlopment"
         element={<HtmlDevlopment/>}
@@ -254,6 +263,21 @@ function App() {
           path="/services/game-development/mobile-game-development"
           element={<MobileGameDevelopment />}
         />
+=======
+       {/* Game development */}
+        <Route  path="/services/game-development/mobile-game-development" element={<MobileGameDevelopment/>}/>
+      
+      {/* Cloud */}
+      <Route path="/services/cloud/azure" element={<Azure/>} />
+      <Route path="/services/cloud/cloud_migration" element={<Cloud_Migration/>}/>
+      <Route path="/services/cloud/google_components" element={<Google/>} />
+      <Route path="/services/cloud/intercloud_Migration" element={<Intercloud_Migration/>}/>
+      <Route path="/services/cloud/AWS" element={<AWS/>}/>
+      <Route path="/services/cloud/CloudNative" element={<CloudNative/>}/>
+      <Route path="/services/cloud/CloudOptimization" element={<CloudOptimization/>}/>
+
+
+>>>>>>> Stashed changes
 
         {/* Cloud */}
         <Route path="/services/cloud/azure" element={<Azure />} />

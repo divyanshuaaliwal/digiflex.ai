@@ -1,20 +1,28 @@
 import React from "react";
 import { Data3 } from "./Data";
+import WrapperContainer from "../../../../Layout/WrapperContainer";
+import Heading from "../../../../Layout/Heading";
+import Paragraph from "../../../../Layout/Paragraph";
 
 const Card6part = () => {
   return (
    <>
-    <div className="bg-gray-100 p-10 rounded-xl mx-10 my-10">
-  <h1 className="text-4xl font-bold text-[#1A2E6F] mb-4 text-center">
+   <WrapperContainer>
+    <div className="bg-gray-100 p-10 rounded-xl">
+    <Heading>
+  <h1>
     Blockchain Support Services
   </h1>
-  <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto">
+  </Heading>
+  <Paragraph>
+  <p>
     A Blockchain Support Server ensures smooth blockchain network operation
     through 24/7 monitoring, node management, security, and backups. It
     maintains uptime, optimizes scalability, and protects against threats.
     With technical assistance and regular updates, it ensures a stable and
     efficient blockchain infrastructure.
   </p>
+  </Paragraph>
   <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-8">
     {Data3.slice(0, 12).map((item, index) => (
       <div
@@ -28,7 +36,7 @@ const Card6part = () => {
     ))}
   </div>
 </div>
-
+</WrapperContainer>
    </>
   );
 };
