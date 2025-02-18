@@ -6,13 +6,13 @@ import ProcessSection from './ProcessSection';
 import Industry from './Industry';
 function Body() {
   return (
-    <div className="min-h-screen bg-white">
+     <>
       <Solutions />
       <Impact />
       <Features />
       <ProcessSection />
       <Industry />
-    </div>
+     </>
   );
 }
 

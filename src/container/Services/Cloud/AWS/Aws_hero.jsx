@@ -22,7 +22,7 @@ function Aws_hero() {
           cloud services such as computing power, storage, databases, machine learning, 
           security, and networking.
         </p>
-        <img src={AWS_logo} alt="AWS Cloud" className="w-[100px] mt-4" />
+        <img src={AWS_logo} alt="AWS Cloud" className="w-[100px]" />
       </div>
     </div>
   );

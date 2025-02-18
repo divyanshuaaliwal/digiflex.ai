@@ -1,5 +1,6 @@
 import React from 'react';
-
+import WrapperContainer from '../Layout/WrapperContainer'
+ 
 
 const footerLinks = {
   'FRONTEND WEB DEVELOPMENT': [
@@ -44,8 +45,8 @@ const footerLinks = {
 
 const Navigation = () => {
   return (
-    
     <div className="flex justify-center items-center bg-blue-950 ">
+      <WrapperContainer>
         <div className="text-white py-12">
         <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
@@ -71,6 +72,7 @@ const Navigation = () => {
             </div>
         </div>
         </div>
+    </WrapperContainer>
     </div>
   );
 };

@@ -2,6 +2,8 @@ import React from 'react';
 import { RefreshCw, Search, Layout, Palette, Send } from "lucide-react";
 import { RefreshCcw, Code, Users, Smartphone } from "lucide-react";
 import { Brain, Building2, ShoppingCart, Heart } from 'lucide-react';
+import WrapperContainer from "../../../../Layout/WrapperContainer"
+
 
 // FeatureCard Component
 const FeatureCard = ({ title, description, titleColor }) => {
@@ -240,7 +242,8 @@ const Body = () => {
   return (
     <div className="relative bg-gradient-to-b from-blue-50 to-white min-h-screen">
       {/* section 1 */}
-      <div className="relative w-full bg-white/80 backdrop-blur-lg py-10 px-4">
+      <div className="relative w-full bg-white/80 backdrop-blur-lg    ">
+      <WrapperContainer>
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Column */}
           <div className="flex items-center">
@@ -271,10 +274,12 @@ const Body = () => {
             </p>
           </div>
         </div>
+        </WrapperContainer>
       </div>
 
       {/* section 2 */}
-      <div className="w-full bg-white/90 backdrop-blur-lg py-10 px-4">
+      <div className="w-full bg-white/90 backdrop-blur-lg    ">
+        <WrapperContainer>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 text-center mb-16 hover:text-blue-600 transition-colors duration-300 animate-glow">
             What Makes Digiflex Your Ideal{' '}
@@ -291,10 +296,12 @@ const Body = () => {
             ))}
           </div>
         </div>
+        </WrapperContainer>
       </div>
 
       {/* section 3 */}
-      <div className="w-full bg-white/95 backdrop-blur-lg py-10 px-4">
+      <div className="w-full bg-white/95 backdrop-blur-lg    ">
+      <WrapperContainer>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 text-center mb-16 hover:text-blue-600 transition-colors duration-300 animate-glow">
             Our{' '}
@@ -323,12 +330,14 @@ const Body = () => {
             </div>
           </div>
         </div>
+        </WrapperContainer>
       </div>
 
       {/* section 4 */}
-      <div className="w-full bg-white/90 backdrop-blur-lg py-10 px-4">
+      <div className="w-full bg-white/90 backdrop-blur-lg ">
+      <WrapperContainer>
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <p className="text-blue-600 font-bold text-lg mb-4 animate-pulse">Let's transform your UI/UX</p>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight animate-glow">
               WHAT WE <span className="text-blue-800">CAN</span>
@@ -348,14 +357,16 @@ const Body = () => {
             ))}
           </div>
         </div>
+        </WrapperContainer>
       </div>
 
       {/* section 5 */}
-      <div className="w-full bg-white/95 backdrop-blur-lg py-10 px-4">
+      <div className="w-full bg-white/95 backdrop-blur-lg    ">
+      <WrapperContainer>
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
           <div className="mb-16 max-w-2xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-md mb-8 animate-pulse">
+            <span className="inline-block   py-2 bg-blue-500 text-white text-sm font-medium rounded-md mb-8 animate-pulse">
               STRATEGIC UX CONSULTING
             </span>
 
@@ -393,10 +404,12 @@ const Body = () => {
             ))}
           </div>
         </div>
+        </WrapperContainer>
       </div>
 
       {/* section 6 */}
-      <div className="w-full bg-white/90 backdrop-blur-lg py-10 px-4">
+      <div className="w-full bg-white/90 backdrop-blur-lg pb-10 ">
+      <WrapperContainer>
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 text-center mb-16 animate-glow">
               DIGIFLEX.AI{' '}
@@ -417,6 +430,7 @@ const Body = () => {
             ))}
           </div>
         </div>
+        </WrapperContainer>
       </div>
     </div>
   );

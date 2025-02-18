@@ -39,9 +39,10 @@ function Aws_intro() {
 
     return (
         <>
-        <WrapperContainer>
+        <div className='flex flex-col items-center justify-center'>
+            <WrapperContainer>
             {/* AWS Introduction Section */}
-            <div className="flex flex-col items-center justify-center text-center">
+            <div className=" text-center">
             <Heading>
                 <h1>About AWS Cloud Services</h1>
                 </Heading>
@@ -73,6 +74,7 @@ function Aws_intro() {
                 </div>
             </div>
             </WrapperContainer>
+        </div>
         </>
     );
 }

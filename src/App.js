@@ -1,5 +1,10 @@
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation, useMatch } from "react-router-dom";
 import { useEffect } from "react";
+
+
+import Home from './pages/Home'
+import About from "./pages/About";
+import ContactPage from "./pages/ContactPage";
 
 import CemDevlopment from "./pages/Cem-devlopment";
 import IntregrationandMigration from "./pages/Intregration-and-Migration";
@@ -13,7 +18,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
-import Reviews from "./components/Reviews";
+import { ReviewsSection} from "./components/Reviews";
 
 import SoftwareTestManagement from "./pages/SoftwareTestManagement";
 import TestAutomation from "./pages/TestAutomation";
@@ -62,11 +67,9 @@ import ReactNative from "./pages/ReactNative";
 import FlutterAppDevlopment from "./pages/FlutterAppDevlopment";
 import NativeScript from "./pages/NativeScript";
 import XamarinAppDEvlopment from "./pages/XamarinAppDEvlopment";
-<<<<<<< Updated upstream
 import HtmlDevlopment from "./pages/HtmlAppDevlopment"
-=======
 import CloudOptimization from './pages/CloudOptimization';
->>>>>>> Stashed changes
+import WebsiteTechDevlopmet from './pages/WebsiteTechDevlopmet'
 
 //Cloud
 
@@ -75,6 +78,7 @@ import Cloud_Migration from "./pages/Cloud_Migration";
 import Google from "./pages/Google";
 import Intercloud_Migration from "./pages/Intercloud";
 import AWS from "./pages/AWS";
+import CloudNative from "./pages/CloudNative"
 
 function App() {
   const location = useLocation();
@@ -87,12 +91,21 @@ function App() {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+   const match = useMatch("/:path(about-us|contact-us)");
+
+   console.log(match);
+   
+   
+  
+
   return (
     <div className="bg-white w-full">
       <Header />
 
       <Routes>
-        <Route path="/" element={<SoftwareTestManagement />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/contact-us" element={<ContactPage />} />
 
         <Route
           path="/services/testing/software-test-management"
@@ -241,24 +254,14 @@ function App() {
           path="/tech/XamarinAppDevlopment"
           element={<XamarinAppDEvlopment />}
         />
-<<<<<<< Updated upstream
         <Route
         path="/tech/HtmlDevlopment"
         element={<HtmlDevlopment/>}
       />
-
       <Route
       path="/tech/web/mean"
       element={<WebsiteTechDevlopmet/>}
     />
-
-
-        {/* Game development */}
-        <Route
-          path="/services/game-development/mobile-game-development"
-          element={<MobileGameDevelopment />}
-        />
-=======
        {/* Game development */}
         <Route  path="/services/game-development/mobile-game-development" element={<MobileGameDevelopment/>}/>
       
@@ -271,25 +274,10 @@ function App() {
       <Route path="/services/cloud/CloudNative" element={<CloudNative/>}/>
       <Route path="/services/cloud/CloudOptimization" element={<CloudOptimization/>}/>
 
-
->>>>>>> Stashed changes
-
-        {/* Cloud */}
-        <Route path="/services/cloud/azure" element={<Azure />} />
-        <Route
-          path="/services/cloud/cloud_migration"
-          element={<Cloud_Migration />}
-        />
-        <Route path="/services/cloud/google_components" element={<Google />} />
-        <Route
-          path="/services/cloud/intercloud_Migration"
-          element={<Intercloud_Migration />}
-        />
-        <Route path="/services/cloud/AWS" element={<AWS />} />
       </Routes>
 
-      <Reviews />
-      <Contact />
+      {!match && <ReviewsSection />}
+      {!match && <Contact />}
       <Navigation />
       <Footer />
     </div>

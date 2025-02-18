@@ -54,7 +54,7 @@ const FeatureStep = ({ title, isActive, onClick }) => {
       }`}
       whileHover={{ scale: isActive ? 1 : 1.02 }}
     >
-      <h3 className="text-lg font-semibold text-black mb-2">{title}</h3>
+      <h3 className="text-lg  font-semibold text-black mb-2">{title}</h3>
     </motion.div>
   );
 };

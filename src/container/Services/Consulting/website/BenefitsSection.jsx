@@ -1,10 +1,17 @@
 import { motion } from "framer-motion";
 import { Star, Users, BarChart, Target } from "lucide-react";
 import WrapperContainer from "../../../../Layout/WrapperContainer";
+import Heading from "../../../../Layout/Heading";
+import Paragraph from "../../../../Layout/Paragraph";
+
 
 export const BenefitsSection = () => {
   return (
     <WrapperContainer>
+        <Heading>Why do you need website consulting?</Heading>
+        <Paragraph>
+          There are several benefits of website consulting services, including:
+        </Paragraph>
       <div className="relative container mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12">
         {/* Benefits List */}
         <div className="space-y-8">

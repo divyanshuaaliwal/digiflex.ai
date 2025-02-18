@@ -31,12 +31,11 @@ import {
   Wallet,
   Code2Icon,
   CodeSquareIcon,
+  ChevronDown,
+  ChevronRight
 } from "lucide-react";
 import logo from "../assets/digiflex.png";
 import { FaAngular, FaBootstrap, FaReact, FaVuejs } from "react-icons/fa";
-import { GiKnockedOutStars, GiKnockout } from "react-icons/gi";
-import { RiNextjsFill } from "react-icons/ri";
-import { FcNext } from "react-icons/fc";
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -49,6 +48,11 @@ const Navbar = () => {
   const [isSearchActive, setIsSearchActive] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const timeoutRef = useRef(null);
+  const [activeMobileDropdown, setActiveMobileDropdown] = useState(null);
+  const [activeMobileSubMenu, setActiveMobileSubMenu] = useState(null);
+  const navRef = useRef(null);
+
+
 
   const navItems = [
     { label: "Home", href: "#" },
@@ -249,37 +253,6 @@ const Navbar = () => {
       image:
         "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
     },
-
-<<<<<<< Updated upstream
-    {
-      id: "CS",
-      icon: Cpu,
-      title: "Cloud",
-      color: "text-yellow-500",
-      description:
-        "Cloud services offer online computing resources like storage, servers, and software, enabling scalability and cost-efficiency. ",
-      features: [
-        {
-          icon: Cpu,
-          title: "Google Cloud",
-          path: "/services/cloud/google_components",
-        },
-        { icon: Cpu, title: "Azure Cloud", path: "/services/cloud/azure" },
-        {
-          icon: Cpu,
-          title: "Cloud Migration",
-          path: "/services/cloud/cloud_migration",
-        },
-        {
-          icon: Cpu,
-          title: "Intercloud Migration",
-          path: "/services/cloud/intercloud_Migration",
-        },
-        { icon: Cpu, title: "AWS", path: "/services/cloud/AWS" },
-      ],
-      image:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
-=======
     { id: 'CS', 
       icon: Cloudy, 
       title: 'Cloud',
@@ -296,9 +269,7 @@ const Navbar = () => {
 
         ],
       image: 'https://img.freepik.com/premium-vector/cloud-computing-technology-with-circuit-cloud-white-background-vector-illustration_493806-13570.jpg'
->>>>>>> Stashed changes
     },
-
     {
       id: "BlockchainDev",
       icon: Cpu,
@@ -600,6 +571,9 @@ const Navbar = () => {
 
   const handleFeatureClick = () => {
     setActiveDropdown(null);
+    setIsMobileMenuOpen(false);
+    setActiveMobileDropdown(null);
+    setActiveMobileSubMenu(null);
   };
 
   const handleItemSelect = (type, id) => {
@@ -609,14 +583,32 @@ const Navbar = () => {
     }));
   };
 
+  const toggleMobileDropdown = (type) => {
+    setActiveMobileDropdown(activeMobileDropdown === type ? null : type);
+    setActiveMobileSubMenu(null);
+  };
+
+  const toggleMobileSubMenu = (id) => {
+    setActiveMobileSubMenu(activeMobileSubMenu === id ? null : id);
+  };
+
   // Get active content data
   const getActiveContentData = (type) => {
     const content = getDropdownContent(type);
     return content.find((item) => item.id === activeItems[type]) || content[0];
   };
 
+  // Close mobile menu when clicking outside
   useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
       }
@@ -631,86 +623,85 @@ const Navbar = () => {
     if (!content.length) return null;
 
     return (
-      <div
-        className="absolute w-[75vw] -left-80 top-8 mt-3 max-w-7xl bg-white shadow-xl rounded-lg overflow-hidden z-60"
-        onMouseEnter={() => handleMouseEnter(type)}
-        onMouseLeave={handleMouseLeave}
-      >
-        <div className="grid grid-cols-12 p-8">
-          <div className="col-span-3 bg-gray-50 rounded-lg p-4">
-            <h3 className="text-lg font-semibold mb-4 text-gray-900">
-              {type.charAt(0).toUpperCase() + type.slice(1)}
-            </h3>
-            <div className="space-y-2">
-              {content.map((item) => (
-                <button
-                  key={item.id}
-                  className={`flex items-center w-full gap-3 p-2 rounded-lg hover:bg-white transition-colors duration-200 ${
-                    item.id === activeItems[type] ? "bg-white shadow-sm" : ""
-                  }`}
-                  onMouseEnter={() => handleItemSelect(type, item.id)}
-                >
-                  <item.icon className={`h-5 w-5 ${item.color}`} />
-                  <span className="text-sm font-medium text-gray-700">
-                    {item.title}
-                  </span>
-                </button>
-              ))}
-            </div>
-          </div>
+      <div 
+  className="absolute lg:w-[75vw] md:w-[90vw] top-8 mt-3 left-0 transform -translate-x-1/2 max-w-7xl bg-white shadow-xl rounded-lg overflow-hidden z-60" 
+  onMouseEnter={() => handleMouseEnter(type)} 
+  onMouseLeave={handleMouseLeave}
+> 
+  <div className="grid grid-cols-12 p-4 md:p-8"> 
+    <div className="col-span-12 md:col-span-3 bg-gray-50 rounded-lg p-4"> 
+      <h3 className="text-lg font-semibold mb-4 text-gray-900"> 
+        {type.charAt(0).toUpperCase() + type.slice(1)} 
+      </h3> 
+      <div className="space-y-2"> 
+        {content.map((item) => ( 
+          <button 
+            key={item.id} 
+            className={`flex items-center w-full gap-3 p-2 rounded-lg hover:bg-white transition-colors duration-200 ${ 
+              item.id === activeItems[type] ? "bg-white shadow-sm" : "" 
+            }`} 
+            onMouseEnter={() => handleItemSelect(type, item.id)} 
+          > 
+            <item.icon className={`h-5 w-5 ${item.color}`} /> 
+            <span className="text-sm font-medium text-gray-700"> 
+              {item.title} 
+            </span> 
+          </button> 
+        ))} 
+      </div> 
+    </div>
 
-          <div className="col-span-9 p-4">
-            <div className="grid grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  {activeContentData.title}
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  {activeContentData.description}
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                  {activeContentData.features.map((feature, index) => (
-                    <Link
-                      key={index}
-                      to={feature.path}
-                      className="flex items-center gap-2 text-gray-700 hover:bg-gray-50 p-2 rounded-lg transition-colors"
-                      onClick={handleFeatureClick}
-                    >
-                      <feature.icon
-                        className={`h-5 w-5 ${activeContentData.color}`}
-                      />
-                      <span>{feature.title}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-              <div className="rounded-lg overflow-hidden">
-                <img
-                  src={activeContentData.image}
-                  alt={activeContentData.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
+  <div className="col-span-12 md:col-span-9 p-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h3 className="text-xl font-bold text-gray-900 mb-4">
+          {activeContentData.title}
+        </h3>
+        <p className="text-gray-600 mb-6">
+          {activeContentData.description}
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {activeContentData.features.map((feature, index) => (
+            <Link
+              key={index}
+              to={feature.path}
+              className="flex items-center gap-2 text-gray-700 hover:bg-gray-50 p-2 rounded-lg transition-colors"
+              onClick={handleFeatureClick}
+            >
+              <feature.icon className={`h-5 w-5 ${activeContentData.color}`} />
+              <span>{feature.title}</span>
+            </Link>
+          ))}
         </div>
+      </div>
+      <div className="hidden md:block rounded-lg overflow-hidden">
+        <img
+          src={activeContentData.image}
+          alt={activeContentData.title}
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
       </div>
     );
   };
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-blue-950 text-white">
+    <nav className="sticky top-0 z-50 w-full bg-blue-950 text-white" ref={navRef}>
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center h-16 gap-x-4">
           {/* Logo */}
-          <a href="/" className="flex items-center no-underline">
+          <a href="/" className="flex items-center no-underline mr-auto">
             <img src={logo} alt="logo" className="h-6" />
           </a>
 
           {!isSearchActive ? (
             <>
               {/* Desktop Navigation Items */}
-              <div className="hidden md:flex items-center space-x-8">
+              <div className="hidden lg:flex items-center space-x-5">
                 {navItems.map((item) => (
                   <div key={item.label} className="relative group">
                     <div
@@ -726,11 +717,13 @@ const Navbar = () => {
                     >
                       <a
                         href={item.href}
-                        className="text-white hover:text-gray-300 transition-colors text-sm"
+                        className="text-white hover:text-gray-300 transition-colors text-xs"
                       >
                         {item.label}
                       </a>
-                      {item.hasDropdown && <div className="h-4 w-4 ml-1" />}
+                      {item.hasDropdown && (
+                        <ChevronDown className="h-4 w-4 text-gray-400" />
+                      )}
                     </div>
 
                     {item.hasDropdown &&
@@ -741,7 +734,7 @@ const Navbar = () => {
                 ))}
               </div>
 
-              {/* Right side items */}
+              {/* Right side items - visible on desktop and tablet */}
               <div className="hidden md:flex items-center space-x-6">
                 <button
                   onClick={() => setIsSearchActive(true)}
@@ -750,14 +743,21 @@ const Navbar = () => {
                   <Search className="h-5 w-5" />
                 </button>
                 <a
-                  href="#"
+                  href="/contact-us"
                   className="border border-blue-600 text-blue-600 px-6 py-2 hover:bg-blue-500 hover:text-white transition-colors text-sm"
                 >
                   CONTACT US
                 </a>
               </div>
 
-              <div className="md:hidden flex items-center">
+              {/* Mobile and tablet burger menu */}
+              <div className="lg:hidden flex items-center space-x-4">
+                <button
+                  onClick={() => setIsSearchActive(true)}
+                  className="text-white hover:text-gray-300 md:hidden"
+                >
+                  <Search className="h-5 w-5" />
+                </button>
                 <button
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                   className="text-white hover:text-gray-300"
@@ -767,7 +767,7 @@ const Navbar = () => {
               </div>
             </>
           ) : (
-            <div className="flex-1 flex items-center ml-8">
+            <div className="flex-1 flex items-center ml-4 md:ml-8">
               <Search className="h-5 w-5 text-gray-400" />
               <input
                 type="text"
@@ -775,7 +775,7 @@ const Navbar = () => {
                 className="flex-1 bg-transparent border-none outline-none text-white placeholder-gray-400 ml-4"
                 autoFocus
               />
-              <button className="bg-[#6B7CFF] px-6 py-2 text-sm mr-4 hover:bg-[#5A6AE6] transition-colors">
+              <button className="bg-[#6B7CFF] px-4 md:px-6 py-2 text-sm mr-2 md:mr-4 hover:bg-[#5A6AE6] transition-colors">
                 SEARCH
               </button>
               <button
@@ -788,25 +788,79 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile and Tablet Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-700">
-            <div className="flex flex-col space-y-4">
+          <div className="lg:hidden py-4 border-t border-gray-700 bg-blue-950">
+            <div className="flex flex-col space-y-2">
               {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="text-white hover:text-gray-300 transition-colors text-sm"
-                >
-                  {item.label}
-                </a>
+                <div key={item.label} className="relative">
+                  {item.hasDropdown ? (
+                    <div>
+                      <button
+                        onClick={() => toggleMobileDropdown(item.dropdownType)}
+                        className="flex items-center justify-between w-full py-2 px-4 text-white hover:bg-blue-900 transition-colors text-sm"
+                      >
+                        <span>{item.label}</span>
+                        <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${
+                          activeMobileDropdown === item.dropdownType ? 'rotate-180' : ''
+                        }`} />
+                      </button>
+                      
+                      {activeMobileDropdown === item.dropdownType && (
+                        <div className="pl-4 py-2 bg-blue-900">
+                          {getDropdownContent(item.dropdownType).map((content) => (
+                            <div key={content.id} className="mb-2">
+                              <button
+                                onClick={() => toggleMobileSubMenu(content.id)}
+                                className="flex items-center justify-between w-full py-2 px-4 text-white hover:bg-blue-800 transition-colors text-sm"
+                              >
+                                <div className="flex items-center">
+                                  <content.icon className={`h-4 w-4 ${content.color} mr-2`} />
+                                  <span>{content.title}</span>
+                                </div>
+                                <ChevronRight className={`h-4 w-4 transition-transform duration-200 ${
+                                  activeMobileSubMenu === content.id ? 'rotate-90' : ''
+                                }`} />
+                              </button>
+                              
+                              {activeMobileSubMenu === content.id && (
+                                <div className="pl-4 py-2 bg-blue-800">
+                                  {content.features.map((feature, index) => (
+                                    <Link
+                                      key={index}
+                                      to={feature.path}
+                                      className="flex items-center py-2 px-4 text-white hover:bg-blue-700 transition-colors text-sm"
+                                      onClick={handleFeatureClick}
+                                    >
+                                      <feature.icon className={`h-4 w-4 mr-2 ${content.color}`} />
+                                      <span>{feature.title}</span>
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <a
+                      href={item.href}
+                      className="block py-2 px-4 text-white hover:bg-blue-900 transition-colors text-sm"
+                    >
+                      {item.label}
+                    </a>
+                  )}
+                </div>
               ))}
-              <a
-                href="#"
-                className="border border-[#98CA3F] text-[#98CA3F] px-6 py-2 hover:bg-[#98CA3F] hover:text-white transition-colors text-sm text-center"
-              >
-                CONTACT US
-              </a>
+              <div className="py-4 px-4">
+                <a
+                  href="/contact-us"
+                  className="block border border-blue-600 text-blue-600 px-6 py-2 hover:bg-blue-600 hover:text-white transition-colors text-sm text-center"
+                >
+                  CONTACT US
+                </a>
+              </div>
             </div>
           </div>
         )}

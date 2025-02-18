@@ -58,8 +58,8 @@ const solutions = [
 
 function Solutions() {
   return (
-    <WrapperContainer>
-      <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto ">
+        <WrapperContainer>
         <Heading>SALESFORCE SOLUTION AREAS</Heading>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -105,8 +105,8 @@ function Solutions() {
             </motion.div>
           ))}
         </div>
-      </div>
     </WrapperContainer>
+      </div>
   );
 }
 

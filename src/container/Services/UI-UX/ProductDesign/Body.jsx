@@ -4,8 +4,10 @@ import { Code, Users, Layout, Smartphone, Video, Box } from 'lucide-react';
 import productdesign32 from '../../../../assets/productdesign32.png';
 import productdesign33 from '../../../../assets/productdesign33.png';
 import productdesign34 from '../../../../assets/productdesign34.png';
-import WrapperContainer from '../../../../Layout/WrapperContainer';
-
+import Heading from '../../../../Layout/Heading';
+import Paragraph from '../../../../Layout/Paragraph';
+import WrapperContainer from "../../../../Layout/WrapperContainer"
+import SubHeading from "../../../../Layout/Subheading"
 
 // section 1 
 const services = [
@@ -71,19 +73,18 @@ const DigitalProducts = () => {
   return (
 <>
     {/*section 1*/}
-      <WrapperContainer>
     <div className="relative z-10 flex items-center justify-center min-h-screen bg-white px-4 sm:px-6 md:px-8 py-12 md:py-16">
+       <WrapperContainer  >
       <div className="w-full max-w-7xl flex flex-col items-start space-y-8">
         <div className="space-y-4 w-full">
-          <span className="text-blue-600 font-medium inline-block">Our Expertise</span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-blue-950 leading-tight">
+          <Heading className="  font-bold text-blue-950 leading-tight">
             Digital Products
-          </h1>
+          </Heading>
         </div>
         
-        <p className="text-base sm:text-lg text-black max-w-2xl">
+        <Paragraph className="text-base  text-black">
           At Digiflex, we believe that every user deserves an intuitive and seamless experience, whether engaging with a product for work or leisure. We design impactful enterprise and consumer products while developing comprehensive design systems that ensure effortless scalability and innovation.
-        </p>
+        </Paragraph>
         
         <div className="space-y-6 w-full">
           <h3 className="text-xl font-semibold text-blue-950">Our Services</h3>
@@ -97,29 +98,30 @@ const DigitalProducts = () => {
                   {service.icon}
                 </div>
                 <div className="space-y-2 sm:space-y-4 flex-1">
-                  <h4 className="font-medium text-blue-950">{service.title}</h4>
-                  <p className="text-sm text-gray-600">{service.description}</p>
+                  <SubHeading className=" text-blue-950">{service.title}</SubHeading>
+                  <Paragraph className=" text-gray-600">{service.description}</Paragraph>
                 </div>
               </div>
             ))}
           </div>
         </div>
+        </div>
+        </WrapperContainer>
       </div>
-    </div>
 
     {/*section 2*/}
-    <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 duration-300 hover:shadow-lg hover:shadow-blue-400">
+    <WrapperContainer  >
       <div className="max-w-7xl flex flex-col items-center justify-center mx-auto">
         {/* Header Section */}
-        <div className="max-w-3xl mb-16 flex flex-col items-center justify-center ">
-          <h1 className="text-6xl font-bold text-blue-950 mb-6">
+        <div className=" mb-16 flex flex-col items-center justify-center ">
+          <Heading className="text-6xl font-bold text-blue-950 mb-6">
             Our Web Design Services
-          </h1>
-          <p className="text-lg text-black ml-6">
+          </Heading>
+          <Paragraph className=" text-black ml-6">
             At the heart of our web design services lies a blend of advanced tools and 
             forward-thinking techniques that set us apart. Here's what you'll gain by 
             choosing us:
-          </p>
+          </Paragraph>
         </div>
 
 
@@ -133,9 +135,9 @@ const DigitalProducts = () => {
                 Custom website design
               </h2>
               
-              <p className="text-black leading-relaxed">
+              <Paragraph className="text-black leading-relaxed">
                 At Digiflex, we create bespoke web design solutions tailored to your unique business needs. Our expert team ensures that your website not only meets expectations but also drives engagement and delivers a seamless user experience. No matter the complexity, we’re here to help you achieve your goals.
-              </p>
+              </Paragraph>
 
               <ul className="space-y-3">
                 <li className="flex items-center text-black">
@@ -191,9 +193,9 @@ const DigitalProducts = () => {
                 Custom SaaS Platform Design
               </h2>
               
-              <p className="text-black leading-relaxed">
+              <Paragraph className="text-black leading-relaxed">
                 At Digiflex, we specialize in creating tailored SaaS design solutions that align with your business objectives and enhance user experiences. Our expert team ensures seamless functionality, scalability, and intuitive interfaces to help your product stand out in the competitive SaaS market.
-              </p>
+              </Paragraph>
 
               <ul className="space-y-3">
                 <li className="flex items-center text-black">
@@ -254,9 +256,9 @@ const DigitalProducts = () => {
                 Custom Mobile App Design
               </h2>
               
-              <p className="text-black leading-relaxed">
+              <Paragraph className="text-black leading-relaxed">
                 Digiflex crafts seamless and engaging mobile app designs that elevate user interaction and ensure smooth functionality. Whether for iOS, Android, or cross-platform solutions, our team creates intuitive experiences tailored to your audience.
-              </p>
+              </Paragraph>
 
               <ul className="space-y-3">
                 <li className="flex items-center text-black">
@@ -303,16 +305,16 @@ const DigitalProducts = () => {
         </div>
 
       </div>
-    </div>
+    </WrapperContainer>
 
 
     {/*section 3*/}
-    <div className="min-h-screen bg-white px-4 py-16 sm:px-6 lg:px-8">
+    <WrapperContainer >
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h1 className="text-4xl md:text-5xl  font-sans font-semibold text-blue-950 max-w-4xl mx-auto text-center mb-16 leading-tight">
-          Why Digiflex is the Right Partner for Your Needs Because We Know Your Challenges and Pain Areas. This is Why We're 'Different'.
-        </h1>
+        <Heading className=" font-sans font-semibold text-blue-950 leading-tight">
+          Why Digiflex is the Right Partner .
+        </Heading>
 
         {/* Features */}
         <div className="flex flex-wrap justify-center gap-8">
@@ -325,19 +327,17 @@ const DigitalProducts = () => {
                 {feature.icon}
               </div>
               
-              <h3 className="text-xl font-semibold text-blue-950 mb-4">
+              <SubHeading className="text-xl font-semibold text-blue-950 mb-4">
                 {feature.title}
-              </h3>
+              </SubHeading>
               
-              <p className="text-gray-600 leading-relaxed">
+              <Paragraph className="text-gray-600 leading-relaxed">
                 {feature.description}
-              </p>
+              </Paragraph>
             </div>
           ))}
         </div>
       </div>
-    </div>
-
     </WrapperContainer>
 </>
   );

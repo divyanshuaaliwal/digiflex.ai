@@ -1,6 +1,8 @@
 import {React, useState} from 'react';
-import uxreasearch43 from '../../../../assets/uxreasearch43.jpg';
-import WrapperContainer from '../../../../Layout/WrapperContainer';
+import uxreasearch43 from '../../../../assets/uxreasearch43.jpg'
+import Heading from '../../../../Layout/Heading';
+import Paragraph from '../../../../Layout/Paragraph';
+import WrapperContainer from "../../../../Layout/WrapperContainer"
 
 
 // section 2
@@ -67,21 +69,21 @@ const ServicesHero = () => {
   return (
 <>
     {/*Section 1 */}
-    <WrapperContainer>
     <div className="bg-white min-h-[400px] w-full mb-10 relative overflow-hidden p-4 md:p-8">
+      <WrapperContainer>
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8">
         {/* Main Content */}
         <div className="w-full mt-20 relative z-10">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl underline font-bold text-blue-950 mb-6">
+          <Heading className="  underline font-bold text-blue-950 ">
             UX Research
-          </h1>
+          </Heading>
           <div className="space-y-4">
-            <p className="text-base sm:text-lg md:text-xl text-black">
+            <Paragraph className="text-base  text-black">
               At DigiFlex, we specialize in UX research and usability testing to ensure financial products are intuitive, accessible, and enjoyable to use. Through in-depth user research, behavioral analysis, and iterative testing, we uncover insights that drive better design decisions and improve user engagement.
-            </p>
-            <p className="text-base sm:text-lg md:text-lg text-black">
+            </Paragraph>
+            <Paragraph className="text-base  text-black">
               Partner with DigiFlex to create research-driven financial experiences that enhance usability and boost customer satisfaction.
-            </p>
+            </Paragraph>
             <ul>
             <li>In-Depth User Research – We conduct qualitative and quantitative research to understand user behaviors, expectations, and challenges.</li><br />
             <li> Behavioral Analysis – By studying how users interact with financial interfaces, we refine navigation, accessibility, and overall usability.</li><br />
@@ -90,7 +92,7 @@ const ServicesHero = () => {
 
           </ul>
           </div>
-          <button className="mt-4 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-400 transition-colors w-full sm:w-auto">
+          <button className="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-md text-base sm:text-lg font-medium transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-transparent">
             Discuss details
           </button>
         </div>
@@ -106,14 +108,16 @@ const ServicesHero = () => {
           </div>
         </div>
       </div>
-    </div>
+      </WrapperContainer>
+      </div>
 
     {/*Section 2 */}
-    <div className="min-h-screen bg-white py-16 px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl underline underline-blue-950 text-center mb-20 sm:text-4xl md:text-5xl lg:text-6xl font-bold text-blue-950 ">
-            DigiFlex UX Research Services
-        </h1> 
+    <WrapperContainer  >
+      
       <div className="max-w-7xl mx-auto">
+          <Heading className=" underline underline-blue-950 text-center   font-bold text-blue-950 ">
+            DigiFlex UX Research Services
+        </Heading> 
         <div className="flex flex-wrap justify-center gap-8">
           {services.map((service) => (
             <div 
@@ -136,10 +140,10 @@ const ServicesHero = () => {
               </h2>
               
               {/* Description */}
-              <p className="text-base text-gray-600 leading-relaxed
+              <Paragraph className="text-base text-gray-600 leading-relaxed
                           group-hover:text-black transition-colors duration-300">
                 {service.description}
-              </p>
+              </Paragraph>
 
               {/* Hover indicator */}
               <div className="h-1 w-0 bg-blue-500 mt-6 transition-all duration-300 group-hover:w-full rounded-full" />
@@ -147,13 +151,14 @@ const ServicesHero = () => {
           ))}
         </div>
       </div>
-    </div>
+    </WrapperContainer>
 
     {/*Section 3 */}
-    <div className="max-w-7xl mx-auto p-6">
-      <h1 className="text-4xl underline  md:text-5xl font-bold text-blue-950  mb-6">
+    <WrapperContainer>
+       <div className="max-w-7xl mx-auto py-10 px-4">
+      <Heading className=" underline  font-bold text-blue-950  ">
         DigiFlex UX Research Process
-      </h1>
+      </Heading>
       
       <p className="text-black mb-6 text-lg">
         At DigiFlex, we believe UX research should be adaptable, data-driven, and aligned with business goals. We dive deep into user behaviors, pain points, and needs to create meaningful, research-backed design decisions.
@@ -246,21 +251,22 @@ const ServicesHero = () => {
         </div>
   
       </div>
-    </div>
+       </div>
+     </WrapperContainer>
 
-    {/*Section 4 */}
-     <div className="min-h-screen bg-white p-4 sm:p-6 md:p-8 lg:p-12">
-      <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
-        <div className="flex flex-col items-start mb-12">
-          <h1 className="text-2xl underline sm:text-3xl md:text-4xl lg:text-5xl font-bold text-blue-950 my-10">
-            DigiFlex UX Research Tools – 
-          </h1>
-          <p className="text-base sm:text-lg md:text-xl text-black max-w-3xl">
-            At DigiFlex, we leverage industry-leading UX research tools to uncover meaningful, data-driven insights that represent the voice of the user while aligning with business objectives.
-          </p>
-          
-        </div>
+
+   {/* Section 4 */}
+<WrapperContainer  >
+  <div className="max-w-7xl mx-auto">
+    {/* Header Section */}
+    <div className="flex flex-col items-center text-center mb-8 sm:mb-10 md:mb-12">
+      <Heading className="underline font-bold text-blue-950 ">
+        DigiFlex UX Research Tools – 
+      </Heading>
+      <Paragraph className="text-sm sm:text-base text-black">
+        At DigiFlex, we leverage industry-leading UX research tools to uncover meaningful, data-driven insights that represent the voice of the user while aligning with business objectives.
+      </Paragraph>
+    </div>
 
         {/* Tools Cards Section */}
         <div className="flex flex-col md:flex-row flex-wrap gap-6">
@@ -288,7 +294,6 @@ const ServicesHero = () => {
             With these advanced research tools, DigiFlex delivers user-centric solutions that drive product success and enhance digital experiences.
         </p>
       </div>
-    </div>
     </WrapperContainer>
 </>
   );

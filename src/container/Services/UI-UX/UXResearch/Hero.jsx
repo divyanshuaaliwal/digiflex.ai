@@ -1,53 +1,47 @@
 import React from "react";
-import uxreasearchbg from '../../../../assets/uxreasearchbg.jpg'
+import Heading from "../../../../Layout/Heading"
 
 const EnterpriseHero = () => {
   return (
-    <div className="relative min-h-[100svh] bg-white">
+    <div className="relative w-full min-h-screen flex flex-col items-center justify-center text-center bg-black px-4 sm:px-6 lg:px-8">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 w-full h-full z-0"
+      <div
+        className="absolute inset-0 w-full h-full z-0 transform scale-110 animate-extreme-float"
         style={{
-          backgroundImage: `url(${uxreasearchbg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       />
-      
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 w-full h-full backdrop-blur-[2px] bg-gradient-to-br from-blue-950/20 to-black " />
 
-      {/* Diagonal shape at bottom */}
-      <div className="absolute bottom-0 right-0 w-full h-32 sm:h-40 md:h-48 transform translate-y-1/2 skew-y-3" />
+      {/* Gradient Overlays */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-950/95 via-purple-900/90 to-black/95 z-10 mix-blend-overlay" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-indigo-950/50 via-transparent to-blue-900/50 z-10 mix-blend-multiply" />
 
-      {/* Main content */}
-      <div className="relative z-20  container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
-        <div className="max-w-3xl  space-y-4 sm:space-y-6 mt-8 sm:mt-12 md:mt-16 lg:mt-20">
-          {/* Main heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
-            DigiFlex UX Research Services
-          </h1>
+      {/* Content Wrapper */}
+      <div className="relative z-20 max-w-4xl text-white space-y-6">
+        {/* Heading */}
+        <Heading className=" sm:text-4xl text-white lg:text-6xl font-bold leading-tight">
+          DigiFlex UX Research Services
+        </Heading>
 
-          {/* Subheading */}
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 font-normal">
-            Extend your team and impact with remote enterprise UX research services.
-          </h2>
+        {/* Subheading */}
+        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal opacity-90">
+          Extend your team and impact with remote enterprise UX research services.
+        </h2>
 
-          {/* Description */}
-          <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed max-w-2xl">
-            At DigiFlex, we empower businesses with remote enterprise UX research to optimize digital experiences for maximum engagement and conversion. Our expert researchers uncover user behaviors, pain points, and opportunities—ensuring every design decision is backed by research, not guesswork.
-          </p>
+        {/* Description */}
+        <p className="text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto opacity-80">
+          At DigiFlex, we empower businesses with remote enterprise UX research to optimize digital experiences for maximum engagement and conversion. Our expert researchers uncover user behaviors, pain points, and opportunities—ensuring every design decision is backed by research, not guesswork.
+        </p>
 
-          {/* CTA Button */}
-          <div className="pt-4 sm:pt-6">
-            <button
-              className="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-md text-base sm:text-lg font-medium transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-transparent"
-              onClick={() => console.log("Schedule consultation")}
-            >
-              Contact us
-            </button>
-          </div>
+        {/* CTA Button */}
+        <div className="mt-6">
+          <button className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-md text-lg font-medium transition-all duration-200 hover:scale-105 focus:outline-none">
+            Contact us
+          </button>
         </div>
       </div>
     </div>

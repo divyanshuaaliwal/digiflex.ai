@@ -1,14 +1,11 @@
 import React from 'react';
 import { MoveRight } from 'lucide-react';
-import AutomationTesting from '../container/Services/UI-UX/DesignTestingsection/Automation.js';
-import Engagementsection from '../container/Services/UI-UX/DesignTestingsection/Engagementmodel.js';
+import AutomationTesting from '../container/Services/UI-UX/DesignTestingsection/Automation';
+import Engagementsection from '../container/Services/UI-UX/DesignTestingsection/Engagementmodel';
 import Futuresection from '../container/Services/UI-UX/DesignTestingsection/Future';
 import ComprehensiveSection from '../container/Services/UI-UX/DesignTestingsection/Comprehensive';
 
-
 function DesignTesting() {
-
-
     return (
         <>
 
