@@ -42,6 +42,12 @@ import DesignTesting from "./pages/DesignTesting";
 
 // Game Development
 import MobileGameDevelopment from "./pages/MobileGameDevelopment";
+import Unity3dGameDevelopment from "./pages/Unity3dGameDevelopment";
+import VR_XRSimulation from "./pages/VR_XRSimulation";
+import ResourceAugmentation  from "./pages/ResourceAugmentation";
+import UnrealGameDevelopment from "./pages/UnrealGameDevelopment";
+import GameArtServices from "./pages/GameArtServices";
+
 
 import ExchangeShoftware from "./pages/ExchangeShoftware";
 import InitialCoinOffering from "./pages/InitialCoinOffering";
@@ -68,11 +74,10 @@ import FlutterAppDevlopment from "./pages/FlutterAppDevlopment";
 import NativeScript from "./pages/NativeScript";
 import XamarinAppDEvlopment from "./pages/XamarinAppDEvlopment";
 import HtmlDevlopment from "./pages/HtmlAppDevlopment"
-import CloudOptimization from './pages/CloudOptimization';
 import WebsiteTechDevlopmet from './pages/WebsiteTechDevlopmet'
 
 //Cloud
-
+import CloudOptimization from './pages/CloudOptimization';
 import Azure from "./pages/Azure";
 import Cloud_Migration from "./pages/Cloud_Migration";
 import Google from "./pages/Google";
@@ -261,10 +266,7 @@ function App() {
       <Route
       path="/tech/web/mean"
       element={<WebsiteTechDevlopmet/>}
-    />
-       {/* Game development */}
-        <Route  path="/services/game-development/mobile-game-development" element={<MobileGameDevelopment/>}/>
-      
+    />      
       {/* Cloud */}
       <Route path="/services/cloud/azure" element={<Azure/>} />
       <Route path="/services/cloud/cloud_migration" element={<Cloud_Migration/>}/>
@@ -273,6 +275,16 @@ function App() {
       <Route path="/services/cloud/AWS" element={<AWS/>}/>
       <Route path="/services/cloud/CloudNative" element={<CloudNative/>}/>
       <Route path="/services/cloud/CloudOptimization" element={<CloudOptimization/>}/>
+
+        {/* Game development */}
+       
+        <Route path="/services/game-development/mobile-game-development" element={<MobileGameDevelopment />}/>
+        <Route path="/services/game-development/unity3d-game-development" element={<Unity3dGameDevelopment />}/>
+        <Route path="/services/game-development/unreal-game-development" element={<UnrealGameDevelopment />}/>
+        <Route path="/services/game-development/pc-game-development" element={<MobileGameDevelopment />}/>
+        <Route path="/services/game-development/game-art-services" element={<GameArtServices />}/>
+        <Route path="/services/game-development/vr-xr-simulation" element={<VR_XRSimulation />}/>
+        <Route path="/services/game-development/resource-augmentation" element={<ResourceAugmentation />}/>
 
       </Routes>
 

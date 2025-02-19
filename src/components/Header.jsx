@@ -55,7 +55,6 @@ const Navbar = () => {
 
 
   const navItems = [
-    { label: "Home", href: "#" },
     {
       label: "Services",
       href: "#",
@@ -69,21 +68,22 @@ const Navbar = () => {
       dropdownType: "technology",
     },
     {
-      label: "Industries",
+      label: "Products",
       href: "#",
       hasDropdown: true,
-      dropdownType: "industries",
     },
-    { label: "Clients", href: "#" },
+    { label: "Industry", 
+      href: "#" , 
+      hasDropdown: true,},
     {
-      label: "Insights",
+      label: "Marketing",
       href: "#",
-      hasDropdown: true,
-      dropdownType: "insights",
     },
-    { label: "Approach", href: "#" },
-    { label: "About us", href: "#" },
+    { label: "Staff Augmentation", href: "#" },
+    { label: "Portfolio", href: "#" },
+    { label: "About us", href: "#" }
   ];
+  
   const services = [
     {
       id: "Consulting",
@@ -352,8 +352,7 @@ const Navbar = () => {
         },
       ],
       image:
-        "https://images.unsplash.com/photo-1628744444372-b5b24ee41e28?auto=format&fit=crop&w=600&q=80",
-    },
+        "https://images.unsplash.com/photo-1556438064-2d7646166914?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",    },
   ];
   // Technology dropdown content
   const technologies = [
